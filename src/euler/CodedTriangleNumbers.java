@@ -22,7 +22,7 @@ public class CodedTriangleNumbers {
         {
 
             String sCurrentLine=br.readLine();
-            long totalsum = 0;
+            
             String[] names = sCurrentLine.split(",");
             Arrays.sort(names);
             for(int i=0;i<names.length;i++)

@@ -76,10 +76,30 @@ public class Permutations {
 
 		SortedSet<String> strings =new TreeSet<String>(new Comparator<String>(){
 		    public int compare(String a, String b){
-		        return Integer.valueOf(b).compareTo(Integer.valueOf(a));
+		        return Long.valueOf(b).compareTo(Long.valueOf(a));
 		    }
 		});
 		String elements = alphabet.substring(0, N);
+		perm1(elements, strings);
+		// System.out.println();
+		return strings;
+		// perm2(elements);
+	}
+	
+	public static SortedSet<String> generateWithoutSort(String alphabet, int N) {
+
+		SortedSet<String> strings =new TreeSet<String>();
+		String elements = alphabet.substring(0, N);
+		perm1(elements, strings);
+		// System.out.println();
+		return strings;
+		// perm2(elements);
+	}
+
+	public static SortedSet<String> generateWithoutSort(String alphabet) {
+
+		SortedSet<String> strings =new TreeSet<String>();
+		String elements = alphabet.substring(0, alphabet.length());
 		perm1(elements, strings);
 		// System.out.println();
 		return strings;
