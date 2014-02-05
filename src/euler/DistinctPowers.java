@@ -14,7 +14,7 @@ public class DistinctPowers {
 			int lowerB = 2;
 			int upperB = 100;
 			Set<BigInteger> powers = new HashSet<>(); 
-			int k =0 ;
+	
 			
 			for(int i=lowerA;i<=upperA;i++)
 			{
