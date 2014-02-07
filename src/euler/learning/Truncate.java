@@ -1,5 +1,6 @@
 package euler.learning;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,6 +10,8 @@ public class Truncate {
 		generate(Integer.toString(379));
 		cut1(Integer.toString(379));
 		System.out.println(isNumberEndWith37("373"));
+		char[] temp = new Integer(1003).toString().toCharArray();
+		Arrays.sort(temp);
 		
 		System.out.println((Math.abs(123) / Math.pow(10, 3 - 1)) % 10);
 		System.out.println(Integer.toString(12).substring(1,2));
