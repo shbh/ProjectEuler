@@ -34,12 +34,14 @@ import project.euler.NonAbundantSums;
 import project.euler.NumberLetterCounts;
 import project.euler.NumberSpiralDiagonals;
 import project.euler.PandigitalMultiples;
+import project.euler.PandigitalPrime;
 import project.euler.PandigitalProducts;
 import project.euler.PowerDigitSum;
 import project.euler.QuadraticPrimes;
 import project.euler.ReciprocalCycles;
 import project.euler.SmallestMultiple;
 import project.euler.SpecialPythagoreanTriplet;
+import project.euler.SubStringDivisibility;
 import project.euler.SumSquareDifference;
 import project.euler.SummationOfPrimes;
 import project.euler.TenThousandFirstPrime;
@@ -291,7 +293,7 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem041() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new PandigitalPrime();
 		solution(problem.solve());
 		return this;
 	}
@@ -303,7 +305,7 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem043() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new SubStringDivisibility();
 		solution(problem.solve());
 		return this;
 	}

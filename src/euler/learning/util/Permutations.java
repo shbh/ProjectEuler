@@ -1,7 +1,6 @@
-package euler.learning;
+package euler.learning.util;
 
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -66,29 +65,30 @@ public class Permutations {
 		a[j] = c;
 	}
 
-	public static SortedSet<String> generate(String alphabet) {
+	public static SortedSet<String> generateCombination(String alphabet) {
 
-		return generate(alphabet, alphabet.length());
+		return generateCombination(alphabet, alphabet.length());
 		// perm2(elements);
 	}
 
-	public static SortedSet<String> generate(String alphabet, int N) {
+	public static SortedSet<String> generateCombination(String alphabet, int N) {
 
-		SortedSet<String> strings =new TreeSet<String>(new Comparator<String>(){
-		    public int compare(String a, String b){
-		        return Long.valueOf(b).compareTo(Long.valueOf(a));
-		    }
-		});
+		SortedSet<String> strings = new TreeSet<String>(
+				new Comparator<String>() {
+					public int compare(String a, String b) {
+						return Long.valueOf(b).compareTo(Long.valueOf(a));
+					}
+				});
 		String elements = alphabet.substring(0, N);
 		perm1(elements, strings);
 		// System.out.println();
 		return strings;
 		// perm2(elements);
 	}
-	
+
 	public static SortedSet<String> generateWithoutSort(String alphabet, int N) {
 
-		SortedSet<String> strings =new TreeSet<String>();
+		SortedSet<String> strings = new TreeSet<String>();
 		String elements = alphabet.substring(0, N);
 		perm1(elements, strings);
 		// System.out.println();
@@ -98,7 +98,7 @@ public class Permutations {
 
 	public static SortedSet<String> generateWithoutSort(String alphabet) {
 
-		SortedSet<String> strings =new TreeSet<String>();
+		SortedSet<String> strings = new TreeSet<String>();
 		String elements = alphabet.substring(0, alphabet.length());
 		perm1(elements, strings);
 		// System.out.println();
@@ -106,12 +106,4 @@ public class Permutations {
 		// perm2(elements);
 	}
 
-	public Integer solve() {
-		// 1193, 3779, 11939, 19937, 193939, 199933
-		for (Iterator<String> iterator = generate("199933").iterator(); iterator
-				.hasNext();) {
-			System.out.println("add("+(String) iterator.next()+");");
-
-		}
-	}
 }

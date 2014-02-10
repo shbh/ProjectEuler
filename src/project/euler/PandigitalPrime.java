@@ -3,61 +3,42 @@ package project.euler;
 import java.util.Iterator;
 import java.util.Set;
 
-import euler.learning.Permutations;
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+import euler.learning.util.Permutations;
 
-public class PandigitalPrime {
+public class PandigitalPrime implements IProblem {
 
-	
 	public Integer solve() {
 		int n = 123456789;
-		
+
 		int m = n;
-		//
-			//
-		//}
+
 		int pandigitalNumber = 0;
-		boolean yougotit =false;
+		boolean yougotit = false;
 		for (int i = 1; i < 9; i++) {
-			
-			Set<String> combinations = Permutations.generate(Integer.toString(m));
-			
+
+			Set<String> combinations = Permutations.generateCombination(Integer
+					.toString(m));
+
 			for (Iterator<String> iterator = combinations.iterator(); iterator
 					.hasNext();) {
 				String number = (String) iterator.next();
-				
-				if(isPrime(Long.parseLong(number)))
-				{
+
+				if (Learning.isPrime(Long.parseLong(number))) {
 					pandigitalNumber = Integer.parseInt(number);
 					yougotit = true;
 					break;
 				}
-				
+
 			}
-			if(yougotit)
-			{
+			if (yougotit) {
 				break;
 			}
-			m = n/(int)Math.pow(10,i);
-			
-		}
-		System.out.println(pandigitalNumber);
-	}
-	
+			m = n / (int) Math.pow(10, i);
 
-	public static boolean isPrime(long number) {
-		if (number < 0) {
-			number = -number;
 		}
-		if(number==1 || number==0)return false;
-		
-		long condition = number / 2 + 1;
-		for (int n = 2; n < condition; n++) {
-
-			if (number % n == 0) {
-				return false;
-			}
-			condition = number / n + 1;
-		}
-		return true;
+		return pandigitalNumber;
 	}
+
 }

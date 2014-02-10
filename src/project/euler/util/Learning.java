@@ -45,12 +45,11 @@ public class Learning {
 		if (number < 0) {
 			number = -number;
 		}
-		
-		if(number==1)
-		{
+
+		if (number == 1 || number == 0) {
 			return false;
 		}
-		
+
 		long condition = number / 2 + 1;
 		for (int n = 2; n < condition; n++) {
 
@@ -188,16 +187,72 @@ public class Learning {
 		Arrays.sort(temp);
 		return new String(temp).equals("123456789");
 	}
-	
-public static boolean isNumberStartNEndWith37(String string) {
-		
-		//String 
-		String l = string.substring(0,1);
-		String r = string.substring(string.length()-1);
-		if((l.equals("3") || l.equals("7"))&& (r.equals("3") || r.equals("7")) )
-		{
+
+	public static boolean isNumberStartNEndWith37(String string) {
+
+		// String
+		String l = string.substring(0, 1);
+		String r = string.substring(string.length() - 1);
+		if ((l.equals("3") || l.equals("7"))
+				&& (r.equals("3") || r.equals("7"))) {
 			return true;
 		}
 		return false;
 	}
+	
+	// Find the last digit needed to make the number 0-9 pandigital and concat
+		// it in front.
+		// Will return the original number if more than one digits are needed.
+		// Example:
+		// 987643210 = 5987643210
+		public static long makePandigital(long n) {
+			boolean[] digits = new boolean[10];
+			long origN = n;
+
+			while (n > 0) {
+				digits[(int) (n % 10)] = true;
+				n /= 10;
+			}
+
+			long newN = 0;
+
+			for (long i = 0; i < 10; i++) {
+				if (!digits[(int) i]) {
+					if (newN != 0)
+						return origN;
+					newN = (long) concat(i, origN);
+				}
+			}
+
+			return newN == 0 ? origN : newN;
+		}
+
+		public static long concat(long a, long b) {
+			long c = b;
+			while (c > 0) {
+				a *= 10;
+				c /= 10;
+			}
+
+			return (long) a + b;
+		}
+
+		// Determine whether the number has distinct digits.
+		// Example:
+		// 123 = true
+		// 102 = true
+		// 101 = false
+		public static boolean areDistinctDigits(long n) {
+			boolean[] digits = new boolean[10];
+
+			while (n > 0) {
+				int rem = (int) (n % 10);
+				if (digits[rem])
+					return false;
+				digits[rem] = true;
+				n /= 10;
+			}
+
+			return true;
+		}
 }
