@@ -1,5 +1,6 @@
 package project.euler.util;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,6 +45,12 @@ public class Learning {
 		if (number < 0) {
 			number = -number;
 		}
+		
+		if(number==1)
+		{
+			return false;
+		}
+		
 		long condition = number / 2 + 1;
 		for (int n = 2; n < condition; n++) {
 
@@ -129,48 +136,68 @@ public class Learning {
 
 		return false;
 	}
-	
+
 	public static int countdivisor(long trianglenumber) {
 
-        int count = 0;
-        long boundry = trianglenumber;
-        for(int i=1;i<boundry;i++)
-        {
-            if(trianglenumber%i==0)
-            {
-                boundry = trianglenumber/i;
-                count++;
-            }
-        }
-        return count;
+		int count = 0;
+		long boundry = trianglenumber;
+		for (int i = 1; i < boundry; i++) {
+			if (trianglenumber % i == 0) {
+				boundry = trianglenumber / i;
+				count++;
+			}
+		}
+		return count;
 
+	}
 
-    }
+	public static boolean isPalindrome(int number) {
+		String characters = new Integer(number).toString();
+		String firstbit = null;
+		String secondbit = null;
+		int length = characters.length();
+		if (length % 2 == 0) {
+			firstbit = characters.substring(0, (length / 2));
+			secondbit = characters.substring(length / 2);
+		} else {
+			firstbit = characters.substring(0, (length / 2));
+			secondbit = characters.substring((length / 2) + 1);
+		}
+
+		secondbit = reverse(secondbit);
+		if (firstbit.equals(secondbit)) {
+			return true;
+
+		}
+		return false;
+	}
+
+	public static int factorial(int n) {
+		int result = 1;
+		for (int i = 1; i <= n; i++) {
+			result *= i;
+		}
+		return result;
+	}
+
+	public static boolean isPandigital(String s) {
+
+		if (s.length() != 9)
+			return false;
+		char[] temp = s.toCharArray();
+		Arrays.sort(temp);
+		return new String(temp).equals("123456789");
+	}
 	
-	 public static boolean isPalindrome(int number)
-	    {
-	        String characters = new Integer(number).toString();
-	        String firstbit = null;
-	        String secondbit = null;
-	        int length = characters.length();
-	        if(length%2==0)
-	        {
-	            firstbit = characters.substring(0,(length/2) );
-	            secondbit = characters.substring(length/2);
-	        }
-	        else
-	        {
-	            firstbit = characters.substring(0,(length/2) );
-	            secondbit = characters.substring((length/2)+1);
-	        }
-
-
-	        secondbit = reverse(secondbit);
-	        if(firstbit.equals(secondbit))
-	        {
-	            return true;
-
-	        }
-	        return false;
-	    }
+public static boolean isNumberStartNEndWith37(String string) {
+		
+		//String 
+		String l = string.substring(0,1);
+		String r = string.substring(string.length()-1);
+		if((l.equals("3") || l.equals("7"))&& (r.equals("3") || r.equals("7")) )
+		{
+			return true;
+		}
+		return false;
+	}
 }

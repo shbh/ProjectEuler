@@ -1,5 +1,6 @@
 package project.euler.net;
 
+import static project.euler.util.Learning.solution;
 import project.euler.AmicableNumbers;
 import project.euler.ChampernowneConstant;
 import project.euler.CircularPrimes;
@@ -18,13 +19,37 @@ import project.euler.FactorialDigitSum;
 import project.euler.GoldbachsOtherConjecture;
 import project.euler.HighlyDivisibleTriangularNumber;
 import project.euler.IntegerRightTriangles;
+import project.euler.LargeSum;
 import project.euler.LargestPalindromeProduct;
+import project.euler.LargestPrimeFactor;
+import project.euler.LargestProductInAGrid;
+import project.euler.LargestProductInASeries;
+import project.euler.LatticePaths;
+import project.euler.LexicographicPermutations;
+import project.euler.LongestCollatzSequence;
+import project.euler.MaximumPathSumI;
+import project.euler.MultiplesOf3And5;
+import project.euler.NamesScores;
+import project.euler.NonAbundantSums;
+import project.euler.NumberLetterCounts;
+import project.euler.NumberSpiralDiagonals;
+import project.euler.PandigitalMultiples;
+import project.euler.PandigitalProducts;
+import project.euler.PowerDigitSum;
+import project.euler.QuadraticPrimes;
+import project.euler.ReciprocalCycles;
+import project.euler.SmallestMultiple;
+import project.euler.SpecialPythagoreanTriplet;
+import project.euler.SumSquareDifference;
+import project.euler.SummationOfPrimes;
+import project.euler.TenThousandFirstPrime;
+import project.euler.ThousandDigitFibonacciNumber;
+import project.euler.TruncatablePrimes;
 import project.euler.base.IProblem;
-import static project.euler.util.Learning.*;
 
 public class GreatEuler {
 	public GreatEuler problem001() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new MultiplesOf3And5().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
@@ -36,7 +61,7 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem003() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new LargestPrimeFactor().inputnumber(600851475143l);
 		solution(problem.solve());
 		return this;
 	}
@@ -49,43 +74,43 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem005() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new SmallestMultiple().divisor(20);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem006() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new SumSquareDifference().limit(100);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem007() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new TenThousandFirstPrime().number(10001);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem008() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new LargestProductInASeries().factor(5);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem009() {
-		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
+		IProblem problem = new SpecialPythagoreanTriplet().marker(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem010() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new SummationOfPrimes().limit(2000000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem011() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new LargestProductInAGrid();
 		solution(problem.solve());
 		return this;
 	}
@@ -97,37 +122,37 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem013() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new LargeSum();
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem014() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new LongestCollatzSequence().limit(1000000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem015() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new LatticePaths().limit(20);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem016() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new PowerDigitSum().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem017() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new NumberLetterCounts();
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem018() {
-		IProblem problem = new CountingSundays().before(2001);
+		IProblem problem = new MaximumPathSumI();
 		solution(problem.solve());
 		return this;
 	}
@@ -151,43 +176,43 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem022() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new NamesScores().path("C:\\names.txt");
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem023() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new NonAbundantSums();
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem024() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new LexicographicPermutations().position(1000000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem025() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new ThousandDigitFibonacciNumber().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem026() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new ReciprocalCycles().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem027() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new QuadraticPrimes().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem028() {
-		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
+		IProblem problem = new NumberSpiralDiagonals().limit(1001);
 		solution(problem.solve());
 		return this;
 	}
@@ -211,7 +236,7 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem032() {
-		IProblem problem = new CoinSums().target(200);
+		IProblem problem = new PandigitalProducts();
 		solution(problem.solve());
 		return this;
 	}
@@ -242,13 +267,13 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem037() {
-		IProblem problem = new DoubleBasePalindromes().limit(1000000);
+		IProblem problem = new TruncatablePrimes().limit(11);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem038() {
-		IProblem problem = new DoubleBasePalindromes().limit(1000000);
+		IProblem problem = new PandigitalMultiples();
 		solution(problem.solve());
 		return this;
 	}

@@ -1,12 +1,14 @@
 package project.euler;
 import java.math.BigInteger;
 
+import project.euler.base.IProblem;
+
 /**
  * Created by shashi on 1/29/14.
  */
-public class LargeSum {
+public class LargeSum implements IProblem{
 
-   public Integer solve()
+   public BigInteger solve()
     {
         String text="37107287533902102798797998220837590246510135740250\n" +
                 "46376937677490009712648124896970078050417018260538\n" +
@@ -116,6 +118,6 @@ public class LargeSum {
             largesum = largesum.add(new BigInteger(lines[i]));
         }
 
-        System.out.println(largesum.divide(BigInteger.TEN.pow(largesum.toString().length()-10)));
+        return largesum.divide(BigInteger.TEN.pow(largesum.toString().length()-10));
     }
 }

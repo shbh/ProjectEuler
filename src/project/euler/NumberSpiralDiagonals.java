@@ -1,19 +1,23 @@
 package project.euler;
 
-public class NumberSpiralDiagonals {
+import project.euler.base.IProblem;
 
-	public Integer solve() {
+public class NumberSpiralDiagonals implements IProblem {
+	
+	private int limit = 1001;
+
+	public Long solve() {
 		int x = 1;
 		int y = 1;
 		int v = 1;
 		int w = 1;
 		int newX = 0, newY = 0, newV = 0, newW = 0;
 		int increment = 8;
-		int limit  = 1001;
-		int n = limit/2 +1;
+
+		int n = limit / 2 + 1;
 		// int to
 		long totalA = 1, totalB = 0;
-		for (int i = 1; i <n ; i++) {
+		for (int i = 1; i < n; i++) {
 			if (i == 1) {
 
 				newV = v + 8;
@@ -39,6 +43,12 @@ public class NumberSpiralDiagonals {
 			totalB += newW + newV;
 
 		}
-		System.out.println(totalA + totalB);
+		return totalA + totalB;
+	}
+	
+	public NumberSpiralDiagonals limit(int limit)
+	{
+		this.limit = limit;
+		return this;
 	}
 }

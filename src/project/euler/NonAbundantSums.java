@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/30/14.
  */
-public class NonAbundantSums {
+public class NonAbundantSums implements IProblem{
 
    public Integer solve()
     {
@@ -16,7 +19,7 @@ public class NonAbundantSums {
         
         for(int i =1; i < limit;i++)
         {
-            if(i<finddivisor(i))
+            if(i<Learning.sumofdivisor(i))
             {
                 list.add(i);
             }
@@ -43,35 +46,14 @@ public class NonAbundantSums {
             }
         }
         int total = 0;
-        for (int i=1; i<=28123; i++) {
+        for (int i=1; i<=limit; i++) {
             if (!map.containsKey(i)) {
                 total += i;
             }
         }
-        System.out.println(total);
+       return total;
     }
 
-    private static int finddivisor(int number) {
-
-        int sum =0;
-        int boundry = number;
-        for(int i=1;i<boundry;i++)
-        {
-            if(number%i==0)
-            {
-                int divisor = number/i;
-                boundry = number/i;
-                sum+=i;
-                if(divisor!=number && i!=divisor)
-                {
-                    sum+=divisor;
-                }
-
-            }
-        }
-        return sum;
-
-
-    }
+    
 
 }

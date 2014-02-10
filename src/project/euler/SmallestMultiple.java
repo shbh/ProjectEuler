@@ -1,14 +1,19 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class SmallestMultiple {
+public class SmallestMultiple implements IProblem{
 
-    public Integer solve()
+	
+	int divisor=20;
+    public Long solve()
     {
 
         long number=1;
-        int divisor=20;
+       
         while(true)
         {
             int temp =0;
@@ -32,6 +37,12 @@ public class SmallestMultiple {
                 break;
             }
         }
-        System.out.println(number);
+        return number;
+    }
+    
+    public SmallestMultiple divisor(int divisor)
+    {
+    	this.divisor=divisor;
+    	return this;
     }
 }

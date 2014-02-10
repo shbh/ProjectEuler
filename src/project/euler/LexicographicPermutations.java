@@ -1,55 +1,55 @@
 package project.euler;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class LexicographicPermutations {
+public class LexicographicPermutations implements IProblem {
 
-   public Integer solve()
-    {
+	
+	private int position = 1000000;
+	public Long solve() {
 
-        int digit = 10;
-        int[] number = new int[digit];
-        List<Integer>  list = new ArrayList<>();
+		int digit = 10;
+		int[] number = new int[digit];
+		List<Integer> list = new ArrayList<>();
 
-        for(int i = 0; i<digit;i++)
-        {
-            list.add(i);
-        }
-        int position = 1000000;
+		for (int i = 0; i < digit; i++) {
+			list.add(i);
+		}
+		int pos = position;
 
-        for(int i=9;i>=0;i--)
-        {
-            int  fact = factorial(i);
-            int result = position/fact;
-            if(position%fact==0)
-                result= result-1;
-            position = position - fact*result;
+		for (int i = 9; i >= 0; i--) {
+			int fact = Learning.factorial(i);
+			int result = pos / fact;
+			if (pos % fact == 0)
+				result = result - 1;
+			pos = pos - fact * result;
 
-            result = list.get(result);
+			result = list.get(result);
 
-            list.remove(new Integer(result));
-            number[digit-(i+1)]=result;
-            System.out.println(position);
-        }
+			list.remove(new Integer(result));
+			number[digit - (i + 1)] = result;
+		}
 
-        StringBuilder sb = new StringBuilder(number.length);
-        for (int i : number) {
-            sb.append(i);
-        }
+		StringBuilder sb = new StringBuilder(number.length);
+		for (int i : number) {
+			sb.append(i);
+		}
 
-        System.out.println(sb.toString());
-    }
+		return Long.valueOf(sb.toString());
+	}
+	
+	public LexicographicPermutations position(int position)
+	{
+		this.position = position;
+		return this;
+	}
 
-    public static int factorial(int n)
-    {
-        int result = 1;
-        for(int i =1;i<=n;i++)
-        {
-            result*=i;
-        }
-        return result;
-    }
+	
 }

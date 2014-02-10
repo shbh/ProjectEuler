@@ -1,34 +1,32 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class SummationOfPrimes {
+public class SummationOfPrimes implements IProblem{
 
-    public Integer solve()
+	private int limit = 2000000;
+    public Long solve()
     {
-        long sum = 0;
-        for(long l =2;l<2000000;l++)
+        long sum = 2;//adding first prime number 2
+        for(long l =3;l<limit;l=l+2)
         {
-            if(isPrime(l))
+            if(Learning.isPrime(l))
             {
                 System.out.println(l);
                 sum+=l;
             }
         }
-        System.out.println(sum);
+        return sum;
     }
-    public static boolean isPrime(long number)
+    
+    public SummationOfPrimes limit(int limit)
     {
-        long condition = number/2+1;
-        for(int n=2; n<condition;n++)
-        {
-
-            if(number%n==0)
-            {
-                return false;
-            }
-            condition=number/n+1;
-        }
-        return true;
+    	this.limit = limit;
+    	return this;
     }
+  
 }

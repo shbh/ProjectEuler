@@ -1,35 +1,43 @@
 package project.euler;
+
 import java.math.BigInteger;
+
+import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/29/14.
  */
-public class PowerDigitSum {
+public class PowerDigitSum implements IProblem {
+	int limit = 1000;
 
-   public Integer solve()
-    {
-        int n =2;
-        int limit = 1000;
+	public Integer solve() {
+		int n = 2;
 
-        BigInteger hugesum = BigInteger.valueOf(n).pow(limit);
+		BigInteger hugesum = BigInteger.valueOf(n).pow(limit);
 
-        int length = hugesum.toString().length();
-        int sum = 0;
-        System.out.println(hugesum);
-        while(hugesum.compareTo(new BigInteger("0"))!=0)
-        {
+		int length = hugesum.toString().length();
+		int sum = 0;
+		
+		while (hugesum.compareTo(new BigInteger("0")) != 0) {
 
-            BigInteger remainder = hugesum.divide(BigInteger.TEN.pow(length-1));
+			BigInteger remainder = hugesum.divide(BigInteger.TEN
+					.pow(length - 1));
 
-            hugesum=hugesum.subtract(BigInteger.TEN.pow(length-1).multiply(remainder));
+			hugesum = hugesum.subtract(BigInteger.TEN.pow(length - 1).multiply(
+					remainder));
 
-            length = hugesum.toString().length();
+			length = hugesum.toString().length();
 
-            sum +=remainder.intValue();
+			sum += remainder.intValue();
 
-        }
-        System.out.println(sum);
+		}
+		return sum;
 
-
-    }
+	}
+	
+	public PowerDigitSum limit(int limit)
+	{
+		this.limit = limit;
+		return this;
+	}
 }

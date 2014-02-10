@@ -1,42 +1,37 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class TenThousandFirstPrime {
+public class TenThousandFirstPrime implements IProblem {
 
+	private long number = 0;
 
-   public Integer solve()
-    {
-        int boundry = 0;
-        long number = 1;
-        while(true)
-        {
-            number = number + 1;
-            if(isPrime(number))
-            {
-                boundry=boundry+1;
-            }
+	public Long solve() {
+		long no = 1;
+		int boundry = 1;// including 2 as condition is starting with 3
 
-            if(boundry==10001)
-            {
-                break;
-            }
+		while (true) {
+			no = no + 2;
+			if (Learning.isPrime(no)) {
+				boundry = boundry + 1;
+			}
 
-        }
-        System.out.println(number);
+			if (boundry == number) {
+				break;
+			}
 
-    }
+		}
+		return no;
 
-    public static boolean isPrime(long number)
-    {
+	}
 
-        for(int n=2; n<number/2+1;n++)
-        {
-            if(number%n==0)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
+	public TenThousandFirstPrime number(long number) {
+		this.number = number;
+
+		return this;
+	}
 }

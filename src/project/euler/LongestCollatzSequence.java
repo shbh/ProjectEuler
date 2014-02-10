@@ -1,71 +1,75 @@
 package project.euler;
+
 import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
+import project.euler.base.IProblem;
+
 /**
  * Created by shashi on 1/29/14.
  */
-public class LongestCollatzSequence {
+public class LongestCollatzSequence implements IProblem {
 
-   public Integer solve()
-    {
-        int limit = 1000000;
-        Set<Integer> ignorednumbers = new HashSet<Integer>();
+	private int limit = 1000000;
 
-        int result=0;
-        int number=0;
-        for(int i =limit-1; i > 0; i--)
-        {
+	public Integer solve() {
 
-            int count=1;
-            if(ignorednumbers.contains(i))
-            {
-                continue;
-            }
+		Set<Integer> ignorednumbers = new HashSet<Integer>();
 
-            //System.out.println(i);
-            count = doCollatz(new BigInteger(new Integer(i).toString()),ignorednumbers, count);
-            if(count>result)
-            {
-                number = i;
-                result = count;
-            }
+		int result = 0;
+		int number = 0;
+		for (int i = limit - 1; i > 0; i--) {
 
+			int count = 1;
+			if (ignorednumbers.contains(i)) {
+				continue;
+			}
 
-        }
-        System.out.println(number+" :: "+ result);
-    }
+			// System.out.println(i);
+			count = doCollatz(new BigInteger(new Integer(i).toString()),
+					ignorednumbers, count);
+			if (count > result) {
+				number = i;
+				result = count;
+			}
 
-    private static int doCollatz(BigInteger i, Set<Integer> ignorednumbers, int count) {
-        if(i.remainder(new BigInteger("2")).compareTo(new BigInteger("0"))==0 && i.compareTo(new BigInteger("1"))!=0)
-        {
-            BigInteger result = even(i);
-            ignorednumbers.add(result.intValue());
-            count++;
+		}
+		return number;
+	}
 
-            return doCollatz(result,ignorednumbers,count);
+	private static int doCollatz(BigInteger i, Set<Integer> ignorednumbers,
+			int count) {
+		if (i.remainder(new BigInteger("2")).compareTo(new BigInteger("0")) == 0
+				&& i.compareTo(new BigInteger("1")) != 0) {
+			BigInteger result = even(i);
+			ignorednumbers.add(result.intValue());
+			count++;
 
-        }
-        else if(i.compareTo(new BigInteger("1"))!=0)
-        {
+			return doCollatz(result, ignorednumbers, count);
 
-            BigInteger result = odd(i);
-            ignorednumbers.add(result.intValue());
-            count++;
+		} else if (i.compareTo(new BigInteger("1")) != 0) {
 
-            return doCollatz(result,ignorednumbers,count);
-        }
-        return count;
-    }
+			BigInteger result = odd(i);
+			ignorednumbers.add(result.intValue());
+			count++;
 
-    public static BigInteger even(BigInteger number)
-    {
-        return number.divide(new BigInteger("2"));
-    }
+			return doCollatz(result, ignorednumbers, count);
+		}
+		return count;
+	}
 
-    public static BigInteger odd(BigInteger number)
-    {
-        return number.multiply(new BigInteger("3")).add(new BigInteger("1"));
-    }
+	public static BigInteger even(BigInteger number) {
+		return number.divide(new BigInteger("2"));
+	}
+
+	public static BigInteger odd(BigInteger number) {
+		return number.multiply(new BigInteger("3")).add(new BigInteger("1"));
+	}
+	
+	public LongestCollatzSequence limit(int limit)
+	{
+		this.limit = limit;
+		return this;
+	}
 }

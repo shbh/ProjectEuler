@@ -5,19 +5,24 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/31/14.
  */
-public class QuadraticPrimes {
+public class QuadraticPrimes implements IProblem{
 
+	private Integer limit = 1000;
+	
 	public Integer solve() {
-		int limit = 1000;
+		
 		List<Integer> bs = new ArrayList<>();
 		int max = 0;
 		int maxm = 0;
 
 		for (int i = 1; i < limit; i++) {
-			if (isPrime(i)) {
+			if (Learning.isPrime(i)) {
 				bs.add(i);
 				bs.add(-i);
 			}
@@ -53,10 +58,10 @@ public class QuadraticPrimes {
 
 		}
 
-		System.out.println(maxm);
+		return maxm;
 	}
 
-	private static int validateQuadric(int a, int b) {
+	private int validateQuadric(int a, int b) {
 
 		// formula n2+an+b
 		int count = 0;
@@ -65,7 +70,7 @@ public class QuadraticPrimes {
 		while (!noprime) {
 			int value = (int) Math.pow(n, 2) + a * n + b;
 			
-			if (isPrime(value)) {
+			if (Learning.isPrime(value)) {
 				count++;
 				n++;
 			} else {
@@ -77,19 +82,10 @@ public class QuadraticPrimes {
 		return count;
 	}
 
-	public static boolean isPrime(long number) {
-		if(number < 0)
-		{
-			number = -number;
-		}
-		long condition = number / 2 + 1;
-		for (int n = 2; n < condition; n++) {
-
-			if (number % n == 0) {
-				return false;
-			}
-			condition = number / n + 1;
-		}
-		return true;
+	public QuadraticPrimes limit(Integer limit)
+	{
+		this.limit = limit;
+		return this;
 	}
+	
 }

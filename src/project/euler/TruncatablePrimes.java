@@ -6,20 +6,25 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class TruncatablePrimes {
+import project.euler.base.IProblem;
+import project.euler.base.Key;
+import project.euler.util.Learning;
 
+public class TruncatablePrimes implements IProblem {
+
+	private int limit = 11;
 	public Integer solve() {
 
 		int count = 0;
 		List<String> list = new ArrayList<>();
-		
-		Integer sum = 0;
 
-		for (int i = 13; count <11; ) {
-				System.out.println(i);
-			if ( isPrime(i)) {
+		Integer sum = 0;
+		// 3 and 7 are prime.. Starting with 13 	
+		for (int i = 13; count < limit;) {
+
+			if (Learning.isPrime(i)) {
 				// System.out.println(i);
-				Set<String> combinations = generate("" + i);
+				Set<String> combinations = generate(Key.BLANK + i);
 
 				boolean isPrimeCombination = false;
 
@@ -27,7 +32,7 @@ public class TruncatablePrimes {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
-					if (isPrime(Integer.valueOf(string))) {
+					if (Learning.isPrime(Integer.valueOf(string))) {
 						isPrimeCombination = true;
 						continue;
 					} else {
@@ -37,45 +42,28 @@ public class TruncatablePrimes {
 				}
 				if (isPrimeCombination) {
 					list.add(Integer.toString(i));
-						
-						count = count+1;
-						System.out.println(count + "::"+i);
-						sum = sum + i;
-					
+
+					count = count + 1;
+
+					sum = sum + i;
 
 				}
 
 			}
-			
-			if(i%10==7)
-			{
-				i=i+6;
-			}
-			else if(i%10==3)
-			{
-				i=i+4;
+
+			if (i % 10 == 7) {
+				i = i + 6;
+			} else if (i % 10 == 3) {
+				i = i + 4;
 			}
 
 		}
-		System.out.println(count + " " + sum);
+		return sum;
 
 	}
 
-	@SuppressWarnings("unused")
-	private static boolean isNumberStartNEndWith37(String string) {
-		
-		//String 
-		String l = string.substring(0,1);
-		String r = string.substring(string.length()-1);
-		if((l.equals("3") || l.equals("7"))&& (r.equals("3") || r.equals("7")) )
-		{
-			return true;
-		}
-		return false;
-	}
+	private  Set<String> generate(String string) {
 
-	private static Set<String> generate(String string) {
-		
 		Set<String> sets = new HashSet<>();
 		sets.add(string);
 		String ltemp = string;
@@ -90,27 +78,11 @@ public class TruncatablePrimes {
 
 		return sets;
 	}
-
 	
-
-	public static boolean isPrime(long number) {
-		if (number < 0) {
-			number = -number;
-		}
-		
-		if(number==1)
-		{
-			return false;
-		}
-		long condition = number / 2 + 1;
-		for (int n = 2; n < condition; n++) {
-
-			if (number % n == 0) {
-				return false;
-			}
-			condition = number / n + 1;
-		}
-		return true;
+	public TruncatablePrimes limit(int limit)
+	{
+		this.limit = limit;
+		return this;
 	}
 
 }

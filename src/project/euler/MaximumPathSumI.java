@@ -1,8 +1,11 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+
 /**
  * Created by shashi on 1/30/14.
  */
-public class MaximumPathSumI {
+public class MaximumPathSumI implements IProblem {
 
    public Integer solve()
     {
@@ -46,17 +49,7 @@ public class MaximumPathSumI {
             }
         }
 
-      /*  int[][] yy = new int[4][4];
-
-        for(int u=0;u<yy.length;u++)
-        {
-            for(int v=0;v<yy.length;v++)
-            {
-                System.out.print("["+u+"][" +v+"]"+ "\t");
-            }
-            System.out.println();
-        }
-        */
+     
 
         for(int j=y-2;j>=0;j--)
         {
@@ -68,7 +61,7 @@ public class MaximumPathSumI {
 
             }
         }
-        System.out.println(chunks[0][0]);
+        return chunks[0][0];
 
 
     }

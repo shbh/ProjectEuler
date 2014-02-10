@@ -1,68 +1,57 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class LargestPrimeFactor {
+public class LargestPrimeFactor implements IProblem {
 
-   public Integer solve()
-    {
-        long largenumber = 600851475143l;
-        //long largenumber = 100;
-        long number = 2;
+	private long inputnumber = 600851475143l;
 
-        long largeprimefactor = divideNumber(largenumber, number,0);
-        System.out.print(largeprimefactor);
+	public Long solve() {
+		long largenumber = inputnumber;
 
-    }
+		return divideNumber(largenumber, 2, 0);
 
-    public static long divideNumber(long largenumber, long number, long largeprimefactor)
-    {
-        boolean isfactored = true;
+	}
 
-        while(true)
-        {
+	private long divideNumber(long largenumber, long number,
+			long largeprimefactor) {
 
-            if(largenumber%number!=0)
-            {
+		boolean isfactored = true;
 
-                isfactored=false;
-                number++;
-                if(largenumber<=number)
-                {
-                    largeprimefactor = largenumber;
-                    return largeprimefactor;
-                }
-            }
-            else
-            {
+		while (true) {
 
-                isfactored=true;
-                break;
-            }
-        }
+			if (largenumber % number != 0) {
 
-        if(isfactored)
-        {
-            largenumber = largenumber/number;
-            largeprimefactor = (number>largeprimefactor&& isPrime(number))?number:largeprimefactor;
-            return divideNumber(largenumber, 2, largeprimefactor);
-        }
-        else
-        {
-            return largeprimefactor;
-        }
-    }
+				isfactored = false;
+				number++;
+				if (largenumber <= number) {
+					largeprimefactor = largenumber;
+					return largeprimefactor;
+				}
+			} else {
 
-    public static boolean isPrime(long number)
-    {
+				isfactored = true;
+				break;
+			}
+		}
 
-        for(int n=2; n<number/2+1;n++)
-        {
-            if(number%n==0)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
+		if (isfactored) {
+			largenumber = largenumber / number;
+			largeprimefactor = (number > largeprimefactor && Learning
+					.isPrime(number)) ? number : largeprimefactor;
+			return divideNumber(largenumber, 2, largeprimefactor);
+		} else {
+			return largeprimefactor;
+		}
+	}
+
+	public LargestPrimeFactor inputnumber(long inputnumber)
+	{
+		this.inputnumber = inputnumber;
+		return this;
+	}
 }
