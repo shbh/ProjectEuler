@@ -5,9 +5,10 @@ import project.euler.util.Learning;
 
 public class DigitCancelingFractions implements IProblem{
 
-	private int denominator;
-	private int numerator;
+	private int denominator=0;
+	private int numerator=0;
 
+	
 	public Integer solve() {
 
 
@@ -29,8 +30,9 @@ public class DigitCancelingFractions implements IProblem{
 						if (h * d == n * i) {
 							int gcd = Learning.greatestCommonFactor(n, d);
 							
-							num =den * (d/gcd);
+							den =den * (d/gcd);
 							num= num*( n/gcd);
+							
 						}
 					}
 				}

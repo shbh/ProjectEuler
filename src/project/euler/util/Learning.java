@@ -2,6 +2,7 @@ package project.euler.util;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Learning {
@@ -255,4 +256,22 @@ public class Learning {
 
 			return true;
 		}
+		
+		public static boolean isPentagonal(long number) {
+			double penTest = (Math.sqrt(1 + 24 * number) + 1.0) / 6.0;
+			return penTest == ((int) penTest);
+		}
+		
+		public static String join(List<?> list, String delim) {
+			int len = list.size();
+			if (len == 0)
+				return "";
+			StringBuilder sb = new StringBuilder(list.get(0).toString());
+			for (int i = 1; i < len; i++) {
+				sb.append(delim);
+				sb.append(list.get(i).toString());
+			}
+			return sb.toString();
+		}
+
 }

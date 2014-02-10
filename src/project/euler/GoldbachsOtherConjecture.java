@@ -5,6 +5,8 @@ import project.euler.util.Learning;
 
 public class GoldbachsOtherConjecture implements IProblem {
 
+	
+
 	public Long solve() {
 		int[] prime = new int[1000];
 		long[] sqrt = new long[100];
@@ -20,10 +22,14 @@ public class GoldbachsOtherConjecture implements IProblem {
 		long i = 7;
 		while (true) {
 			i = i + 2;
-			if (Learning.isComposite(i) && isConjecture(i, sqrt, prime)) {
-				return i;
+			if (Learning.isComposite(i)) {
+
+				if (isConjecture(i, sqrt, prime)) {
+					return i;
+				}
 
 			} else {
+
 				prime[index++] = (int) i;
 			}
 		}

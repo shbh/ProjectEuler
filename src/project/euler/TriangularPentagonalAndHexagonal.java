@@ -1,8 +1,11 @@
 package project.euler;
 
-public class TriangularPentagonalAndHexagonal {
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
-	public Integer solve() {
+public class TriangularPentagonalAndHexagonal implements IProblem {
+
+	public Long solve() {
 
 		int i = 143;
 		long result =0;
@@ -10,15 +13,12 @@ public class TriangularPentagonalAndHexagonal {
 		{
 			i++;
 			result = i * (2 * i - 1);
-			if (isPentagonal(result)) {
+			if (Learning.isPentagonal(result)) {
 		        break;
 		    }
 		}
-		System.out.println(result);
+		return result;
 	}
 
-	private static boolean isPentagonal(long number) {
-		double penTest = (Math.sqrt(1 + 24 * number) + 1.0) / 6.0;
-		return penTest == ((int) penTest);
-	}
+	
 }

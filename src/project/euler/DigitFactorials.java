@@ -18,7 +18,7 @@ public class DigitFactorials implements IProblem{
 		for(int i=2;i<digits.length;i++)
 		{
 			fact[i]=i*fact[i-1];
-			System.out.println(i + "::"+fact[i]);
+			
 		}
 		//9!*7=2540160
 		for(int i =3;i<2540160;i++)

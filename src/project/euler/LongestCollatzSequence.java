@@ -1,9 +1,5 @@
 package project.euler;
 
-import java.math.BigInteger;
-import java.util.HashSet;
-import java.util.Set;
-
 import project.euler.base.IProblem;
 
 /**
@@ -15,57 +11,41 @@ public class LongestCollatzSequence implements IProblem {
 
 	public Integer solve() {
 
-		Set<Integer> ignorednumbers = new HashSet<Integer>();
-
-		int result = 0;
-		int number = 0;
-		for (int i = limit - 1; i > 0; i--) {
-
-			int count = 1;
-			if (ignorednumbers.contains(i)) {
-				continue;
-			}
-
-			// System.out.println(i);
-			count = doCollatz(new BigInteger(new Integer(i).toString()),
-					ignorednumbers, count);
-			if (count > result) {
-				number = i;
-				result = count;
-			}
-
+		
+		int sequenceLength = 0;
+		int startingNumber = 0;
+		long sequence;
+		 
+		int[] cache = new int[limit + 1];
+		//Initialise cache
+		for (int i = 0; i < cache.length; i++) {
+		    cache[i] = -1;
 		}
-		return number;
-	}
-
-	private static int doCollatz(BigInteger i, Set<Integer> ignorednumbers,
-			int count) {
-		if (i.remainder(new BigInteger("2")).compareTo(new BigInteger("0")) == 0
-				&& i.compareTo(new BigInteger("1")) != 0) {
-			BigInteger result = even(i);
-			ignorednumbers.add(result.intValue());
-			count++;
-
-			return doCollatz(result, ignorednumbers, count);
-
-		} else if (i.compareTo(new BigInteger("1")) != 0) {
-
-			BigInteger result = odd(i);
-			ignorednumbers.add(result.intValue());
-			count++;
-
-			return doCollatz(result, ignorednumbers, count);
+		cache[1] = 1;
+		 
+		for (int i = 2; i <= limit; i++) {
+		    sequence = i;
+		    int k = 0;
+		    while (sequence != 1 && sequence >= i) {
+		        k++;
+		        if ((sequence % 2) == 0) {
+		            sequence = sequence / 2;
+		        } else {
+		            sequence = sequence * 3 + 1;
+		        }
+		    }
+		    //Store result in cache
+		    cache[i] = k + cache[(int) sequence];
+		 
+		    //Check if sequence is the best solution
+		    if (cache[i] > sequenceLength) {
+		        sequenceLength = cache[i];
+		        startingNumber = i;
+		    }
 		}
-		return count;
+		return startingNumber;
 	}
 
-	public static BigInteger even(BigInteger number) {
-		return number.divide(new BigInteger("2"));
-	}
-
-	public static BigInteger odd(BigInteger number) {
-		return number.multiply(new BigInteger("3")).add(new BigInteger("1"));
-	}
 	
 	public LongestCollatzSequence limit(int limit)
 	{

@@ -36,9 +36,12 @@ import project.euler.NumberSpiralDiagonals;
 import project.euler.PandigitalMultiples;
 import project.euler.PandigitalPrime;
 import project.euler.PandigitalProducts;
+import project.euler.PentagonNumbers;
 import project.euler.PowerDigitSum;
+import project.euler.PrimePermutations;
 import project.euler.QuadraticPrimes;
 import project.euler.ReciprocalCycles;
+import project.euler.SelfPowers;
 import project.euler.SmallestMultiple;
 import project.euler.SpecialPythagoreanTriplet;
 import project.euler.SubStringDivisibility;
@@ -46,6 +49,7 @@ import project.euler.SumSquareDifference;
 import project.euler.SummationOfPrimes;
 import project.euler.TenThousandFirstPrime;
 import project.euler.ThousandDigitFibonacciNumber;
+import project.euler.TriangularPentagonalAndHexagonal;
 import project.euler.TruncatablePrimes;
 import project.euler.base.IProblem;
 
@@ -311,13 +315,13 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem044() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new PentagonNumbers();
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem045() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new TriangularPentagonalAndHexagonal();
 		solution(problem.solve());
 		return this;
 	}
@@ -335,13 +339,13 @@ public class GreatEuler {
 	}
 
 	public GreatEuler problem048() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new SelfPowers().limit(1000);
 		solution(problem.solve());
 		return this;
 	}
 
 	public GreatEuler problem049() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new PrimePermutations();
 		solution(problem.solve());
 		return this;
 	}
@@ -350,5 +354,9 @@ public class GreatEuler {
 		IProblem problem = new ConsecutivePrimeSum().limit(1000000);
 		solution(problem.solve());
 		return this;
+	}
+	
+	public static void main(String[] args) {
+		
 	}
 }

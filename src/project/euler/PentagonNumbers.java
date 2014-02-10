@@ -1,58 +1,34 @@
 package project.euler;
 
-import java.util.ArrayList;
-import java.util.List;
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
-public class PentagonNumbers {
 
-	static int k = 0;
-	static int j = 0;
-	static List<Integer> numbers = new ArrayList<>();
+public class PentagonNumbers implements IProblem {
+
 
 	public Integer solve() {
 
-		
-		
-		generate();
-		while(k==0)
-		{
-			if(!checkPentagonalNumber())
-			{
-				
-				System.out.println(numbers.size());
-			}
-		}
-		
-		System.out.println(k-j);
+		int result = 0;
+		boolean notFound = true;
+		int i = 1;
 
-	}
+		while (notFound) {
+			i++;
+			int n = i * (3 * i - 1) / 2;
 
-	public static int getPentagonalNumber(int n) {
-		return (n * ((3 * n) - 1)) / 2;
-	}
-
-	public static void generate() {
-		int x = 1;
-		for (int i = x; i <2500; i++) {
-			numbers.add(getPentagonalNumber(i));
-		}
-	}
-
-	public static boolean checkPentagonalNumber()
-	{
-		for(int i = 1;i<numbers.size();i++)
-		{
-			for(int l = 1;l<numbers.size();l++)
-			{
-				int f = numbers.get(i);
-				int g = numbers.get(l);
-				if(numbers.contains(f-g) && numbers.contains(f+g))
-				{
-					k=f;j=g;
-					return true;
+			for (int j = i - 1; j > 0; j--) {
+				int m = j * (3 * j - 1) / 2;
+				if (Learning.isPentagonal(n - m) && Learning.isPentagonal(n + m)) {
+					result = n - m;
+					notFound = false;
+					break;
 				}
 			}
 		}
-		return false;
+		return result;
+
 	}
+
+	
 }

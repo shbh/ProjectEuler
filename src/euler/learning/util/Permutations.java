@@ -47,7 +47,7 @@ public class Permutations {
 
 	private static void perm2(char[] a, int n) {
 		if (n == 1) {
-			System.out.println(a);
+			
 			return;
 		}
 		for (int i = 0; i < n; i++) {
