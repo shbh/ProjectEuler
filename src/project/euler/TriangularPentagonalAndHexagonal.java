@@ -2,7 +2,7 @@ package project.euler;
 
 public class TriangularPentagonalAndHexagonal {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 
 		int i = 143;
 		long result =0;

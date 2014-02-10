@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class NonAbundantSums {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int limit = 28123;
         List<Integer> list = new ArrayList<>();

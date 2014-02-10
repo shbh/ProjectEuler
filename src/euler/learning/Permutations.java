@@ -106,7 +106,7 @@ public class Permutations {
 		// perm2(elements);
 	}
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		// 1193, 3779, 11939, 19937, 193939, 199933
 		for (Iterator<String> iterator = generate("199933").iterator(); iterator
 				.hasNext();) {

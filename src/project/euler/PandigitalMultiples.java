@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class PandigitalMultiples {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		System.out.println(getValue());
 		
 	}

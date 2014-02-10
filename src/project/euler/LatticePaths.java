@@ -4,7 +4,7 @@ package project.euler;
  */
 public class LatticePaths {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int limit = 20;
         int node = limit+1;

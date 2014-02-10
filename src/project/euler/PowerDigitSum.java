@@ -6,7 +6,7 @@ import java.math.BigInteger;
  */
 public class PowerDigitSum {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int n =2;
         int limit = 1000;

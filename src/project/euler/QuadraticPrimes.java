@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class QuadraticPrimes {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		int limit = 1000;
 		List<Integer> bs = new ArrayList<>();
 		int max = 0;

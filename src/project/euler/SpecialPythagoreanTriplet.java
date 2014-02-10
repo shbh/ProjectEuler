@@ -3,7 +3,7 @@ package project.euler;
  * Created by shashi on 1/28/14.
  */
 public class SpecialPythagoreanTriplet {
-    public static void main(String[] args)
+   public Integer solve()
     {
 
         int marker = 1000;

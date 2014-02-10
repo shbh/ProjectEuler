@@ -6,37 +6,41 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import project.euler.base.IProblem;
+import project.euler.base.Key;
+
 /**
  * Created by shashi on 1/30/14.
  */
-public class CodedTriangleNumbers {
+public class CodedTriangleNumbers  implements IProblem{
 
 	static List<Integer> triangleNumber = new ArrayList<>();
 	static int max = 0;
-    public static void main(String[] args)
+	private String path;
+    public Integer solve()
     {
     	
     	int n = 1;
     	int count = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\words.txt")))
+        try (BufferedReader br = new BufferedReader(new FileReader(path)))
         {
 
             String sCurrentLine=br.readLine();
             
-            String[] names = sCurrentLine.split(",");
+            String[] names = sCurrentLine.split(Key.COMMA);
             Arrays.sort(names);
             for(int i=0;i<names.length;i++)
             {
 
                 int sum =0;
-                char[] charcters = names[i].replace("\"", "").toCharArray();
+                char[] charcters = names[i].replace(Key.FORWARD_SLASH, Key.BLANK).toCharArray();
                 for(int c=0;c<charcters.length;c++)
                 {
                 	sum+=charcters[c]-64;
                 	if(sum>max)
                 	{
                 		n = generateNext(n, sum);
-                		System.out.println(n + "::"+triangleNumber.size()+"::"+sum);
+                		
                 	}
                 	
                 	
@@ -48,13 +52,14 @@ public class CodedTriangleNumbers {
 
 
             }
-            System.out.println(count);
+            return count;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return 0;
     }
     
-    public static int generateNext(int n, int limit)
+    private int generateNext(int n, int limit)
     {
     	//tn = ½n(n+1)
     	int sum = n*(n+1)/2;
@@ -67,4 +72,10 @@ public class CodedTriangleNumbers {
     	return n;
     	
     }
+
+	public CodedTriangleNumbers path(String path) {
+		
+		this.path = path;
+		return this;
+	}
 }

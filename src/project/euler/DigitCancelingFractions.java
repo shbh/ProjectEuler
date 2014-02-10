@@ -1,16 +1,22 @@
 package project.euler;
 
-public class DigitCancelingFractions {
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class DigitCancelingFractions implements IProblem{
+
+	private int denominator;
+	private int numerator;
+
+	public Integer solve() {
+
 
 		int n = 10;
 		int d = 10;
-		int numerator= 1;
-		int denominator = 1;
-		for (n = 10; n < 100; n++) {
-			for (d = 10; d < 100; d++) {
+		int num= 1;
+		int den = 1;
+		for (n = 10; n < numerator; n++) {
+			for (d = 10; d < denominator; d++) {
 				if (n >= d) {
 					continue;
 				} else {
@@ -21,24 +27,28 @@ public class DigitCancelingFractions {
 
 					if (f == g) {
 						if (h * d == n * i) {
-							int gcd = greatestCommonFactor(n, d);
+							int gcd = Learning.greatestCommonFactor(n, d);
 							
-							denominator =denominator  * (d/gcd);
-							numerator = numerator *( n/gcd);
+							num =den * (d/gcd);
+							num= num*( n/gcd);
 						}
 					}
 				}
 			}
 		}
-		System.out.println(denominator/greatestCommonFactor(numerator, denominator));
+		return den/Learning.greatestCommonFactor(num, den);
+	}
+
+	public DigitCancelingFractions numerator(int numerator) {
+		this.numerator= numerator;
+		return this;
+	}
+
+	public DigitCancelingFractions denominator(int denominator) {
+		this.denominator=denominator;
+		return this;
 	}
 	
-	public static int greatestCommonFactor(int num, int den)
-	{
-	    if(den == 0){
-	        return num;
-	    }
-	    return greatestCommonFactor(den, num % den);
-	}
+	
 
 }

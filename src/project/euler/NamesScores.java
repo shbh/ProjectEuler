@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class NamesScores {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
 
         try (BufferedReader br = new BufferedReader(new FileReader("C:\\names.txt")))

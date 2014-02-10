@@ -1,29 +1,37 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class EvenFibonacciNumbers {
+public class EvenFibonacciNumbers implements IProblem{
 
-    public static void main(String[] args)
-    {
-        int firstnumber = 1;
-        int secondnumber = 2;
-        int limit = 4000000;
-        int nextnumber=0;
-        int sum = secondnumber;
-        while(nextnumber<limit)
-        {
+	private int limit = 0;
 
-            nextnumber=firstnumber + secondnumber;
-            firstnumber = secondnumber;
-            secondnumber = nextnumber;
+	public Integer solve() {
+		int firstnumber = 1;
+		int secondnumber = 2;
 
-            if(nextnumber%2==0)
-            {
-                sum+=nextnumber;
-            }
-        }
+		int nextnumber = 0;
+		int sum = secondnumber;
+		while (nextnumber < limit) {
 
-        System.out.print(sum);
-    }
+			nextnumber = firstnumber + secondnumber;
+			firstnumber = secondnumber;
+			secondnumber = nextnumber;
+
+			if (nextnumber % 2 == 0) {
+				sum += nextnumber;
+			}
+		}
+
+		return sum;
+	}
+
+	public EvenFibonacciNumbers limit(int limit)
+	{
+		this.limit = limit;
+		return this;
+	}
 }

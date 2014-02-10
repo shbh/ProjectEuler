@@ -6,16 +6,21 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class CircularPrimes {
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
-	public static void main(String[] args) {
+public class CircularPrimes implements IProblem{
+
+	private int limit;
+
+	public Integer solve() {
 
 		int count = 1;
 		List<String> list = new ArrayList<>();
 		Set<String> unique = new HashSet<>();
 		
 		
-		for (int i = 1; i < 1000000; i = i + 2) {
+		for (int i = 1; i < limit; i = i + 2) {
 			if (i == 1)
 				continue;
 			
@@ -24,9 +29,9 @@ public class CircularPrimes {
 				continue;
 			}
 
-			if (isPrime(i) && !isNumberContainEven("" + i)) {
+			if (Learning.isPrime(i) && !Learning.isNumberContainEven("" + i)) {
 				// System.out.println(i);
-				Set<String> combinations = generate("" + i);
+				Set<String> combinations = Learning.generateCircular("" + i);
 
 				boolean isPrimeCombination = false;
 
@@ -34,7 +39,7 @@ public class CircularPrimes {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
-					if (isPrime(Integer.valueOf(string))) {
+					if (Learning.isPrime(Integer.valueOf(string))) {
 						isPrimeCombination = true;
 						continue;
 					} else {
@@ -52,56 +57,16 @@ public class CircularPrimes {
 			}
 
 		}
-		System.out.println(count);
+		return count;
 
 	}
 
-	private static Set<String> generate(String string) {
-		// TODO Auto-generated method stub
-		Set<String> sets = new HashSet<>();
-		sets.add(string);
-		String temp = string;
-		for (int i = 0; i < string.length(); i++) {
-			temp = temp.charAt(temp.length() - 1) + temp;
-			//System.out.print(temp+",");
-			temp = temp.substring(0, temp.length() - 1);
-			
-			if (sets.contains(temp)) {
-				break;
-			}
-			else
-			{
-				sets.add(temp);
-			}
-		}
+	public CircularPrimes limit(int limit) {
 		
-		return sets;
+		this.limit= limit;
+		return this;
 	}
 
-	public static boolean isNumberContainEven(String s) {
-		for (int i = 0; i < s.length(); i++) {
-			int number = Integer.valueOf(s.charAt(i));
-			if ((number & 1) == 0) {
-				return true;
-			}
-		}
-		return false;
-
-	}
-
-	public static boolean isPrime(long number) {
-		if (number < 0) {
-			number = -number;
-		}
-		long condition = number / 2 + 1;
-		for (int n = 2; n < condition; n++) {
-
-			if (number % n == 0) {
-				return false;
-			}
-			condition = number / n + 1;
-		}
-		return true;
-	}
+	
 
 }

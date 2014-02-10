@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class LexicographicPermutations {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
 
         int digit = 10;

@@ -13,7 +13,7 @@ import java.util.Map;
 
 public final class ReciprocalCycles {
 
-    public static void main(String[] args) {
+   public Integer solve() {
         System.out.println(new ReciprocalCycles().run());
     }
 

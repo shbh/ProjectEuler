@@ -4,7 +4,7 @@ package project.euler;
  */
 public class SmallestMultiple {
 
-    public static void main(String [] args)
+    public Integer solve()
     {
 
         long number=1;

@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class TruncatablePrimes {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 
 		int count = 0;
 		List<String> list = new ArrayList<>();
@@ -63,7 +63,7 @@ public class TruncatablePrimes {
 
 	@SuppressWarnings("unused")
 	private static boolean isNumberStartNEndWith37(String string) {
-		// TODO Auto-generated method stub
+		
 		//String 
 		String l = string.substring(0,1);
 		String r = string.substring(string.length()-1);
@@ -75,7 +75,7 @@ public class TruncatablePrimes {
 	}
 
 	private static Set<String> generate(String string) {
-		// TODO Auto-generated method stub
+		
 		Set<String> sets = new HashSet<>();
 		sets.add(string);
 		String ltemp = string;

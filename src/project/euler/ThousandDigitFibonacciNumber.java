@@ -5,7 +5,7 @@ import java.math.BigInteger;
  * Created by shashi on 1/31/14.
  */
 public class ThousandDigitFibonacciNumber {
-    public static void main(String[] args)
+   public Integer solve()
     {
         BigInteger start = BigInteger.ONE;
         BigInteger next = BigInteger.ONE;

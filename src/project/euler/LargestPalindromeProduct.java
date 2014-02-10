@@ -1,65 +1,41 @@
 package project.euler;
+
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
+
 /**
  * Created by shashi on 1/28/14.
  */
-public class LargestPalindromeProduct {
+public class LargestPalindromeProduct implements IProblem {
 
-    public static void main(String[] args)
-    {
+	private int upper=0;
+	private int lower=0;
 
-        int largestpalindromeproduct=0;
-        for(int n = 999;n>99;n--)
-        {
-            for(int m = 999;m>99;m--)
-            {
-                int product = n*m;
-                if(product>largestpalindromeproduct && isPalindrome(product))
-                {
-                    largestpalindromeproduct=product;
-                }
-            }
-        }
-        System.out.print(largestpalindromeproduct);
-    }
-
-    public static boolean isPalindrome(int number)
-    {
-        String characters = new Integer(number).toString();
-        String firstbit = null;
-        String secondbit = null;
-        int length = characters.length();
-        if(length%2==0)
-        {
-            firstbit = characters.substring(0,(length/2) );
-            secondbit = characters.substring(length/2);
-        }
-        else
-        {
-            firstbit = characters.substring(0,(length/2) );
-            secondbit = characters.substring((length/2)+1);
-        }
-
-
-        secondbit = reverse(secondbit);
-        if(firstbit.equals(secondbit))
-        {
-            return true;
-
-        }
-        return false;
-    }
-
-    public static String reverse(String characters)
-    {
-        char[] oldString = characters.toCharArray();
-        char[] newString = new char[oldString.length];
-
-        int newindex=0;
-        for(int n=oldString.length-1; n>=0;n--)
-        {
-            newString[newindex]=oldString[n];
-            newindex++;
-        }
-        return new String(newString);
-    }
+	public Integer solve() {
+		upper = upper - 1;
+		lower = lower - 1;
+		int largestpalindromeproduct = 0;
+		for (int n = upper; n > lower; n--) {
+			for (int m = upper; m > lower; m--) {
+				int product = n * m;
+				if (product > largestpalindromeproduct
+						&& Learning.isPalindrome(product)) {
+					largestpalindromeproduct = product;
+				}
+			}
+		}
+		return largestpalindromeproduct;
+	}
+	
+	public LargestPalindromeProduct upper(int upper)
+	{
+		this.upper = upper;
+		return this;
+	}
+	
+	public LargestPalindromeProduct lower(int lower)
+	{
+		this.lower= lower;
+		return this;
+	}
 }

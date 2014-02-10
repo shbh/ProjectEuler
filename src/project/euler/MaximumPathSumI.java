@@ -4,7 +4,7 @@ package project.euler;
  */
 public class MaximumPathSumI {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         String text="75\n" +
                 "95 64\n" +

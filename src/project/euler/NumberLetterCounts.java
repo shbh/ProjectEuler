@@ -35,7 +35,7 @@ public class NumberLetterCounts {
 
 
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int length=0;
         for (int i =1;i<=1000;i++)

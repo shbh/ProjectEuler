@@ -1,30 +1,42 @@
 package project.euler;
 
-public class DigitFifthPowers {
+import project.euler.base.IProblem;
 
-	public static void main(String[] args) {
+
+public class DigitFifthPowers implements IProblem {
+
+	private int digit = 5;
+	
+	public  Integer solve() {
 		
 		int result = 0;
-		 
-		for (int i = 2; i < 355000; i++) {
-		    int sumOfPowers = 0;
+		// Retrieve Upper Bound.. X*9^Digit
+		int limit = (digit+1)*(int)Math.pow(9, digit);
+		
+		
+		for (int i = 2; i < limit; i++) {
+			
+		    int sum = 0;
+		    
 		    int number = i;
+		    
 		    while (number > 0) {
-		        int d = number % 10;
-		        number /= 10;
+		        int remainder = number % 10;
+		        number = number/10;
 		 
-		        int temp = d;
-		        for(int j = 1; j < 5; j++){
-		            temp *= d;
-		        }
-		        sumOfPowers += temp;
+		        sum += (int)Math.pow(remainder,digit);
 		    }
 		 
-		    if (sumOfPowers == i) {
+		    if (sum == i) {
 		        result += i;
 		    }
 		}
-		System.out.println(result);		
+		return result;		
+	}
+
+	public DigitFifthPowers digit(int digit) {
+		this.digit = digit;
+		return this;
 	}
 	
 }

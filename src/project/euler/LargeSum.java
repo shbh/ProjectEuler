@@ -6,7 +6,7 @@ import java.math.BigInteger;
  */
 public class LargeSum {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         String text="37107287533902102798797998220837590246510135740250\n" +
                 "46376937677490009712648124896970078050417018260538\n" +

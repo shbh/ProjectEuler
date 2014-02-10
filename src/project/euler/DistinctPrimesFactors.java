@@ -4,60 +4,55 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-public class DistinctPrimesFactors {
+import project.euler.base.IProblem;
+import project.euler.util.Learning;
 
-	
+public class DistinctPrimesFactors implements IProblem {
 
-	public static void main(String[] args) {
+	private int count = 4;
 
-		int count = 4;
+	public Integer solve() {
+
 		Stack<Integer> stack = new Stack<>();
 		int firstnumber = 2;
 		int number = firstnumber;
-		
+
 		while (true) {
 			number++;
 
-			if (containPrimeFactor(number)==count) {
+			if (containPrimeFactor(number) == count) {
 				stack.add(number);
 			} else {
 				stack.removeAllElements();
-				firstnumber = number+1;
+				firstnumber = number + 1;
 			}
 
-			if (stack.size() == count ) {
+			if (stack.size() == count) {
 
 				break;
 			}
-			
 
 		}
-		System.out.println(firstnumber);
+		return firstnumber;
 	}
 
 	private static int containPrimeFactor(int number) {
-		// TODO Auto-generated method stub
-		int x =number;
+
 		Set<Integer> divisor = new HashSet<>();
-		while(true)
-		{
-			int factor = smallestFactor(number);
+		while (true) {
+			int factor = Learning.smallestFactor(number);
 			divisor.add(factor);
-			number = number/factor;
-			if(number==1)
+			number = number / factor;
+			if (number == 1)
 				break;
 		}
-		System.out.println(x + "::"+divisor.size());
-		
+
 		return divisor.size();
 	}
-	
-	public static int smallestFactor(int C) {
 
-        for (int i = 2; i*i<= C; i++) {   
-            if (C % i == 0) return i;
-        }
-        return C;
-    }
+	public DistinctPrimesFactors count(int count) {
+		this.count = count;
+		return this;
+	}
 
 }

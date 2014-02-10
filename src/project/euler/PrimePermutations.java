@@ -14,7 +14,7 @@ public class PrimePermutations {
 
 	static List<Integer> primes = new ArrayList<>();
 
-	public static void main(String[] args) {
+	public Integer solve() {
 
 		
 		for (int i = 1000; i < 10000; i++) {

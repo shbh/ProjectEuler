@@ -4,7 +4,7 @@ package project.euler;
  */
 public class LargestPrimeFactor {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         long largenumber = 600851475143l;
         //long largenumber = 100;

@@ -2,7 +2,7 @@ package project.euler;
 
 public class SubStringDivisibility {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		SuprDewd();
 	}
 

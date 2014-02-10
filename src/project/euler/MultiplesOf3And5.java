@@ -4,7 +4,7 @@ package project.euler;
  */
 public class MultiplesOf3And5 {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int limit = 1000;
         int sum = 0;

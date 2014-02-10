@@ -8,7 +8,7 @@ import java.util.Set;
  */
 public class LongestCollatzSequence {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int limit = 1000000;
         Set<Integer> ignorednumbers = new HashSet<Integer>();

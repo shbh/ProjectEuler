@@ -2,7 +2,7 @@ package project.euler;
 
 public class NumberSpiralDiagonals {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		int x = 1;
 		int y = 1;
 		int v = 1;

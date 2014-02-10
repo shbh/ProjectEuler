@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class SelfPowers {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		
 		
 		BigInteger number = BigInteger.ZERO;

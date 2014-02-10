@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class Truncate {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		generate(Integer.toString(379));
 		cut1(Integer.toString(379));
 		System.out.println(isNumberEndWith37("373"));
@@ -18,13 +18,13 @@ public class Truncate {
 	}
 
 	private static void cut1(String string) {
-		// TODO Auto-generated method stub
+		
 		System.out.println(string.substring(0,1));
 		System.out.println(string.substring(string.length()-1));
 	}
 	
 	private static boolean isNumberEndWith37(String string) {
-		// TODO Auto-generated method stub
+		
 		//String 
 		String l = string.substring(0,1);
 		String r = string.substring(string.length()-1);
@@ -36,7 +36,7 @@ public class Truncate {
 	}
 
 	private static Set<String> generate(String string) {
-		// TODO Auto-generated method stub
+		
 		Set<String> sets = new HashSet<>();
 		sets.add(string);
 		String ltemp = string;

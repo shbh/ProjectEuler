@@ -4,7 +4,7 @@ package project.euler;
  */
 public class SummationOfPrimes {
 
-    public static void main (String[] args)
+    public Integer solve()
     {
         long sum = 0;
         for(long l =2;l<2000000;l++)

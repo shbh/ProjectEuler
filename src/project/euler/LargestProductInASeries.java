@@ -6,7 +6,7 @@ import java.math.BigInteger;
  */
 public class LargestProductInASeries {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
 
 

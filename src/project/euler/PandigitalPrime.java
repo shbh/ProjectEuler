@@ -8,7 +8,7 @@ import euler.learning.Permutations;
 public class PandigitalPrime {
 
 	
-	public static void main(String[] args) {
+	public Integer solve() {
 		int n = 123456789;
 		
 		int m = n;

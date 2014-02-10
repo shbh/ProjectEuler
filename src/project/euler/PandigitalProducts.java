@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public final class PandigitalProducts  {
 
-	public static void main(String[] args) {
+	public Integer solve() {
 		
 		// A candidate product has at most 4 digits. This is because if it has 5
 		// digits,

@@ -1,12 +1,14 @@
 package project.euler;
 
+import project.euler.base.IProblem;
 
-public class DigitFactorials {
+
+public class DigitFactorials implements IProblem{
 
 	
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public Integer solve() {
+		
 		int[] digits = {0,1,2,3,4,5,6,7,8,9};
 		int fact[] = new int[digits.length];
 		int totalSum=0;	
@@ -34,7 +36,7 @@ public class DigitFactorials {
 			}
 			
 		}
-		System.out.println(totalSum);
+		return totalSum;
 		
 	}
 

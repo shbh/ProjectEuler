@@ -4,7 +4,7 @@ package project.euler;
  */
 public class SumSquareDifference {
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         long Sum =0;
         long Square = 0;

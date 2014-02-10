@@ -1,28 +1,35 @@
 package project.euler;
+
 import java.math.BigInteger;
+
+import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class FactorialDigitSum {
+public class FactorialDigitSum implements IProblem {
 
-    public static void main(String[] args)
-    {
-        BigInteger sum = BigInteger.ZERO;
-        BigInteger integer = BigInteger.ONE;
+	private int limit = 0;
 
-        for (int i =1;i<=100;i++)
-        {
-            integer = integer.multiply(BigInteger.valueOf(i));
-        }
-        System.out.println(integer);
-        while(integer.compareTo(BigInteger.ZERO)!=0)
-        {
-            BigInteger fact = integer.mod(BigInteger.TEN);
-            integer = integer.divide(BigInteger.TEN);
-            sum = sum.add(fact );
+	public BigInteger solve() {
+		BigInteger sum = BigInteger.ZERO;
+		BigInteger integer = BigInteger.ONE;
 
-        }
-        System.out.println(sum);
-    }
+		for (int i = 1; i <= limit; i++) {
+			integer = integer.multiply(BigInteger.valueOf(i));
+		}
+
+		while (integer.compareTo(BigInteger.ZERO) != 0) {
+			BigInteger fact = integer.mod(BigInteger.TEN);
+			integer = integer.divide(BigInteger.TEN);
+			sum = sum.add(fact);
+
+		}
+		return sum;
+	}
+
+	public FactorialDigitSum limit(int limit) {
+		this.limit = limit;
+		return this;
+	}
 }

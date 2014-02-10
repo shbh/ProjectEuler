@@ -5,7 +5,7 @@ package project.euler;
 public class TenThousandFirstPrime {
 
 
-    public static void main(String[] args)
+   public Integer solve()
     {
         int boundry = 0;
         long number = 1;
