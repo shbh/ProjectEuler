@@ -1,4 +1,4 @@
-package euler.learning.util;
+package project.euler.util;
 
 import java.util.Comparator;
 import java.util.Set;

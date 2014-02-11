@@ -5,7 +5,7 @@ import java.util.Set;
 
 import project.euler.base.IProblem;
 import project.euler.util.Learning;
-import euler.learning.util.Permutations;
+import project.euler.util.Permutations;
 
 public class PandigitalPrime implements IProblem {
 

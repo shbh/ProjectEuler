@@ -1,6 +1,5 @@
 package project.euler.net;
 
-import static project.euler.util.Learning.solution;
 import project.euler.AmicableNumbers;
 import project.euler.ChampernowneConstant;
 import project.euler.CircularPrimes;
@@ -52,311 +51,279 @@ import project.euler.ThousandDigitFibonacciNumber;
 import project.euler.TriangularPentagonalAndHexagonal;
 import project.euler.TruncatablePrimes;
 import project.euler.base.IProblem;
+import project.euler.base.Key;
+import project.euler.base.Problem;
 
 public class GreatEuler {
-	public GreatEuler problem001() {
+
+	private Problem execute(IProblem problem) {
+
+		Problem p = new Problem();
+		try {
+			long startTime = System.currentTimeMillis();
+			Object result = problem.solve();
+			long stopTime = System.currentTimeMillis();
+			p.setResult(result);
+			p.setTime(stopTime - startTime);
+			p.setState(Key.ThreeState.PASS);
+		} catch (Exception ex) {
+			p.setException(ex);
+			p.setState(Key.ThreeState.FAIL);
+		}
+
+		return p;
+	}
+
+	public Object problem001() {
 		IProblem problem = new MultiplesOf3And5().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem002() {
+	public Object problem002() {
 		IProblem problem = new EvenFibonacciNumbers().limit(4000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem003() {
+	public Object problem003() {
 		IProblem problem = new LargestPrimeFactor().inputnumber(600851475143l);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem004() {
+	public Object problem004() {
 		IProblem problem = new LargestPalindromeProduct().upper(1000)
 				.lower(100);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem005() {
+	public Object problem005() {
 		IProblem problem = new SmallestMultiple().divisor(20);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem006() {
+	public Object problem006() {
 		IProblem problem = new SumSquareDifference().limit(100);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem007() {
+	public Object problem007() {
 		IProblem problem = new TenThousandFirstPrime().number(10001);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem008() {
+	public Object problem008() {
 		IProblem problem = new LargestProductInASeries().factor(5);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem009() {
+	public Object problem009() {
 		IProblem problem = new SpecialPythagoreanTriplet().marker(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem010() {
+	public Object problem010() {
 		IProblem problem = new SummationOfPrimes().limit(2000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem011() {
+	public Object problem011() {
 		IProblem problem = new LargestProductInAGrid();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem012() {
+	public Object problem012() {
 		IProblem problem = new HighlyDivisibleTriangularNumber().total(500);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem013() {
+	public Object problem013() {
 		IProblem problem = new LargeSum();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem014() {
+	public Object problem014() {
 		IProblem problem = new LongestCollatzSequence().limit(1000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem015() {
+	public Object problem015() {
 		IProblem problem = new LatticePaths().limit(20);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem016() {
+	public Object problem016() {
 		IProblem problem = new PowerDigitSum().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem017() {
+	public Object problem017() {
 		IProblem problem = new NumberLetterCounts();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem018() {
+	public Object problem018() {
 		IProblem problem = new MaximumPathSumI();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem019() {
+	public Object problem019() {
 		IProblem problem = new CountingSundays().before(2001);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem020() {
+	public Object problem020() {
 		IProblem problem = new FactorialDigitSum().limit(100);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem021() {
+	public Object problem021() {
 		IProblem problem = new AmicableNumbers().limit(10000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem022() {
+	public Object problem022() {
 		IProblem problem = new NamesScores().path("C:\\names.txt");
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem023() {
+	public Object problem023() {
 		IProblem problem = new NonAbundantSums();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem024() {
+	public Object problem024() {
 		IProblem problem = new LexicographicPermutations().position(1000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem025() {
+	public Object problem025() {
 		IProblem problem = new ThousandDigitFibonacciNumber().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem026() {
+	public Object problem026() {
 		IProblem problem = new ReciprocalCycles().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem027() {
+	public Object problem027() {
 		IProblem problem = new QuadraticPrimes().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem028() {
+	public Object problem028() {
 		IProblem problem = new NumberSpiralDiagonals().limit(1001);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem029() {
+	public Object problem029() {
 		IProblem problem = new DistinctPowers().a(2, 100).b(2, 100);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem030() {
+	public Object problem030() {
 		IProblem problem = new DigitFifthPowers().digit(5);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem031() {
+	public Object problem031() {
 		IProblem problem = new CoinSums().target(200);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem032() {
+	public Object problem032() {
 		IProblem problem = new PandigitalProducts();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem033() {
+	public Object problem033() {
 		IProblem problem = new DigitCancelingFractions().numerator(100)
 				.denominator(100);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem034() {
+	public Object problem034() {
 		IProblem problem = new DigitFactorials();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem035() {
+	public Object problem035() {
 		IProblem problem = new CircularPrimes().limit(1000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem036() {
+	public Object problem036() {
 		IProblem problem = new DoubleBasePalindromes().limit(1000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem037() {
+	public Object problem037() {
 		IProblem problem = new TruncatablePrimes().limit(11);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem038() {
+	public Object problem038() {
 		IProblem problem = new PandigitalMultiples();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem039() {
+	public Object problem039() {
 		IProblem problem = new IntegerRightTriangles().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem040() {
+	public Object problem040() {
 		IProblem problem = new ChampernowneConstant().limit(7);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem041() {
+	public Object problem041() {
 		IProblem problem = new PandigitalPrime();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem042() {
+	public Object problem042() {
 		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem043() {
+	public Object problem043() {
 		IProblem problem = new SubStringDivisibility();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem044() {
+	public Object problem044() {
 		IProblem problem = new PentagonNumbers();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem045() {
+	public Object problem045() {
 		IProblem problem = new TriangularPentagonalAndHexagonal();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem046() {
+	public Object problem046() {
 		IProblem problem = new GoldbachsOtherConjecture();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem047() {
+	public Object problem047() {
 		IProblem problem = new DistinctPrimesFactors().count(4);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem048() {
+	public Object problem048() {
 		IProblem problem = new SelfPowers().limit(1000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem049() {
+	public Object problem049() {
 		IProblem problem = new PrimePermutations();
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
 
-	public GreatEuler problem050() {
+	public Object problem050() {
 		IProblem problem = new ConsecutivePrimeSum().limit(1000000);
-		solution(problem.solve());
-		return this;
+		return execute(problem);
 	}
-	
-	public static void main(String[] args) {
-		
-	}
+
 }

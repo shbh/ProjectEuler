@@ -1,4 +1,4 @@
-package euler.learning;
+package project.euler.util;
 
 import java.util.Arrays;
 import java.util.HashSet;

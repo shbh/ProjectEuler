@@ -2,12 +2,13 @@ package project.euler.base;
 
 public class Key {
 
+	public static final int ALLOWEDTIME = 60000;
 	public static final String COMMA = ",";
 	public static final String FORWARD_SLASH = "\"";
 	public static final String BLANK = "";
 	public static final int[] coins = new int[] { 1, 2, 5, 10, 20, 50, 100, 200 };
-	public static final int[] noOfDaysInAMonthInYear = {31,28,31,30,31,30,31,31,30,31,30,31};
-	public static final int[] noOfDaysInAMonthInLeapYear = {31,29,31,30,31,30,31,31,30,31,30,31};
+	public static final int[] NO_OF_DAYS_IN_A_MONTH_FOR_A_NON_LEAP_YEAR = {31,28,31,30,31,30,31,31,30,31,30,31};
+	public static final int[] NO_OF_DAYS_IN_A_MONTH_FOR_A_LEAP_YEAR = {31,29,31,30,31,30,31,31,30,31,30,31};
 	
     public static final String SPACE =  " ";
     public static final String HYPHEN =  "-";
@@ -23,4 +24,12 @@ public class Key {
 
     }
     public static final String HYPHENSPACEREGEX= "[\\s\\-()]";
+	public static final String MULTISTAR = "--------------------------------------------------";
+	public static final String NEWLINE = "\n";
+	
+	public enum ThreeState {
+	    PASS,
+	    FAIL,
+	    TIME_EXCEEDED
+	};
 }

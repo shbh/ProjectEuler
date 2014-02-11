@@ -1,14 +1,47 @@
 package project.euler.util;
 
+import static project.euler.base.Key.AND;
+import static project.euler.base.Key.HYPHEN;
+import static project.euler.base.Key.SPACE;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import project.euler.base.Key.NUMBER;
+import project.euler.base.Problem;
+
 public class Learning {
 
-	public static void solution(Object output) {
-		System.out.println(output);
+	public static void solution(Problem problem) {
+
+		switch (problem.getState()) {
+
+		case PASS:
+			write("Problem No :" + problem.getNumber() + ", Time Taken :"
+					+ problem.getTime() + ", Result :" + problem.getResult());
+			break;
+		case FAIL:
+			error("Problem No :" + problem.getNumber());
+			break;
+		case TIME_EXCEEDED:
+			error("Problem No :" + problem.getNumber() + ", Time Taken :"
+					+ problem.getTime() + ", Result :" + problem.getResult());
+			break;
+		default:
+			break;
+		}
+		
+
+	}
+
+	public static void write(String text) {
+		System.out.println(text);
+	}
+
+	public static void error(String text) {
+		System.err.println(text);
 	}
 
 	public static Set<String> generateCircular(String string) {
@@ -200,78 +233,138 @@ public class Learning {
 		}
 		return false;
 	}
-	
+
 	// Find the last digit needed to make the number 0-9 pandigital and concat
-		// it in front.
-		// Will return the original number if more than one digits are needed.
-		// Example:
-		// 987643210 = 5987643210
-		public static long makePandigital(long n) {
-			boolean[] digits = new boolean[10];
-			long origN = n;
+	// it in front.
+	// Will return the original number if more than one digits are needed.
+	// Example:
+	// 987643210 = 5987643210
+	public static long makePandigital(long n) {
+		boolean[] digits = new boolean[10];
+		long origN = n;
 
-			while (n > 0) {
-				digits[(int) (n % 10)] = true;
-				n /= 10;
-			}
-
-			long newN = 0;
-
-			for (long i = 0; i < 10; i++) {
-				if (!digits[(int) i]) {
-					if (newN != 0)
-						return origN;
-					newN = (long) concat(i, origN);
-				}
-			}
-
-			return newN == 0 ? origN : newN;
+		while (n > 0) {
+			digits[(int) (n % 10)] = true;
+			n /= 10;
 		}
 
-		public static long concat(long a, long b) {
-			long c = b;
-			while (c > 0) {
-				a *= 10;
-				c /= 10;
+		long newN = 0;
+
+		for (long i = 0; i < 10; i++) {
+			if (!digits[(int) i]) {
+				if (newN != 0)
+					return origN;
+				newN = (long) concat(i, origN);
+			}
+		}
+
+		return newN == 0 ? origN : newN;
+	}
+
+	public static long concat(long a, long b) {
+		long c = b;
+		while (c > 0) {
+			a *= 10;
+			c /= 10;
+		}
+
+		return (long) a + b;
+	}
+
+	// Determine whether the number has distinct digits.
+	// Example:
+	// 123 = true
+	// 102 = true
+	// 101 = false
+	public static boolean areDistinctDigits(long n) {
+		boolean[] digits = new boolean[10];
+
+		while (n > 0) {
+			int rem = (int) (n % 10);
+			if (digits[rem])
+				return false;
+			digits[rem] = true;
+			n /= 10;
+		}
+
+		return true;
+	}
+
+	public static boolean isPentagonal(long number) {
+		double penTest = (Math.sqrt(1 + 24 * number) + 1.0) / 6.0;
+		return penTest == ((int) penTest);
+	}
+
+	public static String join(List<?> list, String delim) {
+		int len = list.size();
+		if (len == 0)
+			return "";
+		StringBuilder sb = new StringBuilder(list.get(0).toString());
+		for (int i = 1; i < len; i++) {
+			sb.append(delim);
+			sb.append(list.get(i).toString());
+		}
+		return sb.toString();
+	}
+
+	public static String getNumberLetters(Integer number) {
+		StringBuffer text = new StringBuffer();
+		int remainder = number;
+		int quotient = number / 1000;
+
+		if (quotient > 0) {
+			text.append(numbertext(quotient)).append(SPACE)
+					.append(NUMBER.thousand).append(SPACE);
+			remainder = number % 1000;
+		}
+
+		quotient = remainder / 100;
+
+		if (quotient > 0) {
+			text.append(numbertext(quotient)).append(SPACE)
+					.append(NUMBER.hundred).append(SPACE);
+			remainder = number % 100;
+		}
+
+		quotient = remainder / 10;
+
+		if (quotient > 1) {
+			if (number > 100)
+				text.append(AND).append(SPACE);
+			text.append(numbertext(quotient * 10));
+
+			remainder = number % 10;
+		} else if (quotient == 1) {
+			if (number > 100)
+				text.append(AND).append(SPACE);
+			text.append(numbertext(remainder));
+			remainder = 0;
+		} else {
+			quotient = 0;
+		}
+
+		// quotient = i;
+		if (remainder > 0) {
+			if (quotient > 0) {
+				text.append(HYPHEN).append(numbertext(remainder));
+			} else {
+				if (number > 100)
+					text.append(AND).append(SPACE);
+				text.append(numbertext(remainder));
+			}
+		}
+		return text.toString();
+	}
+
+	public static String numbertext(int i) {
+		NUMBER[] number = NUMBER.values();
+		for (int j = 0; j < number.length; j++) {
+			if (number[j].getValue() == i) {
+				return number[j].toString();
 			}
 
-			return (long) a + b;
 		}
+		return NUMBER.thousand.toString();
 
-		// Determine whether the number has distinct digits.
-		// Example:
-		// 123 = true
-		// 102 = true
-		// 101 = false
-		public static boolean areDistinctDigits(long n) {
-			boolean[] digits = new boolean[10];
-
-			while (n > 0) {
-				int rem = (int) (n % 10);
-				if (digits[rem])
-					return false;
-				digits[rem] = true;
-				n /= 10;
-			}
-
-			return true;
-		}
-		
-		public static boolean isPentagonal(long number) {
-			double penTest = (Math.sqrt(1 + 24 * number) + 1.0) / 6.0;
-			return penTest == ((int) penTest);
-		}
-		
-		public static String join(List<?> list, String delim) {
-			int len = list.size();
-			if (len == 0)
-				return "";
-			StringBuilder sb = new StringBuilder(list.get(0).toString());
-			for (int i = 1; i < len; i++) {
-				sb.append(delim);
-				sb.append(list.get(i).toString());
-			}
-			return sb.toString();
-		}
-
+	}
 }

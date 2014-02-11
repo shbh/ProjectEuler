@@ -36,10 +36,10 @@ public class CountingSundays implements IProblem{
         
         for(int i = 1901; i<before;i++)
         {
-            int[] temp=Key.noOfDaysInAMonthInYear;
+            int[] temp=Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_NON_LEAP_YEAR;
             if(i%4==0 && i%400>0)
             {
-                temp =Key.noOfDaysInAMonthInLeapYear;
+                temp =Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_LEAP_YEAR;
             }
 
             for(int m=0;m<temp.length;m++)
