@@ -205,7 +205,10 @@ public class Learning {
 		return false;
 	}
 
-	public static int factorial(int n) {
+	public static long factorial(int n) {
+		
+		if(n==0)
+			return 1;
 		int result = 1;
 		for (int i = 1; i <= n; i++) {
 			result *= i;
@@ -220,6 +223,14 @@ public class Learning {
 		char[] temp = s.toCharArray();
 		Arrays.sort(temp);
 		return new String(temp).equals("123456789");
+	}
+
+	
+	public static boolean isPandigital(String s, String number) {
+
+		char[] temp = s.toCharArray();
+		Arrays.sort(temp);
+		return new String(temp).equals(number);
 	}
 
 	public static boolean isNumberStartNEndWith37(String string) {

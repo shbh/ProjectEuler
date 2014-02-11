@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import project.euler.base.Key;
 import project.euler.base.Problem;
+import project.euler.base.Key.ThreeState;
 import project.euler.util.Learning;
 
 public class EulerEngine {
@@ -14,7 +15,7 @@ public class EulerEngine {
 	public static void main(String[] args) {
 
 		EulerEngine e = new EulerEngine();
-		e.range(1,50);
+		e.range(53,53);
 	}
 
 	@SuppressWarnings("unused")
@@ -95,7 +96,7 @@ public class EulerEngine {
 			ex.printStackTrace();
 			Learning.error("**************");
 		}
-		return p;
+		return p!=null?p:new Problem(number,ThreeState.FAIL);
 	}
 
 	private void clazz() throws ClassNotFoundException, InstantiationException,

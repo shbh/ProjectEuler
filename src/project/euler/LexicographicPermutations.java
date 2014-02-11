@@ -12,40 +12,40 @@ import project.euler.util.Learning;
 public class LexicographicPermutations implements IProblem {
 
 	
-	private int position = 1000000;
+	private long position = 1000000;
 	public Long solve() {
 
 		int digit = 10;
-		int[] number = new int[digit];
-		List<Integer> list = new ArrayList<>();
+		long[] number = new long[digit];
+		List<Long> list = new ArrayList<>();
 
-		for (int i = 0; i < digit; i++) {
+		for (long i = 0; i < digit; i++) {
 			list.add(i);
 		}
-		int pos = position;
+		long pos = position;
 
 		for (int i = 9; i >= 0; i--) {
-			int fact = Learning.factorial(i);
-			int result = pos / fact;
+			long fact = Learning.factorial(i);
+			long result = pos / fact;
 			if (pos % fact == 0)
 				result = result - 1;
 			pos = pos - fact * result;
 
-			result = list.get(result);
+			result = list.get((int)result);
 
-			list.remove(new Integer(result));
+			list.remove(new Long(result));
 			number[digit - (i + 1)] = result;
 		}
 
 		StringBuilder sb = new StringBuilder(number.length);
-		for (int i : number) {
+		for (long i : number) {
 			sb.append(i);
 		}
 
 		return Long.valueOf(sb.toString());
 	}
 	
-	public LexicographicPermutations position(int position)
+	public LexicographicPermutations position(long position)
 	{
 		this.position = position;
 		return this;

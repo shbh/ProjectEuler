@@ -5,6 +5,7 @@ import project.euler.ChampernowneConstant;
 import project.euler.CircularPrimes;
 import project.euler.CodedTriangleNumbers;
 import project.euler.CoinSums;
+import project.euler.CombinatoricSelections;
 import project.euler.ConsecutivePrimeSum;
 import project.euler.CountingSundays;
 import project.euler.DigitCancelingFractions;
@@ -36,6 +37,7 @@ import project.euler.PandigitalMultiples;
 import project.euler.PandigitalPrime;
 import project.euler.PandigitalProducts;
 import project.euler.PentagonNumbers;
+import project.euler.PermutedMultiples;
 import project.euler.PowerDigitSum;
 import project.euler.PrimePermutations;
 import project.euler.QuadraticPrimes;
@@ -326,4 +328,14 @@ public class GreatEuler {
 		return execute(problem);
 	}
 
+	public Object problem052() {
+		IProblem problem = new PermutedMultiples();
+		return execute(problem);
+	}
+
+
+	public Object problem053() {
+		IProblem problem = new CombinatoricSelections();
+		return execute(problem);
+	}
 }

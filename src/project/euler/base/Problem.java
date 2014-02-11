@@ -1,5 +1,7 @@
 package project.euler.base;
 
+import project.euler.base.Key.ThreeState;
+
 public class Problem {
 
 	private long time;
@@ -10,6 +12,15 @@ public class Problem {
 	
 	
 	
+	public Problem() {
+		super();
+	}
+
+	public Problem(int number, ThreeState state) {
+		this.number = number;
+		this.state = state;
+	}
+
 	public Exception getException() {
 		return exception;
 	}
