@@ -15,7 +15,7 @@ public class EulerEngine {
 	public static void main(String[] args) {
 
 		EulerEngine e = new EulerEngine();
-		e.range(53,53);
+		e.range(22,22);
 	}
 
 	@SuppressWarnings("unused")

@@ -1,60 +1,60 @@
 package project.euler.net;
 
-import project.euler.AmicableNumbers;
-import project.euler.ChampernowneConstant;
-import project.euler.CircularPrimes;
-import project.euler.CodedTriangleNumbers;
-import project.euler.CoinSums;
-import project.euler.CombinatoricSelections;
-import project.euler.ConsecutivePrimeSum;
-import project.euler.CountingSundays;
-import project.euler.DigitCancelingFractions;
-import project.euler.DigitFactorials;
-import project.euler.DigitFifthPowers;
-import project.euler.DistinctPowers;
-import project.euler.DistinctPrimesFactors;
-import project.euler.DoubleBasePalindromes;
-import project.euler.EvenFibonacciNumbers;
-import project.euler.FactorialDigitSum;
-import project.euler.GoldbachsOtherConjecture;
-import project.euler.HighlyDivisibleTriangularNumber;
-import project.euler.IntegerRightTriangles;
-import project.euler.LargeSum;
-import project.euler.LargestPalindromeProduct;
-import project.euler.LargestPrimeFactor;
-import project.euler.LargestProductInAGrid;
-import project.euler.LargestProductInASeries;
-import project.euler.LatticePaths;
-import project.euler.LexicographicPermutations;
-import project.euler.LongestCollatzSequence;
-import project.euler.MaximumPathSumI;
-import project.euler.MultiplesOf3And5;
-import project.euler.NamesScores;
-import project.euler.NonAbundantSums;
-import project.euler.NumberLetterCounts;
-import project.euler.NumberSpiralDiagonals;
-import project.euler.PandigitalMultiples;
-import project.euler.PandigitalPrime;
-import project.euler.PandigitalProducts;
-import project.euler.PentagonNumbers;
-import project.euler.PermutedMultiples;
-import project.euler.PowerDigitSum;
-import project.euler.PrimePermutations;
-import project.euler.QuadraticPrimes;
-import project.euler.ReciprocalCycles;
-import project.euler.SelfPowers;
-import project.euler.SmallestMultiple;
-import project.euler.SpecialPythagoreanTriplet;
-import project.euler.SubStringDivisibility;
-import project.euler.SumSquareDifference;
-import project.euler.SummationOfPrimes;
-import project.euler.TenThousandFirstPrime;
-import project.euler.ThousandDigitFibonacciNumber;
-import project.euler.TriangularPentagonalAndHexagonal;
-import project.euler.TruncatablePrimes;
 import project.euler.base.IProblem;
 import project.euler.base.Key;
 import project.euler.base.Problem;
+import project.euler.problem.AmicableNumbers;
+import project.euler.problem.ChampernowneConstant;
+import project.euler.problem.CircularPrimes;
+import project.euler.problem.CodedTriangleNumbers;
+import project.euler.problem.CoinSums;
+import project.euler.problem.CombinatoricSelections;
+import project.euler.problem.ConsecutivePrimeSum;
+import project.euler.problem.CountingSundays;
+import project.euler.problem.DigitCancelingFractions;
+import project.euler.problem.DigitFactorials;
+import project.euler.problem.DigitFifthPowers;
+import project.euler.problem.DistinctPowers;
+import project.euler.problem.DistinctPrimesFactors;
+import project.euler.problem.DoubleBasePalindromes;
+import project.euler.problem.EvenFibonacciNumbers;
+import project.euler.problem.FactorialDigitSum;
+import project.euler.problem.GoldbachsOtherConjecture;
+import project.euler.problem.HighlyDivisibleTriangularNumber;
+import project.euler.problem.IntegerRightTriangles;
+import project.euler.problem.LargeSum;
+import project.euler.problem.LargestPalindromeProduct;
+import project.euler.problem.LargestPrimeFactor;
+import project.euler.problem.LargestProductInAGrid;
+import project.euler.problem.LargestProductInASeries;
+import project.euler.problem.LatticePaths;
+import project.euler.problem.LexicographicPermutations;
+import project.euler.problem.LongestCollatzSequence;
+import project.euler.problem.MaximumPathSumI;
+import project.euler.problem.MultiplesOf3And5;
+import project.euler.problem.NamesScores;
+import project.euler.problem.NonAbundantSums;
+import project.euler.problem.NumberLetterCounts;
+import project.euler.problem.NumberSpiralDiagonals;
+import project.euler.problem.PandigitalMultiples;
+import project.euler.problem.PandigitalPrime;
+import project.euler.problem.PandigitalProducts;
+import project.euler.problem.PentagonNumbers;
+import project.euler.problem.PermutedMultiples;
+import project.euler.problem.PowerDigitSum;
+import project.euler.problem.PrimePermutations;
+import project.euler.problem.QuadraticPrimes;
+import project.euler.problem.ReciprocalCycles;
+import project.euler.problem.SelfPowers;
+import project.euler.problem.SmallestMultiple;
+import project.euler.problem.SpecialPythagoreanTriplet;
+import project.euler.problem.SubStringDivisibility;
+import project.euler.problem.SumSquareDifference;
+import project.euler.problem.SummationOfPrimes;
+import project.euler.problem.TenThousandFirstPrime;
+import project.euler.problem.ThousandDigitFibonacciNumber;
+import project.euler.problem.TriangularPentagonalAndHexagonal;
+import project.euler.problem.TruncatablePrimes;
 
 public class GreatEuler {
 
@@ -183,7 +183,7 @@ public class GreatEuler {
 	}
 
 	public Object problem022() {
-		IProblem problem = new NamesScores().path("C:\\names.txt");
+		IProblem problem = new NamesScores();
 		return execute(problem);
 	}
 
@@ -284,7 +284,7 @@ public class GreatEuler {
 	}
 
 	public Object problem042() {
-		IProblem problem = new CodedTriangleNumbers().path("C:\\words.txt");
+		IProblem problem = new CodedTriangleNumbers();
 		return execute(problem);
 	}
 
