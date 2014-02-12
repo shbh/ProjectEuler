@@ -26,12 +26,29 @@ public class EulerEngine {
 	long stopTime = 0l;
 	int noofproblem = 0;
 
-	public static void main(String[] args) {
-
+	public static EulerEngine getInstance()
+	{
+		return new EulerEngine();
+	}
+	
+	public static void run(int number)
+	{
+		EulerEngine engine = EulerEngine.getInstance();
+		engine.solve(true, number);
+		engine.postProcess();
+	}
+	
+	public static void ring(int... number)
+	{
+		EulerEngine engine = EulerEngine.getInstance();
+		engine.solve(true, number);
+		engine.postProcess();
+	}
+	
+	public static void range(int startrange, int endrange)
+	{
 		EulerEngine engine = new EulerEngine();
-
-		engine.solve(15, 18);
-
+		engine.solve(startrange, endrange);
 		engine.postProcess();
 	}
 
@@ -42,13 +59,13 @@ public class EulerEngine {
 
 	}
 
-	public void solve(boolean isRange, int... numbers) {
+	private void solve(boolean isRange, int... numbers) {
 		for (int number : numbers) {
 			process(classes.get(number - 1));
 		}
 	}
 
-	public void solve(int startrange, int endrange) {
+	private void solve(int startrange, int endrange) {
 		List<Class<? extends IProblem>> rangeclasses = classes.subList(
 				startrange - 1, endrange);
 		for (Class<? extends IProblem> clazz : rangeclasses) {
@@ -138,7 +155,7 @@ public class EulerEngine {
 		}
 	}
 
-	public EulerEngine() {
+	private EulerEngine() {
 		Reflections reflections = new Reflections("project.euler.problem");
 		Set<Class<? extends IProblem>> allClasses = reflections
 				.getSubTypesOf(IProblem.class);
