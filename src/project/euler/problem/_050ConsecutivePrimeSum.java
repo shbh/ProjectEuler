@@ -8,7 +8,7 @@ import project.euler.util.Learning;
 
 public class _050ConsecutivePrimeSum implements IProblem {
 
-	int limit = 0;
+	int limit = 1000000;
 
 	public Integer solve() {
 
@@ -57,10 +57,9 @@ public class _050ConsecutivePrimeSum implements IProblem {
 
 	}
 
-	public _050ConsecutivePrimeSum limit(int limit) {
-		
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 50;
 	}
 
 }

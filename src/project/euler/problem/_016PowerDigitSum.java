@@ -17,7 +17,7 @@ public class _016PowerDigitSum implements IProblem {
 
 		int length = hugesum.toString().length();
 		int sum = 0;
-		
+
 		while (hugesum.compareTo(new BigInteger("0")) != 0) {
 
 			BigInteger remainder = hugesum.divide(BigInteger.TEN
@@ -34,10 +34,10 @@ public class _016PowerDigitSum implements IProblem {
 		return sum;
 
 	}
-	
-	public _016PowerDigitSum limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+
+	public int getNo() {
+
+		return 16;
 	}
+
 }

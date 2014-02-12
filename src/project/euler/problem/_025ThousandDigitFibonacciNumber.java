@@ -28,9 +28,9 @@ public class _025ThousandDigitFibonacciNumber implements IProblem {
 		return answer + 1;
 	}
 
-	public _025ThousandDigitFibonacciNumber limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 25;
 	}
+
 }

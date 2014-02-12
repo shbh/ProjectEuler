@@ -11,8 +11,8 @@ import project.euler.util.Learning;
  */
 public class _024LexicographicPermutations implements IProblem {
 
-	
 	private long position = 1000000;
+
 	public Long solve() {
 
 		int digit = 10;
@@ -31,7 +31,7 @@ public class _024LexicographicPermutations implements IProblem {
 				result = result - 1;
 			pos = pos - fact * result;
 
-			result = list.get((int)result);
+			result = list.get((int) result);
 
 			list.remove(new Long(result));
 			number[digit - (i + 1)] = result;
@@ -44,12 +44,10 @@ public class _024LexicographicPermutations implements IProblem {
 
 		return Long.valueOf(sb.toString());
 	}
-	
-	public _024LexicographicPermutations position(long position)
-	{
-		this.position = position;
-		return this;
+
+	public int getNo() {
+
+		return 24;
 	}
 
-	
 }

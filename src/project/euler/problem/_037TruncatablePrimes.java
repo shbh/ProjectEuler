@@ -13,13 +13,14 @@ import project.euler.util.Learning;
 public class _037TruncatablePrimes implements IProblem {
 
 	private int limit = 11;
+
 	public Integer solve() {
 
 		int count = 0;
 		List<String> list = new ArrayList<>();
 
 		Integer sum = 0;
-		// 3 and 7 are prime.. Starting with 13 	
+		// 3 and 7 are prime.. Starting with 13
 		for (int i = 13; count < limit;) {
 
 			if (Learning.isPrime(i)) {
@@ -62,7 +63,7 @@ public class _037TruncatablePrimes implements IProblem {
 
 	}
 
-	private  Set<String> generate(String string) {
+	private Set<String> generate(String string) {
 
 		Set<String> sets = new HashSet<>();
 		sets.add(string);
@@ -78,11 +79,10 @@ public class _037TruncatablePrimes implements IProblem {
 
 		return sets;
 	}
-	
-	public _037TruncatablePrimes limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+
+	public int getNo() {
+
+		return 37;
 	}
 
 }

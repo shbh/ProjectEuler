@@ -8,8 +8,8 @@ import project.euler.util.Learning;
  */
 public class _004LargestPalindromeProduct implements IProblem {
 
-	private int upper=0;
-	private int lower=0;
+	private int lower = 100;
+	private int upper = 1000;
 
 	public Integer solve() {
 		upper = upper - 1;
@@ -26,16 +26,10 @@ public class _004LargestPalindromeProduct implements IProblem {
 		}
 		return largestpalindromeproduct;
 	}
-	
-	public _004LargestPalindromeProduct upper(int upper)
-	{
-		this.upper = upper;
-		return this;
+
+	public int getNo() {
+
+		return 4;
 	}
-	
-	public _004LargestPalindromeProduct lower(int lower)
-	{
-		this.lower= lower;
-		return this;
-	}
+
 }

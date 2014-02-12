@@ -6,75 +6,55 @@ import project.euler.base.Key;
 /**
  * Created by shashi on 1/30/14.
  */
-public class _019CountingSundays implements IProblem{
+public class _019CountingSundays implements IProblem {
 
-    
+	private int before = 2001;
 
+	public Integer solve() {
 
-    private int before;
+		/*
+		 * 1 Jan 1900 was a Monday. Thirty days has September, April, June and
+		 * November. All the rest have thirty-one, Saving February alone, Which
+		 * has twenty-eight, rain or shine. And on leap years, twenty-nine. A
+		 * leap year occurs on any year evenly divisible by 4, but not on a
+		 * century unless it is divisible by 400.
+		 */
 
-	public Integer solve()
-    {
+		int carry = 0;
+		int sunday = 0;
+		// considering sunday as 0, 1 as monday, 2 as tuesday and so on..
+		// for 1990
+		int firstDay = 366 % 7;
 
+		for (int i = 1901; i < before; i++) {
+			int[] temp = Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_NON_LEAP_YEAR;
+			if (i % 4 == 0 && i % 400 > 0) {
+				temp = Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_LEAP_YEAR;
+			}
 
-/*
-        1 Jan 1900 was a Monday.
-            Thirty days has September,
-            April, June and November.
-        All the rest have thirty-one,
-            Saving February alone,
-        Which has twenty-eight, rain or shine.
-        And on leap years, twenty-nine.
-            A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
-*/
+			for (int m = 0; m < temp.length; m++) {
+				if (m - 1 < 0) {
+					firstDay = (carry + firstDay) % 7;
 
-        int carry =0 ;
-        int sunday=0;
-        //considering sunday as 0, 1 as monday, 2 as tuesday and so on..
-        // for 1990
-        int firstDay = 366%7;
-        
-        for(int i = 1901; i<before;i++)
-        {
-            int[] temp=Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_NON_LEAP_YEAR;
-            if(i%4==0 && i%400>0)
-            {
-                temp =Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_LEAP_YEAR;
-            }
+				} else if (m + 1 < temp.length) {
+					firstDay = (temp[m - 1] + firstDay) % 7;
+				} else {
+					firstDay = (temp[m - 1] + firstDay) % 7;
+					carry = temp[m];
+				}
 
-            for(int m=0;m<temp.length;m++)
-            {
-                if(m-1<0)
-                {
-                    firstDay = (carry+firstDay)%7;
+				if (firstDay % 7 == 0)
+					sunday++;
+			}
 
-                }
-                else if(m+1<temp.length)
-                {
-                    firstDay = (temp[m-1]+firstDay)%7;
-                }
-                else
-                {
-                    firstDay = (temp[m-1]+firstDay)%7;
-                    carry = temp[m];
-                }
+		}
+		return sunday;
 
-
-
-                if(firstDay%7==0)
-                    sunday++;
-            }
-
-        }
-        return sunday;
-
-
-
-    }
-
-	public _019CountingSundays before(int before) {
-		
-		this.before= before;
-		return this;
 	}
+
+	public int getNo() {
+
+		return 19;
+	}
+
 }

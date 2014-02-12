@@ -26,7 +26,7 @@ public class _053CombinatoricSelections implements IProblem {
 		int count = 0;
 		factorial[0] = BigInteger.ONE;
 		for (int k = i; k <= j; k++) {
-			factorial[k] = factorial[k-1].multiply(BigInteger.valueOf(k));
+			factorial[k] = factorial[k - 1].multiply(BigInteger.valueOf(k));
 
 		}
 		i = 23;
@@ -46,6 +46,11 @@ public class _053CombinatoricSelections implements IProblem {
 	private BigInteger combinatorics(int k, int l) {
 
 		return factorial[k].divide(factorial[l].multiply(factorial[k - l]));
+	}
+
+	public int getNo() {
+
+		return 53;
 	}
 
 }

@@ -8,13 +8,13 @@ import project.euler.util.Learning;
  */
 public class _012HighlyDivisibleTriangularNumber implements IProblem {
 
-	private int total = 0;
+	private int total = 500;
 
 	public Long solve() {
 		long trianglenumber = 0;
 		int lastnumber = 1;
-		total = total/2;
-		
+		total = total / 2;
+
 		while (true) {
 			trianglenumber = trianglenumber + lastnumber;
 			lastnumber++;
@@ -27,11 +27,10 @@ public class _012HighlyDivisibleTriangularNumber implements IProblem {
 		return trianglenumber;
 
 	}
-	
-	public _012HighlyDivisibleTriangularNumber total(int total)
-	{
-		this.total = total;
-		return this;
+
+	public int getNo() {
+
+		return 12;
 	}
 
 }

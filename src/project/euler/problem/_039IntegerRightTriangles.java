@@ -2,10 +2,9 @@ package project.euler.problem;
 
 import project.euler.base.IProblem;
 
-
 public class _039IntegerRightTriangles implements IProblem {
 
-	private int limit = 0;
+	private int limit = 1000;
 
 	public Integer solve() {
 
@@ -45,9 +44,9 @@ public class _039IntegerRightTriangles implements IProblem {
 		return count;
 	}
 
-	public _039IntegerRightTriangles limit(int limit) {
-		this.limit = limit;
+	public int getNo() {
 
-		return this;
+		return 39;
 	}
+
 }

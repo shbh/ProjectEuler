@@ -31,8 +31,9 @@ public class _009SpecialPythagoreanTriplet implements IProblem {
 
 	}
 
-	public _009SpecialPythagoreanTriplet marker(int marker) {
-		this.marker = marker;
-		return this;
+	public int getNo() {
+
+		return 9;
 	}
+
 }

@@ -2,23 +2,35 @@ package project.euler.base;
 
 import project.euler.base.Key.ThreeState;
 
-public class Problem {
+public class Solution {
 
 	private long time;
-	private int number;
 	private Object result;
 	private Key.ThreeState state = Key.ThreeState.FAIL;
 	private Exception exception;
+	private String className;
+	private int no;
 	
 	
-	
-	public Problem() {
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public Solution() {
 		super();
 	}
 
-	public Problem(int number, ThreeState state) {
-		this.number = number;
+	public Solution(int no,String className, ThreeState state) {
+		this.className= className;
 		this.state = state;
+	}
+
+	public String getClassName() {
+		return className;
 	}
 
 	public Exception getException() {
@@ -37,13 +49,7 @@ public class Problem {
 		this.time = time;
 	}
 
-	public int getNumber() {
-		return number;
-	}
 
-	public void setNumber(int number) {
-		this.number = number;
-	}
 
 	public Object getResult() {
 		return result;
@@ -59,10 +65,14 @@ public class Problem {
 
 	public void setState(Key.ThreeState state) {
 		this.state = state;
-		if(this.time>Key.ALLOWEDTIME && state.equals(Key.ThreeState.PASS))
-		{
+		if (this.time > Key.ALLOWEDTIME && state.equals(Key.ThreeState.PASS)) {
 			this.state = Key.ThreeState.TIME_EXCEEDED;
 		}
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+
 	}
 
 }

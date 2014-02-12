@@ -5,7 +5,8 @@ import project.euler.util.Learning;
 
 public class _036DoubleBasePalindromes implements IProblem {
 
-	private int limit = 0;
+	private int limit = 1000000;
+
 	public Integer solve() {
 		int result = 0;
 
@@ -16,10 +17,10 @@ public class _036DoubleBasePalindromes implements IProblem {
 
 		return result;
 	}
-	
-	public _036DoubleBasePalindromes limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+
+	public int getNo() {
+
+		return 36;
 	}
+
 }

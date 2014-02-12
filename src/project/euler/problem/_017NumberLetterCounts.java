@@ -12,7 +12,6 @@ public class _017NumberLetterCounts implements IProblem {
 	public Integer solve() {
 		int length = 0;
 		for (int i = 1; i <= 1000; i++) {
-			
 
 			// System.out.println(text);
 			// length += text.toString().replaceAll("[\\s\\-()]", "").length();
@@ -23,7 +22,9 @@ public class _017NumberLetterCounts implements IProblem {
 
 	}
 
-	
-	
-		
+	public int getNo() {
+
+		return 17;
+	}
+
 }

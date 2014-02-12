@@ -14,10 +14,11 @@ import project.euler.base.Key;
  */
 public class _022NamesScores implements IProblem {
 
-
 	public Long solve() {
-		InputStream input = _022NamesScores.class.getResourceAsStream("/files/names.txt");
-		try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
+		InputStream input = _022NamesScores.class
+				.getResourceAsStream("/files/names.txt");
+		try (BufferedReader br = new BufferedReader(
+				new InputStreamReader(input))) {
 
 			String sCurrentLine = br.readLine();
 			long totalsum = 0;
@@ -40,6 +41,10 @@ public class _022NamesScores implements IProblem {
 		}
 		return 0l;
 	}
-	
-	
+
+	public int getNo() {
+
+		return 22;
+	}
+
 }

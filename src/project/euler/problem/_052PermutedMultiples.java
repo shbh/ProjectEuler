@@ -5,7 +5,7 @@ import java.util.Arrays;
 import project.euler.base.IProblem;
 import project.euler.util.Learning;
 
-public class _052PermutedMultiples implements IProblem{
+public class _052PermutedMultiples implements IProblem {
 
 	public Integer solve() {
 
@@ -38,6 +38,11 @@ public class _052PermutedMultiples implements IProblem{
 
 		}
 
+	}
+
+	public int getNo() {
+
+		return 52;
 	}
 
 }

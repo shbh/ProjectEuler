@@ -5,9 +5,9 @@ import project.euler.base.IProblem;
 /**
  * Created by shashi on 1/28/14.
  */
-public class _002EvenFibonacciNumbers implements IProblem{
+public class _002EvenFibonacciNumbers implements IProblem {
 
-	private int limit = 0;
+	private int limit = 4000000;
 
 	public Integer solve() {
 		int firstnumber = 1;
@@ -29,9 +29,9 @@ public class _002EvenFibonacciNumbers implements IProblem{
 		return sum;
 	}
 
-	public _002EvenFibonacciNumbers limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 2;
 	}
+
 }

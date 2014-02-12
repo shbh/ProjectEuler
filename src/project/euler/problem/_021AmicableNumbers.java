@@ -11,11 +11,10 @@ import project.euler.util.Learning;
  */
 public class _021AmicableNumbers implements IProblem {
 
+	private int limit = 10000;
 
-	private int limit=0;
-	
 	public Integer solve() {
-		
+
 		int[] numbers = new int[limit * 10];
 		numbers[0] = 0;
 		int sum = 0;
@@ -43,12 +42,9 @@ public class _021AmicableNumbers implements IProblem {
 
 	}
 
-	
+	public int getNo() {
 
-
-	public _021AmicableNumbers limit(int limit) {
-		
-		this.limit = limit;
-		return this;
+		return 21;
 	}
+
 }

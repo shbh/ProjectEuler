@@ -5,44 +5,37 @@ import project.euler.base.IProblem;
 /**
  * Created by shashi on 1/28/14.
  */
-public class _005SmallestMultiple implements IProblem{
+public class _005SmallestMultiple implements IProblem {
 
-	
-	int divisor=20;
-    public Long solve()
-    {
+	int divisor = 20;
 
-        long number=1;
-       
-        while(true)
-        {
-            int temp =0;
-            for(int n =divisor;n >1;n-- )
-            {
+	public Long solve() {
 
-                temp=n;
-                if(number%n==0)
-                {
+		long number = 1;
 
-                    continue;
-                }
-                else
-                {
-                    number++;
-                    break;
-                }
-            }
-            if(temp==2)
-            {
-                break;
-            }
-        }
-        return number;
-    }
-    
-    public _005SmallestMultiple divisor(int divisor)
-    {
-    	this.divisor=divisor;
-    	return this;
-    }
+		while (true) {
+			int temp = 0;
+			for (int n = divisor; n > 1; n--) {
+
+				temp = n;
+				if (number % n == 0) {
+
+					continue;
+				} else {
+					number++;
+					break;
+				}
+			}
+			if (temp == 2) {
+				break;
+			}
+		}
+		return number;
+	}
+
+	public int getNo() {
+
+		return 5;
+	}
+
 }

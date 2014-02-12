@@ -16,5 +16,9 @@ public class _038PandigitalMultiples implements IProblem {
 		return -1;
 	}
 
-	
+	public int getNo() {
+
+		return 38;
+	}
+
 }

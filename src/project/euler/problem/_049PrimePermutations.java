@@ -16,9 +16,7 @@ import project.euler.util.Learning;
 
 public class _049PrimePermutations implements IProblem {
 
-	
-
-	public String solve(){
+	public String solve() {
 
 		List<Integer> primes = new ArrayList<>();
 		for (int i = 1000; i < 10000; i++) {
@@ -95,16 +93,19 @@ public class _049PrimePermutations implements IProblem {
 			String key = iterator.next();
 			List<Integer> resultValue = result.get(key);
 			Collections.sort(resultValue);
-			if (key.equals("1478"))
-			{
+			if (key.equals("1478")) {
 				continue;
-			}	
+			}
 			return Learning.join(resultValue, Key.BLANK);
 		}
-		
+
 		return Key.BLANK;
 
 	}
 
-	
+	public int getNo() {
+
+		return 49;
+	}
+
 }

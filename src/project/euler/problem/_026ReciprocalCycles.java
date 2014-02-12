@@ -1,7 +1,5 @@
 package project.euler.problem;
 
-
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +8,7 @@ import project.euler.base.IProblem;
 public final class _026ReciprocalCycles implements IProblem {
 
 	public int limit = 1000;
-	
+
 	public Integer solve() {
 		int bestNumber = 0;
 		int bestLength = 0;
@@ -36,9 +34,9 @@ public final class _026ReciprocalCycles implements IProblem {
 		return iter - stateToIter.get(state);
 	}
 
-	public _026ReciprocalCycles limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 26;
 	}
+
 }

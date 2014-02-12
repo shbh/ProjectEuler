@@ -3,7 +3,7 @@ package project.euler.problem;
 import project.euler.base.IProblem;
 
 public class _028NumberSpiralDiagonals implements IProblem {
-	
+
 	private int limit = 1001;
 
 	public Long solve() {
@@ -45,10 +45,10 @@ public class _028NumberSpiralDiagonals implements IProblem {
 		}
 		return totalA + totalB;
 	}
-	
-	public _028NumberSpiralDiagonals limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+
+	public int getNo() {
+
+		return 28;
 	}
+
 }

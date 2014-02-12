@@ -49,9 +49,9 @@ public class _003LargestPrimeFactor implements IProblem {
 		}
 	}
 
-	public _003LargestPrimeFactor inputnumber(long inputnumber)
-	{
-		this.inputnumber = inputnumber;
-		return this;
+	public int getNo() {
+
+		return 3;
 	}
+
 }

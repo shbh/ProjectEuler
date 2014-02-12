@@ -11,45 +11,43 @@ public class _014LongestCollatzSequence implements IProblem {
 
 	public Integer solve() {
 
-		
 		int sequenceLength = 0;
 		int startingNumber = 0;
 		long sequence;
-		 
+
 		int[] cache = new int[limit + 1];
-		//Initialise cache
+		// Initialise cache
 		for (int i = 0; i < cache.length; i++) {
-		    cache[i] = -1;
+			cache[i] = -1;
 		}
 		cache[1] = 1;
-		 
+
 		for (int i = 2; i <= limit; i++) {
-		    sequence = i;
-		    int k = 0;
-		    while (sequence != 1 && sequence >= i) {
-		        k++;
-		        if ((sequence % 2) == 0) {
-		            sequence = sequence / 2;
-		        } else {
-		            sequence = sequence * 3 + 1;
-		        }
-		    }
-		    //Store result in cache
-		    cache[i] = k + cache[(int) sequence];
-		 
-		    //Check if sequence is the best solution
-		    if (cache[i] > sequenceLength) {
-		        sequenceLength = cache[i];
-		        startingNumber = i;
-		    }
+			sequence = i;
+			int k = 0;
+			while (sequence != 1 && sequence >= i) {
+				k++;
+				if ((sequence % 2) == 0) {
+					sequence = sequence / 2;
+				} else {
+					sequence = sequence * 3 + 1;
+				}
+			}
+			// Store result in cache
+			cache[i] = k + cache[(int) sequence];
+
+			// Check if sequence is the best solution
+			if (cache[i] > sequenceLength) {
+				sequenceLength = cache[i];
+				startingNumber = i;
+			}
 		}
 		return startingNumber;
 	}
 
-	
-	public _014LongestCollatzSequence limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 14;
 	}
+
 }

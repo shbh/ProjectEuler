@@ -6,12 +6,12 @@ import java.util.Set;
 
 import project.euler.base.IProblem;
 
-public class _029DistinctPowers implements IProblem{
+public class _029DistinctPowers implements IProblem {
 
-	private int lowerA = 0;
-	private int upperA = 0;
-	private int lowerB = 0;
-	private int upperB = 0;
+	private int lowerA = 2;
+	private int upperA = 100;
+	private int lowerB = 2;
+	private int upperB = 100;
 
 	public Integer solve() {
 
@@ -22,6 +22,7 @@ public class _029DistinctPowers implements IProblem{
 				powers.add(BigInteger.valueOf(i).pow(j));
 			}
 		}
+
 		return powers.size();
 	}
 
@@ -30,11 +31,16 @@ public class _029DistinctPowers implements IProblem{
 		this.upperA = upper;
 		return this;
 	}
-	
+
 	public _029DistinctPowers b(int lower, int upper) {
 		this.lowerB = lower;
 		this.upperB = upper;
 		return this;
+	}
+
+	public int getNo() {
+
+		return 29;
 	}
 
 }

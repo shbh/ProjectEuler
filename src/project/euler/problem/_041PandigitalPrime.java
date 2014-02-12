@@ -41,4 +41,9 @@ public class _041PandigitalPrime implements IProblem {
 		return pandigitalNumber;
 	}
 
+	public int getNo() {
+
+		return 41;
+	}
+
 }

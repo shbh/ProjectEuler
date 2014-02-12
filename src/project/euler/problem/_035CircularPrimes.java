@@ -9,23 +9,21 @@ import java.util.Set;
 import project.euler.base.IProblem;
 import project.euler.util.Learning;
 
-public class _035CircularPrimes implements IProblem{
+public class _035CircularPrimes implements IProblem {
 
-	private int limit;
+	private int limit = 1000000;
 
 	public Integer solve() {
 
 		int count = 1;
 		List<String> list = new ArrayList<>();
 		Set<String> unique = new HashSet<>();
-		
-		
+
 		for (int i = 1; i < limit; i = i + 2) {
 			if (i == 1)
 				continue;
-			
-			if (unique.contains(Integer.toString(i)))
-			{
+
+			if (unique.contains(Integer.toString(i))) {
 				continue;
 			}
 
@@ -52,7 +50,7 @@ public class _035CircularPrimes implements IProblem{
 
 					count = count + combinations.size();
 				}
-				
+
 				unique.addAll(combinations);
 			}
 
@@ -61,12 +59,9 @@ public class _035CircularPrimes implements IProblem{
 
 	}
 
-	public _035CircularPrimes limit(int limit) {
-		
-		this.limit= limit;
-		return this;
-	}
+	public int getNo() {
 
-	
+		return 35;
+	}
 
 }

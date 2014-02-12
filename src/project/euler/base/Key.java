@@ -24,7 +24,8 @@ public class Key {
 
     }
     public static final String HYPHENSPACEREGEX= "[\\s\\-()]";
-	public static final String MULTISTAR = "---------------------------------------------------------------------------";
+	public static final String MULTISTAR = "----------------------------------------";
+	public static final String DOUBLEMULTILINE=MULTISTAR+MULTISTAR+MULTISTAR;
 	public static final String NEWLINE = "\n";
 	
 	public enum ThreeState {

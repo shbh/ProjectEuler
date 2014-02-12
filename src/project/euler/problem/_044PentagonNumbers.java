@@ -3,9 +3,7 @@ package project.euler.problem;
 import project.euler.base.IProblem;
 import project.euler.util.Learning;
 
-
 public class _044PentagonNumbers implements IProblem {
-
 
 	public Integer solve() {
 
@@ -19,7 +17,8 @@ public class _044PentagonNumbers implements IProblem {
 
 			for (int j = i - 1; j > 0; j--) {
 				int m = j * (3 * j - 1) / 2;
-				if (Learning.isPentagonal(n - m) && Learning.isPentagonal(n + m)) {
+				if (Learning.isPentagonal(n - m)
+						&& Learning.isPentagonal(n + m)) {
 					result = n - m;
 					notFound = false;
 					break;
@@ -30,5 +29,9 @@ public class _044PentagonNumbers implements IProblem {
 
 	}
 
-	
+	public int getNo() {
+
+		return 44;
+	}
+
 }

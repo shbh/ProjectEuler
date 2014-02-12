@@ -6,7 +6,7 @@ import project.euler.base.IProblem;
 
 public class _048SelfPowers implements IProblem {
 
-	public int limit = 0;
+	public int limit = 1000;
 
 	public BigInteger solve() {
 
@@ -19,10 +19,10 @@ public class _048SelfPowers implements IProblem {
 		}
 		return number.mod(BigInteger.TEN.pow(10));
 	}
-	
-	public _048SelfPowers limit(int limit)
-	{
-		this.limit = limit;
-		return this;
+
+	public int getNo() {
+
+		return 48;
 	}
+
 }

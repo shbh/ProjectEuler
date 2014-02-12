@@ -50,9 +50,9 @@ public class _047DistinctPrimesFactors implements IProblem {
 		return divisor.size();
 	}
 
-	public _047DistinctPrimesFactors count(int count) {
-		this.count = count;
-		return this;
+	public int getNo() {
+
+		return 47;
 	}
 
 }

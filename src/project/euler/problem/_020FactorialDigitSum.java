@@ -9,7 +9,7 @@ import project.euler.base.IProblem;
  */
 public class _020FactorialDigitSum implements IProblem {
 
-	private int limit = 0;
+	private int limit = 100;
 
 	public BigInteger solve() {
 		BigInteger sum = BigInteger.ZERO;
@@ -28,8 +28,9 @@ public class _020FactorialDigitSum implements IProblem {
 		return sum;
 	}
 
-	public _020FactorialDigitSum limit(int limit) {
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 20;
 	}
+
 }

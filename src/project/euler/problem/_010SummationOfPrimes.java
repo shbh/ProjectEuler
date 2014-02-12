@@ -21,9 +21,9 @@ public class _010SummationOfPrimes implements IProblem {
 		return sum;
 	}
 
-	public _010SummationOfPrimes limit(int limit) {
-		this.limit = limit;
-		return this;
+	public int getNo() {
+
+		return 10;
 	}
 
 }

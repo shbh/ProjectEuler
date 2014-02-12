@@ -4,15 +4,15 @@ import project.euler.base.IProblem;
 
 public class _040ChampernowneConstant implements IProblem {
 
-	int limit = 0;
-	
+	int limit = 7;
+
 	public Integer solve() {
 		// d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 
 		// 0.123456789101112131415161718192021...
 		// 0-9
 		// 1-180
-		
+
 		int[] n = new int[limit + 1];
 		int next = 1;
 		for (int i = 1; i < n.length; i++) {
@@ -29,7 +29,6 @@ public class _040ChampernowneConstant implements IProblem {
 				* findingposition(10000, n) * findingposition(100000, n)
 				* findingposition(1000000, n);
 
-		
 	}
 
 	private int findingposition(int number, int[] n) {
@@ -69,9 +68,9 @@ public class _040ChampernowneConstant implements IProblem {
 
 	}
 
-	public _040ChampernowneConstant limit(int limit) {
-		
-		this.limit=limit;
-		return this;
+	public int getNo() {
+
+		return 40;
 	}
+
 }

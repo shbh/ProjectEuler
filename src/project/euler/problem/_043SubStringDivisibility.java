@@ -5,12 +5,11 @@ import project.euler.util.Learning;
 
 public class _043SubStringDivisibility implements IProblem {
 
-
 	public Long solve() {
 		long sum = 0;
 
 		for (int p17 = 17; p17 < 1000; p17 += 17) // Loop through all multiples
-		{// 
+		{//
 			if (!Learning.areDistinctDigits(p17))
 				continue; // Make sure the multiple has distinct digits.
 
@@ -23,15 +22,18 @@ public class _043SubStringDivisibility implements IProblem {
 					continue;
 
 				for (int p11 = 11; p11 < 1000; p11 += 11) {
-					if (p13 / 10 != p11 % 100 || !Learning.areDistinctDigits(p11))
+					if (p13 / 10 != p11 % 100
+							|| !Learning.areDistinctDigits(p11))
 						continue;
 
 					for (int p7 = 7; p7 < 1000; p7 += 7) {
-						if (p11 / 10 != p7 % 100 || !Learning.areDistinctDigits(p7))
+						if (p11 / 10 != p7 % 100
+								|| !Learning.areDistinctDigits(p7))
 							continue;
 
 						for (int p5 = 5; p5 < 1000; p5 += 5) {
-							if (p7 / 10 != p5 % 100 || !Learning.areDistinctDigits(p5))
+							if (p7 / 10 != p5 % 100
+									|| !Learning.areDistinctDigits(p5))
 								continue;
 
 							for (int p3 = 3; p3 < 1000; p3 += 3) {
@@ -45,14 +47,19 @@ public class _043SubStringDivisibility implements IProblem {
 										continue;
 									// Extract the the correct digits from the
 									// multiples and concatenate the together.
-									long n = (long) Learning.concat(
-											p2,
-											Learning.concat(p3 % 10,
-													Learning.concat(p5 % 10,
-															Learning.concat(p7 % 10,
-																	Learning.concat(p11 % 10,
-																			Learning.concat(p13 % 10,
-																					p17 % 10))))));
+									long n = (long) Learning
+											.concat(p2,
+													Learning.concat(
+															p3 % 10,
+															Learning.concat(
+																	p5 % 10,
+																	Learning.concat(
+																			p7 % 10,
+																			Learning.concat(
+																					p11 % 10,
+																					Learning.concat(
+																							p13 % 10,
+																							p17 % 10))))));
 									// Make sure the concatenated number has
 									// distinct digits.
 									if (!Learning.areDistinctDigits(n))
@@ -79,6 +86,9 @@ public class _043SubStringDivisibility implements IProblem {
 
 	}
 
-	
+	public int getNo() {
+
+		return 43;
+	}
 
 }

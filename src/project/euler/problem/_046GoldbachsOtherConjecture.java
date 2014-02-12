@@ -5,8 +5,6 @@ import project.euler.util.Learning;
 
 public class _046GoldbachsOtherConjecture implements IProblem {
 
-	
-
 	public Long solve() {
 		int[] prime = new int[1000];
 		long[] sqrt = new long[100];
@@ -57,6 +55,11 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 		}
 
 		return true;
+	}
+
+	public int getNo() {
+
+		return 46;
 	}
 
 }
