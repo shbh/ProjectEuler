@@ -27,6 +27,11 @@ public class EulerEngine {
 
 		long startTime = System.currentTimeMillis();
 
+		
+		Learning.headerformat();
+		Learning.write(Key.BLANK);
+		Learning.write(Key.MULTISTAR);
+		
 		int pass = 0;
 		int fail = 0;
 		int timeExceeded = 0;
@@ -46,9 +51,11 @@ public class EulerEngine {
 			default:
 				break;
 			}
-			Learning.solution(p);
-
+			Learning.format(p);
+			Learning.write(Key.BLANK);
+			
 		}
+		Learning.write(Key.MULTISTAR);
 		long stopTime = System.currentTimeMillis();
 		Learning.write(Key.NEWLINE);
 		Learning.write(Key.MULTISTAR);

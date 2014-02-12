@@ -11,7 +11,7 @@ import project.euler.base.IProblem;
 public class _051NextPrimeDigitReplacements implements IProblem {
 
 	public Integer solve() {
-		int[] primes = new int[1000000];
+		/*int[] primes = new int[1000000];
 		for (int i = 10; i < 1000000; i++) {
 			if (primes[i]) {
 				String strPrime = Integer.toString(i);
@@ -41,7 +41,7 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 						return listPrimes.Min();
 				}
 			}
-		}
+		}*/
 		return 0;
 	}
 }
