@@ -276,15 +276,15 @@ public class Learning extends KeyConstant{
 	// 123 = true
 	// 102 = true
 	// 101 = false
-	public static boolean areDistinctDigits(long n) {
+	public static boolean areDistinctDigits(long number) {
 		boolean[] digits = new boolean[10];
-
-		while (n > 0) {
-			int rem = (int) (n % 10);
+		
+		while (number > 0) {
+			int rem = (int) (number % 10);
 			if (digits[rem])
 				return false;
 			digits[rem] = true;
-			n /= 10;
+			number /= 10;
 		}
 
 		return true;

@@ -15,39 +15,54 @@ import java.util.TreeSet;
  * 
  *************************************************************************/
 
-public class Permutations {
+public final class Permutations {
+
+	private static final int ZERO = 0;
+	private static final int ONE = 1;
+	
+	private Permutations() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 
 	// print N! permutation of the characters of the string s (in order)
-	public static void perm1(String string, Set<String> content) {
+	public static void perm1(final String string, final Set<String> content) {
 		perm1("", content, string);
 	}
 
-	private final static void perm1(String prefix, Set<String> content, String string) {
-		int nLength = string.length();
-		if (nLength  == 0) {
+	private static void perm1(final String prefix,
+			final Set<String> content, final String string) {
+		final int nLength = string.length();
+		if (nLength == ZERO) {
 			content.add(prefix);
 		}
 
 		else {
-			for (int i = 0; i < nLength; i++)
-				perm1(prefix + string.charAt(i), content,
-						string.substring(0, i) + string.substring(i + 1, nLength ));
+			for (int i = 0; i < nLength; i++) {
+				perm1(prefix + string.charAt(i),
+						content,
+						string.substring(0, i)
+								+ string.substring(i + 1, nLength));
+			}
 		}
 
 	}
 
 	// print N! permutation of the elements of array a (not in order)
-	public static void perm2(String string) {
-		int nLength  = string.length();
-		char[] a = new char[nLength ];
-		for (int i = 0; i < nLength ; i++)
-			a[i] = string.charAt(i);
-		perm2(a, nLength );
+	public static void perm2(final String string) {
+		final int nLength = string.length();
+		final char[] aChar = new char[nLength];
+		for (int i = 0; i < nLength; i++) {
+			aChar[i] = string.charAt(i);
+		}
+		perm2(aChar, nLength);
 	}
 
-	private final static void perm2(char[] aChar, int number) {
-		if (number == 1) {
-			
+	private static void perm2(final char[] aChar, final int number) {
+		if (number == ONE) {
+
 			return;
 		}
 		for (int i = 0; i < number; i++) {
@@ -58,7 +73,8 @@ public class Permutations {
 	}
 
 	// swap the characters at indices i and j
-	private final static void swap(char[] aChar, final int increment,final int joker) {
+	private static void swap(final char[] aChar, final int increment,
+			final int joker) {
 		char character;
 		character = aChar[increment];
 		aChar[increment] = aChar[joker];
@@ -71,35 +87,37 @@ public class Permutations {
 		// perm2(elements);
 	}
 
-	public static SortedSet<String> generateCombination(final String alphabet,final int nLength) {
+	public static SortedSet<String> generateCombination(final String alphabet,
+			final int nLength) {
 
-		SortedSet<String> strings = new TreeSet<String>(
+		final SortedSet<String> strings = new TreeSet<String>(
 				new Comparator<String>() {
-					public int compare(String a, String b) {
-						return Long.valueOf(b).compareTo(Long.valueOf(a));
+					public int compare(final String first, final String second) {
+						return Long.valueOf(first).compareTo(Long.valueOf(second));
 					}
 				});
-		String elements = alphabet.substring(0, nLength);
+		final String elements = alphabet.substring(0, nLength);
 		perm1(elements, strings);
 		// System.out.println();
 		return strings;
 		// perm2(elements);
 	}
 
-	public static SortedSet<String> generateWithoutSort(String alphabet, int nLength) {
+	public static SortedSet<String> generateWithoutSort(final String alphabet,
+			final int nLength) {
 
-		SortedSet<String> strings = new TreeSet<String>();
-		String elements = alphabet.substring(0, nLength);
+		final SortedSet<String> strings = new TreeSet<String>();
+		final String elements = alphabet.substring(0, nLength);
 		perm1(elements, strings);
 		// System.out.println();
 		return strings;
 		// perm2(elements);
 	}
 
-	public static SortedSet<String> generateWithoutSort(String alphabet) {
+	public static SortedSet<String> generateWithoutSort(final String alphabet) {
 
-		SortedSet<String> strings = new TreeSet<String>();
-		String elements = alphabet.substring(0, alphabet.length());
+		final SortedSet<String> strings = new TreeSet<String>();
+		final String elements = alphabet.substring(0, alphabet.length());
 		perm1(elements, strings);
 		// System.out.println();
 		return strings;

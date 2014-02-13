@@ -15,46 +15,44 @@ import project.euler.util.Learning;
 
 public final class EulerEngine {
 
-	private final  ClassLoader myClassLoader = ClassLoader.getSystemClassLoader();
-	private  List<Class<? extends IProblem>> classes = null;
+	private static final ClassLoader CLASSLOADER = ClassLoader
+			.getSystemClassLoader();
+	private static List<Class<? extends IProblem>> classes = null;
 	private final transient List<Solution> failed = new ArrayList<>();
 
-	private int pass = 0;
-	private  int fail = 0;
-	private  int timeExceeded = 0;
-	private long startTime = 0l;
-	private long stopTime = 0l;
-	private int noofproblem = 0;
+	private static int pass = 0;
+	private static int fail = 0;
+	private static int timeExceeded = 0;
+	private static long startTime;
+	private static long stopTime;
+	private static int noofproblem = 0;
 
-	public static EulerEngine getInstance()
-	{
+	public static EulerEngine getInstance() {
 		return new EulerEngine();
 	}
-	
-	public static void run(int number)
-	{
+
+	public static void run(int number) {
 		EulerEngine engine = EulerEngine.getInstance();
 		engine.solve(true, number);
 		engine.postProcess();
 	}
-	
-	public static void ring(int... number)
-	{
+
+	public static void ring(int... number) {
 		EulerEngine engine = EulerEngine.getInstance();
 		engine.solve(true, number);
 		engine.postProcess();
 	}
-	
-	public static void range(int startrange, int endrange)
-	{
+
+	public static void range(int startrange, int endrange) {
 		EulerEngine engine = new EulerEngine();
+		startTime = System.currentTimeMillis();
 		engine.solve(startrange, endrange);
 		engine.postProcess();
 	}
 
 	private final void postProcess() {
 		Learning.write(KeyConstant.DOUBLEMULTILINE);
-		this.stopTime = System.currentTimeMillis();
+		stopTime = System.currentTimeMillis();
 		this.footer();
 
 	}
@@ -96,7 +94,8 @@ public final class EulerEngine {
 			Exception ex = failProblem.getException();
 
 			Learning.error("**************");
-			Learning.error("Exception in problem no :" + failProblem.getProblemNo());
+			Learning.error("Exception in problem no :"
+					+ failProblem.getProblemNo());
 			ex.printStackTrace();
 
 		}
@@ -109,7 +108,7 @@ public final class EulerEngine {
 		IProblem problem = null;
 		final String className = problems.getCanonicalName();
 		try {
-			final Class<?> myClass = myClassLoader.loadClass(className);
+			final Class<?> myClass = CLASSLOADER.loadClass(className);
 			final Object whatInstance = myClass.newInstance();
 
 			problem = ((IProblem) whatInstance);
@@ -133,14 +132,14 @@ public final class EulerEngine {
 			switch (solution.getState()) {
 
 			case PASS:
-				this.pass++;
+				EulerEngine.pass++;
 				break;
 			case FAIL:
-				this.fail++;
+				EulerEngine.fail++;
 				this.failed.add(solution);
 				break;
 			case TIME_EXCEEDED:
-				this.timeExceeded++;
+				EulerEngine.timeExceeded++;
 				break;
 			default:
 				break;
@@ -159,9 +158,9 @@ public final class EulerEngine {
 		final Reflections reflections = new Reflections("project.euler.problem");
 		final Set<Class<? extends IProblem>> allClasses = reflections
 				.getSubTypesOf(IProblem.class);
-		this.classes = new ArrayList<Class<? extends IProblem>>(allClasses);
+		EulerEngine.classes = new ArrayList<Class<? extends IProblem>>(allClasses);
 
-		Collections.sort(this.classes,
+		Collections.sort(EulerEngine.classes,
 				new Comparator<Class<? extends IProblem>>() {
 
 					public int compare(final Class<? extends IProblem> clazz,
@@ -173,7 +172,7 @@ public final class EulerEngine {
 				});
 
 		this.header();
-		this.startTime = System.currentTimeMillis();
+		
 
 	}
 }

@@ -19,15 +19,6 @@ public class Solution {
 		this.problemNo = problemNo;
 	}
 
-//	public Solution() {
-//		super();
-//	}
-
-//	public Solution(final int number,final String className, 
-//	final ThreeState state) {
-//		this.className= className;
-//		this.state = state;
-//	}
 
 	public String getClassName() {
 		return className;
