@@ -11,7 +11,7 @@ import project.euler.util.Learning;
 
 public class _035CircularPrimes implements IProblem {
 
-	private int limit = 1000000;
+	private final int limit = 1000000;
 
 	public Integer solve() {
 

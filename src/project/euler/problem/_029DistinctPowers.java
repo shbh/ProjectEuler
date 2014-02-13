@@ -8,10 +8,10 @@ import project.euler.base.IProblem;
 
 public class _029DistinctPowers implements IProblem {
 
-	private int lowerA = 2;
-	private int upperA = 100;
-	private int lowerB = 2;
-	private int upperB = 100;
+	private  int lowerA = 2;
+	private  int upperA = 100;
+	private  int lowerB = 2;
+	private  int upperB = 100;
 
 	public Integer solve() {
 

@@ -5,16 +5,16 @@ import project.euler.util.Learning;
 
 public class _036DoubleBasePalindromes implements IProblem {
 
-	private int limit = 1000000;
+	private static final int LIMIT = 1000000;
 
 	public Integer solve() {
 		int result = 0;
 
-		for (int i = 1; i < limit; i++)
+		for (int i = 1; i < LIMIT; i++){
 			if (Learning.isDoubleBasePalindrome(i)) {
 				result += i;
 			}
-
+		}
 		return result;
 	}
 

@@ -8,7 +8,7 @@ import project.euler.util.Learning;
  */
 public class _012HighlyDivisibleTriangularNumber implements IProblem {
 
-	private int total = 500;
+	private static int total = 500;
 
 	public Long solve() {
 		long trianglenumber = 0;
@@ -19,7 +19,7 @@ public class _012HighlyDivisibleTriangularNumber implements IProblem {
 			trianglenumber = trianglenumber + lastnumber;
 			lastnumber++;
 
-			int count = Learning.countdivisor(trianglenumber);
+			final int count = Learning.countdivisor(trianglenumber);
 			if (count >= total) {
 				break;
 			}

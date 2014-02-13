@@ -1,11 +1,15 @@
 package project.euler.net;
 
-public class LaunchPad {
+public final class LaunchPad {
 
-	public static void main(String[] args) {
-		EulerEngine.run(17);
-		EulerEngine.ring(17,23,52);
-		EulerEngine.range(1,54);
+	private LaunchPad()
+	{
+		super();
+	}
+	public static void main(final String[] args) {
+	//	EulerEngine.run(47);//for single
+	//	EulerEngine.ring(17,23,52);//non sequence
+		EulerEngine.range(1,54); // for range
 	}
 	
 }

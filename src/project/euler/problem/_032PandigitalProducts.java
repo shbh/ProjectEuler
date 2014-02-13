@@ -18,7 +18,7 @@ public final class _032PandigitalProducts implements IProblem {
 		return sum;
 	}
 
-	private boolean hasPandigitalProduct(int n) {
+	private final boolean hasPandigitalProduct(int n) {
 		// Find and examine all factors of n
 
 		for (int i = 1; i <= n; i++) {

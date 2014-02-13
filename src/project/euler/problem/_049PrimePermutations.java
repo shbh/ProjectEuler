@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.base.Key;
+import project.euler.base.KeyConstant;
 import project.euler.util.Learning;
 
 public class _049PrimePermutations implements IProblem {
@@ -26,7 +26,7 @@ public class _049PrimePermutations implements IProblem {
 			}
 		}
 
-		Map<String, List<Integer>> filters = new HashMap<>();
+		final Map<String, List<Integer>> filters = new HashMap<>();
 		for (Iterator<Integer> iterator = primes.iterator(); iterator.hasNext();) {
 			Integer integer = (Integer) iterator.next();
 			char[] temp = integer.toString().toCharArray();
@@ -45,8 +45,8 @@ public class _049PrimePermutations implements IProblem {
 
 		}
 
-		Map<String, List<Integer>> result = new HashMap<>();
-		Map<String, List<Integer>> tempfilter = new HashMap<>(filters);
+		final Map<String, List<Integer>> result = new HashMap<>();
+		final Map<String, List<Integer>> tempfilter = new HashMap<>(filters);
 
 		Set<String> keySet = filters.keySet();
 
@@ -67,7 +67,7 @@ public class _049PrimePermutations implements IProblem {
 
 						if (top + diff != bottom && values.contains(top + diff)) {
 
-							List<Integer> resultValue = new LinkedList<>();
+							final List<Integer> resultValue = new LinkedList<>();
 							resultValue.add(top);
 							resultValue.add(top + diff);
 							resultValue.add(bottom);
@@ -96,10 +96,10 @@ public class _049PrimePermutations implements IProblem {
 			if (key.equals("1478")) {
 				continue;
 			}
-			return Learning.join(resultValue, Key.BLANK);
+			return Learning.join(resultValue, KeyConstant.BLANK);
 		}
 
-		return Key.BLANK;
+		return KeyConstant.BLANK;
 
 	}
 

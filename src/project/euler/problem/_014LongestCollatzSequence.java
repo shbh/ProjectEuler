@@ -7,7 +7,7 @@ import project.euler.base.IProblem;
  */
 public class _014LongestCollatzSequence implements IProblem {
 
-	private int limit = 1000000;
+	private final int limit = 1000000;
 
 	public Integer solve() {
 

@@ -4,7 +4,7 @@ import project.euler.base.IProblem;
 
 public class _028NumberSpiralDiagonals implements IProblem {
 
-	private int limit = 1001;
+	private final int limit = 1001;
 
 	public Long solve() {
 		int x = 1;

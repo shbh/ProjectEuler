@@ -31,7 +31,7 @@ public class _040ChampernowneConstant implements IProblem {
 
 	}
 
-	private int findingposition(int number, int[] n) {
+	private final int findingposition(int number, int[] n) {
 
 		int bar = 0;
 		for (int j = 0; j < n.length; j++) {

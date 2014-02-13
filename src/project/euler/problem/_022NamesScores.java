@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 import project.euler.base.IProblem;
-import project.euler.base.Key;
+import project.euler.base.KeyConstant;
 
 /**
  * Created by shashi on 1/30/14.
@@ -22,18 +22,22 @@ public class _022NamesScores implements IProblem {
 
 			String sCurrentLine = br.readLine();
 			long totalsum = 0;
-			String[] names = sCurrentLine.split(Key.COMMA);
-			Arrays.sort(names);
-			for (int i = 0; i < names.length; i++) {
+			if (sCurrentLine != null) {
+				String[] names = sCurrentLine.split(KeyConstant.COMMA);
+				Arrays.sort(names);
+				for (int i = 0; i < names.length; i++) {
 
-				int sum = 0;
-				char[] charcters = names[i].replace(Key.FORWARD_SLASH,
-						Key.BLANK).toCharArray();
-				for (int c = 0; c < charcters.length; c++) {
-					sum += charcters[c] - 64;
+					int sum = 0;
+					char[] charcters = names[i].replace(KeyConstant.FORWARD_SLASH,
+							KeyConstant.BLANK).toCharArray();
+					for (int c = 0; c < charcters.length; c++) {
+						sum += charcters[c] - 64;
+					}
+					totalsum += sum * (i + 1);
+
 				}
-				totalsum += sum * (i + 1);
-
+			} else {
+				return 0l;
 			}
 			return totalsum;
 		} catch (IOException e) {

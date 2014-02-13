@@ -9,7 +9,7 @@ import project.euler.base.IProblem;
  */
 public class _025ThousandDigitFibonacciNumber implements IProblem {
 
-	private Integer limit = 1000;
+	private final Integer limit = 1000;
 
 	public Integer solve() {
 		BigInteger start = BigInteger.ONE;

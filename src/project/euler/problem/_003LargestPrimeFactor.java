@@ -8,7 +8,7 @@ import project.euler.util.Learning;
  */
 public class _003LargestPrimeFactor implements IProblem {
 
-	private long inputnumber = 600851475143l;
+	private final long inputnumber = 600851475143l;
 
 	public Long solve() {
 		long largenumber = inputnumber;
@@ -17,7 +17,7 @@ public class _003LargestPrimeFactor implements IProblem {
 
 	}
 
-	private long divideNumber(long largenumber, long number,
+	private final long divideNumber(long largenumber, long number,
 			long largeprimefactor) {
 
 		boolean isfactored = true;

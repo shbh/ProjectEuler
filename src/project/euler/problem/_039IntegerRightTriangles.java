@@ -4,7 +4,7 @@ import project.euler.base.IProblem;
 
 public class _039IntegerRightTriangles implements IProblem {
 
-	private int limit = 1000;
+	private final int limit = 1000;
 
 	public Integer solve() {
 
@@ -22,7 +22,7 @@ public class _039IntegerRightTriangles implements IProblem {
 
 	}
 
-	private int dosomething(int marker) {
+	private final int dosomething(int marker) {
 		int count = 0;
 		for (int c = 1; c <= marker; c++) {
 

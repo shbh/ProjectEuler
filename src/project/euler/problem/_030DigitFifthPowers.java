@@ -4,13 +4,13 @@ import project.euler.base.IProblem;
 
 public class _030DigitFifthPowers implements IProblem {
 
-	private int digit = 5;
+	private static final int DIGIT = 5;
 
 	public Integer solve() {
 
 		int result = 0;
 		// Retrieve Upper Bound.. X*9^Digit
-		int limit = (digit + 1) * (int) Math.pow(9, digit);
+		final int limit = (DIGIT + 1) * (int) Math.pow(9, DIGIT);
 
 		for (int i = 2; i < limit; i++) {
 
@@ -19,10 +19,10 @@ public class _030DigitFifthPowers implements IProblem {
 			int number = i;
 
 			while (number > 0) {
-				int remainder = number % 10;
+				final int remainder = number % 10;
 				number = number / 10;
 
-				sum += (int) Math.pow(remainder, digit);
+				sum += (int) Math.pow(remainder, DIGIT);
 			}
 
 			if (sum == i) {

@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import project.euler.base.IProblem;
-import project.euler.base.Key;
+import project.euler.base.KeyConstant;
 
 /**
  * Created by shashi on 1/30/14.
@@ -29,14 +29,14 @@ public class _042CodedTriangleNumbers implements IProblem {
 				new InputStreamReader(input))) {
 
 			String sCurrentLine = br.readLine();
-
-			String[] names = sCurrentLine.split(Key.COMMA);
+			if (sCurrentLine != null) {
+			String[] names = sCurrentLine.split(KeyConstant.COMMA);
 			Arrays.sort(names);
 			for (int i = 0; i < names.length; i++) {
 
 				int sum = 0;
-				char[] charcters = names[i].replace(Key.FORWARD_SLASH,
-						Key.BLANK).toCharArray();
+				char[] charcters = names[i].replace(KeyConstant.FORWARD_SLASH,
+						KeyConstant.BLANK).toCharArray();
 				for (int c = 0; c < charcters.length; c++) {
 					sum += charcters[c] - 64;
 					if (sum > max) {
@@ -50,6 +50,11 @@ public class _042CodedTriangleNumbers implements IProblem {
 				}
 
 			}
+			}
+			else
+			{
+				return 0;
+			}
 			return count;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -57,7 +62,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 		return 0;
 	}
 
-	private int generateNext(int n, int limit) {
+	private final int generateNext(int n, int limit) {
 		// tn = ½n(n+1)
 		int sum = n * (n + 1) / 2;
 		triangleNumber.add(sum);

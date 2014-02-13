@@ -7,7 +7,7 @@ import project.euler.base.IProblem;
  */
 public class _002EvenFibonacciNumbers implements IProblem {
 
-	private int limit = 4000000;
+	private final int limit = 4000000;
 
 	public Integer solve() {
 		int firstnumber = 1;

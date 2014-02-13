@@ -8,11 +8,11 @@ import project.euler.util.Learning;
  */
 public class _010SummationOfPrimes implements IProblem {
 
-	private int limit = 2000000;
+	private static final int LIMIT = 2000000;
 
 	public Long solve() {
 		long sum = 2;// adding first prime number 2
-		for (long l = 3; l < limit; l = l + 2) {
+		for (long l = 3; l < LIMIT; l = l + 2) {
 			if (Learning.isPrime(l)) {
 
 				sum += l;

@@ -17,13 +17,13 @@ public class Truncate {
 		System.out.println(Integer.toString(12).substring(1, 2));
 	}
 
-	private static void cut1(String string) {
+	private final static void cut1(String string) {
 
 		System.out.println(string.substring(0, 1));
 		System.out.println(string.substring(string.length() - 1));
 	}
 
-	private static boolean isNumberEndWith37(String string) {
+	private final static boolean isNumberEndWith37(String string) {
 
 		// String
 		String l = string.substring(0, 1);
@@ -35,7 +35,7 @@ public class Truncate {
 		return false;
 	}
 
-	private static Set<String> generate(String string) {
+	private final static Set<String> generate(String string) {
 
 		Set<String> sets = new HashSet<>();
 		sets.add(string);

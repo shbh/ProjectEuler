@@ -6,7 +6,7 @@ import project.euler.base.IProblem;
 
 public class _053CombinatoricSelections implements IProblem {
 
-	private BigInteger[] factorial = new BigInteger[100 + 1];
+	private final BigInteger[] factorial = new BigInteger[100 + 1];
 
 	public BigInteger factorial(int n) {
 
@@ -43,7 +43,7 @@ public class _053CombinatoricSelections implements IProblem {
 
 	}
 
-	private BigInteger combinatorics(int k, int l) {
+	private final BigInteger combinatorics(int k, int l) {
 
 		return factorial[k].divide(factorial[l].multiply(factorial[k - l]));
 	}

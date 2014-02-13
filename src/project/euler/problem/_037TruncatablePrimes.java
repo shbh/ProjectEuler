@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.base.Key;
+import project.euler.base.KeyConstant;
 import project.euler.util.Learning;
 
 public class _037TruncatablePrimes implements IProblem {
 
-	private int limit = 11;
+	private final int limit = 11;
 
 	public Integer solve() {
 
@@ -25,7 +25,7 @@ public class _037TruncatablePrimes implements IProblem {
 
 			if (Learning.isPrime(i)) {
 				// System.out.println(i);
-				Set<String> combinations = generate(Key.BLANK + i);
+				Set<String> combinations = generate(KeyConstant.BLANK + i);
 
 				boolean isPrimeCombination = false;
 
@@ -63,7 +63,7 @@ public class _037TruncatablePrimes implements IProblem {
 
 	}
 
-	private Set<String> generate(String string) {
+	private final Set<String> generate(String string) {
 
 		Set<String> sets = new HashSet<>();
 		sets.add(string);

@@ -7,11 +7,11 @@ public class _045TriangularPentagonalAndHexagonal implements IProblem {
 
 	public Long solve() {
 
-		int i = 143;
+		int initial = 143;
 		long result = 0;
 		while (true) {
-			i++;
-			result = i * (2 * i - 1);
+			initial=initial+1;
+			result = initial * (2 * initial - 1);
 			if (Learning.isPentagonal(result)) {
 				break;
 			}

@@ -1,46 +1,41 @@
 package project.euler.util;
 
-import static project.euler.base.Key.AND;
-import static project.euler.base.Key.HYPHEN;
-import static project.euler.base.Key.SPACE;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import project.euler.base.Key;
-import project.euler.base.Key.NUMBER;
+import project.euler.base.KeyConstant;
 import project.euler.base.Solution;
 
-public class Learning {
+public class Learning extends KeyConstant{
 
 	
 
 	public static void headerformat()
 	{
-		write(Key.DOUBLEMULTILINE);
+		write(DOUBLEMULTILINE);
 		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%13s%1s",
 				"|","Problem No","|","Problem Class Name","|", "Result","|", "Time Taken(In Milliseconds)","|", "State","|");
 	}
 	
-	public static void format(Solution solution)
+	public static void format(final Solution solution)
 	{
 		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%13s%1s",
-				"|",solution.getNo(),"|",solution.getClassName(),"|", solution.getResult(),"|", solution.getTime(),"|", solution.getState(),"|");
+				"|",solution.getProblemNo(),"|",solution.getClassName(),"|", solution.getResult(),"|", solution.getTime(),"|", solution.getState(),"|");
 	}
 	
-	public static void write(String text) {
+	public static void write(final  String text) {
 		System.out.println(text);
 	}
 
-	public static void error(String text) {
+	public static void error(final  String text) {
 		System.err.println(text);
 	}
 
-	public static Set<String> generateCircular(String string) {
+	public static Set<String> generateCircular(final String string) {
 
-		Set<String> sets = new HashSet<>();
+		final Set<String> sets = new HashSet<>();
 		sets.add(string);
 		String temp = string;
 		for (int i = 0; i < string.length(); i++) {
@@ -58,9 +53,9 @@ public class Learning {
 		return sets;
 	}
 
-	public static boolean isNumberContainEven(String s) {
-		for (int i = 0; i < s.length(); i++) {
-			int number = Integer.valueOf(s.charAt(i));
+	public static boolean isNumberContainEven(final  String string) {
+		for (int i = 0; i < string.length(); i++) {
+			int number = Integer.valueOf(string.charAt(i));
 			if ((number & 1) == 0) {
 				return true;
 			}
@@ -361,10 +356,10 @@ public class Learning {
 		return text.toString();
 	}
 
-	public static String numbertext(int i) {
+	public static String numbertext(int destination) {
 		NUMBER[] number = NUMBER.values();
 		for (int j = 0; j < number.length; j++) {
-			if (number[j].getValue() == i) {
+			if (number[j].getValue() == destination) {
 				return number[j].toString();
 			}
 

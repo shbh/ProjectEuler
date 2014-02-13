@@ -1,14 +1,14 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.base.Key;
+import project.euler.base.KeyConstant;
 
 /**
  * Created by shashi on 1/30/14.
  */
 public class _019CountingSundays implements IProblem {
 
-	private int before = 2001;
+	private final int before = 2001;
 
 	public Integer solve() {
 
@@ -27,9 +27,9 @@ public class _019CountingSundays implements IProblem {
 		int firstDay = 366 % 7;
 
 		for (int i = 1901; i < before; i++) {
-			int[] temp = Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_NON_LEAP_YEAR;
+			int[] temp = KeyConstant.NON_LEAP_YEAR;
 			if (i % 4 == 0 && i % 400 > 0) {
-				temp = Key.NO_OF_DAYS_IN_A_MONTH_FOR_A_LEAP_YEAR;
+				temp = KeyConstant.A_LEAP_YEAR;
 			}
 
 			for (int m = 0; m < temp.length; m++) {

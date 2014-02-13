@@ -13,7 +13,7 @@ import project.euler.util.Learning;
  */
 public class _027QuadraticPrimes implements IProblem {
 
-	private Integer limit = 1000;
+	private final Integer limit = 1000;
 
 	public Integer solve() {
 
@@ -60,7 +60,7 @@ public class _027QuadraticPrimes implements IProblem {
 		return maxm;
 	}
 
-	private int validateQuadric(int a, int b) {
+	private final int validateQuadric(int a, int b) {
 
 		// formula n2+an+b
 		int count = 0;

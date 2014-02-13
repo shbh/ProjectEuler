@@ -22,7 +22,7 @@ public final class _026ReciprocalCycles implements IProblem {
 		return bestNumber;
 	}
 
-	private int getCycleLength(int n) {
+	private final int getCycleLength(int n) {
 		Map<Integer, Integer> stateToIter = new HashMap<Integer, Integer>();
 		int state = 1;
 		int iter = 0;

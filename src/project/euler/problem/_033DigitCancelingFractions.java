@@ -5,8 +5,8 @@ import project.euler.util.Learning;
 
 public class _033DigitCancelingFractions implements IProblem {
 
-	private int denominator = 100;
-	private int numerator = 100;
+	private final int denominator = 100;
+	private final int numerator = 100;
 
 	public Integer solve() {
 
@@ -19,14 +19,14 @@ public class _033DigitCancelingFractions implements IProblem {
 				if (n >= d) {
 					continue;
 				} else {
-					int f = n % 10;
-					int g = d / 10;
-					int h = n / 10;
-					int i = d % 10;
+					final int f = n % 10;
+					final int g = d / 10;
+					final int h = n / 10;
+					final int i = d % 10;
 
 					if (f == g) {
 						if (h * d == n * i) {
-							int gcd = Learning.greatestCommonFactor(n, d);
+							final int gcd = Learning.greatestCommonFactor(n, d);
 
 							den = den * (d / gcd);
 							num = num * (n / gcd);

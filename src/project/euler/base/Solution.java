@@ -1,33 +1,33 @@
 package project.euler.base;
 
-import project.euler.base.Key.ThreeState;
 
 public class Solution {
 
 	private long time;
 	private Object result;
-	private Key.ThreeState state = Key.ThreeState.FAIL;
+	private KeyConstant.ThreeState state = KeyConstant.ThreeState.FAIL;
 	private Exception exception;
 	private String className;
-	private int no;
+	private int problemNo;
 	
 	
-	public int getNo() {
-		return no;
+	public int getProblemNo() {
+		return problemNo;
 	}
 
-	public void setNo(int no) {
-		this.no = no;
+	public void setProblemNo(final int problemNo) {
+		this.problemNo = problemNo;
 	}
 
-	public Solution() {
-		super();
-	}
+//	public Solution() {
+//		super();
+//	}
 
-	public Solution(int no,String className, ThreeState state) {
-		this.className= className;
-		this.state = state;
-	}
+//	public Solution(final int number,final String className, 
+//	final ThreeState state) {
+//		this.className= className;
+//		this.state = state;
+//	}
 
 	public String getClassName() {
 		return className;
@@ -37,7 +37,7 @@ public class Solution {
 		return exception;
 	}
 
-	public void setException(Exception exception) {
+	public void setException(final Exception exception) {
 		this.exception = exception;
 	}
 
@@ -45,7 +45,7 @@ public class Solution {
 		return time;
 	}
 
-	public void setTime(long time) {
+	public void setTime(final long time) {
 		this.time = time;
 	}
 
@@ -55,22 +55,22 @@ public class Solution {
 		return result;
 	}
 
-	public void setResult(Object result) {
+	public void setResult(final Object result) {
 		this.result = result;
 	}
 
-	public Key.ThreeState getState() {
+	public KeyConstant.ThreeState getState() {
 		return state;
 	}
 
-	public void setState(Key.ThreeState state) {
+	public void setState(final KeyConstant.ThreeState state) {
 		this.state = state;
-		if (this.time > Key.ALLOWEDTIME && state.equals(Key.ThreeState.PASS)) {
-			this.state = Key.ThreeState.TIME_EXCEEDED;
+		if (this.time > KeyConstant.ALLOWEDTIME && state.equals(KeyConstant.ThreeState.PASS)) {
+			this.state = KeyConstant.ThreeState.TIME_EXCEEDED;
 		}
 	}
 
-	public void setClassName(String className) {
+	public void setClassName(final String className) {
 		this.className = className;
 
 	}

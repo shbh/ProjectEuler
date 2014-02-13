@@ -11,7 +11,7 @@ import project.euler.util.Learning;
  */
 public class _024LexicographicPermutations implements IProblem {
 
-	private long position = 1000000;
+	private final long position = 1000000;
 
 	public Long solve() {
 

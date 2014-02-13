@@ -8,7 +8,7 @@ import project.euler.util.Learning;
  */
 public class _007TenThousandFirstPrime implements IProblem {
 
-	private long number = 10001;
+	private final long number = 10001;
 
 	public Long solve() {
 		long no = 1;

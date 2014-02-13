@@ -11,7 +11,7 @@ import project.euler.util.Learning;
  */
 public class _021AmicableNumbers implements IProblem {
 
-	private int limit = 10000;
+	private final int limit = 10000;
 
 	public Integer solve() {
 

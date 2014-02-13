@@ -34,7 +34,7 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 	}
 
 	// 31 + 2×1^2
-	private boolean isConjecture(long n, long[] sqrt, int[] prime) {
+	private final boolean isConjecture(long n, long[] sqrt, int[] prime) {
 
 		for (int i = 0; i < prime.length; i++) {
 			int no = (int) n - prime[i];

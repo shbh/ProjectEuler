@@ -7,18 +7,18 @@ import project.euler.base.IProblem;
  */
 public class _006SumSquareDifference implements IProblem {
 
-	private int limit = 100;
+	private static final  int LIMIT = 100;
 
 	public Long solve() {
-		long Sum = 0;
-		long Square = 0;
+		long sum = 0;
+		long square = 0;
 
-		for (int n = 0; n <= limit; n++) {
-			Sum += n * n;
-			Square += n;
+		for (int n = 0; n <= LIMIT; n++) {
+			sum += n * n;
+			square += n;
 		}
 
-		return Square * Square - Sum;
+		return square * square - sum;
 
 	}
 
