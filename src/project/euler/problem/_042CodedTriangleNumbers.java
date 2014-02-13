@@ -29,7 +29,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 				new InputStreamReader(input))) {
 
 			String sCurrentLine = br.readLine();
-			if (sCurrentLine != null) {
+
 			String[] names = sCurrentLine.split(KeyConstant.COMMA);
 			Arrays.sort(names);
 			for (int i = 0; i < names.length; i++) {
@@ -49,11 +49,6 @@ public class _042CodedTriangleNumbers implements IProblem {
 					count++;
 				}
 
-			}
-			}
-			else
-			{
-				return 0;
 			}
 			return count;
 		} catch (IOException e) {

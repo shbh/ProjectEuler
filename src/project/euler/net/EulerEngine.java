@@ -1,15 +1,15 @@
 package project.euler.net;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Enumeration;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 import org.reflections.Reflections;
@@ -51,24 +51,40 @@ public final class EulerEngine {
 	String cvsSplitBy = ",";
 	private void readCSV()
 	{
-		
-		InputStream input = _042CodedTriangleNumbers.class
-				.getResourceAsStream("/files/euler.csv");
-		try (BufferedReader br = new BufferedReader(
-				new InputStreamReader(input))) {
-			line = br.readLine();
-			while ((line = br.readLine()) != null) {
-			
-				
-		        // use comma as separator
-			String[] result = line.split(cvsSplitBy);
+		InputStream input = null;
+		Properties props = new Properties();
+		try {
+			 
+    		
+    		input = EulerEngine.class.getClassLoader().getResourceAsStream("solution.properties");
+    	
  
-			results.put(Integer.parseInt(result[0]), result[1]);
-		}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    		//load a properties file from class path, inside static method
+    		props.load(input);
+ 
+    		props.load(input);
+    		Enumeration<Object> keys= props.keys();
+                
+    		while (keys.hasMoreElements()) {
+				Object key = (Object) keys.nextElement();
+				results.put(Integer.parseInt(key.toString()), (String) props.get(key));
+			}
+                
+ 
+    	} catch (IOException ex) {
+    		ex.printStackTrace();
+        } finally{
+        	if(input!=null){
+        		try {
+				input.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+        	}
+        }
+		
+		
+		
 			
 
 	}
@@ -157,8 +173,8 @@ public final class EulerEngine {
 				final long stopTime = System.currentTimeMillis();
 				solution.setResult(result);
 				solution.setTime(stopTime - startTime);
-				
-				if(result.toString().equals(results.get(solution.getProblemNo())))
+				solution.setActualResult(results.get(solution.getProblemNo()));
+				if(result.toString().equals(solution.getActualresult()))
 				{
 					solution.setState(KeyConstant.FourState.PASS);
 				}

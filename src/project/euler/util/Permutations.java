@@ -93,7 +93,7 @@ public final class Permutations {
 		final SortedSet<String> strings = new TreeSet<String>(
 				new Comparator<String>() {
 					public int compare(final String first, final String second) {
-						return Long.valueOf(first).compareTo(Long.valueOf(second));
+						return Long.valueOf(second).compareTo(Long.valueOf(first));
 					}
 				});
 		final String elements = alphabet.substring(0, nLength);

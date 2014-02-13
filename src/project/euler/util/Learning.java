@@ -15,14 +15,14 @@ public class Learning extends KeyConstant{
 	public static void headerformat()
 	{
 		write(DOUBLEMULTILINE);
-		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%13s%1s",
-				"|","Problem No","|","Problem Class Name","|", "Result","|", "Time Taken(In Milliseconds)","|", "State","|");
+		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%30s%1s%13s%1s",
+				"|","Problem No","|","Problem Class Name","|", "Result","|", "Actual Result","|", "Time Taken(In Milliseconds)","|", "State","|");
 	}
 	
 	public static void format(final Solution solution)
 	{
-		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%13s%1s",
-				"|",solution.getProblemNo(),"|",solution.getClassName(),"|", solution.getResult(),"|", solution.getTime(),"|", solution.getState(),"|");
+		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%30s%1s%13s%1s",
+				"|",solution.getProblemNo(),"|",solution.getClassName(),"|", solution.getResult(),"|", solution.getActualresult(),"|", solution.getTime(),"|", solution.getState(),"|");
 	}
 	
 	public static void write(final  String text) {

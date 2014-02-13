@@ -16,19 +16,34 @@ public class _041PandigitalPrime implements IProblem {
 
 		int pandigitalNumber = 0;
 		boolean yougotit = false;
-		for (int i = 1; i < 9; i++) {
-
+		int current = 0;
+		for (int i = 9; i > 0; i--) {
+			
 			Set<String> combinations = Permutations.generateCombination(Integer
 					.toString(m));
 
+			
+			
 			for (Iterator<String> iterator = combinations.iterator(); iterator
 					.hasNext();) {
 				String number = (String) iterator.next();
-
+				
 				if (Learning.isPrime(Long.parseLong(number))) {
-					pandigitalNumber = Integer.parseInt(number);
-					yougotit = true;
-					break;
+					
+					current = i;
+					if(pandigitalNumber<Integer.parseInt(number))
+					{
+						
+						pandigitalNumber = Integer.parseInt(number);
+						if(current>i)
+						{
+							yougotit = true;
+							break;
+						}
+					}
+					
+					
+					
 				}
 
 			}

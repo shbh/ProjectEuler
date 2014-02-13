@@ -9,6 +9,7 @@ public class Solution {
 	private Exception exception;
 	private String className;
 	private int problemNo;
+	private String actualresult;
 	
 	
 	public int getProblemNo() {
@@ -61,9 +62,24 @@ public class Solution {
 		}
 	}
 
+	public String getActualresult() {
+		return actualresult;
+	}
+
+	public void setActualresult(String actualresult) {
+		this.actualresult = actualresult;
+	}
+
 	public void setClassName(final String className) {
 		this.className = className;
 
 	}
+
+	public void setActualResult(String actualresult) {
+		this.actualresult = actualresult;
+		
+	}
+	
+	
 
 }
