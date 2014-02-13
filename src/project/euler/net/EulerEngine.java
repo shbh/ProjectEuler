@@ -1,9 +1,15 @@
 package project.euler.net;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.reflections.Reflections;
@@ -11,18 +17,21 @@ import org.reflections.Reflections;
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
 import project.euler.base.Solution;
+import project.euler.problem._042CodedTriangleNumbers;
 import project.euler.util.Learning;
 
 public final class EulerEngine {
 
+	private static final Map<Integer, String> results = new LinkedHashMap<>();
 	private static final ClassLoader CLASSLOADER = ClassLoader
 			.getSystemClassLoader();
-	private static List<Class<? extends IProblem>> classes = null;
+	private static List<Class<? extends IProblem>> classes;
 	private final transient List<Solution> failed = new ArrayList<>();
 
-	private static int pass = 0;
-	private static int fail = 0;
-	private static int timeExceeded = 0;
+	private static int pass=0;
+	private static int fail=0;
+	private static int timeExceeded=0;
+	private static int mismatch=0;
 	private static long startTime;
 	private static long stopTime;
 	private static int noofproblem = 0;
@@ -31,39 +40,66 @@ public final class EulerEngine {
 		return new EulerEngine();
 	}
 
-	public static void run(int number) {
+	public static void run(final int number) {
+		EulerEngine engine = EulerEngine.getInstance();
+		
+		engine.solve(true, number);
+		engine.postProcess();
+		
+	}
+	String line = "";
+	String cvsSplitBy = ",";
+	private void readCSV()
+	{
+		
+		InputStream input = _042CodedTriangleNumbers.class
+				.getResourceAsStream("/files/euler.csv");
+		try (BufferedReader br = new BufferedReader(
+				new InputStreamReader(input))) {
+			line = br.readLine();
+			while ((line = br.readLine()) != null) {
+			
+				
+		        // use comma as separator
+			String[] result = line.split(cvsSplitBy);
+ 
+			results.put(Integer.parseInt(result[0]), result[1]);
+		}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+
+	}
+
+	public static void ring(final int... number) {
 		EulerEngine engine = EulerEngine.getInstance();
 		engine.solve(true, number);
 		engine.postProcess();
 	}
 
-	public static void ring(int... number) {
-		EulerEngine engine = EulerEngine.getInstance();
-		engine.solve(true, number);
-		engine.postProcess();
-	}
-
-	public static void range(int startrange, int endrange) {
+	public static void range(final int startrange, final int endrange) {
 		EulerEngine engine = new EulerEngine();
 		startTime = System.currentTimeMillis();
 		engine.solve(startrange, endrange);
 		engine.postProcess();
 	}
 
-	private final void postProcess() {
+	private void postProcess() {
 		Learning.write(KeyConstant.DOUBLEMULTILINE);
 		stopTime = System.currentTimeMillis();
 		this.footer();
 
 	}
 
-	private final void solve(boolean isRange, int... numbers) {
+	private void solve(final boolean isRange, final int... numbers) {
 		for (int number : numbers) {
 			process(classes.get(number - 1));
 		}
 	}
 
-	private final void solve(int startrange, int endrange) {
+	private void solve(final int startrange, final int endrange) {
 		List<Class<? extends IProblem>> rangeclasses = classes.subList(
 				startrange - 1, endrange);
 		for (Class<? extends IProblem> clazz : rangeclasses) {
@@ -71,14 +107,14 @@ public final class EulerEngine {
 		}
 	}
 
-	private final void header() {
+	private void header() {
 		Learning.headerformat();
 		Learning.write(KeyConstant.BLANK);
 		Learning.write(KeyConstant.DOUBLEMULTILINE);
 
 	}
 
-	private final void footer() {
+	private void footer() {
 
 		Learning.write("Total No of Problem Attempt: "
 				+ Learning.getNumberLetters(noofproblem).toUpperCase());
@@ -87,22 +123,23 @@ public final class EulerEngine {
 				+ " milliseconds");
 		Learning.write("Total Pass: " + pass);
 		Learning.write("Total Fail: " + fail);
+		Learning.write("Total Mismatch: " + mismatch);
 		Learning.write("Total No Of Problem Failed In Time Boundation: "
 				+ timeExceeded);
 		Learning.write(KeyConstant.DOUBLEMULTILINE);
 		for (final Solution failProblem : failed) {
-			Exception ex = failProblem.getException();
+			final Exception exception = failProblem.getException();
 
 			Learning.error("**************");
 			Learning.error("Exception in problem no :"
 					+ failProblem.getProblemNo());
-			ex.printStackTrace();
+			exception.printStackTrace();
 
 		}
 
 	}
 
-	private final void process(final Class<? extends IProblem> problems) {
+	private void process(final Class<? extends IProblem> problems) {
 		noofproblem = noofproblem + 1;
 		final Solution solution = new Solution();
 		IProblem problem = null;
@@ -115,16 +152,23 @@ public final class EulerEngine {
 
 			solution.setProblemNo(problem.getNo());
 			try {
-				long startTime = System.currentTimeMillis();
-
-				Object result = problem.solve();
-				long stopTime = System.currentTimeMillis();
+				final long startTime = System.currentTimeMillis();
+				final Object result = problem.solve();
+				final long stopTime = System.currentTimeMillis();
 				solution.setResult(result);
 				solution.setTime(stopTime - startTime);
-				solution.setState(KeyConstant.ThreeState.PASS);
+				
+				if(result.toString().equals(results.get(solution.getProblemNo())))
+				{
+					solution.setState(KeyConstant.FourState.PASS);
+				}
+				else
+				{
+					solution.setState(KeyConstant.FourState.MISMATCH);
+				}
 			} catch (Exception ex) {
 				solution.setException(ex);
-				solution.setState(KeyConstant.ThreeState.FAIL);
+				solution.setState(KeyConstant.FourState.FAIL);
 			}
 
 			solution.setClassName(problems.getSimpleName());
@@ -141,6 +185,9 @@ public final class EulerEngine {
 			case TIME_EXCEEDED:
 				EulerEngine.timeExceeded++;
 				break;
+			case MISMATCH:
+				EulerEngine.mismatch++;
+				break;	
 			default:
 				break;
 			}
@@ -155,10 +202,12 @@ public final class EulerEngine {
 	}
 
 	private EulerEngine() {
+		readCSV();
 		final Reflections reflections = new Reflections("project.euler.problem");
 		final Set<Class<? extends IProblem>> allClasses = reflections
 				.getSubTypesOf(IProblem.class);
-		EulerEngine.classes = new ArrayList<Class<? extends IProblem>>(allClasses);
+		EulerEngine.classes = new ArrayList<Class<? extends IProblem>>(
+				allClasses);
 
 		Collections.sort(EulerEngine.classes,
 				new Comparator<Class<? extends IProblem>>() {
@@ -166,13 +215,13 @@ public final class EulerEngine {
 					public int compare(final Class<? extends IProblem> clazz,
 							final Class<? extends IProblem> clajj) {
 
-						return clazz.getSimpleName().compareTo(
-								clajj.getSimpleName());
+						final String clazzName = clazz.getSimpleName();
+						final String clajjName = clajj.getSimpleName();
+						return clazzName.compareTo(clajjName);
 					}
 				});
 
 		this.header();
-		
 
 	}
 }

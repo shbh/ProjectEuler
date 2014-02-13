@@ -5,7 +5,7 @@ public class Solution {
 
 	private long time;
 	private Object result;
-	private KeyConstant.ThreeState state = KeyConstant.ThreeState.FAIL;
+	private KeyConstant.FourState state = KeyConstant.FourState.FAIL;
 	private Exception exception;
 	private String className;
 	private int problemNo;
@@ -50,14 +50,14 @@ public class Solution {
 		this.result = result;
 	}
 
-	public KeyConstant.ThreeState getState() {
+	public KeyConstant.FourState getState() {
 		return state;
 	}
 
-	public void setState(final KeyConstant.ThreeState state) {
+	public void setState(final KeyConstant.FourState state) {
 		this.state = state;
-		if (this.time > KeyConstant.ALLOWEDTIME && state.equals(KeyConstant.ThreeState.PASS)) {
-			this.state = KeyConstant.ThreeState.TIME_EXCEEDED;
+		if (this.time > KeyConstant.ALLOWEDTIME && state.equals(KeyConstant.FourState.PASS)) {
+			this.state = KeyConstant.FourState.TIME_EXCEEDED;
 		}
 	}
 

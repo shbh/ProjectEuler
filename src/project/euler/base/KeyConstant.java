@@ -29,9 +29,10 @@ public class KeyConstant {
 
     }
    
-	public enum ThreeState {
+	public enum FourState {
 	    PASS,
 	    FAIL,
-	    TIME_EXCEEDED
+	    TIME_EXCEEDED,
+	    MISMATCH
 	};
 }

@@ -24,9 +24,9 @@ public class _014LongestCollatzSequence implements IProblem {
 
 		for (int i = 2; i <= limit; i++) {
 			sequence = i;
-			int k = 0;
+			int count = 0;
 			while (sequence != 1 && sequence >= i) {
-				k++;
+				count++;
 				if ((sequence % 2) == 0) {
 					sequence = sequence / 2;
 				} else {
@@ -34,7 +34,7 @@ public class _014LongestCollatzSequence implements IProblem {
 				}
 			}
 			// Store result in cache
-			cache[i] = k + cache[(int) sequence];
+			cache[i] = count + cache[(int) sequence];
 
 			// Check if sequence is the best solution
 			if (cache[i] > sequenceLength) {

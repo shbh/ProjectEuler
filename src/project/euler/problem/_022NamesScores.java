@@ -16,7 +16,7 @@ public class _022NamesScores implements IProblem {
 
 	public Long solve() {
 		InputStream input = _022NamesScores.class
-				.getResourceAsStream("/files/names.txt");
+				.getResourceAsStream("/files/project/names.txt");
 		try (BufferedReader br = new BufferedReader(
 				new InputStreamReader(input))) {
 
