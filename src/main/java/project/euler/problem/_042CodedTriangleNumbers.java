@@ -24,7 +24,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 		int n = 1;
 		int count = 0;
 		InputStream input = _042CodedTriangleNumbers.class
-				.getResourceAsStream("/files/project/words.txt");
+				.getResourceAsStream("words.txt");
 		try (BufferedReader br = new BufferedReader(
 				new InputStreamReader(input))) {
 
