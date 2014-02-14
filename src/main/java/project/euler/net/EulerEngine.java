@@ -55,7 +55,7 @@ public final class EulerEngine {
 		try {
 			 
     		
-    		input = EulerEngine.class.getResourceAsStream("solution.properties");
+    		input = EulerEngine.class.getClassLoader().getResourceAsStream("solution.properties");
     	
  
     		//load a properties file from class path, inside static method
