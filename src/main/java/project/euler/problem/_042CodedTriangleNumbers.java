@@ -56,9 +56,9 @@ public class _042CodedTriangleNumbers implements IProblem {
 		}
 		return 0;
 	}
-//mvn exec:java -Dexec.mainClass="project.euler.net.LaunchPad"
+
 	private final int generateNext(int n, int limit) {
-		// tn = 1/2*n(n+1)
+
 		int sum = n * (n + 1) / 2;
 		triangleNumber.add(sum);
 		max = sum;

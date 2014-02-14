@@ -7,7 +7,7 @@ public class _040ChampernowneConstant implements IProblem {
 	int limit = 7;
 
 	public Integer solve() {
-		// d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
+
 
 		// 0.123456789101112131415161718192021...
 		// 0-9
