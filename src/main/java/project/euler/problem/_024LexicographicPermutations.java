@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
 
 /**
  * Created by shashi on 1/30/14.
@@ -23,9 +22,9 @@ public class _024LexicographicPermutations implements IProblem {
 			list.add(i);
 		}
 		long pos = position;
-
+		
 		for (int i = 9; i >= 0; i--) {
-			long fact = Learning.factorial(i);
+			long fact = factorial(i);
 			long result = pos / fact;
 			if (pos % fact == 0)
 				result = result - 1;
@@ -45,9 +44,21 @@ public class _024LexicographicPermutations implements IProblem {
 		return Long.valueOf(sb.toString());
 	}
 
+	private static long factorial(int n) {
+
+		if (n == 0)
+			return 1;
+		int result = 1;
+		for (int i = 1; i <= n; i++) {
+			result *= i;
+		}
+		return result;
+	}
+	
 	public int getNo() {
 
 		return 24;
 	}
+	
 
 }

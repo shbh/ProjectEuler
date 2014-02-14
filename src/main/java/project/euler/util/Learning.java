@@ -6,32 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 import project.euler.base.KeyConstant;
-import project.euler.base.Solution;
 
-public class Learning extends KeyConstant{
-
-	
-
-	public static void headerformat()
-	{
-		write(DOUBLEMULTILINE);
-		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%30s%1s%13s%1s",
-				"|","Problem No","|","Problem Class Name","|", "Result","|", "Actual Result","|", "Time Taken(In Milliseconds)","|", "State","|");
-	}
-	
-	public static void format(final Solution solution)
-	{
-		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%30s%1s%13s%1s",
-				"|",solution.getProblemNo(),"|",solution.getClassName(),"|", solution.getResult(),"|", solution.getActualresult(),"|", solution.getTime(),"|", solution.getState(),"|");
-	}
-	
-	public static void write(final  String text) {
-		System.out.println(text);
-	}
-
-	public static void error(final  String text) {
-		System.err.println(text);
-	}
+public class Learning extends KeyConstant {
 
 	public static Set<String> generateCircular(final String string) {
 
@@ -53,7 +29,7 @@ public class Learning extends KeyConstant{
 		return sets;
 	}
 
-	public static boolean isNumberContainEven(final  String string) {
+	public static boolean isNumberContainEven(final String string) {
 		for (int i = 0; i < string.length(); i++) {
 			int number = Integer.valueOf(string.charAt(i));
 			if ((number & 1) == 0) {
@@ -194,17 +170,8 @@ public class Learning extends KeyConstant{
 		return false;
 	}
 
-	public static long factorial(int n) {
-		
-		if(n==0)
-			return 1;
-		int result = 1;
-		for (int i = 1; i <= n; i++) {
-			result *= i;
-		}
-		return result;
-	}
-
+	
+	//2
 	public static boolean isPandigital(String s) {
 
 		if (s.length() != 9)
@@ -213,8 +180,7 @@ public class Learning extends KeyConstant{
 		Arrays.sort(temp);
 		return new String(temp).equals("123456789");
 	}
-
-	
+	//1
 	public static boolean isPandigital(String s, String number) {
 
 		char[] temp = s.toCharArray();
@@ -222,18 +188,8 @@ public class Learning extends KeyConstant{
 		return new String(temp).equals(number);
 	}
 
-	public static boolean isNumberStartNEndWith37(String string) {
 
-		// String
-		String l = string.substring(0, 1);
-		String r = string.substring(string.length() - 1);
-		if ((l.equals("3") || l.equals("7"))
-				&& (r.equals("3") || r.equals("7"))) {
-			return true;
-		}
-		return false;
-	}
-
+	//1
 	// Find the last digit needed to make the number 0-9 pandigital and concat
 	// it in front.
 	// Will return the original number if more than one digits are needed.
@@ -260,17 +216,9 @@ public class Learning extends KeyConstant{
 
 		return newN == 0 ? origN : newN;
 	}
-
-	public static long concat(long a, long b) {
-		long c = b;
-		while (c > 0) {
-			a *= 10;
-			c /= 10;
-		}
-
-		return (long) a + b;
-	}
-
+	
+	
+	//1
 	// Determine whether the number has distinct digits.
 	// Example:
 	// 123 = true
@@ -278,7 +226,7 @@ public class Learning extends KeyConstant{
 	// 101 = false
 	public static boolean areDistinctDigits(long number) {
 		boolean[] digits = new boolean[10];
-		
+
 		while (number > 0) {
 			int rem = (int) (number % 10);
 			if (digits[rem])
@@ -289,12 +237,12 @@ public class Learning extends KeyConstant{
 
 		return true;
 	}
-
+	//2
 	public static boolean isPentagonal(long number) {
 		double penTest = (Math.sqrt(1 + 24 * number) + 1.0) / 6.0;
 		return penTest == ((int) penTest);
 	}
-
+	//1
 	public static String join(List<?> list, String delim) {
 		int len = list.size();
 		if (len == 0)
@@ -306,65 +254,16 @@ public class Learning extends KeyConstant{
 		}
 		return sb.toString();
 	}
-
-	public static String getNumberLetters(Integer number) {
-		StringBuffer text = new StringBuffer();
-		int remainder = number;
-		int quotient = number / 1000;
-
-		if (quotient > 0) {
-			text.append(numbertext(quotient)).append(SPACE)
-					.append(NUMBER.thousand).append(SPACE);
-			remainder = number % 1000;
+	
+	public static long concat(long a, long b) {
+		long c = b;
+		while (c > 0) {
+			a *= 10;
+			c /= 10;
 		}
 
-		quotient = remainder / 100;
-
-		if (quotient > 0) {
-			text.append(numbertext(quotient)).append(SPACE)
-					.append(NUMBER.hundred).append(SPACE);
-			remainder = number % 100;
-		}
-
-		quotient = remainder / 10;
-
-		if (quotient > 1) {
-			if (number > 100)
-				text.append(AND).append(SPACE);
-			text.append(numbertext(quotient * 10));
-
-			remainder = number % 10;
-		} else if (quotient == 1) {
-			if (number > 100)
-				text.append(AND).append(SPACE);
-			text.append(numbertext(remainder));
-			remainder = 0;
-		} else {
-			quotient = 0;
-		}
-
-		// quotient = i;
-		if (remainder > 0) {
-			if (quotient > 0) {
-				text.append(HYPHEN).append(numbertext(remainder));
-			} else {
-				if (number > 100)
-					text.append(AND).append(SPACE);
-				text.append(numbertext(remainder));
-			}
-		}
-		return text.toString();
+		return (long) a + b;
 	}
 
-	public static String numbertext(int destination) {
-		NUMBER[] number = NUMBER.values();
-		for (int j = 0; j < number.length; j++) {
-			if (number[j].getValue() == destination) {
-				return number[j].toString();
-			}
-
-		}
-		return NUMBER.thousand.toString();
-
-	}
+	
 }

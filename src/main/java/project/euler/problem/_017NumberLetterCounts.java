@@ -5,7 +5,7 @@ package project.euler.problem;
  */
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
-import project.euler.util.Learning;
+import project.euler.util.NumberText;
 
 public class _017NumberLetterCounts implements IProblem {
 	 public static final String HYPHENSPACEREGEX= "[\\s\\-()]";
@@ -15,7 +15,7 @@ public class _017NumberLetterCounts implements IProblem {
 
 			// System.out.println(text);
 			// length += text.toString().replaceAll("[\\s\\-()]", "").length();
-			String letters = Learning.getNumberLetters(i);
+			String letters = NumberText.getNumberLetters(i);
 			String replacedLetter = letters.replaceAll(KeyConstant.HYPHENSPACEREGEX, KeyConstant.BLANK);
 			length += replacedLetter.length();
 		}

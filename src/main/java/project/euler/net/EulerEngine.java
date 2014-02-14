@@ -66,7 +66,8 @@ import project.euler.problem._051NextPrimeDigitReplacements;
 import project.euler.problem._052PermutedMultiples;
 import project.euler.problem._053CombinatoricSelections;
 import project.euler.problem._054PokerHands;
-import project.euler.util.Learning;
+import project.euler.util.NumberText;
+import project.euler.util.Writer;
 
 public final class EulerEngine {
 
@@ -205,7 +206,7 @@ public final class EulerEngine {
 	}
 
 	private void postProcess() {
-		Learning.write(KeyConstant.DOUBLEMULTILINE);
+		Writer.write(KeyConstant.DOUBLEMULTILINE);
 		stopTime = System.currentTimeMillis();
 		this.footer();
 
@@ -229,30 +230,30 @@ public final class EulerEngine {
 	}
 
 	private void header() {
-		Learning.headerformat();
-		Learning.write(KeyConstant.BLANK);
-		Learning.write(KeyConstant.DOUBLEMULTILINE);
+		Writer.headerformat();
+		Writer.write(KeyConstant.BLANK);
+		Writer.write(KeyConstant.DOUBLEMULTILINE);
 
 	}
 
 	private void footer() {
 
-		Learning.write("Total No of Problem Attempt: "
-				+ Learning.getNumberLetters(noofproblem).toUpperCase());
+		Writer.write("Total No of Problem Attempt: "
+				+ NumberText.getNumberLetters(noofproblem).toUpperCase());
 
-		Learning.write("Total Time Taken: " + (stopTime - startTime)
+		Writer.write("Total Time Taken: " + (stopTime - startTime)
 				+ " milliseconds");
-		Learning.write("Total Pass: " + pass);
-		Learning.write("Total Fail: " + fail);
-		Learning.write("Total Mismatch: " + mismatch);
-		Learning.write("Total No Of Problem Failed In Time Boundation: "
+		Writer.write("Total Pass: " + pass);
+		Writer.write("Total Fail: " + fail);
+		Writer.write("Total Mismatch: " + mismatch);
+		Writer.write("Total No Of Problem Failed In Time Boundation: "
 				+ timeExceeded);
-		Learning.write(KeyConstant.DOUBLEMULTILINE);
+		Writer.write(KeyConstant.DOUBLEMULTILINE);
 		for (final Solution failProblem : failed) {
 			final Exception exception = failProblem.getException();
 
-			Learning.error("**************");
-			Learning.error("Exception in problem no :"
+			Writer.error("**************");
+			Writer.error("Exception in problem no :"
 					+ failProblem.getProblemNo());
 			exception.printStackTrace();
 
@@ -309,13 +310,13 @@ public final class EulerEngine {
 			default:
 				break;
 			}
-			Learning.format(solution);
-			Learning.write(KeyConstant.BLANK);
+			Writer.format(solution);
+			Writer.write(KeyConstant.BLANK);
 		} catch (Exception ex) {
-			Learning.error("**************");
-			Learning.error("Exception in problem no :" + className);
+			Writer.error("**************");
+			Writer.error("Exception in problem no :" + className);
 			ex.printStackTrace();
-			Learning.error("**************");
+			Writer.error("**************");
 		}
 	}
 
