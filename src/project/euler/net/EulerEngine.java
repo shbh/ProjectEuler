@@ -17,7 +17,6 @@ import org.reflections.Reflections;
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
 import project.euler.base.Solution;
-import project.euler.problem._042CodedTriangleNumbers;
 import project.euler.util.Learning;
 
 public final class EulerEngine {
