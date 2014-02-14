@@ -48,14 +48,14 @@ public final class EulerEngine {
 	}
 	String line = "";
 	String cvsSplitBy = ",";
-	private void readCSV()
+	private void readProperties()
 	{
 		InputStream input = null;
 		Properties props = new Properties();
 		try {
 			 
     		
-    		input = EulerEngine.class.getClassLoader().getResourceAsStream("solution.properties");
+    		input = EulerEngine.class.getResourceAsStream("solution.properties");
     	
  
     		//load a properties file from class path, inside static method
@@ -217,7 +217,7 @@ public final class EulerEngine {
 	}
 
 	private EulerEngine() {
-		readCSV();
+		readProperties();
 		final Reflections reflections = new Reflections("project.euler.problem");
 		final Set<Class<? extends IProblem>> allClasses = reflections
 				.getSubTypesOf(IProblem.class);
