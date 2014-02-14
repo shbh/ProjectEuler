@@ -23,7 +23,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 
 		int n = 1;
 		int count = 0;
-		InputStream input = _042CodedTriangleNumbers.class
+		InputStream input = _042CodedTriangleNumbers.class.getClassLoader()
 				.getResourceAsStream("words.txt");
 		try (BufferedReader br = new BufferedReader(
 				new InputStreamReader(input))) {

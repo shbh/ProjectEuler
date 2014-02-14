@@ -15,7 +15,7 @@ import project.euler.base.KeyConstant;
 public class _022NamesScores implements IProblem {
 
 	public Long solve() {
-		InputStream input = _022NamesScores.class
+		InputStream input = _022NamesScores.class.getClassLoader()
 				.getResourceAsStream("names.txt");
 		try (BufferedReader br = new BufferedReader(
 				new InputStreamReader(input))) {

@@ -1,21 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>Euler</groupId>
-	<artifactId>Euler</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>com.mkyong.core</groupId>
+	<artifactId>superman</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>superman</name>
+	<url>http://maven.apache.org</url>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.reflections</groupId>
-			<artifactId>reflections</artifactId>
-			<version>0.9.9-RC1</version>
-		</dependency>
-	</dependencies>
 	<properties>
 		<jdk.version>1.7</jdk.version>
+		<log4j.version>1.2.17</log4j.version>
+		<junit.version>4.10</junit.version>
+		
 	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		
+		
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -28,6 +44,7 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -35,6 +52,7 @@
 				<configuration>
 					<archive>
 						<manifest>
+							<addClasspath>true</addClasspath>
 							<mainClass>project.euler.net.LaunchPad</mainClass>
 							<classpathPrefix>dependency-jars/</classpathPrefix>
 						</manifest>
@@ -55,6 +73,7 @@
 						</goals>
 						<configuration>
 							<includeGroupIds>log4j</includeGroupIds>
+							<includeGroupIds>org.reflections</includeGroupIds>
 							<outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
 						</configuration>
 					</execution>
@@ -62,7 +81,6 @@
 			</plugin>
 
 		</plugins>
-
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
@@ -101,9 +119,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	<!-- <build> <sourceDirectory>src</sourceDirectory> <plugins> <plugin> <artifactId>maven-compiler-plugin</artifactId> 
-		<version>3.1</version> <configuration> <source>1.7</source> <target>1.7</target> 
-		</configuration> </plugin> </plugins> <resources> <resource> <directory>src/main/resources</directory> 
-		<includes> <include>*.txt</include> <include>*.properties</include> </includes> 
-		</resource> </resources> </build> -->
+
 </project>
