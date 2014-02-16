@@ -12,8 +12,6 @@ public class _054PokerHands implements IProblem {
 
 	int h = 3, d = 2, s = 4, c = 1;
 
-	String set1 = "5H 5C 6S 7S KD";
-	String set2 = "2C 8S 8S 8D TD";
 
 	public Object solve() {
 		int count = 0;
@@ -26,21 +24,14 @@ public class _054PokerHands implements IProblem {
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
-				
+
 				String set1 = sCurrentLine.substring(0, 15);
 				String set2 = sCurrentLine.substring(15);
-				boolean isPlayer1Won= isPlayer1Won(set1,set2);
-				if(isPlayer1Won)
-				{
-					System.out.println("won"+ "::"+set1 + "::"+set2);
+				boolean isPlayer1Won = isPlayer1Won(set1, set2);
+				if (isPlayer1Won) {
+
 					count++;
 				}
-				else
-				{
-					System.out.println("loss"+ "::"+set1 + "::"+set2);
-				}
-				
-
 			}
 
 		} catch (IOException e) {
@@ -50,13 +41,12 @@ public class _054PokerHands implements IProblem {
 		return Integer.valueOf(count);
 	}
 
-	private boolean isPlayer1Won(String set1, String set2)
-	{
+	private boolean isPlayer1Won(String set1, String set2) {
 		int[] numbers1 = new int[5];
 		int[] numbers2 = new int[5];
 		POKER poker1 = whichPoker(numbers1, set1);
 		POKER poker2 = whichPoker(numbers2, set2);
-
+		System.out.print(poker1 + "::" + poker2);
 		if (poker1.ordinal() > poker2.ordinal()) {
 			return true;
 		} else if (poker1.ordinal() == poker2.ordinal()) {
@@ -64,17 +54,34 @@ public class _054PokerHands implements IProblem {
 			switch (poker1) {
 			case ROYALFLUSH:
 				return true;
-				
+
 			case STRAIGHTFLUSH:
 				if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
 					return true;
 				}
 				break;
 			case FOUROFAKIND:
-				if (getCNO(numbers1[0]) > getCNO(numbers2[0])) {
+				int cnof1 = getCNO(numbers1[0]);
+				int cnof2 = getCNO(numbers2[0]);
+
+				if (cnof1 == 1)
+					cnof1 = 14;
+				if (cnof2 == 1)
+					cnof2 = 14;
+
+				if (cnof1 > cnof2) {
 					return true;
-				} else if (getCNO(numbers1[0]) == getCNO(numbers2[0])) {
-					if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+				} else if (cnof1 == cnof2) {
+
+					cnof1 = getCNO(numbers1[0]);
+					cnof2 = getCNO(numbers2[0]);
+
+					if (cnof1 == 1)
+						cnof1 = 14;
+					if (cnof2 == 1)
+						cnof2 = 14;
+
+					if (cnof1 >= cnof2) {
 						return true;
 					}
 				}
@@ -82,9 +89,18 @@ public class _054PokerHands implements IProblem {
 				break;
 
 			case FULLHOUSE:
-				if (getCNO(numbers1[0]) > getCNO(numbers2[0])) {
+				cnof1 = getCNO(numbers1[0]);
+				cnof2 = getCNO(numbers2[0]);
+
+				if (cnof1 == 1)
+					cnof1 = 14;
+				if (cnof2 == 1)
+					cnof2 = 14;
+
+				if (cnof1 > cnof2) {
 					return true;
-				} else if (getCNO(numbers1[0]) == getCNO(numbers2[0])) {
+
+				} else if (cnof1 == cnof2) {
 					if (getCNO(numbers1[3]) >= getCNO(numbers2[3])) {
 						return true;
 					}
@@ -94,31 +110,79 @@ public class _054PokerHands implements IProblem {
 			case FLUSH:
 			case HIGHCARD:
 				for (int i = numbers1.length - 1; i >= 0; i--) {
-					if (getCNO(numbers1[i]) > getCNO(numbers2[i])) {
+
+					cnof1 = getCNO(numbers1[i]);
+					cnof2 = getCNO(numbers2[i]);
+
+					if (cnof1 == 1)
+						cnof1 = 14;
+					if (cnof2 == 1)
+						cnof2 = 14;
+
+					if (cnof1 > cnof2) {
 						return true;
-					} else if (getCNO(numbers1[i]) == getCNO(numbers2[i])) {
+					} else if (cnof1 == cnof2) {
 						continue;
-					} else if (getCNO(numbers1[i]) < getCNO(numbers2[i])) {
+					} else if (cnof1 < cnof2) {
 						break;
 					}
 				}
 				break;
 
 			case STRAIGHT:
-				if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+
+				cnof1 = getCNO(numbers1[0]);
+				cnof2 = getCNO(numbers2[0]);
+				int cnof10 = getCNO(numbers1[1]);
+				int cnof20 = getCNO(numbers2[1]);
+
+				if (cnof1 == 1 && cnof10 == 10)
+					cnof1 = 14;
+				if (cnof2 == 1 && cnof20 == 10)
+					cnof2 = 14;
+
+				if (cnof1 >= cnof2) {
 					return true;
 				}
 
 				break;
 			case THREEOFAKIND:
-				if (getCNO(numbers1[0]) > getCNO(numbers2[0])) {
+
+				cnof1 = getCNO(numbers1[0]);
+				cnof2 = getCNO(numbers2[0]);
+
+				if (cnof1 == 1)
+					cnof1 = 14;
+				if (cnof2 == 1)
+					cnof2 = 14;
+
+				if (cnof1 > cnof2) {
 					return true;
-				} else if (getCNO(numbers1[0]) == getCNO(numbers2[0])) {
-					if (getCNO(numbers1[3]) > getCNO(numbers2[3])) {
+				} else if (cnof1 == cnof2) {
+
+					cnof1 = getCNO(numbers1[3]);
+					cnof2 = getCNO(numbers2[3]);
+
+					if (cnof1 == 1)
+						cnof1 = 14;
+					if (cnof2 == 1)
+						cnof2 = 14;
+
+					if (cnof1 > cnof2) {
 						return true;
-					} else if (getCNO(numbers1[3]) == getCNO(numbers2[3])) {
-						if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+
+					} else if (cnof1 == cnof2) {
+						cnof1 = getCNO(numbers1[4]);
+						cnof2 = getCNO(numbers2[4]);
+
+						if (cnof1 == 1)
+							cnof1 = 14;
+						if (cnof2 == 1)
+							cnof2 = 14;
+
+						if (cnof1 >= cnof2) {
 							return true;
+
 						}
 
 					}
@@ -126,14 +190,41 @@ public class _054PokerHands implements IProblem {
 
 				break;
 			case TWOPAIRS:
-				if (getCNO(numbers1[0]) > getCNO(numbers2[0])) {
+				cnof1 = getCNO(numbers1[0]);
+				cnof2 = getCNO(numbers2[0]);
+
+				if (cnof1 == 1)
+					cnof1 = 14;
+				if (cnof2 == 1)
+					cnof2 = 14;
+
+				if (cnof1 > cnof2) {
 					return true;
-				} else if (getCNO(numbers1[0]) == getCNO(numbers2[0])) {
-					if (getCNO(numbers1[2]) > getCNO(numbers2[2])) {
+				} else if (cnof1 == cnof2) {
+
+					cnof1 = getCNO(numbers1[2]);
+					cnof2 = getCNO(numbers2[2]);
+
+					if (cnof1 == 1)
+						cnof1 = 14;
+					if (cnof2 == 1)
+						cnof2 = 14;
+
+					if (cnof1 > cnof2) {
 						return true;
-					} else if (getCNO(numbers1[2]) == getCNO(numbers2[2])) {
-						if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+
+					} else if (cnof1 == cnof2) {
+						cnof1 = getCNO(numbers1[4]);
+						cnof2 = getCNO(numbers2[4]);
+
+						if (cnof1 == 1)
+							cnof1 = 14;
+						if (cnof2 == 1)
+							cnof2 = 14;
+
+						if (cnof1 >= cnof2) {
 							return true;
+
 						}
 
 					}
@@ -141,21 +232,60 @@ public class _054PokerHands implements IProblem {
 
 				break;
 			case ONEPAIR:
-				if (getCNO(numbers1[0]) > getCNO(numbers2[0])) {
-					return true;
-				} else if (getCNO(numbers1[0]) == getCNO(numbers2[0])) {
-					if (getCNO(numbers1[2]) > getCNO(numbers2[2])) {
-						return true;
-					} else if (getCNO(numbers1[2]) == getCNO(numbers2[2])) {
-						if (getCNO(numbers1[3]) > getCNO(numbers2[3])) {
-							return true;
-						} else if (getCNO(numbers1[3]) == getCNO(numbers2[3])) {
-							if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
-								return true;
-							}
-						}
 
+				cnof1 = getCNO(numbers1[0]);
+				cnof2 = getCNO(numbers2[0]);
+
+				if (cnof1 == 1)
+					cnof1 = 14;
+				if (cnof2 == 1)
+					cnof2 = 14;
+
+				if (cnof1 > cnof2) {
+					return true;
+				} else if (cnof1 == cnof2) {
+
+					cnof1 = getCNO(numbers1[2]);
+					cnof2 = getCNO(numbers2[2]);
+
+					if (cnof1 == 1)
+						cnof1 = 14;
+					if (cnof2 == 1)
+						cnof2 = 14;
+
+					if (cnof1 > cnof2) {
+						return true;
+
+					} else if (cnof1 == cnof2) {
+						cnof1 = getCNO(numbers1[3]);
+						cnof2 = getCNO(numbers2[3]);
+
+						if (cnof1 == 1)
+							cnof1 = 14;
+						if (cnof2 == 1)
+							cnof2 = 14;
+
+						if (cnof1 > cnof2) {
+							return true;
+
+						} else if (cnof1 == cnof2) {
+
+							cnof1 = getCNO(numbers1[4]);
+							cnof2 = getCNO(numbers2[4]);
+
+							if (cnof1 == 1)
+								cnof1 = 14;
+							if (cnof2 == 1)
+								cnof2 = 14;
+
+							if (cnof1 >= cnof2) {
+								return true;
+
+							}
+
+						}
 					}
+
 				}
 
 				break;
@@ -166,7 +296,7 @@ public class _054PokerHands implements IProblem {
 
 		return false;
 	}
-	
+
 	private POKER whichPoker(int[] numbers, String set) {
 		set = set.replace("A", "1").replace("K", "13").replace("Q", "12")
 				.replace("T", "10").replace("J", "11").replace("C", "1")
@@ -279,6 +409,14 @@ public class _054PokerHands implements IProblem {
 			poker = POKER.STRAIGHT;
 		} else if (isColor) {
 			poker = POKER.FLUSH;
+			if (isStartWithA) {
+				int temp = numbers[0];
+				numbers[0] = numbers[1];
+				numbers[1] = numbers[2];
+				numbers[2] = numbers[3];
+				numbers[3] = numbers[4];
+				numbers[4] = temp;
+			}
 
 		} else if (firstpair > 0) {
 			if (secondpair == 0) {
@@ -447,6 +585,16 @@ public class _054PokerHands implements IProblem {
 					poker = POKER.FULLHOUSE;
 				}
 			}
+		} else {
+			if (isStartWithA) {
+				int temp = numbers[0];
+				numbers[0] = numbers[1];
+				numbers[1] = numbers[2];
+				numbers[2] = numbers[3];
+				numbers[3] = numbers[4];
+				numbers[4] = temp;
+			}
+
 		}
 
 		return poker;
