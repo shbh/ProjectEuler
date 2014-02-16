@@ -46,7 +46,7 @@ public class _054PokerHands implements IProblem {
 		int[] numbers2 = new int[5];
 		POKER poker1 = whichPoker(numbers1, set1);
 		POKER poker2 = whichPoker(numbers2, set2);
-		System.out.print(poker1 + "::" + poker2);
+		
 		if (poker1.ordinal() > poker2.ordinal()) {
 			return true;
 		} else if (poker1.ordinal() == poker2.ordinal()) {
