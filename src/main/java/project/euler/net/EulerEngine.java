@@ -1,13 +1,9 @@
 package project.euler.net;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
@@ -67,11 +63,12 @@ import project.euler.problem._052PermutedMultiples;
 import project.euler.problem._053CombinatoricSelections;
 import project.euler.problem._054PokerHands;
 import project.euler.util.NumberText;
+import project.euler.util.Reader;
 import project.euler.util.Writer;
 
 public final class EulerEngine {
 
-	private static final Map<Integer, String> results = new LinkedHashMap<>();
+	private static Map<Integer, String> results;
 	private static final ClassLoader CLASSLOADER = ClassLoader
 			.getSystemClassLoader();
 	private static Map<Integer, Class<? extends IProblem>> classes = new LinkedHashMap<>();
@@ -158,39 +155,7 @@ public final class EulerEngine {
 	String line = "";
 	String cvsSplitBy = ",";
 
-	private void readProperties() {
-		InputStream input = null;
-		Properties props = new Properties();
-		try {
-
-			input = EulerEngine.class.getClassLoader().getResourceAsStream(
-					"solution.properties");
-
-			// load a properties file from class path, inside static method
-			props.load(input);
-
-			props.load(input);
-			Enumeration<Object> keys = props.keys();
-
-			while (keys.hasMoreElements()) {
-				Object key = (Object) keys.nextElement();
-				results.put(Integer.parseInt(key.toString()),
-						(String) props.get(key));
-			}
-
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		} finally {
-			if (input != null) {
-				try {
-					input.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-	}
+	
 
 	public static void ring(final int... number) {
 		EulerEngine engine = EulerEngine.getInstance();
@@ -321,7 +286,7 @@ public final class EulerEngine {
 	}
 
 	private EulerEngine() {
-		readProperties();
+		results = Reader.readProperties();
 
 		this.header();
 
