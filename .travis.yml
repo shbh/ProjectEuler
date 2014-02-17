@@ -2,4 +2,4 @@ language: java
 jdk:
   - openjdk7
   - oraclejdk7
-install: mvn clean install package && cd target && java -jar superman-1.0.jar && cd ..  
+install: mvn clean install package  && java -jar target/superman-1.0.jar
