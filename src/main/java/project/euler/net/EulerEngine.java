@@ -62,6 +62,7 @@ import project.euler.problem._051NextPrimeDigitReplacements;
 import project.euler.problem._052PermutedMultiples;
 import project.euler.problem._053CombinatoricSelections;
 import project.euler.problem._054PokerHands;
+import project.euler.problem._056PowerfulDigitSum;
 import project.euler.util.NumberText;
 import project.euler.util.Reader;
 import project.euler.util.Writer;
@@ -129,6 +130,8 @@ public final class EulerEngine {
 		classes.put(52, _052PermutedMultiples.class);
 		classes.put(53, _053CombinatoricSelections.class);
 		classes.put(54, _054PokerHands.class);
+		
+		classes.put(56, _056PowerfulDigitSum.class);
 
 	}
 	private final transient List<Solution> failed = new ArrayList<>();
