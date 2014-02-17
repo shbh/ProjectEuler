@@ -130,9 +130,6 @@ public class _011LargestProductInAGrid implements IProblem {
 		return multiplication;
 	}
 
-	public int getNo() {
-
-		return 11;
-	}
+	
 
 }

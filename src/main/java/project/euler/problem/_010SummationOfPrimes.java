@@ -21,9 +21,7 @@ public class _010SummationOfPrimes implements IProblem {
 		return sum;
 	}
 
-	public int getNo() {
+	
 
-		return 10;
-	}
 
 }

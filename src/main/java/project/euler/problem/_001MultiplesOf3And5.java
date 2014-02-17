@@ -7,7 +7,7 @@ import project.euler.base.IProblem;
  */
 public class _001MultiplesOf3And5 implements IProblem {
 
-	private final static  int LIMIT = 1000;
+	private final static int LIMIT = 1000;
 
 	public Integer solve() {
 
@@ -19,11 +19,6 @@ public class _001MultiplesOf3And5 implements IProblem {
 
 		}
 		return sum;
-	}
-
-	public int getNo() {
-
-		return 1;
 	}
 
 }

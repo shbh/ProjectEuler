@@ -10,11 +10,31 @@ import java.util.Properties;
 import project.euler.net.EulerEngine;
 
 public class Reader {
+	
+	public static Reader reader = null;
+	public static Reader getInstance()
+	{
+		if(reader!=null)
+		{
+			return reader;
+		}
+		return new Reader();
+	}
 
-	public static Map<Integer, String> readProperties() {
+	private Map<Integer, String> results = new LinkedHashMap<Integer, String>();
+
+	private Reader() {
+		this.readProperties();
+	}
+	
+	public Map<Integer, String> getResults() {
+		return results;
+	}
+	
+	public  Map<Integer, String> readProperties() {
 		InputStream input = null;
 		Properties props = new Properties();
-		Map<Integer, String> results = new LinkedHashMap<Integer, String>();
+		
 
 		try {
 
@@ -45,5 +65,9 @@ public class Reader {
 			}
 		}
 		return results;
+	}
+
+	public void setResults(Map<Integer, String> results) {
+		this.results = results;
 	}
 }

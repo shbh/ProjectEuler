@@ -68,7 +68,8 @@ import project.euler.util.Writer;
 
 public final class EulerEngine {
 
-	private static Map<Integer, String> results;
+	private static Map<Integer, String> results = Reader.getInstance()
+			.getResults();;
 	private static final ClassLoader CLASSLOADER = ClassLoader
 			.getSystemClassLoader();
 	private static Map<Integer, Class<? extends IProblem>> classes = new LinkedHashMap<>();
@@ -155,8 +156,6 @@ public final class EulerEngine {
 	String line = "";
 	String cvsSplitBy = ",";
 
-	
-
 	public static void ring(final int... number) {
 		EulerEngine engine = EulerEngine.getInstance();
 		engine.solve(true, number);
@@ -237,7 +236,7 @@ public final class EulerEngine {
 
 			problem = ((IProblem) whatInstance);
 
-			solution.setProblemNo(problem.getNo());
+			solution.setProblemNo(Integer.parseInt(problems.getSimpleName().substring(1,4)));
 			try {
 				final long startTime = System.currentTimeMillis();
 				final Object result = problem.solve();
@@ -286,7 +285,6 @@ public final class EulerEngine {
 	}
 
 	private EulerEngine() {
-		results = Reader.readProperties();
 
 		this.header();
 

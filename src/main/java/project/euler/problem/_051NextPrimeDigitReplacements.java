@@ -63,8 +63,8 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 		return 0;
 	}
 
-	public int getNo() {
+	
 
-		return 51;
-	}
+	
+	
 }

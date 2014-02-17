@@ -29,9 +29,7 @@ public class _002EvenFibonacciNumbers implements IProblem {
 		return sum;
 	}
 
-	public int getNo() {
+	
 
-		return 2;
-	}
 
 }

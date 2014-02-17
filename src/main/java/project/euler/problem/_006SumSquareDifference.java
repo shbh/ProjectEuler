@@ -22,9 +22,7 @@ public class _006SumSquareDifference implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 6;
-	}
 
 }

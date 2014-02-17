@@ -65,9 +65,5 @@ public class _008LargestProductInASeries implements IProblem {
 		return multiply;
 	}
 
-	public int getNo() {
-
-		return 8;
-	}
 
 }

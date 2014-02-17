@@ -69,8 +69,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 42;
-	}
+
 }

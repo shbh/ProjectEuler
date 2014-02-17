@@ -28,9 +28,7 @@ public class _025ThousandDigitFibonacciNumber implements IProblem {
 		return answer + 1;
 	}
 
-	public int getNo() {
+	
 
-		return 25;
-	}
 
 }

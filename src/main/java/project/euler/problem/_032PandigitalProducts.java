@@ -28,9 +28,7 @@ public final class _032PandigitalProducts implements IProblem {
 		return false;
 	}
 
-	public int getNo() {
+	
 
-		return 32;
-	}
 
 }

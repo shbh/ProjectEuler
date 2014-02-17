@@ -68,9 +68,5 @@ public class _040ChampernowneConstant implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 40;
-	}
 
 }

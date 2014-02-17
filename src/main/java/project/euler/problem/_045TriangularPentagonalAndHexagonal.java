@@ -19,9 +19,8 @@ public class _045TriangularPentagonalAndHexagonal implements IProblem {
 		return result;
 	}
 
-	public int getNo() {
+	
 
-		return 45;
-	}
+
 
 }

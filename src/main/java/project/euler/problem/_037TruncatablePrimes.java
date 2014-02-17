@@ -80,9 +80,5 @@ public class _037TruncatablePrimes implements IProblem {
 		return sets;
 	}
 
-	public int getNo() {
-
-		return 37;
-	}
 
 }

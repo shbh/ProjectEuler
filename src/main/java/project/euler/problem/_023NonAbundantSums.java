@@ -46,9 +46,7 @@ public class _023NonAbundantSums implements IProblem {
 		return total;
 	}
 
-	public int getNo() {
+	
 
-		return 23;
-	}
 
 }

@@ -625,11 +625,9 @@ public class _054PokerHands implements IProblem {
 	 * Pairs : Number Check One Pair : Number Check High Card : High Card Check
 	 */
 
-	public int getNo() {
+	
 
-		return 54;
-	}
-
+	
 	public enum POKER {
 		HIGHCARD, ONEPAIR, TWOPAIRS, THREEOFAKIND, STRAIGHT, FLUSH, FULLHOUSE, FOUROFAKIND, STRAIGHTFLUSH, ROYALFLUSH
 	}

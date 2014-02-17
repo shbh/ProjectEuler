@@ -35,9 +35,6 @@ public class _016PowerDigitSum implements IProblem {
 
 	}
 
-	public int getNo() {
 
-		return 16;
-	}
 
 }

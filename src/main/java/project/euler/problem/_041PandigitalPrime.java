@@ -18,32 +18,26 @@ public class _041PandigitalPrime implements IProblem {
 		boolean yougotit = false;
 		int current = 0;
 		for (int i = 9; i > 0; i--) {
-			
+
 			Set<String> combinations = Permutations.generateCombination(Integer
 					.toString(m));
 
-			
-			
 			for (Iterator<String> iterator = combinations.iterator(); iterator
 					.hasNext();) {
 				String number = (String) iterator.next();
-				
+
 				if (Learning.isPrime(Long.parseLong(number))) {
-					
+
 					current = i;
-					if(pandigitalNumber<Integer.parseInt(number))
-					{
-						
+					if (pandigitalNumber < Integer.parseInt(number)) {
+
 						pandigitalNumber = Integer.parseInt(number);
-						if(current>i)
-						{
+						if (current > i) {
 							yougotit = true;
 							break;
 						}
 					}
-					
-					
-					
+
 				}
 
 			}
@@ -54,11 +48,6 @@ public class _041PandigitalPrime implements IProblem {
 
 		}
 		return pandigitalNumber;
-	}
-
-	public int getNo() {
-
-		return 41;
 	}
 
 }

@@ -32,9 +32,7 @@ public class _030DigitFifthPowers implements IProblem {
 		return result;
 	}
 
-	public int getNo() {
+	
 
-		return 30;
-	}
 
 }

@@ -29,9 +29,5 @@ public class _007TenThousandFirstPrime implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 7;
-	}
 
 }

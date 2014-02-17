@@ -59,9 +59,7 @@ public class _035CircularPrimes implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 35;
-	}
 
 }

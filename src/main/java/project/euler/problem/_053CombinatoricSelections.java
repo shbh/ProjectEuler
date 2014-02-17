@@ -48,9 +48,7 @@ public class _053CombinatoricSelections implements IProblem {
 		return factorial[k].divide(factorial[l].multiply(factorial[k - l]));
 	}
 
-	public int getNo() {
+	
 
-		return 53;
-	}
 
 }

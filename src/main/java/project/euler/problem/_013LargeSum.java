@@ -121,8 +121,6 @@ public class _013LargeSum implements IProblem {
 				.pow(largesum.toString().length() - 10));
 	}
 
-	public int getNo() {
+	
 
-		return 13;
-	}
 }

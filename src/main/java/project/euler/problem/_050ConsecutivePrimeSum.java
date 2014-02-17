@@ -57,9 +57,9 @@ public class _050ConsecutivePrimeSum implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 50;
-	}
+
+	
 
 }

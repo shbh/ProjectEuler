@@ -27,9 +27,8 @@ public class _004LargestPalindromeProduct implements IProblem {
 		return largestproduct;
 	}
 
-	public int getNo() {
+	
 
-		return 4;
-	}
+	
 
 }

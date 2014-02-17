@@ -29,9 +29,7 @@ public class _044PentagonNumbers implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 44;
-	}
 
 }

@@ -23,9 +23,7 @@ public class _017NumberLetterCounts implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 17;
-	}
 
 }

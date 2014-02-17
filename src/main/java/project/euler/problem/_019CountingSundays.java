@@ -52,9 +52,5 @@ public class _019CountingSundays implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 19;
-	}
 
 }

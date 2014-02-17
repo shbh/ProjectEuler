@@ -81,9 +81,7 @@ public class _027QuadraticPrimes implements IProblem {
 		return count;
 	}
 
-	public int getNo() {
+	
 
-		return 27;
-	}
 
 }

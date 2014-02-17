@@ -50,8 +50,6 @@ public class _018MaximumPathSumI implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 18;
-	}
 }

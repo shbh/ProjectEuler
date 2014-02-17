@@ -28,9 +28,5 @@ public class _012HighlyDivisibleTriangularNumber implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 12;
-	}
 
 }

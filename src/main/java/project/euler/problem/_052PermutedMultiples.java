@@ -40,9 +40,8 @@ public class _052PermutedMultiples implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 52;
-	}
+	
 
 }

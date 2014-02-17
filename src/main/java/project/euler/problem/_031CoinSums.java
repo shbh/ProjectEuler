@@ -29,9 +29,5 @@ public class _031CoinSums implements IProblem {
 		return count;
 	}
 
-	public int getNo() {
-
-		return 31;
-	}
 
 }

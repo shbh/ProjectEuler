@@ -33,9 +33,7 @@ public class _005SmallestMultiple implements IProblem {
 		return number;
 	}
 
-	public int getNo() {
+	
 
-		return 5;
-	}
 
 }

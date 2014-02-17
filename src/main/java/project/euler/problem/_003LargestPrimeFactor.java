@@ -49,9 +49,7 @@ public class _003LargestPrimeFactor implements IProblem {
 		}
 	}
 
-	public int getNo() {
+	
 
-		return 3;
-	}
 
 }

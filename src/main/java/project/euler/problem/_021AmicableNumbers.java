@@ -42,9 +42,4 @@ public class _021AmicableNumbers implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 21;
-	}
-
 }

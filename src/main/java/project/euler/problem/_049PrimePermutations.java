@@ -103,9 +103,6 @@ public class _049PrimePermutations implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 49;
-	}
+	
 
 }

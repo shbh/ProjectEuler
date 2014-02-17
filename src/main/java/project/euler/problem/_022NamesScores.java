@@ -46,9 +46,5 @@ public class _022NamesScores implements IProblem {
 		return 0l;
 	}
 
-	public int getNo() {
-
-		return 22;
-	}
 
 }

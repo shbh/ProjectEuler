@@ -18,9 +18,6 @@ public class _036DoubleBasePalindromes implements IProblem {
 		return result;
 	}
 
-	public int getNo() {
-
-		return 36;
-	}
+	
 
 }

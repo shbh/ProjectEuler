@@ -28,9 +28,7 @@ public class _020FactorialDigitSum implements IProblem {
 		return sum;
 	}
 
-	public int getNo() {
+	
 
-		return 20;
-	}
 
 }

@@ -31,9 +31,4 @@ public class _009SpecialPythagoreanTriplet implements IProblem {
 
 	}
 
-	public int getNo() {
-
-		return 9;
-	}
-
 }

@@ -33,9 +33,6 @@ public class _034DigitFactorials implements IProblem {
 
 	}
 
-	public int getNo() {
 
-		return 34;
-	}
 
 }

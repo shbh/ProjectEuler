@@ -57,9 +57,5 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 		return true;
 	}
 
-	public int getNo() {
-
-		return 46;
-	}
 
 }

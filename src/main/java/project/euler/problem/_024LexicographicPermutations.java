@@ -55,10 +55,7 @@ public class _024LexicographicPermutations implements IProblem {
 		return result;
 	}
 	
-	public int getNo() {
 
-		return 24;
-	}
 	
 
 }

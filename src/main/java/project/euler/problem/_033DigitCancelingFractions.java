@@ -39,9 +39,8 @@ public class _033DigitCancelingFractions implements IProblem {
 		return den / Learning.greatestCommonFactor(num, den);
 	}
 
-	public int getNo() {
+	
 
-		return 33;
-	}
+
 
 }

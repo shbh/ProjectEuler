@@ -46,9 +46,7 @@ public class _028NumberSpiralDiagonals implements IProblem {
 		return totalA + totalB;
 	}
 
-	public int getNo() {
+	
 
-		return 28;
-	}
 
 }

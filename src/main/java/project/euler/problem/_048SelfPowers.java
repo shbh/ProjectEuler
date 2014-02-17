@@ -20,9 +20,7 @@ public class _048SelfPowers implements IProblem {
 		return number.mod(BigInteger.TEN.pow(10));
 	}
 
-	public int getNo() {
+	
 
-		return 48;
-	}
 
 }

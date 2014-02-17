@@ -26,21 +26,7 @@ public class _029DistinctPowers implements IProblem {
 		return powers.size();
 	}
 
-	public _029DistinctPowers a(int lower, int upper) {
-		this.lowerA = lower;
-		this.upperA = upper;
-		return this;
-	}
+	
 
-	public _029DistinctPowers b(int lower, int upper) {
-		this.lowerB = lower;
-		this.upperB = upper;
-		return this;
-	}
-
-	public int getNo() {
-
-		return 29;
-	}
 
 }

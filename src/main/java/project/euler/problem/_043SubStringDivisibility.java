@@ -86,9 +86,7 @@ public class _043SubStringDivisibility implements IProblem {
 
 	}
 
-	public int getNo() {
+	
 
-		return 43;
-	}
 
 }

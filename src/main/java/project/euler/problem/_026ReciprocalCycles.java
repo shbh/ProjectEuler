@@ -34,9 +34,7 @@ public final class _026ReciprocalCycles implements IProblem {
 		return iter - stateToIter.get(state);
 	}
 
-	public int getNo() {
+	
 
-		return 26;
-	}
 
 }

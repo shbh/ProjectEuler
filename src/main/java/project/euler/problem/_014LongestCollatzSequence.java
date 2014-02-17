@@ -45,9 +45,7 @@ public class _014LongestCollatzSequence implements IProblem {
 		return startingNumber;
 	}
 
-	public int getNo() {
+	
 
-		return 14;
-	}
 
 }

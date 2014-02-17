@@ -32,8 +32,5 @@ public class _015LatticePaths implements IProblem {
 
 	}
 
-	public int getNo() {
 
-		return 15;
-	}
 }

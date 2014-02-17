@@ -44,9 +44,5 @@ public class _039IntegerRightTriangles implements IProblem {
 		return count;
 	}
 
-	public int getNo() {
-
-		return 39;
-	}
 
 }
