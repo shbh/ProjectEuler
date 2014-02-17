@@ -7,9 +7,9 @@ public final class LaunchPad {
 		super();
 	}
 	public static void main(final String[] args) {
-	EulerEngine.run(54);//for single
+	//EulerEngine.run(54);//for single
 	//	EulerEngine.ring(41,47);//non sequence
-	//EulerEngine.range(3,7); // for range
+	EulerEngine.range(1,54); // for range
 	}
 	
 }
