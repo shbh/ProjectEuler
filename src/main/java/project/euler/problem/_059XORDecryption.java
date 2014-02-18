@@ -14,7 +14,7 @@ public class _059XORDecryption implements IProblem {
 	static Logger logger = Logger.getLogger(_059XORDecryption.class);
 	
 	public Integer solve() {
-		// TODO Auto-generated method stub
+		
 
 		int[] ciphers = null;
 		InputStream input = _059XORDecryption.class.getClassLoader()
