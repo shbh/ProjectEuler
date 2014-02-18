@@ -1,1 +1,2 @@
 mvn exec:java -Dexec.mainClass="project.euler.net.LaunchPad"
+mvn clean install -Dmaven.test.failure.ignore=true
