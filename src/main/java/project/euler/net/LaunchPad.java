@@ -12,7 +12,7 @@ public final class LaunchPad {
 	}
 
 	public static void main(final String[] args) {
-		logger.info(new project.euler.problem._059XORDecryption().solve());
+		logger.info(new project.euler.problem._053CombinatoricSelections().solve());
 	}
 
 }

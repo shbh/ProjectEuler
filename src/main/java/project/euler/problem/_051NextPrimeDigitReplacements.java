@@ -13,29 +13,46 @@ import project.euler.base.IProblem;
 import project.euler.feature.Functions;
 
 public class _051NextPrimeDigitReplacements implements IProblem {
+
 	static Logger logger = Logger.getLogger(_051NextPrimeDigitReplacements.class);
 
 	public Integer solve() {
 
 		for (int i = 11; i < 1000000; i = i + 2) {
+	
 			if (Functions.isPrime(i)) {
+			
 				String strPrime = Integer.toString(i);
+				
 				char[] chars = strPrime.toCharArray();
+				
 				Character[] characters = new Character[chars.length];
+				
 				for (int l = 0; l < chars.length; l++) {
+				
 					characters[l] = chars[l];
+				
 				}
+				
 				Set<Character> uniqueChars = new HashSet<Character>(Arrays.asList(characters));
+				
 				for (Character c : uniqueChars) {
+				
 					if (strPrime.replace(c.toString(), "").length() != strPrime.length() - 3) {
+					
 						continue;
 					}
 
 					List<Integer> listPrimes = new ArrayList<>();
+					
 					for (Integer j = 0; j < 10; j++) {
+					
 						Integer newNum = Integer.parseInt(strPrime.replace(c.toString(), j.toString()));
+						
 						if (Functions.isPrime(newNum) && newNum.toString().length() == strPrime.length()) {
+						
 							listPrimes.add(newNum);
+						
 						}
 
 						List<Integer> unique = new ArrayList<Integer>();
@@ -46,20 +63,27 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 							// is already in `unique` List or not. If not, then
 							// add it.
 							if (!unique.contains(arr)) {
+						
 								unique.add(arr);
+							
 							}
 						}
 
 						if (unique.size() == 8) {
+							
 							Collections.sort(unique);
+							
 							return unique.get(0);
+						
 						}
 
 					}
 				}
 			}
 		}
+	
 		return 0;
+
 	}
 
 }

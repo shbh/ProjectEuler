@@ -17,17 +17,25 @@ public class _047DistinctPrimesFactors implements IProblem {
 	public Integer solve() {
 
 		Stack<Integer> stack = new Stack<>();
+
 		int firstnumber = 2;
+		
 		int number = firstnumber;
 
 		while (true) {
+		
 			number++;
 
 			if (containPrimeFactor(number) == count) {
+			
 				stack.add(number);
-			} else {
+			} 
+			else 
+			{
 				stack.removeAllElements();
+			
 				firstnumber = number + 1;
+			
 			}
 
 			if (stack.size() == count) {
@@ -36,6 +44,7 @@ public class _047DistinctPrimesFactors implements IProblem {
 			}
 
 		}
+		
 		return firstnumber;
 	}
 
