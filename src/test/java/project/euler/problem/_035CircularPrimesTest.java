@@ -15,11 +15,8 @@ public class _035CircularPrimesTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_035CircularPrimes problem = new _035CircularPrimes();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

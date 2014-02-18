@@ -3,7 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _044PentagonNumbers implements IProblem {
 	static Logger logger = Logger.getLogger(_044PentagonNumbers.class);
@@ -20,8 +20,7 @@ public class _044PentagonNumbers implements IProblem {
 
 			for (int j = i - 1; j > 0; j--) {
 				int m = j * (3 * j - 1) / 2;
-				if (Functions.isPentagonal(n - m)
-						&& Functions.isPentagonal(n + m)) {
+				if (Functions.isPentagonal(n - m) && Functions.isPentagonal(n + m)) {
 					result = n - m;
 					notFound = false;
 					break;

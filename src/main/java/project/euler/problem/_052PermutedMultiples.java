@@ -1,11 +1,11 @@
 package project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.Arrays;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _052PermutedMultiples implements IProblem {
 	static Logger logger = Logger.getLogger(_052PermutedMultiples.class);
@@ -24,8 +24,7 @@ public class _052PermutedMultiples implements IProblem {
 				Arrays.sort(temp);
 				int countPermutedMultiple = 0;
 				for (int j = 6; j > 0; j--) {
-					if (Functions.isPandigital(Integer.toString(j * i),
-							new String(temp))) {
+					if (Functions.isPandigital(Integer.toString(j * i),	new String(temp))) {
 						countPermutedMultiple++;
 					} else {
 						break;

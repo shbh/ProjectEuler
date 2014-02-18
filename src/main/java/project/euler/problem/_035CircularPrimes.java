@@ -1,15 +1,15 @@
 package project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _035CircularPrimes implements IProblem {
 	static Logger logger = Logger.getLogger(_035CircularPrimes.class);

@@ -15,11 +15,8 @@ public class _015LatticePathsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_015LatticePaths problem = new _015LatticePaths();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

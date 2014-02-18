@@ -23,11 +23,9 @@ public class _016PowerDigitSum implements IProblem {
 
 		while (hugesum.compareTo(new BigInteger("0")) != 0) {
 
-			BigInteger remainder = hugesum.divide(BigInteger.TEN
-					.pow(length - 1));
+			BigInteger remainder = hugesum.divide(BigInteger.TEN.pow(length - 1));
 
-			hugesum = hugesum.subtract(BigInteger.TEN.pow(length - 1).multiply(
-					remainder));
+			hugesum = hugesum.subtract(BigInteger.TEN.pow(length - 1).multiply(remainder));
 
 			length = hugesum.toString().length();
 

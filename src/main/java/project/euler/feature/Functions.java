@@ -1,11 +1,9 @@
-package project.euler.util;
+package project.euler.feature;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import project.euler.base.KeyConstant;
 
 public class Functions implements KeyConstant {
 

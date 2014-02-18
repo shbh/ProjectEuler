@@ -1,4 +1,4 @@
-package project.euler.util;
+package project.euler.feature;
 
 import java.util.Arrays;
 import java.util.HashSet;

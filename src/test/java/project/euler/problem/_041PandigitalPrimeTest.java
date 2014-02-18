@@ -15,11 +15,8 @@ public class _041PandigitalPrimeTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_041PandigitalPrime problem = new _041PandigitalPrime();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

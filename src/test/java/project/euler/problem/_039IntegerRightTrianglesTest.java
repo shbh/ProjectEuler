@@ -16,11 +16,8 @@ public class _039IntegerRightTrianglesTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_039IntegerRightTriangles problem = new _039IntegerRightTriangles();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

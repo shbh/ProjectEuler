@@ -16,11 +16,8 @@ public class _028NumberSpiralDiagonalsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_028NumberSpiralDiagonals problem = new _028NumberSpiralDiagonals();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

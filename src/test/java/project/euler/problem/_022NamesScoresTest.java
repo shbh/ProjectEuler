@@ -15,11 +15,8 @@ public class _022NamesScoresTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_022NamesScores problem = new _022NamesScores();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

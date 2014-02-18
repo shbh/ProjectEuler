@@ -2,7 +2,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
-import project.euler.base.KeyConstant;
+import project.euler.feature.KeyConstant;
 
 public class _031CoinSums implements IProblem { 
 	static Logger logger = Logger.getLogger(_031CoinSums.class);

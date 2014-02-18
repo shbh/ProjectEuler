@@ -12,14 +12,12 @@ public class _003LargestPrimeFactorTest extends EulerTest {
 		super(_003LargestPrimeFactor.class.getSimpleName());
 	}
 
+	@Override
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_003LargestPrimeFactor problem = new _003LargestPrimeFactor();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

@@ -1,6 +1,5 @@
-package project.euler.util;
+package project.euler.feature;
 
-import project.euler.base.KeyConstant;
 
 
 

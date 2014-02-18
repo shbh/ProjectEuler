@@ -16,11 +16,8 @@ public class _009SpecialPythagoreanTripletTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_009SpecialPythagoreanTriplet problem = new _009SpecialPythagoreanTriplet();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

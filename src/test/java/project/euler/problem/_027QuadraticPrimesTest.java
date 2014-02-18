@@ -15,11 +15,8 @@ public class _027QuadraticPrimesTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_027QuadraticPrimes problem = new _027QuadraticPrimes();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

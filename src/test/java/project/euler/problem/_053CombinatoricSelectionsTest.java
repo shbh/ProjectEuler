@@ -16,10 +16,8 @@ public class _053CombinatoricSelectionsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_053CombinatoricSelections problem = new _053CombinatoricSelections();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
+
+		testEquality(problem);
 
 	}
 

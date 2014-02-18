@@ -3,7 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _043SubStringDivisibility implements IProblem {
 	static Logger logger = Logger.getLogger(_043SubStringDivisibility.class);
@@ -25,28 +25,23 @@ public class _043SubStringDivisibility implements IProblem {
 					continue;
 
 				for (int p11 = 11; p11 < 1000; p11 += 11) {
-					if (p13 / 10 != p11 % 100
-							|| !Functions.areDistinctDigits(p11))
+					if (p13 / 10 != p11 % 100 || !Functions.areDistinctDigits(p11))
 						continue;
 
 					for (int p7 = 7; p7 < 1000; p7 += 7) {
-						if (p11 / 10 != p7 % 100
-								|| !Functions.areDistinctDigits(p7))
+						if (p11 / 10 != p7 % 100 || !Functions.areDistinctDigits(p7))
 							continue;
 
 						for (int p5 = 5; p5 < 1000; p5 += 5) {
-							if (p7 / 10 != p5 % 100
-									|| !Functions.areDistinctDigits(p5))
+							if (p7 / 10 != p5 % 100 || !Functions.areDistinctDigits(p5))
 								continue;
 
 							for (int p3 = 3; p3 < 1000; p3 += 3) {
-								if (p5 / 10 != p3 % 100
-										|| !Functions.areDistinctDigits(p3))
+								if (p5 / 10 != p3 % 100 || !Functions.areDistinctDigits(p3))
 									continue;
 
 								for (int p2 = 2; p2 < 1000; p2 += 2) {
-									if (p3 / 10 != p2 % 100
-											|| !Functions.areDistinctDigits(p2))
+									if (p3 / 10 != p2 % 100 || !Functions.areDistinctDigits(p2))
 										continue;
 									// Extract the the correct digits from the
 									// multiples and concatenate the together.

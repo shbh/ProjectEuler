@@ -1,13 +1,13 @@
 package project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
-import project.euler.util.Permutations;
+import project.euler.feature.Functions;
+import project.euler.feature.Permutations;
 
 public class _041PandigitalPrime implements IProblem {
 	static Logger logger = Logger.getLogger(_041PandigitalPrime.class);
@@ -22,8 +22,7 @@ public class _041PandigitalPrime implements IProblem {
 		int current = 0;
 		for (int i = 9; i > 0; i--) {
 
-			Set<String> combinations = Permutations.generateCombination(Integer
-					.toString(m));
+			Set<String> combinations = Permutations.generateCombination(Integer.toString(m));
 
 			for (Iterator<String> iterator = combinations.iterator(); iterator
 					.hasNext();) {

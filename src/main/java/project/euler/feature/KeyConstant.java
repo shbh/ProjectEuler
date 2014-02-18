@@ -1,4 +1,4 @@
-package project.euler.base;
+package project.euler.feature;
 
 public interface KeyConstant {
 

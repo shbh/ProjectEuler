@@ -15,11 +15,8 @@ public class _010SummationOfPrimesTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_010SummationOfPrimes problem = new _010SummationOfPrimes();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

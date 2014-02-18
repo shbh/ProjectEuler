@@ -15,11 +15,8 @@ public class _019CountingSundaysTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_019CountingSundays problem = new _019CountingSundays();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

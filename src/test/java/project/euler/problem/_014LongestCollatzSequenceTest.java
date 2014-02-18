@@ -16,11 +16,8 @@ public class _014LongestCollatzSequenceTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_014LongestCollatzSequence problem = new _014LongestCollatzSequence();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

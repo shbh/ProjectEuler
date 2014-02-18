@@ -15,11 +15,8 @@ public class _023NonAbundantSumsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_023NonAbundantSums problem = new _023NonAbundantSums();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

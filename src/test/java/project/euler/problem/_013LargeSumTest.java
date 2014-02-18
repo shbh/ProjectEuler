@@ -15,11 +15,8 @@ public class _013LargeSumTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_013LargeSum problem = new _013LargeSum();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
-		// Assert.assertEquals("The result is mismatch",);
 
+		testEquality(problem);
 	}
+
 }

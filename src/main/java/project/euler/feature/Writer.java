@@ -1,8 +1,6 @@
-package project.euler.util;
+package project.euler.feature;
 
 import org.apache.log4j.Logger;
-
-import project.euler.base.KeyConstant;
 
 public class Writer implements KeyConstant {
 	static Logger logger = Logger.getLogger(Writer.class);

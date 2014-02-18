@@ -1,12 +1,12 @@
 package project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _050ConsecutivePrimeSum implements IProblem {
 	static Logger logger = Logger.getLogger(_050ConsecutivePrimeSum.class);

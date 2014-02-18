@@ -10,67 +10,99 @@ import java.util.Arrays;
 import project.euler.base.IProblem;
 
 public class _054PokerHands implements IProblem { 
+	
 	static Logger logger = Logger.getLogger(_054PokerHands.class);
 
 	int h = 3, d = 2, s = 4, c = 1;
 
 
 	public Object solve() {
+	
 		int count = 0;
 
-		InputStream input = _054PokerHands.class.getClassLoader()
-				.getResourceAsStream("poker.txt");
-		try (BufferedReader br = new BufferedReader(
-				new InputStreamReader(input))) {
+		InputStream input = _054PokerHands.class.getClassLoader().getResourceAsStream("poker.txt");
+		
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
 
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
 
 				String set1 = sCurrentLine.substring(0, 15);
+		
 				String set2 = sCurrentLine.substring(15);
+				
 				boolean isPlayer1Won = isPlayer1Won(set1, set2);
+				
 				if (isPlayer1Won) {
 
 					count++;
 				}
 			}
 
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
+		
 			e.printStackTrace();
+		
 		}
 
 		return Integer.valueOf(count);
 	}
 
 	private boolean isPlayer1Won(String set1, String set2) {
+		
 		int[] numbers1 = new int[5];
+		
 		int[] numbers2 = new int[5];
+		
 		POKER poker1 = whichPoker(numbers1, set1);
+		
 		POKER poker2 = whichPoker(numbers2, set2);
 		
-		if (poker1.ordinal() > poker2.ordinal()) {
+		if (poker1.ordinal() > poker2.ordinal()) 
+		{
+		
 			return true;
-		} else if (poker1.ordinal() == poker2.ordinal()) {
+		
+		} 
+		else if (poker1.ordinal() == poker2.ordinal()) 
+		{
 
 			switch (poker1) {
+		
 			case ROYALFLUSH:
 				return true;
 
 			case STRAIGHTFLUSH:
+			
 				if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+				
 					return true;
+				
 				}
+				
 				break;
+			
 			case FOUROFAKIND:
+			
 				int cnof1 = getCNO(numbers1[0]);
+				
 				int cnof2 = getCNO(numbers2[0]);
 
 				if (cnof1 == 1)
+				{
+				
 					cnof1 = 14;
+				
+				}
+				
 				if (cnof2 == 1)
+				{
+				
 					cnof2 = 14;
-
+				
+				}	
 				if (cnof1 > cnof2) {
 					return true;
 				} else if (cnof1 == cnof2) {

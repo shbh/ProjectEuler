@@ -16,11 +16,8 @@ public class _057SquareRootConvergentsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_057SquareRootConvergents problem = new _057SquareRootConvergents();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

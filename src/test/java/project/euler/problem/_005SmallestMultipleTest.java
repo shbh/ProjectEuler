@@ -15,11 +15,8 @@ public class _005SmallestMultipleTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_005SmallestMultiple problem = new _005SmallestMultiple();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

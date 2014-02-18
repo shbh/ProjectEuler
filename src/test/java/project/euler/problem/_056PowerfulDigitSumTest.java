@@ -15,11 +15,8 @@ public class _056PowerfulDigitSumTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_056PowerfulDigitSum problem = new _056PowerfulDigitSum();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

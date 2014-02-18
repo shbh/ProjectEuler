@@ -15,11 +15,8 @@ public class _030DigitFifthPowersTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_030DigitFifthPowers problem = new _030DigitFifthPowers();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

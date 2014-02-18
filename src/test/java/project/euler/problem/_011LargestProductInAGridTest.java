@@ -16,11 +16,8 @@ public class _011LargestProductInAGridTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_011LargestProductInAGrid problem = new _011LargestProductInAGrid();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

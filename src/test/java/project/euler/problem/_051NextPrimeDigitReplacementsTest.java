@@ -16,11 +16,8 @@ public class _051NextPrimeDigitReplacementsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_051NextPrimeDigitReplacements problem = new _051NextPrimeDigitReplacements();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
+
+		testEquality(problem);
 
 	}
-
 }

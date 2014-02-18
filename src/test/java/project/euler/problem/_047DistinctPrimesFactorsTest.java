@@ -16,11 +16,8 @@ public class _047DistinctPrimesFactorsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_047DistinctPrimesFactors problem = new _047DistinctPrimesFactors();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

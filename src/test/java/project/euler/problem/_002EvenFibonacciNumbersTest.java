@@ -15,10 +15,8 @@ public class _002EvenFibonacciNumbersTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_002EvenFibonacciNumbers problem = new _002EvenFibonacciNumbers();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
+
+		testEquality(problem);
 
 	}
 

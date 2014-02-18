@@ -1,14 +1,14 @@
 package project.euler.problem; 
-import org.apache.log4j.Logger;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.base.KeyConstant;
+import project.euler.feature.KeyConstant;
 
 /**
  * Created by shashi on 1/30/14.

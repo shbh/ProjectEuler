@@ -3,7 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _038PandigitalMultiples implements IProblem {
 	static Logger logger = Logger.getLogger(_038PandigitalMultiples.class);

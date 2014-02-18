@@ -1,7 +1,5 @@
 package project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -12,9 +10,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
-import project.euler.base.KeyConstant;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
+import project.euler.feature.KeyConstant;
 
 public class _049PrimePermutations implements IProblem {
 	static Logger logger = Logger.getLogger(_049PrimePermutations.class);

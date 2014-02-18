@@ -3,7 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
-import project.euler.util.Functions;
+import project.euler.feature.Functions;
 
 public class _033DigitCancelingFractions implements IProblem {
 	static Logger logger = Logger.getLogger(_033DigitCancelingFractions.class);
@@ -29,8 +29,7 @@ public class _033DigitCancelingFractions implements IProblem {
 
 					if (f == g) {
 						if (h * d == n * i) {
-							final int gcd = Functions
-									.greatestCommonFactor(n, d);
+							final int gcd = Functions.greatestCommonFactor(n, d);
 
 							den = den * (d / gcd);
 							num = num * (n / gcd);

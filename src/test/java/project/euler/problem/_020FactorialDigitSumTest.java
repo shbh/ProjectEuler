@@ -15,11 +15,8 @@ public class _020FactorialDigitSumTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_020FactorialDigitSum problem = new _020FactorialDigitSum();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

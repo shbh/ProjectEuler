@@ -15,11 +15,8 @@ public class _054PokerHandsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_054PokerHands problem = new _054PokerHands();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

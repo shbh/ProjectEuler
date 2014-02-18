@@ -1,4 +1,4 @@
-package project.euler.util;
+package project.euler.feature;
 
 import java.io.IOException;
 import java.io.InputStream;

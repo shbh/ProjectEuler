@@ -15,11 +15,8 @@ public class _032PandigitalProductsTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_032PandigitalProducts problem = new _032PandigitalProducts();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }

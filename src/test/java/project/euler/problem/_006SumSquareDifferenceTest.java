@@ -15,11 +15,8 @@ public class _006SumSquareDifferenceTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_006SumSquareDifference problem = new _006SumSquareDifference();
-		if (!problem.solve().toString().equals(results.get(classNo))) {
-			org.junit.Assert
-					.fail("The result is not matched with desired result");
-		}
 
+		testEquality(problem);
 	}
 
 }
