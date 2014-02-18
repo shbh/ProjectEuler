@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.Arrays;
 
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _052PermutedMultiples implements IProblem {
+	static Logger logger = Logger.getLogger(_052PermutedMultiples.class);
 
 	public Integer solve() {
 
@@ -39,9 +42,5 @@ public class _052PermutedMultiples implements IProblem {
 		}
 
 	}
-
-	
-
-	
 
 }

@@ -1,11 +1,15 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/29/14.
  */
 public class _015LatticePaths implements IProblem {
+
+	static Logger logger = Logger.getLogger(_015LatticePaths.class);
 
 	int limit = 20;
 
@@ -31,6 +35,5 @@ public class _015LatticePaths implements IProblem {
 		return nodes[0][0];
 
 	}
-
 
 }

@@ -1,8 +1,11 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 public class _039IntegerRightTriangles implements IProblem {
+	static Logger logger = Logger.getLogger(_039IntegerRightTriangles.class);
 
 	private final int limit = 1000;
 
@@ -43,6 +46,5 @@ public class _039IntegerRightTriangles implements IProblem {
 		}
 		return count;
 	}
-
 
 }

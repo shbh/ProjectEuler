@@ -1,4 +1,5 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +9,8 @@ import java.util.Arrays;
 
 import project.euler.base.IProblem;
 
-public class _054PokerHands implements IProblem {
+public class _054PokerHands implements IProblem { 
+	static Logger logger = Logger.getLogger(_054PokerHands.class);
 
 	int h = 3, d = 2, s = 4, c = 1;
 

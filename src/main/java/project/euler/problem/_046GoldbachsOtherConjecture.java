@@ -1,9 +1,12 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _046GoldbachsOtherConjecture implements IProblem {
+	static Logger logger = Logger.getLogger(_046GoldbachsOtherConjecture.class);
 
 	public Long solve() {
 		int[] prime = new int[1000];
@@ -33,7 +36,6 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 		}
 	}
 
-
 	private final boolean isConjecture(long n, long[] sqrt, int[] prime) {
 
 		for (int i = 0; i < prime.length; i++) {
@@ -56,6 +58,5 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 
 		return true;
 	}
-
 
 }

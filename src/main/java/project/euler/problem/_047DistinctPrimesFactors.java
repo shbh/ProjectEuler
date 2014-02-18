@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
@@ -8,6 +10,7 @@ import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _047DistinctPrimesFactors implements IProblem {
+	static Logger logger = Logger.getLogger(_047DistinctPrimesFactors.class);
 
 	private int count = 4;
 
@@ -49,7 +52,5 @@ public class _047DistinctPrimesFactors implements IProblem {
 
 		return divisor.size();
 	}
-
-
 
 }

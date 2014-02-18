@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/28/14.
  */
 public class _002EvenFibonacciNumbers implements IProblem {
+	static Logger logger = Logger.getLogger(_002EvenFibonacciNumbers.class);
 
 	private final int limit = 4000000;
 
@@ -28,8 +31,5 @@ public class _002EvenFibonacciNumbers implements IProblem {
 
 		return sum;
 	}
-
-	
-
 
 }

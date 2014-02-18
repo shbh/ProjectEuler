@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/29/14.
  */
 public class _014LongestCollatzSequence implements IProblem {
+	static Logger logger = Logger.getLogger(_014LongestCollatzSequence.class);
 
 	private final int limit = 1000000;
 
@@ -44,8 +47,5 @@ public class _014LongestCollatzSequence implements IProblem {
 		}
 		return startingNumber;
 	}
-
-	
-
 
 }

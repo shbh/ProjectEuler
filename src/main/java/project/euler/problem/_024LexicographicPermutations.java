@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +11,7 @@ import project.euler.base.IProblem;
  * Created by shashi on 1/30/14.
  */
 public class _024LexicographicPermutations implements IProblem {
+	static Logger logger = Logger.getLogger(_024LexicographicPermutations.class);
 
 	private final long position = 1000000;
 
@@ -22,7 +25,7 @@ public class _024LexicographicPermutations implements IProblem {
 			list.add(i);
 		}
 		long pos = position;
-		
+
 		for (int i = 9; i >= 0; i--) {
 			long fact = factorial(i);
 			long result = pos / fact;
@@ -54,8 +57,5 @@ public class _024LexicographicPermutations implements IProblem {
 		}
 		return result;
 	}
-	
-
-	
 
 }

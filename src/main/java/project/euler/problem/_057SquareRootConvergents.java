@@ -1,14 +1,16 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.math.BigInteger;
 
 import project.euler.base.IProblem;
 
 public class _057SquareRootConvergents implements IProblem {
+	static Logger logger = Logger.getLogger(_057SquareRootConvergents.class);
 
-	
 	public Integer solve() {
-		int answer=0;
+		int answer = 0;
 		BigInteger numerator = BigInteger.valueOf(3);
 		BigInteger denominator = BigInteger.valueOf(2);
 		BigInteger two = BigInteger.valueOf(2);
@@ -16,14 +18,13 @@ public class _057SquareRootConvergents implements IProblem {
 			BigInteger temp = numerator;
 			numerator = denominator.multiply(two).add(numerator);
 			denominator = temp.add(denominator);
-			
-			if(numerator.toString().length()>denominator.toString().length())
-			{
+
+			if (numerator.toString().length() > denominator.toString().length()) {
 				answer++;
 			}
-			
+
 		}
-		
+
 		return answer;
 	}
 

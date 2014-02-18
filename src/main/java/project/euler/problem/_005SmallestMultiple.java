@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/28/14.
  */
 public class _005SmallestMultiple implements IProblem {
+	static Logger logger = Logger.getLogger(_005SmallestMultiple.class);
 
 	int divisor = 20;
 
@@ -32,8 +35,5 @@ public class _005SmallestMultiple implements IProblem {
 		}
 		return number;
 	}
-
-	
-
 
 }

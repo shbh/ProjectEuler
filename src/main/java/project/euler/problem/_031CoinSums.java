@@ -1,9 +1,11 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
 
-public class _031CoinSums implements IProblem {
+public class _031CoinSums implements IProblem { 
+	static Logger logger = Logger.getLogger(_031CoinSums.class);
 
 	private static final int TARGET = 200;
 

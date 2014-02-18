@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -8,6 +10,7 @@ import project.euler.util.Functions;
 import project.euler.util.Permutations;
 
 public class _041PandigitalPrime implements IProblem {
+	static Logger logger = Logger.getLogger(_041PandigitalPrime.class);
 
 	public Integer solve() {
 		int n = 123456789;

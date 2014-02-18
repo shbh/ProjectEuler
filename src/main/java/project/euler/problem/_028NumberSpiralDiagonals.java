@@ -1,8 +1,11 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
 
-public class _028NumberSpiralDiagonals implements IProblem {
+public class _028NumberSpiralDiagonals implements IProblem { 
+	
+	static Logger logger = Logger.getLogger(_028NumberSpiralDiagonals.class);
 
 	private final int limit = 1001;
 

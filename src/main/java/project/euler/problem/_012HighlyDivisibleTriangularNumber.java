@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
@@ -7,6 +9,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/29/14.
  */
 public class _012HighlyDivisibleTriangularNumber implements IProblem {
+	static Logger logger = Logger.getLogger(_012HighlyDivisibleTriangularNumber.class);
 
 	private static int total = 500;
 
@@ -27,6 +30,5 @@ public class _012HighlyDivisibleTriangularNumber implements IProblem {
 		return trianglenumber;
 
 	}
-
 
 }

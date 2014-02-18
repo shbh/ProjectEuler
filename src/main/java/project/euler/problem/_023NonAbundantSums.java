@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +14,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/30/14.
  */
 public class _023NonAbundantSums implements IProblem {
+	static Logger logger = Logger.getLogger(_023NonAbundantSums.class);
 
 	public Integer solve() {
 		int limit = 28123;
@@ -45,8 +48,5 @@ public class _023NonAbundantSums implements IProblem {
 		}
 		return total;
 	}
-
-	
-
 
 }

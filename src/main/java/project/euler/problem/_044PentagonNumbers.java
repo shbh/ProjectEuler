@@ -1,9 +1,12 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _044PentagonNumbers implements IProblem {
+	static Logger logger = Logger.getLogger(_044PentagonNumbers.class);
 
 	public Integer solve() {
 
@@ -28,8 +31,5 @@ public class _044PentagonNumbers implements IProblem {
 		return result;
 
 	}
-
-	
-
 
 }

@@ -1,9 +1,12 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public final class _032PandigitalProducts implements IProblem {
+	static Logger logger = Logger.getLogger(_032PandigitalProducts.class);
 
 	public Integer solve() {
 
@@ -27,8 +30,5 @@ public final class _032PandigitalProducts implements IProblem {
 		}
 		return false;
 	}
-
-	
-
 
 }

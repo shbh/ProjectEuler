@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.HashMap;
 import java.util.Map;
 
 import project.euler.base.IProblem;
 
 public final class _026ReciprocalCycles implements IProblem {
+	static Logger logger = Logger.getLogger(_026ReciprocalCycles.class);
 
 	public int limit = 1000;
 
@@ -33,8 +36,5 @@ public final class _026ReciprocalCycles implements IProblem {
 		}
 		return iter - stateToIter.get(state);
 	}
-
-	
-
 
 }

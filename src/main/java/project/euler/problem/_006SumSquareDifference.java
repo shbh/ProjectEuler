@@ -1,13 +1,16 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/28/14.
  */
 public class _006SumSquareDifference implements IProblem {
+	static Logger logger = Logger.getLogger(_006SumSquareDifference.class);
 
-	private static final  int LIMIT = 100;
+	private static final int LIMIT = 100;
 
 	public Long solve() {
 		long sum = 0;
@@ -21,8 +24,5 @@ public class _006SumSquareDifference implements IProblem {
 		return square * square - sum;
 
 	}
-
-	
-
 
 }

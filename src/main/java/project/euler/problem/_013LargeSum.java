@@ -1,4 +1,5 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
@@ -7,7 +8,8 @@ import project.euler.base.IProblem;
 /**
  * Created by shashi on 1/29/14.
  */
-public class _013LargeSum implements IProblem {
+public class _013LargeSum implements IProblem { 
+	static Logger logger = Logger.getLogger(_013LargeSum.class);
 
 	public BigInteger solve() {
 		String text = "37107287533902102798797998220837590246510135740250\n"

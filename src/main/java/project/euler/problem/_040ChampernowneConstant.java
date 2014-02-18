@@ -1,13 +1,15 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 public class _040ChampernowneConstant implements IProblem {
+	static Logger logger = Logger.getLogger(_040ChampernowneConstant.class);
 
 	int limit = 7;
 
 	public Integer solve() {
-
 
 		// 0.123456789101112131415161718192021...
 		// 0-9
@@ -54,7 +56,7 @@ public class _040ChampernowneConstant implements IProblem {
 		int w = y / bar;// 3
 
 		y = (int) Math.pow(10, bar - 1) - 1 + w;// 12
-		
+
 		if (z != 0) {
 			y = y + 1;// 13
 
@@ -67,6 +69,5 @@ public class _040ChampernowneConstant implements IProblem {
 		return Integer.parseInt(Integer.toString(y).substring(g, g + 1));
 
 	}
-
 
 }

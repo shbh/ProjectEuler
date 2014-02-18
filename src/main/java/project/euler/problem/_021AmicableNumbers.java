@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,6 +12,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/30/14.
  */
 public class _021AmicableNumbers implements IProblem {
+	static Logger logger = Logger.getLogger(_021AmicableNumbers.class);
 
 	private final int limit = 10000;
 

@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -11,6 +13,7 @@ import project.euler.base.KeyConstant;
 import project.euler.util.Functions;
 
 public class _037TruncatablePrimes implements IProblem {
+	static Logger logger = Logger.getLogger(_037TruncatablePrimes.class);
 
 	private final int limit = 11;
 
@@ -78,6 +81,5 @@ public class _037TruncatablePrimes implements IProblem {
 
 		return sets;
 	}
-
 
 }

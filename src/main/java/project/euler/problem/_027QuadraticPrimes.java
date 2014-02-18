@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -12,6 +14,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/31/14.
  */
 public class _027QuadraticPrimes implements IProblem {
+	static Logger logger = Logger.getLogger(_027QuadraticPrimes.class);
 
 	private final Integer limit = 1000;
 
@@ -80,8 +83,5 @@ public class _027QuadraticPrimes implements IProblem {
 
 		return count;
 	}
-
-	
-
 
 }

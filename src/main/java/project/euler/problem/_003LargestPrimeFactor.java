@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
@@ -7,6 +9,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/28/14.
  */
 public class _003LargestPrimeFactor implements IProblem {
+	static Logger logger = Logger.getLogger(_003LargestPrimeFactor.class);
 
 	private final long inputnumber = 600851475143l;
 
@@ -48,8 +51,5 @@ public class _003LargestPrimeFactor implements IProblem {
 			return largeprimefactor;
 		}
 	}
-
-	
-
 
 }

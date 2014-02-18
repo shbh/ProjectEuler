@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +17,7 @@ import project.euler.base.KeyConstant;
  * Created by shashi on 1/30/14.
  */
 public class _042CodedTriangleNumbers implements IProblem {
+	static Logger logger = Logger.getLogger(_042CodedTriangleNumbers.class);
 
 	static List<Integer> triangleNumber = new ArrayList<>();
 	static int max = 0;
@@ -68,8 +71,5 @@ public class _042CodedTriangleNumbers implements IProblem {
 		return n;
 
 	}
-
-	
-
 
 }

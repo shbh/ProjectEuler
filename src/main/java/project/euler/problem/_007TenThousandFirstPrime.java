@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
@@ -7,6 +9,7 @@ import project.euler.util.Functions;
  * Created by shashi on 1/28/14.
  */
 public class _007TenThousandFirstPrime implements IProblem {
+	static Logger logger = Logger.getLogger(_007TenThousandFirstPrime.class);
 
 	private final long number = 10001;
 
@@ -28,6 +31,5 @@ public class _007TenThousandFirstPrime implements IProblem {
 		return no;
 
 	}
-
 
 }

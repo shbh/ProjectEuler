@@ -1,4 +1,5 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
@@ -7,7 +8,9 @@ import project.euler.base.IProblem;
 /**
  * Created by shashi on 1/28/14.
  */
-public class _008LargestProductInASeries implements IProblem {
+public class _008LargestProductInASeries implements IProblem { 
+	
+	static Logger logger = Logger.getLogger(_008LargestProductInASeries.class);
 
 	int factor = 5;
 

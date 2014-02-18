@@ -1,4 +1,5 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
 
@@ -6,6 +7,8 @@ import project.euler.base.IProblem;
  * Created by shashi on 1/30/14.
  */
 public class _018MaximumPathSumI implements IProblem {
+
+	static Logger logger = Logger.getLogger(_018MaximumPathSumI.class);
 
 	public Integer solve() {
 		String text = "75\n" + "95 64\n" + "17 47 82\n" + "18 35 87 10\n"

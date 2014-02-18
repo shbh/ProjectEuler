@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.math.BigInteger;
 
 import project.euler.base.IProblem;
@@ -8,6 +10,7 @@ import project.euler.base.IProblem;
  * Created by shashi on 1/30/14.
  */
 public class _020FactorialDigitSum implements IProblem {
+	static Logger logger = Logger.getLogger(_020FactorialDigitSum.class);
 
 	private final int limit = 100;
 
@@ -27,8 +30,5 @@ public class _020FactorialDigitSum implements IProblem {
 		}
 		return sum;
 	}
-
-	
-
 
 }

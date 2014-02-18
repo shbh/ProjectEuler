@@ -1,11 +1,14 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.math.BigInteger;
 
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _055LychrelNumbers implements IProblem {
+	static Logger logger = Logger.getLogger(_055LychrelNumbers.class);
 
 	public Integer solve() {
 		int answer = 0;

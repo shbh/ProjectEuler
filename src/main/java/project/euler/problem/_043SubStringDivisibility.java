@@ -1,9 +1,12 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _043SubStringDivisibility implements IProblem {
+	static Logger logger = Logger.getLogger(_043SubStringDivisibility.class);
 
 	public Long solve() {
 		long sum = 0;
@@ -49,17 +52,17 @@ public class _043SubStringDivisibility implements IProblem {
 									// multiples and concatenate the together.
 									long n = (long) Functions
 											.concat(p2,
-													Functions.concat(
-															p3 % 10,
-															Functions.concat(
-																	p5 % 10,
-																	Functions.concat(
-																			p7 % 10,
-																			Functions.concat(
-																					p11 % 10,
-																					Functions.concat(
-																							p13 % 10,
-																							p17 % 10))))));
+													Functions
+															.concat(p3 % 10,
+																	Functions
+																			.concat(p5 % 10,
+																					Functions
+																							.concat(p7 % 10,
+																									Functions
+																											.concat(p11 % 10,
+																													Functions
+																															.concat(p13 % 10,
+																																	p17 % 10))))));
 									// Make sure the concatenated number has
 									// distinct digits.
 									if (!Functions.areDistinctDigits(n))
@@ -85,8 +88,5 @@ public class _043SubStringDivisibility implements IProblem {
 		return sum;
 
 	}
-
-	
-
 
 }

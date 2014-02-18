@@ -1,4 +1,5 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +13,8 @@ import project.euler.base.KeyConstant;
 /**
  * Created by shashi on 1/30/14.
  */
-public class _022NamesScores implements IProblem {
+public class _022NamesScores implements IProblem { 
+	static Logger logger = Logger.getLogger(_022NamesScores.class);
 
 	public Long solve() {
 		InputStream input = _022NamesScores.class.getClassLoader()

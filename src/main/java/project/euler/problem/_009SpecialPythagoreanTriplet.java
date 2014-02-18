@@ -1,11 +1,14 @@
-package project.euler.problem;
+package project.euler.problem; 
+import org.apache.log4j.Logger;
 
 import project.euler.base.IProblem;
 
 /**
  * Created by shashi on 1/28/14.
  */
-public class _009SpecialPythagoreanTriplet implements IProblem {
+public class _009SpecialPythagoreanTriplet implements IProblem { 
+	
+	static Logger logger = Logger.getLogger(_009SpecialPythagoreanTriplet.class);
 
 	int marker = 1000;
 

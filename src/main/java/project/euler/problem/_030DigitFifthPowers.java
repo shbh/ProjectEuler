@@ -1,8 +1,11 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 public class _030DigitFifthPowers implements IProblem {
+	static Logger logger = Logger.getLogger(_030DigitFifthPowers.class);
 
 	private static final int DIGIT = 5;
 
@@ -31,8 +34,5 @@ public class _030DigitFifthPowers implements IProblem {
 		}
 		return result;
 	}
-
-	
-
 
 }

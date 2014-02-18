@@ -1,5 +1,7 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +9,7 @@ import project.euler.base.IProblem;
 import project.euler.util.Functions;
 
 public class _050ConsecutivePrimeSum implements IProblem {
+	static Logger logger = Logger.getLogger(_050ConsecutivePrimeSum.class);
 
 	int limit = 1000000;
 
@@ -56,10 +59,5 @@ public class _050ConsecutivePrimeSum implements IProblem {
 		return result;
 
 	}
-
-	
-
-
-	
 
 }

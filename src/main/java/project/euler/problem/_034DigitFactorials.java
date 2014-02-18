@@ -1,8 +1,11 @@
 package project.euler.problem;
 
+import org.apache.log4j.Logger;
+
 import project.euler.base.IProblem;
 
 public class _034DigitFactorials implements IProblem {
+	static Logger logger = Logger.getLogger(_034DigitFactorials.class);
 
 	public Integer solve() {
 
@@ -32,7 +35,5 @@ public class _034DigitFactorials implements IProblem {
 		return totalSum;
 
 	}
-
-
 
 }
