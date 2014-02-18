@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.Stack;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _047DistinctPrimesFactors implements IProblem {
 
@@ -40,7 +40,7 @@ public class _047DistinctPrimesFactors implements IProblem {
 
 		Set<Integer> divisor = new HashSet<>();
 		while (true) {
-			int factor = Learning.smallestFactor(number);
+			int factor = Functions.smallestFactor(number);
 			divisor.add(factor);
 			number = number / factor;
 			if (number == 1)

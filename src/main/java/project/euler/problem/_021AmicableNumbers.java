@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/30/14.
@@ -22,7 +22,7 @@ public class _021AmicableNumbers implements IProblem {
 		Set<Integer> unique = new HashSet<Integer>();
 
 		for (int i = 1; i < limit; i++) {
-			numbers[i] = Learning.sumofdivisor(i);
+			numbers[i] = Functions.sumofdivisor(i);
 		}
 
 		for (int i = 1; i < limit; i++) {

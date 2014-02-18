@@ -8,7 +8,7 @@ import java.util.Set;
 
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _037TruncatablePrimes implements IProblem {
 
@@ -23,7 +23,7 @@ public class _037TruncatablePrimes implements IProblem {
 		// 3 and 7 are prime.. Starting with 13
 		for (int i = 13; count < limit;) {
 
-			if (Learning.isPrime(i)) {
+			if (Functions.isPrime(i)) {
 				// System.out.println(i);
 				Set<String> combinations = generate(KeyConstant.BLANK + i);
 
@@ -33,7 +33,7 @@ public class _037TruncatablePrimes implements IProblem {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
-					if (Learning.isPrime(Integer.valueOf(string))) {
+					if (Functions.isPrime(Integer.valueOf(string))) {
 						isPrimeCombination = true;
 						continue;
 					} else {

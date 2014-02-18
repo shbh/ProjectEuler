@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 import project.euler.util.Permutations;
 
 public class _041PandigitalPrime implements IProblem {
@@ -26,7 +26,7 @@ public class _041PandigitalPrime implements IProblem {
 					.hasNext();) {
 				String number = (String) iterator.next();
 
-				if (Learning.isPrime(Long.parseLong(number))) {
+				if (Functions.isPrime(Long.parseLong(number))) {
 
 					current = i;
 					if (pandigitalNumber < Integer.parseInt(number)) {

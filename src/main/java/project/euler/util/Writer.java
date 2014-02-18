@@ -3,7 +3,7 @@ package project.euler.util;
 import project.euler.base.KeyConstant;
 import project.euler.base.Solution;
 
-public class Writer extends KeyConstant {
+public class Writer implements KeyConstant {
 	public static void headerformat() {
 		write(DOUBLEMULTILINE);
 		System.out.format("%1s%10s%1s%40s%1s%15s%1s%30s%1s%30s%1s%13s%1s", "|",

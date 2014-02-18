@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _046GoldbachsOtherConjecture implements IProblem {
 
@@ -20,7 +20,7 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 		long i = 7;
 		while (true) {
 			i = i + 2;
-			if (Learning.isComposite(i)) {
+			if (Functions.isComposite(i)) {
 
 				if (isConjecture(i, sqrt, prime)) {
 					return i;

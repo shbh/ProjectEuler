@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _044PentagonNumbers implements IProblem {
 
@@ -17,8 +17,8 @@ public class _044PentagonNumbers implements IProblem {
 
 			for (int j = i - 1; j > 0; j--) {
 				int m = j * (3 * j - 1) / 2;
-				if (Learning.isPentagonal(n - m)
-						&& Learning.isPentagonal(n + m)) {
+				if (Functions.isPentagonal(n - m)
+						&& Functions.isPentagonal(n + m)) {
 					result = n - m;
 					notFound = false;
 					break;

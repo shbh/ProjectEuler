@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/28/14.
@@ -19,7 +19,7 @@ public class _004LargestPalindromeProduct implements IProblem {
 			for (int m = upper; m > lower; m--) {
 				final int product = n * m;
 				if (product > largestproduct
-						&& Learning.isPalindrome(product)) {
+						&& Functions.isPalindrome(product)) {
 					largestproduct = product;
 				}
 			}

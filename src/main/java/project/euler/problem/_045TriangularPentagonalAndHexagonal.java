@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _045TriangularPentagonalAndHexagonal implements IProblem {
 
@@ -12,7 +12,7 @@ public class _045TriangularPentagonalAndHexagonal implements IProblem {
 		while (true) {
 			initial=initial+1;
 			result = initial * (2 * initial - 1);
-			if (Learning.isPentagonal(result)) {
+			if (Functions.isPentagonal(result)) {
 				break;
 			}
 		}

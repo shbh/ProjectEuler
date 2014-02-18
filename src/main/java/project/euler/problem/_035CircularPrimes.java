@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _035CircularPrimes implements IProblem {
 
@@ -27,9 +27,9 @@ public class _035CircularPrimes implements IProblem {
 				continue;
 			}
 
-			if (Learning.isPrime(i) && !Learning.isNumberContainEven("" + i)) {
+			if (Functions.isPrime(i) && !Functions.isNumberContainEven("" + i)) {
 				// System.out.println(i);
-				Set<String> combinations = Learning.generateCircular("" + i);
+				Set<String> combinations = Functions.generateCircular("" + i);
 
 				boolean isPrimeCombination = false;
 
@@ -37,7 +37,7 @@ public class _035CircularPrimes implements IProblem {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
-					if (Learning.isPrime(Integer.valueOf(string))) {
+					if (Functions.isPrime(Integer.valueOf(string))) {
 						isPrimeCombination = true;
 						continue;
 					} else {

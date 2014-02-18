@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _036DoubleBasePalindromes implements IProblem {
 
@@ -11,7 +11,7 @@ public class _036DoubleBasePalindromes implements IProblem {
 		int result = 0;
 
 		for (int i = 1; i < LIMIT; i++){
-			if (Learning.isDoubleBasePalindrome(i)) {
+			if (Functions.isDoubleBasePalindrome(i)) {
 				result += i;
 			}
 		}

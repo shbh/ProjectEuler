@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/28/14.
@@ -41,7 +41,7 @@ public class _003LargestPrimeFactor implements IProblem {
 
 		if (isfactored) {
 			largenumber = largenumber / number;
-			largeprimefactor = (number > largeprimefactor && Learning
+			largeprimefactor = (number > largeprimefactor && Functions
 					.isPrime(number)) ? number : largeprimefactor;
 			return divideNumber(largenumber, 2, largeprimefactor);
 		} else {

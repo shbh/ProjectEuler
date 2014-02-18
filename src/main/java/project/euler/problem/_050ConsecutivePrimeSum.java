@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _050ConsecutivePrimeSum implements IProblem {
 
@@ -20,7 +20,7 @@ public class _050ConsecutivePrimeSum implements IProblem {
 
 		int firstnumber = 2;
 		while (firstnumber < limit) {
-			if (Learning.isPrime(firstnumber)) {
+			if (Functions.isPrime(firstnumber)) {
 				primes.add(firstnumber);
 			}
 			firstnumber++;
@@ -30,7 +30,7 @@ public class _050ConsecutivePrimeSum implements IProblem {
 		int maxterm = 0;
 		while (loop < primes.size()) {
 			i = i + 1;
-			if (Learning.isPrime(i)) {
+			if (Functions.isPrime(i)) {
 
 				sum += i;
 
@@ -41,7 +41,7 @@ public class _050ConsecutivePrimeSum implements IProblem {
 					continue;
 				}
 				term++;
-				if (Learning.isPrime(sum)) {
+				if (Functions.isPrime(sum)) {
 
 					if (term > maxterm) {
 						result = sum;

@@ -6,14 +6,12 @@ import project.euler.base.IProblem;
 
 public class _056PowerfulDigitSum implements IProblem {
 
-	@Override
+	
 	public Integer solve() {
 		int a = 100;
 		int b = 100;
 
 		Integer answer = 0;
-		int answerA = 0;
-		int answerB = 0;
 
 		for (int i = 1; i < a; i++) {
 			for (int j = 0; j < b; j++) {
@@ -21,13 +19,10 @@ public class _056PowerfulDigitSum implements IProblem {
 				Integer sum = addDigit(power);
 				
 				if (sum > answer) {
-					answerA = i;
-					answerB = j;
 					answer = sum;
 				}
 			}
 		}
-		System.out.println(answer + " ::"+answerA + "::"+answerB);
 
 		return answer;
 	}

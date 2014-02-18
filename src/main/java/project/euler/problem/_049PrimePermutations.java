@@ -12,7 +12,7 @@ import java.util.Set;
 
 import project.euler.base.IProblem;
 import project.euler.base.KeyConstant;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _049PrimePermutations implements IProblem {
 
@@ -20,7 +20,7 @@ public class _049PrimePermutations implements IProblem {
 
 		List<Integer> primes = new ArrayList<>();
 		for (int i = 1000; i < 10000; i++) {
-			if (Learning.isPrime(i)) {
+			if (Functions.isPrime(i)) {
 				primes.add(i);
 
 			}
@@ -96,7 +96,7 @@ public class _049PrimePermutations implements IProblem {
 			if (key.equals("1478")) {
 				continue;
 			}
-			return Learning.join(resultValue, KeyConstant.BLANK);
+			return Functions.join(resultValue, KeyConstant.BLANK);
 		}
 
 		return KeyConstant.BLANK;

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _051NextPrimeDigitReplacements implements IProblem {
 
@@ -16,7 +16,7 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 		
 		
 		for (int i = 11; i < 1000000; i=i+2) {
-			if (Learning.isPrime(i)) { 
+			if (Functions.isPrime(i)) { 
 				String strPrime = Integer.toString(i); 
 				char[] chars= strPrime.toCharArray(); 
 				Character[] characters = new Character[chars.length]; 
@@ -34,7 +34,7 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 					List<Integer> listPrimes = new ArrayList<>(); 
 					for (Integer j = 0; j < 10; j++) {
 						Integer newNum = Integer.parseInt(strPrime.replace( c.toString(),j.toString())); 
-						if (Learning.isPrime(newNum) && newNum.toString().length() ==strPrime .length()) 
+						if (Functions.isPrime(newNum) && newNum.toString().length() ==strPrime .length()) 
 						{
 							listPrimes.add(newNum); 
 						} 

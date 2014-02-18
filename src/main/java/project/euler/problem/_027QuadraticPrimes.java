@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/31/14.
@@ -22,7 +22,7 @@ public class _027QuadraticPrimes implements IProblem {
 		int maxm = 0;
 
 		for (int i = 1; i < limit; i++) {
-			if (Learning.isPrime(i)) {
+			if (Functions.isPrime(i)) {
 				bs.add(i);
 				bs.add(-i);
 			}
@@ -69,7 +69,7 @@ public class _027QuadraticPrimes implements IProblem {
 		while (!noprime) {
 			int value = (int) Math.pow(n, 2) + a * n + b;
 
-			if (Learning.isPrime(value)) {
+			if (Functions.isPrime(value)) {
 				count++;
 				n++;
 			} else {

@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/29/14.
@@ -19,7 +19,7 @@ public class _012HighlyDivisibleTriangularNumber implements IProblem {
 			trianglenumber = trianglenumber + lastnumber;
 			lastnumber++;
 
-			final int count = Learning.countdivisor(trianglenumber);
+			final int count = Functions.countdivisor(trianglenumber);
 			if (count >= total) {
 				break;
 			}

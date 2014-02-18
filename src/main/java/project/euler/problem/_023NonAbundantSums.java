@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/30/14.
@@ -18,7 +18,7 @@ public class _023NonAbundantSums implements IProblem {
 		List<Integer> list = new ArrayList<>();
 
 		for (int i = 1; i < limit; i++) {
-			if (i < Learning.sumofdivisor(i)) {
+			if (i < Functions.sumofdivisor(i)) {
 				list.add(i);
 			}
 

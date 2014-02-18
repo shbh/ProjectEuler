@@ -7,7 +7,7 @@ import java.util.Set;
 
 import project.euler.base.KeyConstant;
 
-public class Learning extends KeyConstant {
+public class Functions implements KeyConstant {
 
 	public static Set<String> generateCircular(final String string) {
 

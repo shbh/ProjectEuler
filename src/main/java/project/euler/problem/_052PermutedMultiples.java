@@ -3,7 +3,7 @@ package project.euler.problem;
 import java.util.Arrays;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public class _052PermutedMultiples implements IProblem {
 
@@ -21,7 +21,7 @@ public class _052PermutedMultiples implements IProblem {
 				Arrays.sort(temp);
 				int countPermutedMultiple = 0;
 				for (int j = 6; j > 0; j--) {
-					if (Learning.isPandigital(Integer.toString(j * i),
+					if (Functions.isPandigital(Integer.toString(j * i),
 							new String(temp))) {
 						countPermutedMultiple++;
 					} else {

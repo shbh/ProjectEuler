@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 public final class _032PandigitalProducts implements IProblem {
 
@@ -22,7 +22,7 @@ public final class _032PandigitalProducts implements IProblem {
 		// Find and examine all factors of n
 
 		for (int i = 1; i <= n; i++) {
-			if (n % i == 0 && Learning.isPandigital("" + n + i + n / i))
+			if (n % i == 0 && Functions.isPandigital("" + n + i + n / i))
 				return true;
 		}
 		return false;

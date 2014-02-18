@@ -2,7 +2,9 @@ package project.euler.util;
 
 import project.euler.base.KeyConstant;
 
-public class NumberText extends KeyConstant{
+
+
+public class NumberText implements KeyConstant {
 
 	public static String getNumberLetters(Integer number) {
 		StringBuffer text = new StringBuffer();

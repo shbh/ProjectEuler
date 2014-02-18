@@ -1,6 +1,6 @@
 package project.euler.base;
 
-public class KeyConstant {
+public interface KeyConstant {
 
 	public static final int ALLOWEDTIME = 60000;
 	public static final String COMMA = ",";

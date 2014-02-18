@@ -1,7 +1,7 @@
 package project.euler.problem;
 
 import project.euler.base.IProblem;
-import project.euler.util.Learning;
+import project.euler.util.Functions;
 
 /**
  * Created by shashi on 1/28/14.
@@ -16,7 +16,7 @@ public class _007TenThousandFirstPrime implements IProblem {
 
 		while (true) {
 			no = no + 2;
-			if (Learning.isPrime(no)) {
+			if (Functions.isPrime(no)) {
 				boundry = boundry + 1;
 			}
 
