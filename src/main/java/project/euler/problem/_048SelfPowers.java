@@ -15,7 +15,7 @@ public class _048SelfPowers implements IProblem {
 		for (int i = 1; i < limit; i++) {
 
 			number = number.add(BigInteger.valueOf(i).pow(i));
-			// System.out.println(number);
+
 		}
 		return number.mod(BigInteger.TEN.pow(10));
 	}

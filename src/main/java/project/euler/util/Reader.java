@@ -7,8 +7,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import project.euler.net.EulerEngine;
-
 public class Reader {
 	
 	public static Reader reader = null;
@@ -38,7 +36,7 @@ public class Reader {
 
 		try {
 
-			input = EulerEngine.class.getClassLoader().getResourceAsStream(
+			input = Reader.class.getClassLoader().getResourceAsStream(
 					"solution.properties");
 
 			// load a properties file from class path, inside static method

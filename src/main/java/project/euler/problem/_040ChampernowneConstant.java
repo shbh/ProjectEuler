@@ -54,7 +54,7 @@ public class _040ChampernowneConstant implements IProblem {
 		int w = y / bar;// 3
 
 		y = (int) Math.pow(10, bar - 1) - 1 + w;// 12
-		// System.out.println(w);
+		
 		if (z != 0) {
 			y = y + 1;// 13
 

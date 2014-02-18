@@ -24,7 +24,6 @@ public class _037TruncatablePrimes implements IProblem {
 		for (int i = 13; count < limit;) {
 
 			if (Functions.isPrime(i)) {
-				// System.out.println(i);
 				Set<String> combinations = generate(KeyConstant.BLANK + i);
 
 				boolean isPrimeCombination = false;

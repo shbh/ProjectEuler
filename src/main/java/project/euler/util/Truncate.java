@@ -4,23 +4,26 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 public class Truncate {
+	static Logger logger = Logger.getLogger(Truncate.class);
 	public static void main(String[] args) {
 
 		generate(Integer.toString(379));
 		cut1(Integer.toString(379));
-		System.out.println(isNumberEndWith37("373"));
+		logger.info(isNumberEndWith37("373"));
 		char[] temp = new Integer(1003).toString().toCharArray();
 		Arrays.sort(temp);
 
-		System.out.println((Math.abs(123) / Math.pow(10, 3 - 1)) % 10);
-		System.out.println(Integer.toString(12).substring(1, 2));
+		logger.info((Math.abs(123) / Math.pow(10, 3 - 1)) % 10);
+		logger.info(Integer.toString(12).substring(1, 2));
 	}
 
 	private final static void cut1(String string) {
 
-		System.out.println(string.substring(0, 1));
-		System.out.println(string.substring(string.length() - 1));
+		logger.info(string.substring(0, 1));
+		logger.info(string.substring(string.length() - 1));
 	}
 
 	private final static boolean isNumberEndWith37(String string) {

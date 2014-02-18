@@ -16,7 +16,7 @@ public class Functions implements KeyConstant {
 		String temp = string;
 		for (int i = 0; i < string.length(); i++) {
 			temp = temp.charAt(temp.length() - 1) + temp;
-			// System.out.print(temp+",");
+
 			temp = temp.substring(0, temp.length() - 1);
 
 			if (sets.contains(temp)) {

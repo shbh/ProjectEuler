@@ -28,7 +28,6 @@ public class _035CircularPrimes implements IProblem {
 			}
 
 			if (Functions.isPrime(i) && !Functions.isNumberContainEven("" + i)) {
-				// System.out.println(i);
 				Set<String> combinations = Functions.generateCircular("" + i);
 
 				boolean isPrimeCombination = false;

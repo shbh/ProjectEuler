@@ -1,15 +1,18 @@
 package project.euler.net;
 
+import org.apache.log4j.Logger;
+
+
+
 public final class LaunchPad {
 
-	private LaunchPad()
-	{
+	static Logger logger = Logger.getLogger(LaunchPad.class);
+	private LaunchPad() {
 		super();
 	}
+
 	public static void main(final String[] args) {
-	EulerEngine.run(57);//for single
-	//	EulerEngine.ring(41,47);//non sequence
-	//EulerEngine.range(1,56); // for range
+		logger.info(new project.euler.problem._057SquareRootConvergents().solve());
 	}
-	
+
 }

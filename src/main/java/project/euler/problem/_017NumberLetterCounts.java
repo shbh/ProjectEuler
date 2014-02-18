@@ -13,8 +13,6 @@ public class _017NumberLetterCounts implements IProblem {
 		int length = 0;
 		for (int i = 1; i <= 1000; i++) {
 
-			// System.out.println(text);
-			// length += text.toString().replaceAll("[\\s\\-()]", "").length();
 			String letters = NumberText.getNumberLetters(i);
 			String replacedLetter = letters.replaceAll(KeyConstant.HYPHENSPACEREGEX, KeyConstant.BLANK);
 			length += replacedLetter.length();

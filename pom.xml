@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mkyong.core</groupId>
-	<artifactId>superman</artifactId>
+	<groupId>shbh</groupId>
+	<artifactId>ProjectEuler</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
-	<name>superman</name>
+	<version>57</version>
+	<name>ProjectEuler</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

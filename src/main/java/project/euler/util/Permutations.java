@@ -98,7 +98,7 @@ public final class Permutations {
 				});
 		final String elements = alphabet.substring(0, nLength);
 		perm1(elements, strings);
-		// System.out.println();
+
 		return strings;
 		// perm2(elements);
 	}
@@ -109,7 +109,7 @@ public final class Permutations {
 		final SortedSet<String> strings = new TreeSet<String>();
 		final String elements = alphabet.substring(0, nLength);
 		perm1(elements, strings);
-		// System.out.println();
+
 		return strings;
 		// perm2(elements);
 	}
@@ -119,7 +119,7 @@ public final class Permutations {
 		final SortedSet<String> strings = new TreeSet<String>();
 		final String elements = alphabet.substring(0, alphabet.length());
 		perm1(elements, strings);
-		// System.out.println();
+
 		return strings;
 		// perm2(elements);
 	}
