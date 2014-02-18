@@ -1,7 +1,5 @@
 package project.euler.problem;
 
-import junit.framework.Assert;
-
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -17,7 +15,10 @@ public class _055LychrelNumbersTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_055LychrelNumbers problem = new _055LychrelNumbers();
-		Assert.assertEquals(problem.solve().toString(), results.get(classNo));
+		if (!problem.solve().toString().equals(results.get(classNo))) {
+			org.junit.Assert
+					.fail("The result is not matched with desired result");
+		}
 
 	}
 

@@ -1,14 +1,13 @@
 package project.euler.problem;
 
 import org.apache.log4j.Logger;
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 import project.euler.net.EulerTest;
 
 public class _025ThousandDigitFibonacciNumberTest extends EulerTest {
-	static Logger logger = Logger.getLogger(_025ThousandDigitFibonacciNumberTest.class);
+	static Logger logger = Logger
+			.getLogger(_025ThousandDigitFibonacciNumberTest.class);
 
 	public _025ThousandDigitFibonacciNumberTest() {
 		super(_025ThousandDigitFibonacciNumber.class.getSimpleName());
@@ -17,7 +16,10 @@ public class _025ThousandDigitFibonacciNumberTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_025ThousandDigitFibonacciNumber problem = new _025ThousandDigitFibonacciNumber();
-		Assert.assertEquals(problem.solve().toString(), results.get(classNo));
+		if (!problem.solve().toString().equals(results.get(classNo))) {
+			org.junit.Assert
+					.fail("The result is not matched with desired result");
+		}
 
 	}
 

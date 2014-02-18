@@ -1,8 +1,6 @@
 package project.euler.problem;
 
 import org.apache.log4j.Logger;
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 import project.euler.net.EulerTest;
@@ -17,7 +15,10 @@ public class _027QuadraticPrimesTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_027QuadraticPrimes problem = new _027QuadraticPrimes();
-		Assert.assertEquals(problem.solve().toString(), results.get(classNo));
+		if (!problem.solve().toString().equals(results.get(classNo))) {
+			org.junit.Assert
+					.fail("The result is not matched with desired result");
+		}
 
 	}
 

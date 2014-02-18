@@ -1,14 +1,13 @@
 package project.euler.problem;
 
 import org.apache.log4j.Logger;
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 import project.euler.net.EulerTest;
 
 public class _007TenThousandFirstPrimeTest extends EulerTest {
-	static Logger logger = Logger.getLogger(_007TenThousandFirstPrimeTest.class);
+	static Logger logger = Logger
+			.getLogger(_007TenThousandFirstPrimeTest.class);
 
 	public _007TenThousandFirstPrimeTest() {
 		super(_007TenThousandFirstPrime.class.getSimpleName());
@@ -17,7 +16,10 @@ public class _007TenThousandFirstPrimeTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_007TenThousandFirstPrime problem = new _007TenThousandFirstPrime();
-		Assert.assertEquals(problem.solve().toString(), results.get(classNo));
+		if (!problem.solve().toString().equals(results.get(classNo))) {
+			org.junit.Assert
+					.fail("The result is not matched with desired result");
+		}
 
 	}
 

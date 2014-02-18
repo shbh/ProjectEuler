@@ -1,8 +1,6 @@
 package project.euler.problem;
 
 import org.apache.log4j.Logger;
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 import project.euler.net.EulerTest;
@@ -17,7 +15,10 @@ public class _003LargestPrimeFactorTest extends EulerTest {
 	@Test(timeout = 60000)
 	public void testSolve() {
 		_003LargestPrimeFactor problem = new _003LargestPrimeFactor();
-		Assert.assertEquals(problem.solve().toString(), results.get(classNo));
+		if (!problem.solve().toString().equals(results.get(classNo))) {
+			org.junit.Assert
+					.fail("The result is not matched with desired result");
+		}
 
 	}
 
