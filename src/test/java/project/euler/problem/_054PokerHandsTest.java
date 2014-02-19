@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _054PokerHandsTest extends EulerTest {
@@ -14,7 +15,7 @@ public class _054PokerHandsTest extends EulerTest {
 		super(_054PokerHands.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_054PokerHands problem = new _054PokerHands();

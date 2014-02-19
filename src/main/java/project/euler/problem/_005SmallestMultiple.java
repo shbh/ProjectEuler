@@ -11,7 +11,7 @@ public class _005SmallestMultiple implements IProblem {
 	
 	static Logger logger = Logger.getLogger(_005SmallestMultiple.class);
 
-	int divisor = 20;
+	private int divisor = 20;
 
 	public Long solve() {
 

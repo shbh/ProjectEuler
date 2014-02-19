@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _009SpecialPythagoreanTripletTest extends EulerTest {
@@ -15,7 +16,7 @@ public class _009SpecialPythagoreanTripletTest extends EulerTest {
 		super(_009SpecialPythagoreanTriplet.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_009SpecialPythagoreanTriplet problem = new _009SpecialPythagoreanTriplet();

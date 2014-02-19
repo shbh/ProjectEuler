@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _007TenThousandFirstPrimeTest extends EulerTest {
@@ -15,7 +16,7 @@ public class _007TenThousandFirstPrimeTest extends EulerTest {
 		super(_007TenThousandFirstPrime.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_007TenThousandFirstPrime problem = new _007TenThousandFirstPrime();

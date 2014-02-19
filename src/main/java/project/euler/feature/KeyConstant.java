@@ -27,11 +27,11 @@ public interface KeyConstant {
    	
     public static final String MULTISTAR = "----------------------------------------";
    	
-   	public static final String DOUBLEMULTILINE=MULTISTAR+MULTISTAR+MULTISTAR+MULTISTAR;
    	
-   	public static final String NEWLINE = "\n";
    	
-    public enum NUMBER {
+   	
+   	
+    enum NUMBER {
         
     	zero(0),one(1), two(2),three(3), four(4), five(5),six(6), seven(7), eight(8), nine(9), ten(10), eleven(11), twelve(12), thirteen(31), fourteen(14), fifteen(15), sixteen(16), seventeen(17),
         eighteen(18), nineteen(19), twenty(20), thirty(30), forty(40), fifty(50), sixty(60), seventy(70), eighty(80), ninety(90),hundred(100), thousand(1000);
@@ -44,10 +44,5 @@ public interface KeyConstant {
 
     }
    
-	public enum FourState {
-	    PASS,
-	    FAIL,
-	    TIME_EXCEEDED,
-	    MISMATCH
-	};
+	
 }

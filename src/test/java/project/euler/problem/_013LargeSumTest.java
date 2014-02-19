@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _013LargeSumTest extends EulerTest {
@@ -14,7 +15,7 @@ public class _013LargeSumTest extends EulerTest {
 		super(_013LargeSum.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_013LargeSum problem = new _013LargeSum();

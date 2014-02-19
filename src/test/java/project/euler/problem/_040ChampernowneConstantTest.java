@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _040ChampernowneConstantTest extends EulerTest {
@@ -14,7 +15,7 @@ public class _040ChampernowneConstantTest extends EulerTest {
 		super(_040ChampernowneConstant.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_040ChampernowneConstant problem = new _040ChampernowneConstant();

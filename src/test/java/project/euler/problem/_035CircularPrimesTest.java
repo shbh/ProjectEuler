@@ -3,6 +3,7 @@ package project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import project.euler.feature.KeyConstant;
 import project.euler.net.EulerTest;
 
 public class _035CircularPrimesTest extends EulerTest {
@@ -14,7 +15,7 @@ public class _035CircularPrimesTest extends EulerTest {
 		super(_035CircularPrimes.class.getSimpleName());
 	}
 
-	@Test(timeout = 60000)
+	@Test(timeout = KeyConstant.ALLOWEDTIME)
 	public void testSolve() {
 
 		_035CircularPrimes problem = new _035CircularPrimes();
