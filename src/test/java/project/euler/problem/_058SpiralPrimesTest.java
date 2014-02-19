@@ -6,14 +6,17 @@ import org.junit.Test;
 import project.euler.net.EulerTest;
 
 public class _058SpiralPrimesTest extends EulerTest {
+
 	static Logger logger = Logger.getLogger(_058SpiralPrimesTest.class);
 
 	public _058SpiralPrimesTest() {
+
 		super(_058SpiralPrimes.class.getSimpleName());
 	}
 
 	@Test(timeout = 60000)
 	public void testSolve() {
+
 		_058SpiralPrimes problem = new _058SpiralPrimes();
 
 		testEquality(problem);

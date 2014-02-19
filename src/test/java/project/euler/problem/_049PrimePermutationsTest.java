@@ -6,14 +6,17 @@ import org.junit.Test;
 import project.euler.net.EulerTest;
 
 public class _049PrimePermutationsTest extends EulerTest {
+
 	static Logger logger = Logger.getLogger(_049PrimePermutationsTest.class);
 
 	public _049PrimePermutationsTest() {
+
 		super(_049PrimePermutations.class.getSimpleName());
 	}
 
 	@Test(timeout = 60000)
 	public void testSolve() {
+
 		_049PrimePermutations problem = new _049PrimePermutations();
 
 		testEquality(problem);
