@@ -1,4 +1,4 @@
-package project.euler.net;
+package project.euler.launcher;
 
 import org.apache.log4j.Logger;
 
