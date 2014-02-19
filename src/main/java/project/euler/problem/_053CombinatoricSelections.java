@@ -12,25 +12,7 @@ public class _053CombinatoricSelections implements IProblem {
 
 	private final BigInteger[] factorial = new BigInteger[100 + 1];
 
-	public BigInteger factorial(int n) {
 
-		
-		if (n == 0)
-		{
-			return BigInteger.ONE;
-			
-		}
-		
-		BigInteger result = BigInteger.ONE;
-		
-		for (int i = 1; i <= n; i++) {
-		
-			result = result.multiply(BigInteger.valueOf(i));
-		
-		}
-		
-		return result;
-	}
 
 	public Integer solve() {
 

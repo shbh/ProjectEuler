@@ -13,7 +13,7 @@ public class _017NumberLetterCounts implements IProblem {
 	
 	static Logger logger = Logger.getLogger(_017NumberLetterCounts.class);
 	
-	public static final String HYPHENSPACEREGEX = "[\\s\\-()]";
+	
 
 	public Integer solve() {
 	

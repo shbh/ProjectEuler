@@ -7,7 +7,7 @@ import project.euler.IProblem;
 /**
  * Created by shashi on 1/28/14.
  */
-class _002EvenFibonacciNumbers implements IProblem {
+public class _002EvenFibonacciNumbers implements IProblem {
 
 	static Logger logger = Logger.getLogger(_002EvenFibonacciNumbers.class);
 

@@ -25,7 +25,7 @@ public interface KeyConstant {
     
     public static final String HYPHENSPACEREGEX= "[\\s\\-()]";
    	
-    public static final String MULTISTAR = "----------------------------------------";
+    
    	
    	
    	
