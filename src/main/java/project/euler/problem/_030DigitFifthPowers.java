@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import project.euler.base.IProblem;
 
 public class _030DigitFifthPowers implements IProblem {
+	
 	static Logger logger = Logger.getLogger(_030DigitFifthPowers.class);
 
 	private static final int DIGIT = 5;
@@ -12,6 +13,7 @@ public class _030DigitFifthPowers implements IProblem {
 	public Integer solve() {
 
 		int result = 0;
+	
 		// Retrieve Upper Bound.. X*9^Digit
 		final int limit = (DIGIT + 1) * (int) Math.pow(9, DIGIT);
 
@@ -22,16 +24,20 @@ public class _030DigitFifthPowers implements IProblem {
 			int number = i;
 
 			while (number > 0) {
+		
 				final int remainder = number % 10;
+				
 				number = number / 10;
 
 				sum += (int) Math.pow(remainder, DIGIT);
 			}
 
 			if (sum == i) {
+				
 				result += i;
 			}
 		}
+		
 		return result;
 	}
 

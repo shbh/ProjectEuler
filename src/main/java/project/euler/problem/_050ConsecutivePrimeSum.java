@@ -9,6 +9,7 @@ import project.euler.base.IProblem;
 import project.euler.feature.Functions;
 
 public class _050ConsecutivePrimeSum implements IProblem {
+	
 	static Logger logger = Logger.getLogger(_050ConsecutivePrimeSum.class);
 
 	int limit = 1000000;

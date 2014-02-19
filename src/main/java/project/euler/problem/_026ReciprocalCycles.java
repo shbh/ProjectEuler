@@ -8,20 +8,29 @@ import java.util.Map;
 import project.euler.base.IProblem;
 
 public final class _026ReciprocalCycles implements IProblem {
+
 	static Logger logger = Logger.getLogger(_026ReciprocalCycles.class);
 
 	public int limit = 1000;
 
 	public Integer solve() {
+	
 		int bestNumber = 0;
+		
 		int bestLength = 0;
+		
 		for (int i = limit; i > 0; i--) {
+		
 			int len = getCycleLength(i);
+			
 			if (len > bestLength) {
+			
 				bestNumber = i;
+				
 				bestLength = len;
 			}
 		}
+		
 		return bestNumber;
 	}
 

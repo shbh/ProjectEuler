@@ -10,6 +10,7 @@ import project.euler.base.IProblem;
 import project.euler.feature.Functions;
 
 public class _047DistinctPrimesFactors implements IProblem {
+
 	static Logger logger = Logger.getLogger(_047DistinctPrimesFactors.class);
 
 	private int count = 4;
@@ -51,15 +52,24 @@ public class _047DistinctPrimesFactors implements IProblem {
 	private static int containPrimeFactor(int number) {
 
 		Set<Integer> divisor = new HashSet<>();
+		
 		while (true) {
+			
 			int factor = Functions.smallestFactor(number);
+			
 			divisor.add(factor);
+			
 			number = number / factor;
+			
 			if (number == 1)
+			{
+			
 				break;
+			}
 		}
 
 		return divisor.size();
+		
 	}
 
 }

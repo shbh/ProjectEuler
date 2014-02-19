@@ -12,25 +12,34 @@ import project.euler.base.IProblem;
 import project.euler.feature.Functions;
 
 public class _035CircularPrimes implements IProblem {
+	
 	static Logger logger = Logger.getLogger(_035CircularPrimes.class);
+	
 
 	private final int limit = 1000000;
 
 	public Integer solve() {
 
 		int count = 1;
+	
 		List<String> list = new ArrayList<>();
+		
 		Set<String> unique = new HashSet<>();
 
 		for (int i = 1; i < limit; i = i + 2) {
+		
 			if (i == 1)
+			{
 				continue;
+			}
 
 			if (unique.contains(Integer.toString(i))) {
+			
 				continue;
 			}
 
 			if (Functions.isPrime(i) && !Functions.isNumberContainEven("" + i)) {
+			
 				Set<String> combinations = Functions.generateCircular("" + i);
 
 				boolean isPrimeCombination = false;
@@ -39,24 +48,35 @@ public class _035CircularPrimes implements IProblem {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
+				
 					if (Functions.isPrime(Integer.valueOf(string))) {
+					
 						isPrimeCombination = true;
+						
 						continue;
-					} else {
+					} 
+					else 
+					{
+					
 						isPrimeCombination = false;
+						
 						break;
 					}
 				}
+				
 				if (isPrimeCombination) {
+				
 					list.addAll(combinations);
 
 					count = count + combinations.size();
 				}
 
 				unique.addAll(combinations);
+			
 			}
 
 		}
+		
 		return count;
 
 	}

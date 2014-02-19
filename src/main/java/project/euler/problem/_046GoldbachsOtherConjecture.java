@@ -6,6 +6,7 @@ import project.euler.base.IProblem;
 import project.euler.feature.Functions;
 
 public class _046GoldbachsOtherConjecture implements IProblem {
+	
 	static Logger logger = Logger.getLogger(_046GoldbachsOtherConjecture.class);
 
 	public Long solve() {

@@ -13,6 +13,7 @@ import project.euler.feature.Functions;
 import project.euler.feature.KeyConstant;
 
 public class _037TruncatablePrimes implements IProblem {
+	
 	static Logger logger = Logger.getLogger(_037TruncatablePrimes.class);
 
 	private final int limit = 11;
@@ -20,13 +21,16 @@ public class _037TruncatablePrimes implements IProblem {
 	public Integer solve() {
 
 		int count = 0;
+		
 		List<String> list = new ArrayList<>();
 
 		Integer sum = 0;
+		
 		// 3 and 7 are prime.. Starting with 13
 		for (int i = 13; count < limit;) {
 
 			if (Functions.isPrime(i)) {
+			
 				Set<String> combinations = generate(KeyConstant.BLANK + i);
 
 				boolean isPrimeCombination = false;
@@ -35,15 +39,25 @@ public class _037TruncatablePrimes implements IProblem {
 						.hasNext();) {
 
 					String string = (String) iterator.next();
+				
 					if (Functions.isPrime(Integer.valueOf(string))) {
+						
 						isPrimeCombination = true;
+					
 						continue;
-					} else {
+					}
+					else 
+					{
+						
 						isPrimeCombination = false;
+						
 						break;
+						
 					}
 				}
+				
 				if (isPrimeCombination) {
+					
 					list.add(Integer.toString(i));
 
 					count = count + 1;
@@ -55,12 +69,18 @@ public class _037TruncatablePrimes implements IProblem {
 			}
 
 			if (i % 10 == 7) {
+				
 				i = i + 6;
-			} else if (i % 10 == 3) {
+				
+			} 
+			else if (i % 10 == 3) 
+			{
 				i = i + 4;
+				
 			}
 
 		}
+		
 		return sum;
 
 	}
@@ -68,14 +88,21 @@ public class _037TruncatablePrimes implements IProblem {
 	private final Set<String> generate(String string) {
 
 		Set<String> sets = new HashSet<>();
+		
 		sets.add(string);
+		
 		String ltemp = string;
+		
 		String rtemp = string;
+		
 		for (int i = 0; i < string.length() - 1; i++) {
+		
 			ltemp = ltemp.substring(0, ltemp.length() - 1);
+			
 			rtemp = rtemp.substring(1);
 
 			sets.add(rtemp);
+			
 			sets.add(ltemp);
 		}
 
