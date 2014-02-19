@@ -13,7 +13,7 @@ public class _054PokerHands implements IProblem {
 	
 	static Logger logger = Logger.getLogger(_054PokerHands.class);
 
-	int h = 3, d = 2, s = 4, c = 1;
+	int club = 1, diamond = 2, heart = 3,spade = 4 ;
 
 
 	public Object solve() {
@@ -103,160 +103,307 @@ public class _054PokerHands implements IProblem {
 					cnof2 = 14;
 				
 				}	
+				
 				if (cnof1 > cnof2) {
+				
 					return true;
-				} else if (cnof1 == cnof2) {
+				
+				} 
+				else if (cnof1 == cnof2) 
+				{
 
 					cnof1 = getCNO(numbers1[0]);
+				
 					cnof2 = getCNO(numbers2[0]);
 
-					if (cnof1 == 1)
+					if (cnof1 == 1){
+					
 						cnof1 = 14;
-					if (cnof2 == 1)
+					
+					}
+					if (cnof2 == 1){
+					
 						cnof2 = 14;
+					
+					}
 
 					if (cnof1 >= cnof2) {
+					
 						return true;
+					
 					}
 				}
 
 				break;
 
 			case FULLHOUSE:
+				
 				cnof1 = getCNO(numbers1[0]);
+				
 				cnof2 = getCNO(numbers2[0]);
 
 				if (cnof1 == 1)
+				{
+				
 					cnof1 = 14;
+				
+				}
 				if (cnof2 == 1)
+				{
+				
 					cnof2 = 14;
+				
+				}
 
-				if (cnof1 > cnof2) {
+				if (cnof1 > cnof2) 
+				{
+				
 					return true;
 
-				} else if (cnof1 == cnof2) {
+				} 
+				else if (cnof1 == cnof2) 
+				{
 					if (getCNO(numbers1[3]) >= getCNO(numbers2[3])) {
+				
 						return true;
+					
 					}
 				}
 
 				break;
+				
 			case FLUSH:
+				
 			case HIGHCARD:
+				
 				for (int i = numbers1.length - 1; i >= 0; i--) {
 
 					cnof1 = getCNO(numbers1[i]);
+				
 					cnof2 = getCNO(numbers2[i]);
 
 					if (cnof1 == 1)
+					{
+					
 						cnof1 = 14;
+					
+					}
+					
 					if (cnof2 == 1)
+					{
+					
 						cnof2 = 14;
+					
+					}
 
-					if (cnof1 > cnof2) {
+					if (cnof1 > cnof2) 
+					{
+					
 						return true;
-					} else if (cnof1 == cnof2) {
+					
+					} 
+					else if (cnof1 == cnof2) 
+					{
 						continue;
-					} else if (cnof1 < cnof2) {
+						
+					} 
+					else if (cnof1 < cnof2) 
+					{
+					
 						break;
+					
 					}
 				}
+				
 				break;
 
 			case STRAIGHT:
 
 				cnof1 = getCNO(numbers1[0]);
+				
 				cnof2 = getCNO(numbers2[0]);
+				
 				int cnof10 = getCNO(numbers1[1]);
+				
 				int cnof20 = getCNO(numbers2[1]);
 
 				if (cnof1 == 1 && cnof10 == 10)
+				{
+					
 					cnof1 = 14;
+				}
+				
 				if (cnof2 == 1 && cnof20 == 10)
+				{
+				
 					cnof2 = 14;
+				}
 
-				if (cnof1 >= cnof2) {
+				if (cnof1 >= cnof2) 
+				{
+				
 					return true;
+				
 				}
 
 				break;
+				
 			case THREEOFAKIND:
 
+				
 				cnof1 = getCNO(numbers1[0]);
+				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1)
+				if (cnof1 == 1){
+				
 					cnof1 = 14;
-				if (cnof2 == 1)
+				
+				}
+				if (cnof2 == 1){
+				
 					cnof2 = 14;
+				
+				}
 
-				if (cnof1 > cnof2) {
+				if (cnof1 > cnof2) 
+				{
+				
 					return true;
-				} else if (cnof1 == cnof2) {
+				
+				} 
+				else if (cnof1 == cnof2) 
+				{
 
 					cnof1 = getCNO(numbers1[3]);
+					
 					cnof2 = getCNO(numbers2[3]);
 
 					if (cnof1 == 1)
+					{
+					
 						cnof1 = 14;
-					if (cnof2 == 1)
+					
+					}
+					
+					if (cnof2 == 1){
+						
 						cnof2 = 14;
+					
+					}
 
-					if (cnof1 > cnof2) {
+					if (cnof1 > cnof2) 
+					{
+					
 						return true;
 
 					} else if (cnof1 == cnof2) {
+						
 						cnof1 = getCNO(numbers1[4]);
+						
 						cnof2 = getCNO(numbers2[4]);
 
-						if (cnof1 == 1)
+						if (cnof1 == 1){
+						
 							cnof1 = 14;
+						
+						}
+						
 						if (cnof2 == 1)
+						{
+						
 							cnof2 = 14;
+						
+						}
 
 						if (cnof1 >= cnof2) {
+				
 							return true;
 
 						}
 
 					}
+				
 				}
 
 				break;
+				
 			case TWOPAIRS:
+				
 				cnof1 = getCNO(numbers1[0]);
+				
 				cnof2 = getCNO(numbers2[0]);
 
 				if (cnof1 == 1)
+				{
+				
 					cnof1 = 14;
+				
+				}
+				
 				if (cnof2 == 1)
+				{
+				
 					cnof2 = 14;
+				
+				}
 
-				if (cnof1 > cnof2) {
+				if (cnof1 > cnof2) 
+				{
+				
 					return true;
-				} else if (cnof1 == cnof2) {
+				
+				} 
+				else if (cnof1 == cnof2) 
+				{
 
 					cnof1 = getCNO(numbers1[2]);
+				
 					cnof2 = getCNO(numbers2[2]);
 
 					if (cnof1 == 1)
+					{
+
 						cnof1 = 14;
+					
+					}
+					
 					if (cnof2 == 1)
+					{
+					
 						cnof2 = 14;
+					
+					}
 
-					if (cnof1 > cnof2) {
+					if (cnof1 > cnof2) 
+					{
+					
 						return true;
-
-					} else if (cnof1 == cnof2) {
+						
+					} 
+					else if (cnof1 == cnof2) 
+					{
+					
 						cnof1 = getCNO(numbers1[4]);
+						
 						cnof2 = getCNO(numbers2[4]);
 
 						if (cnof1 == 1)
+						{
+						
 							cnof1 = 14;
+						
+						}
+						
 						if (cnof2 == 1)
+						{
+						
 							cnof2 = 14;
+						
+						}
 
 						if (cnof1 >= cnof2) {
+				
 							return true;
 
 						}
@@ -265,54 +412,96 @@ public class _054PokerHands implements IProblem {
 				}
 
 				break;
+				
 			case ONEPAIR:
 
 				cnof1 = getCNO(numbers1[0]);
+				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1)
+				if (cnof1 == 1){
+				
 					cnof1 = 14;
-				if (cnof2 == 1)
+				
+				}
+				
+				if (cnof2 == 1){
+				
 					cnof2 = 14;
+				
+				}
 
 				if (cnof1 > cnof2) {
+				
 					return true;
-				} else if (cnof1 == cnof2) {
+				
+				} 
+				else if (cnof1 == cnof2) 
+				{
 
 					cnof1 = getCNO(numbers1[2]);
+					
 					cnof2 = getCNO(numbers2[2]);
 
-					if (cnof1 == 1)
+					if (cnof1 == 1){
+					
 						cnof1 = 14;
-					if (cnof2 == 1)
+					
+					}
+					if (cnof2 == 1){
+					
 						cnof2 = 14;
+					
+					}
 
 					if (cnof1 > cnof2) {
+					
 						return true;
 
-					} else if (cnof1 == cnof2) {
+					} 
+					else if (cnof1 == cnof2) 
+					{
+						
 						cnof1 = getCNO(numbers1[3]);
+						
 						cnof2 = getCNO(numbers2[3]);
 
-						if (cnof1 == 1)
+						if (cnof1 == 1){
+						
 							cnof1 = 14;
-						if (cnof2 == 1)
+						
+						}
+						if (cnof2 == 1){
+						
 							cnof2 = 14;
+						
+						}
 
 						if (cnof1 > cnof2) {
+							
 							return true;
 
-						} else if (cnof1 == cnof2) {
+						} 
+						else if (cnof1 == cnof2) 
+						{
 
 							cnof1 = getCNO(numbers1[4]);
+							
 							cnof2 = getCNO(numbers2[4]);
 
-							if (cnof1 == 1)
+							if (cnof1 == 1){
+							
 								cnof1 = 14;
-							if (cnof2 == 1)
+							
+							}
+							
+							if (cnof2 == 1){
+							
 								cnof2 = 14;
+							}
 
 							if (cnof1 >= cnof2) {
+								
 								return true;
 
 							}
@@ -323,67 +512,100 @@ public class _054PokerHands implements IProblem {
 				}
 
 				break;
+				
 			default:
 				break;
+			
 			}
 		}
 
 		return false;
 	}
 
+	
 	private POKER whichPoker(int[] numbers, String set) {
+		
 		set = set.replace("A", "1").replace("K", "13").replace("Q", "12")
 				.replace("T", "10").replace("J", "11").replace("C", "1")
 				.replace("D", "2").replace("H", "3").replace("S", "4");
+		
 		String[] cards = set.split(" ");
 
 		for (int i = 0; i < cards.length; i++) {
+		
 			numbers[i] = Integer.parseInt(cards[i]);
+		
 		}
+		
 		Arrays.sort(numbers);
 
 		boolean isColor = true;
+		
 		boolean isOrder = true;
+		
 		boolean isStartWithA = false;
+		
 		int firstpair = 0;
+		
 		int secondpair = 0;
+		
 		int firstpaircount = 1;
+		
 		int secondpaircount = 1;
+		
 		boolean isFirstDone = false;
 
 		POKER poker = POKER.HIGHCARD;
 
+		
 		int result = numbers[0] - (numbers[0] / 10) * 10;
+		
 		int sequence = (numbers[0] - (numbers[0] % 10)) / 10;
+		
 		int pair = sequence;
 
 		for (int i = 0; i < numbers.length; i++) {
 
 			int cno = getCNO(numbers[i]);
+			
 			int ctype = numbers[i] - (numbers[i] / 10) * 10;
 
 			if (cno == 1 && i == 0) {
 
 				isStartWithA = true;
+			
 			}
 
 			if (isOrder && i > 0) {
 
 				if (sequence == 1 && cno == 10) {
+					
 					sequence = cno;
+				
 				} else if (cno - sequence == 1) {
+				
 					sequence = cno;
+				
 				} else {
+				
 					isOrder = false;
+				
 				}
 			}
 
 			if (isColor && result > -1) {
+				
 				if (ctype == result) {
+				
 					isColor = true;
-				} else {
+				} 
+				else 
+				{
+					
 					isColor = false;
+					
 					result = -1;
+				
 				}
 			}
 
@@ -392,27 +614,51 @@ public class _054PokerHands implements IProblem {
 				if (cno == pair) {
 
 					if (!isFirstDone) {
+						
 						firstpair = cno;
+					
 						firstpaircount++;
+				
 					}
-				} else {
+				} 
+				else 
+				{
+			
 					pair = cno;
+				
 				}
-			} else if (i > 1) {
+			
+			} 
+			else if (i > 1) 
+			{
 
 				if (cno == pair) {
+					
 					if (!isFirstDone) {
+						
 						firstpair = cno;
+						
 						firstpaircount++;
-					} else {
-						secondpair = cno;
-						secondpaircount++;
+					
 					}
-				} else {
+					else 
+					{
+					
+						secondpair = cno;
+				
+						secondpaircount++;
+					
+					}
+				} 
+				else 
+				{
 					if (!isFirstDone && firstpair > 0) {
+					
 						isFirstDone = true;
 
+				
 					}
+					
 					pair = cno;
 
 				}
@@ -431,202 +677,353 @@ public class _054PokerHands implements IProblem {
 		if (isOrder && isColor) {
 
 			if (isStartWithA) {
+				
 				if ((numbers[1] - (numbers[1] % 10)) / 10 == 10) {
+				
 					poker = POKER.ROYALFLUSH;
 
 				}
+				
 			} else {
+			
 				poker = POKER.STRAIGHTFLUSH;
 
 			}
+			
 		} else if (isOrder) {
+			
 			poker = POKER.STRAIGHT;
+			
 		} else if (isColor) {
+			
 			poker = POKER.FLUSH;
+			
 			if (isStartWithA) {
+			
 				int temp = numbers[0];
+				
 				numbers[0] = numbers[1];
+				
 				numbers[1] = numbers[2];
+				
 				numbers[2] = numbers[3];
+				
 				numbers[3] = numbers[4];
+				
 				numbers[4] = temp;
 			}
 
-		} else if (firstpair > 0) {
+		} 
+		else if (firstpair > 0) 
+		{
+			
 			if (secondpair == 0) {
+		
 				if (firstpaircount == 4) {
+				
 					poker = POKER.FOUROFAKIND;
+					
 					int temp[] = new int[4];
+					
 					int tempi = 0;
+					
 					int extra = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+					
 						int cno = getCNO(numbers[i]);
+						
 						if (cno != firstpair) {
+						
 							extra = numbers[i];
 
-						} else {
+						} 
+						else 
+						{
+						
 							temp[tempi++] = numbers[i];
+						
 						}
 
 					}
 
 					for (int i = 0; i < temp.length; i++) {
+						
 						numbers[i] = temp[i];
+						
 					}
+					
 					numbers[4] = extra;
-				} else if (firstpaircount == 3) {
+					
+				} 
+				else if (firstpaircount == 3) 
+				{
+					
 					poker = POKER.THREEOFAKIND;
+					
 					int[] temp = new int[2];
+					
 					int[] triplet = new int[3];
+					
 					int tempi = 0;
+					
 					int tripleti = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+						
 						int cno = getCNO(numbers[i]);
+						
 						if (cno != firstpair) {
+						
 							temp[tempi++] = numbers[i];
 
+						
 						} else {
+						
 							triplet[tripleti++] = numbers[i];
+						
 						}
 
 					}
 
 					for (int i = 0; i < triplet.length; i++) {
+					
 						numbers[i] = triplet[i];
+					
 					}
+					
 					int j = 0;
+					
 					for (int i = temp.length - 1; i >= 0; i--) {
+						
 						numbers[3 + j++] = temp[i];
+					
 					}
-				} else {
+				
+				} 
+				else 
+				{
 					poker = POKER.ONEPAIR;
 
 					int[] temp = new int[3];
+					
 					int[] dual = new int[2];
+					
 					int tempi = 0;
+					
 					int duali = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+						
 						int cno = getCNO(numbers[i]);
+					
 						if (cno != firstpair) {
+					
 							temp[tempi++] = numbers[i];
 
+					
 						} else {
+						
 							dual[duali++] = numbers[i];
+					
 						}
 
 					}
 
 					for (int i = 0; i < dual.length; i++) {
+					
 						numbers[i] = dual[i];
+				
 					}
+					
 					int j = 0;
+				
 					for (int i = temp.length - 1; i >= 0; i--) {
+				
 						numbers[2 + j++] = temp[i];
+				
 					}
 
 				}
 
 			} else {
-				if (secondpaircount == 3) {
+			
+				if (secondpaircount == 3) 
+				{
 
+				
 					int[] first = new int[2];
+					
 					int[] second = new int[3];
+					
 					int firsti = 0;
+					
 					int secondi = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+					
 						int cno = getCNO(numbers[i]);
+						
 						if (cno == secondpair) {
+						
 							second[secondi++] = numbers[i];
 
-						} else {
+						} 
+						else 
+						{
+						
 							first[firsti++] = numbers[i];
+					
 						}
+						
 
 					}
 
 					for (int i = 0; i < second.length; i++) {
+						
 						numbers[i] = second[i];
+					
 					}
 
 					for (int i = 0; i < first.length; i++) {
+					
 						numbers[3 + i] = first[i];
+					
 					}
 
 					poker = POKER.FULLHOUSE;
-				} else if (firstpaircount == 2 && secondpaircount == 2) {
+					
+				} 
+				else if (firstpaircount == 2 && secondpaircount == 2) 
+				{
+					
 					if (isStartWithA && firstpair == 1) {
+						
 						int temp = secondpair;
+						
 						secondpair = firstpair;
+						
 						firstpair = temp;
 
+						
 						temp = secondpaircount;
+						
 						secondpaircount = firstpaircount;
+						
 						firstpaircount = temp;
+					
 					}
 
 					int[] first = new int[2];
+					
 					int[] second = new int[2];
+					
 					int firsti = 0;
+					
 					int secondi = 0;
+					
 					int extra = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+						
 						int cno = getCNO(numbers[i]);
+						
 						if (cno == secondpair) {
+						
 							second[secondi++] = numbers[i];
 
+						
 						} else if (cno == firstpair) {
+						
 							first[firsti++] = numbers[i];
+						
 						} else {
+						
 							extra = numbers[i];
 						}
 
 					}
 
 					for (int i = 0; i < second.length; i++) {
+					
 						numbers[i] = second[i];
+					
 					}
 
 					for (int i = 0; i < first.length; i++) {
+					
 						numbers[2 + i] = first[i];
+					
 					}
 
 					numbers[4] = extra;
+					
 					poker = POKER.TWOPAIRS;
 
-				} else if (firstpaircount == 3) {
+				} 
+				else if (firstpaircount == 3) 
+				{
+			
 					int[] first = new int[3];
+					
 					int[] second = new int[2];
+					
 					int firsti = 0;
+					
 					int secondi = 0;
+					
 					for (int i = 0; i < numbers.length; i++) {
+					
 						int cno = getCNO(numbers[i]);
+						
 						if (cno == secondpair) {
+						
 							second[secondi++] = numbers[i];
 
-						} else {
+						} 
+						else 
+						{
+						
 							first[firsti++] = numbers[i];
+						
 						}
 
 					}
 
 					for (int i = 0; i < first.length; i++) {
+						
 						numbers[i] = first[i];
+					
 					}
 
 					for (int i = 0; i < second.length; i++) {
+					
 						numbers[3 + i] = second[i];
+					
 					}
+					
 					poker = POKER.FULLHOUSE;
+				
 				}
 			}
-		} else {
+		} 
+		else 
+		{
+		
 			if (isStartWithA) {
+			
 				int temp = numbers[0];
+				
 				numbers[0] = numbers[1];
+				
 				numbers[1] = numbers[2];
+				
 				numbers[2] = numbers[3];
+				
 				numbers[3] = numbers[4];
+				
 				numbers[4] = temp;
+			
 			}
 
 		}
@@ -635,7 +1032,9 @@ public class _054PokerHands implements IProblem {
 	}
 
 	private int getCNO(int n) {
+		
 		return (n - (n % 10)) / 10;
+		
 	}
 
 	/*
@@ -663,6 +1062,13 @@ public class _054PokerHands implements IProblem {
 
 	
 	public enum POKER {
-		HIGHCARD, ONEPAIR, TWOPAIRS, THREEOFAKIND, STRAIGHT, FLUSH, FULLHOUSE, FOUROFAKIND, STRAIGHTFLUSH, ROYALFLUSH
+		
+		HIGHCARD, 
+		ONEPAIR, TWOPAIRS,
+		THREEOFAKIND, 
+		STRAIGHT, FLUSH, 
+		FULLHOUSE, FOUROFAKIND, 
+		STRAIGHTFLUSH, 
+		ROYALFLUSH
 	}
 }
