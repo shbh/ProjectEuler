@@ -114,13 +114,20 @@ public class _013LargeSum implements IProblem {
 				+ "53503534226472524250874054075591789781264330331690";
 
 		String[] lines = text.split("\n");
+		
 		BigInteger largesum = new BigInteger("0");
+	
+		
 		for (int i = 0; i < lines.length; i++) {
+	
+	
 			largesum = largesum.add(new BigInteger(lines[i]));
+	
 		}
 
 		return largesum.divide(BigInteger.TEN
 				.pow(largesum.toString().length() - 10));
+	
 	}
 
 	

@@ -11,7 +11,8 @@ public class _018MaximumPathSumI implements IProblem {
 	static Logger logger = Logger.getLogger(_018MaximumPathSumI.class);
 
 	public Integer solve() {
-		String text = "75\n" 
+		String text = 
+				"75\n" 
 				+ "95 64\n" 
 				+ "17 47 82\n" 
 				+ "18 35 87 10\n"
@@ -28,6 +29,7 @@ public class _018MaximumPathSumI implements IProblem {
 				+ "04 62 98 27 23 09 70 98 73 93 38 53 60 04 23";
 
 		String[] texts = text.split("\n");
+		
 		int x = texts.length;
 
 		int y = texts[x - 1].split(" ").length;
@@ -35,25 +37,37 @@ public class _018MaximumPathSumI implements IProblem {
 		int[][] chunks = new int[x][y];
 
 		for (int i = 0; i < x; i++) {
+		
 			String[] chunk = texts[i].split(" ");
+			
 			for (int j = 0; j < y; j++) {
+			
 				if (j < chunk.length) {
+			
 					chunks[i][j] = new Integer(chunk[j]);
+			
 				} else {
+			
 					chunks[i][j] = 0;
+			
 				}
 
 			}
 		}
 
 		for (int j = y - 2; j >= 0; j--) {
+			
 			for (int i = x - 2; i >= 0; i--) {
+			
 				int right = chunks[i][j] + chunks[i + 1][j + 1];
+		
 				int left = chunks[i][j] + chunks[i + 1][j];
+		
 				chunks[i][j] = left > right ? left : right;
 
 			}
 		}
+		
 		return chunks[0][0];
 
 	}
