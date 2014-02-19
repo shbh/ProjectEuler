@@ -34,6 +34,7 @@ public class _008LargestProductInASeries implements IProblem {
 			for (int i = 0; i < factor; i++) {
 			
 				BigInteger remainder = null;
+				
 				if (i == 0) {
 					int templength = length;
 
@@ -78,7 +79,9 @@ public class _008LargestProductInASeries implements IProblem {
 				temp = temp * remainder.intValue();
 
 				if (temp > multiply) {
+				
 					multiply = temp;
+				
 				}
 
 			}
