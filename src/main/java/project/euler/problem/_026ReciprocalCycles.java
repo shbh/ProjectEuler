@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 public final class _026ReciprocalCycles implements IProblem {
 

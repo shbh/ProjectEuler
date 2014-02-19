@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 /**
  * Created by shashi on 1/29/14.

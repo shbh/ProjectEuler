@@ -1,7 +1,7 @@
 package project.euler.problem; 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 /**
  * Created by shashi on 1/28/14.

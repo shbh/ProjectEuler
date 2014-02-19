@@ -2,7 +2,7 @@ package project.euler.net;
 
 import java.util.Map;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.Reader;
 
 public abstract class EulerTest {

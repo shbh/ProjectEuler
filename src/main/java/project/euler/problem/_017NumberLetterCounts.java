@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 /**
  * Created by shashi on 1/29/14.
  */
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.KeyConstant;
 import project.euler.feature.NumberText;
 

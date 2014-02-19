@@ -1,4 +1,4 @@
-package project.euler.base;
+package project.euler;
 
 public interface IProblem {
 

@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 public class _054PokerHands implements IProblem { 
 	

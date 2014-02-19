@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.Functions;
 
 public class _050ConsecutivePrimeSum implements IProblem {

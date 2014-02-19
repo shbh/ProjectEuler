@@ -9,7 +9,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.Functions;
 
 public class _051NextPrimeDigitReplacements implements IProblem {

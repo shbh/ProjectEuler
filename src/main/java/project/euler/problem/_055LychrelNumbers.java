@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.Functions;
 
 public class _055LychrelNumbers implements IProblem {

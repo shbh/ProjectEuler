@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 public class _029DistinctPowers implements IProblem {
 	static Logger logger = Logger.getLogger(_029DistinctPowers.class);

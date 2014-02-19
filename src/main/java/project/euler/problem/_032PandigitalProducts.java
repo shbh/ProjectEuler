@@ -2,7 +2,7 @@ package project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.Functions;
 
 public final class _032PandigitalProducts implements IProblem {

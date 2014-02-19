@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 /**
  * Created by shashi on 1/30/14.

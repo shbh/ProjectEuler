@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 public class _053CombinatoricSelections implements IProblem {
 	

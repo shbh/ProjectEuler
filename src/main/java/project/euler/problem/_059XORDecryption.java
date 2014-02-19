@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 
 public class _059XORDecryption implements IProblem {
 

@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
-import project.euler.base.IProblem;
+import project.euler.IProblem;
 import project.euler.feature.KeyConstant;
 
 /**
