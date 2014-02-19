@@ -39,24 +39,38 @@ public class _008LargestProductInASeries implements IProblem {
 
 					remainder = myBigInteger.divide(BigInteger.TEN
 							.pow(length - 1));
+					
 					myBigInteger = myBigInteger.subtract(BigInteger.TEN.pow(
 							length - 1).multiply(remainder));
+					
 					length = myBigInteger.toString().length();
+					
 					if (templength - 1 > length) {
+				
 						n = n + (factor - i);
+				
 						break;
+				
 					}
+				
 					tempInteger = myBigInteger;
+			
 				} else {
+			
 					int templength = length;
+			
 					remainder = tempInteger.divide(BigInteger.TEN
 							.pow(length - 1));
+			
 					tempInteger = tempInteger.subtract(BigInteger.TEN.pow(
 							length - 1).multiply(remainder));
+				
 					length = tempInteger.toString().length();
+				
 					if (templength - 1 > length) {
 
 						n = n + (factor - i + 1);
+				
 						break;
 					}
 				}
