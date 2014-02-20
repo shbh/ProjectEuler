@@ -16,8 +16,20 @@ public final class LaunchPad {
 
 	public static void main(final String[] args) {
 	
-		logger.info(new project.euler.problem._053CombinatoricSelections().solve());
-	
+		long lStartTime = System.nanoTime();
+
+
+		logger.info(new project.euler.problem._060PrimePairSets().solve());
+
+		long lEndTime = System.nanoTime();
+		
+		long difference = lEndTime - lStartTime;
+
+		
+		logger.info("Elapsed milliseconds: " + difference/1000000);
+
+
+
 	}
 
 }

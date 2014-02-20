@@ -6,9 +6,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-public class PlayGround {
+public class RoughCopy {
 	
-	static Logger logger = Logger.getLogger(PlayGround.class);
+	static Logger logger = Logger.getLogger(RoughCopy.class);
 	
 	public static void main(String[] args) {
 
