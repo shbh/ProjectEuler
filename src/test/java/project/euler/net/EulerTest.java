@@ -3,6 +3,7 @@ package project.euler.net;
 import java.util.Map;
 
 import project.euler.IProblem;
+import project.euler.feature.Encrypt;
 import project.euler.feature.Reader;
 
 public abstract class EulerTest {
@@ -22,10 +23,16 @@ public abstract class EulerTest {
 	protected void testEquality(IProblem problem)
 	{
 
-		if (!problem.solve().toString().equals(results.get(classNo))) {
+		try {
+			if (!Encrypt.encrypt(problem.solve().toString(), "SHA", "UTF-8").equals(results.get(classNo))) {
 
+				org.junit.Assert
+						.fail("The result is not matched with desired result");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			org.junit.Assert
-					.fail("The result is not matched with desired result");
+			.fail("The system break!!! not the code");
 		}
 	}
 

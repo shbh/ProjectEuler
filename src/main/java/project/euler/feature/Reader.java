@@ -3,7 +3,7 @@ package project.euler.feature;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -25,7 +25,7 @@ public class Reader {
 	
 	}
 
-	private Map<Integer, String> results = new LinkedHashMap<Integer, String>();
+	private Map<Integer, String> results = new HashMap<Integer, String>();
 
 	private Reader() {
 	
