@@ -52,37 +52,60 @@ import project.euler.IProblem;
                if(isPrime(i))  
                {  
                     ArrayList<Integer> al = new ArrayList<Integer>();  
+                  
                     ht_commons.put(new Integer(i), al);  
+                    
                     for(int j=i+2; j<=10000; ++j)  
                     {  
-                         if(isPrime(j))  
+                    
+                    	if(isPrime(j))  
                          {  
-                              int p1 = Integer.parseInt(""+j+i);  
-                              int p2 = Integer.parseInt(""+i+j);  
-                              if(isPrime(p1) && isPrime(p2))  
+                        
+                    		int p1 = Integer.parseInt(""+j+i);  
+                            
+                    		int p2 = Integer.parseInt(""+i+j);  
+                            
+                    		if(isPrime(p1) && isPrime(p2))  
                               {  
-                                   al.add(new Integer(j));  
+                            
+                    			al.add(new Integer(j));  
+                             
                               }  
                          }  
                     }  
                }  
           }  
+
+          
           //Now we have our prime sets, iterate through the prime sets to find the n remarkable primes  
           for(int i = 3; i <= 10000; i=i+2)  
           {  
-               ArrayList<Integer> al1 = ht_commons.get(new Integer(i));  
-               ArrayList<Integer> answers = getMinimumMatch(al1, n-1);  
-               answers.add(new Integer(i));  
-               if(answers.size()==n)  
-               {  
-                    for(Integer answer: answers)  
-                    {  
-                         sum += answer.intValue();  
-                    }  
-                    break;  
-               }  
+          
+        	  ArrayList<Integer> al1 = ht_commons.get(new Integer(i));  
+              
+        	  ArrayList<Integer> answers = getMinimumMatch(al1, n-1);  
+              
+        	  answers.add(new Integer(i));  
+              
+        	  if(answers.size()==n)  
+              
+        	  {  
+              
+        		  for(Integer answer: answers)  
+                  
+        		  {  
+                  
+        			  sum += answer.intValue();  
+                    
+        		  }  
+                 
+        		  break;  
+               
+        	  }  
           }
-		return sum; 
+		
+          return sum; 
+      
       }  
       
       public static ArrayList<Integer> getMinimumMatch(ArrayList<Integer> matches, int size)  
@@ -92,36 +115,55 @@ import project.euler.IProblem;
                 for(Integer parent: matches)  
                 {  
                      ArrayList<Integer> al = ht_commons.get(parent);  
+      
                      if(al!=null && al.size()>=size)  
                      {  
-                          ArrayList<Integer> test = new ArrayList<Integer>();  
-                          for(Integer child: al)  
-                          {  
+                     
+                    	 ArrayList<Integer> test = new ArrayList<Integer>();  
+                         
+                    	 for(Integer child: al)  
+                         
+                    	 {  
                                if(matches.contains(child))  
                                {  
-                                    test.add(child);  
+                         
+                            	   test.add(child);  
+                               
                                }  
                           }  
-                          if(test.size() >= (size)-1)//we got a match  
+                          
+                    	 if(test.size() >= (size)-1)//we got a match  
                           {  
                                if(size == 2)  
                                {  
-                                    ArrayList<Integer> answer = new ArrayList<Integer>();  
-                                    answer.add(test.get(0));  
-                                    answer.add(parent);  
-                                    return answer;  
-                               }  
+                         
+                            	   ArrayList<Integer> answer = new ArrayList<Integer>();  
+                                   
+                            	   answer.add(test.get(0));  
+                                   
+                            	   answer.add(parent);  
+                                   
+                            	   return answer;  
+                               
+                               }
+                               
                                ArrayList<Integer> answer = getMinimumMatch(test, size-1);  
+                               
                                answer.add(parent);  
+                               
                                if(answer.size() == size)  
                                {  
-                                    return answer;  
+                               
+                            	   return answer;  
+                               
                                }  
                           }  
                      }  
                 }  
            }  
+           
            return new ArrayList<Integer>();  
+      
       }  
       /**  
        * Checks whether a number is prime or not  
@@ -131,17 +173,25 @@ import project.euler.IProblem;
       public static boolean isPrimeBrute(int num)  
       {  
            boolean is_prime = true;  
+      
            double sqrt = Math.sqrt(num);  
+           
            for(int i=2; i <= sqrt; ++i)  
+           
            {  
                 int mod = num % i;  
+           
                 if(mod==0)  
                 {  
-                     is_prime = false;  
-                     break;  
+                
+                	is_prime = false;  
+                    
+                	break;  
                 }  
            }  
+           
            return is_prime;  
+      
       }  
       /**  
        * Lazy load primes.  
@@ -151,12 +201,18 @@ import project.euler.IProblem;
       public static boolean isPrime(int num)  
       {  
            Boolean is_prime = primes.get(new Integer(num));  
+      
            if(is_prime == null)  
            {  
-                is_prime = new Boolean(isPrimeBrute(num));  
-                primes.put(new Integer(num), is_prime);  
+           
+        	   is_prime = new Boolean(isPrimeBrute(num));  
+               
+        	   primes.put(new Integer(num), is_prime);  
+           
            }  
+           
            return is_prime.booleanValue();  
+      
       }  
         
  }  
