@@ -4,7 +4,7 @@ package project.euler.feature;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Map;
+
 
 
  
@@ -29,32 +29,32 @@ public final class Encrypt {
         return hashValue;
     }
  
-    public static void main(String args[]) throws Exception {
-      /*  String plainPassword = "SecretPassword";
- 
-        System.out.println("PlainText\tAlgo\tEncoding\tEncrypted Password");
-        System.out.println(plainPassword + "\tSHA\tUTF-8\t"
-                + encrypt("MySecretPassword", "SHA", "UTF-8"));
-        System.out.println(plainPassword + "\tSHA-1\tUTF-16\t"
-                + encrypt("MySecretPassword", "SHA-1", "UTF-16"));
-        System.out.println(plainPassword + "\tMD5\tUTF-8\t"
-                + encrypt("MySecretPassword", "MD5", "UTF-8"));
-        System.out.println(plainPassword + "\tMD5\tUTF-16\t"
-                + encrypt("MySecretPassword", "MD5", "UTF-16"));
- 	*/
-    
-    	
-    	Reader reader = Reader.getInstance();
-    	Map<Integer,String> results = reader.getResults();
-    	
-    	for(Map.Entry<Integer, String> entry : results.entrySet())
-    	{
-    		System.out.println(entry.getKey()+"="+encrypt(entry.getValue(), "SHA", "UTF-8"));
-    	}
-    	
-
-    
-    }
+//    public static void main(String args[]) throws Exception {
+//      /*  String plainPassword = "SecretPassword";
+// 
+//        System.out.println("PlainText\tAlgo\tEncoding\tEncrypted Password");
+//        System.out.println(plainPassword + "\tSHA\tUTF-8\t"
+//                + encrypt("MySecretPassword", "SHA", "UTF-8"));
+//        System.out.println(plainPassword + "\tSHA-1\tUTF-16\t"
+//                + encrypt("MySecretPassword", "SHA-1", "UTF-16"));
+//        System.out.println(plainPassword + "\tMD5\tUTF-8\t"
+//                + encrypt("MySecretPassword", "MD5", "UTF-8"));
+//        System.out.println(plainPassword + "\tMD5\tUTF-16\t"
+//                + encrypt("MySecretPassword", "MD5", "UTF-16"));
+// 	*/
+//    
+//    	
+//    	Reader reader = Reader.getInstance();
+//    	java.util.Map<Integer,String> results = reader.getResults();
+//    	
+//    	for(java.util.Map.Entry<Integer, String> entry : results.entrySet())
+//    	{
+//    		System.out.println(entry.getKey()+"="+encrypt(entry.getValue(), "SHA", "UTF-8"));
+//    	}
+//    	
+//
+//    
+//    }
     
     
     
