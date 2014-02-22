@@ -19,11 +19,11 @@ public final class _026ReciprocalCycles implements IProblem {
 		
 		int bestLength = 0;
 		
-		for (int i = limit; i > 0; i--) {
+		for (int i = limit; i > bestLength; i--) {
 		
 			int len = getCycleLength(i);
 			
-			if (len > bestLength) {
+			if (len > bestLength ) {
 			
 				bestNumber = i;
 				

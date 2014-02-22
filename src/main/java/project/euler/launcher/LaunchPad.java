@@ -19,7 +19,7 @@ public final class LaunchPad {
 		long lStartTime = System.nanoTime();
 
 
-		logger.info(new project.euler.problem._060PrimePairSets().solve());
+		logger.info(new project.euler.problem._061CyclicalFigurateNumbers().solve());
 
 		long lEndTime = System.nanoTime();
 		
