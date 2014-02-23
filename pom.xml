@@ -4,7 +4,7 @@
 	<groupId>shbh</groupId>
 	<artifactId>ProjectEuler</artifactId>
 	<packaging>jar</packaging>
-	<version>59</version>
+	<version>62</version>
 	<name>ProjectEuler</name>
 	<url>http://maven.apache.org</url>
 

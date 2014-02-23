@@ -13,6 +13,8 @@ public class RoughCopy {
 	public static void main(String[] args) {
 
 	
+		
+		
 		generate(Integer.toString(379));
 		
 		cut1(Integer.toString(379));
@@ -23,13 +25,59 @@ public class RoughCopy {
 		
 		Arrays.sort(temp);
 
+		logger.info(max(123456781));
 		
 		logger.info((Math.abs(123) / Math.pow(10, 3 - 1)) % 10);
 		
 		logger.info(Integer.toString(12).substring(1, 2));
 	
 	}
+	public static Integer BubbleSort( int [ ] num )
+	{
+	     int j;
+	     boolean flag = true;   // set flag to true to begin first pass
+	     int temp;   //holding variable
+	     int number =0;
+	     while ( flag )
+	     {
+	            flag= false;    //set flag to false awaiting a possible swap
+	            for( j=0;  j < num.length -1;  j++ )
+	            {
+	                   if ( num[ j ] > num[j+1] )   // change to > for ascending sort
+	                   {
+	                           temp = num[ j +1 ];                //swap elements
+	                           
+	                           num[ j+1 ] = num[ j ];
+	                           
+	                           num[ j] = temp;
+	                           
+	                           flag = true;              //shows a swap occurred 
+	                  }
+	            }
+	      }
+	     
+	     
+	     for (int i = 0; i < num.length; i++) {
+			number = number+num[i]*(int)Math.pow(10, i);
+		}
+	     
+	     return number;
+	} 
 
+	public static Integer max(int n)
+	{
+
+		
+		String temp = Integer.toString(n);
+		int[] newGuess = new int[temp.length()];
+		
+		for (int i = 0; i < temp.length(); i++)
+		{
+		    newGuess[i] = temp.charAt(i) - '0';
+		}
+		return BubbleSort(newGuess);
+	}
+	
 	private final static void cut1(String string) {
 
 		logger.info(string.substring(0, 1));

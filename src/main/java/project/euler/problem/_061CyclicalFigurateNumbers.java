@@ -35,7 +35,7 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			int[] outputs = new int[6];
 			
 			int output = -1;
-			int number = 1281;//octagonal.get(i);
+			int number = octagonal.get(i);
 			
 			outputs[0]=1281;
 			List<Integer> tnumbers = findPairs(number, triangles);
@@ -56,7 +56,9 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			}
 			else 
 			{
-				return output;
+				
+				
+				return sum(outputs);
 			}
 
 			if(output==-1)
@@ -71,7 +73,7 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			}
 			else
 			{
-				return output;
+				return sum(outputs);
 			}
 			
 			if(output==-1)
@@ -86,7 +88,7 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			}
 			else
 			{
-				return output;
+				return sum(outputs);
 			}
 			
 			
@@ -102,7 +104,7 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			}
 			else
 			{
-				return output;
+				return sum(outputs);
 			}
 
 
@@ -113,6 +115,15 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 		}
 
 		return 0;
+	}
+
+	private Integer sum(int[] outputs) {
+		// TODO Auto-generated method stub
+		int sum = 0;
+		for (int i = 0; i < outputs.length; i++) {
+			sum+=outputs[i];
+		}
+		return sum;
 	}
 
 	private int checkAll(int number, List<Integer> fiver, List<Integer> first,
@@ -163,52 +174,77 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 			return -1;
 		}
 		List<Integer> first = findPairs(value, firstlist);
+		
+		
+		
 		for (int l = 0; l < first.size(); l++) {
 
+			outputs[3] = first.get(l);
 			List<Integer> second = findPairs(first.get(l), secondlist);
+			
+			if(second.size()==0)
+			{
+				continue;
+			}
+			
 			for (int m = 0; m < second.size(); m++) {
 
+				outputs[4] = second.get(m);
 				List<Integer> third = findPairs(second.get(m), thirdlist);
-				if (third.size() > 0) {
-					for(int n =0; n< third.size();n++)
-					{
-						int output = third.get(0);
-						
-						
-						int firsttwo = number/100;
-						
-						int lasttwo = output%100;
-						
-						if(firsttwo == lasttwo)
-						{
-							return output;
-						}
-					}
-
+				if(third.size()==0)
+				{
+					continue;
 				}
+				for(int n =0; n< third.size();n++)
+				{
+					outputs[5] = third.get(n);
+					int output = third.get(0);
+					
+					
+					int firsttwo = number/100;
+					
+					int lasttwo = output%100;
+					
+					if(firsttwo == lasttwo)
+					{
+						return output;
+					}
+				}
+
+				
 
 			}
 
 			List<Integer> fourth = findPairs(first.get(l), thirdlist);
+			if(fourth.size()==0)
+			{
+				continue;
+			}
 			for (int m = 0; m < fourth.size(); m++) {
 				
+				outputs[4] = fourth.get(m);
 				List<Integer> fifth = findPairs(fourth.get(m), secondlist);
-				if (fifth.size() >0) {
-					for(int n =0; n< fifth.size();n++)
+				
+				if(fifth.size()==0)
+				{
+					continue;
+				}
+				for(int n =0; n< fifth.size();n++)
+				{
+					outputs[5] = fifth.get(n);
+					
+					int output = fifth.get(0);
+		
+					int firsttwo = number/100;
+					
+					int lasttwo = output%100;
+					
+					if(firsttwo == lasttwo)
 					{
-						
-						int output = fifth.get(0);
-			
-						int firsttwo = number/100;
-						
-						int lasttwo = output%100;
-						
-						if(firsttwo == lasttwo)
-						{
-							return output;
-						}
+						return output;
 					}
 				}
+			
 
 			}
 
@@ -227,6 +263,7 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 		}
 		for (int k = 0; k < filter.size(); k++) {
 
+			outputs[2] = filter.get(k);
 			int output = checkThree(number,filter.get(k), first, second, third, outputs);
 
 			if (output == -1) {
@@ -255,8 +292,15 @@ public class _061CyclicalFigurateNumbers implements IProblem {
 		}
 		
 		for (int j = 0; j < fiver.size(); j++) {
-
+			
 			List<Integer> filter = findPairs(fiver.get(j), second);
+			
+			if(filter.size()==0)
+			{
+				return -1;
+			}
+			outputs[1] = fiver.get(j);
+			
 			int output = checkFour(number,filter, third, fourth, fifth, outputs);
 			if (output > -1) {
 				return output;

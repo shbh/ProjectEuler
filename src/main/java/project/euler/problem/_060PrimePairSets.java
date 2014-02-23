@@ -19,14 +19,6 @@ import project.euler.IProblem;
           
     	  long sum = computeRemarkablePrimes(5);
           
-    	  if(sum!=-1)  
-           {  
-                System.out.println("The computed sum is: " + sum);  
-           }  
-           else  
-           {  
-                System.out.println("Could not identify such prime numbers. Consider increasing the number of primes in your prime set");  
-           }  
            
            return sum;
       }
