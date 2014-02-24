@@ -23,7 +23,7 @@ mvn clean install package && cd target && java -jar superman-1.0.jar && cd ..
 Build Status
 ------------
 [![Build Status](https://travis-ci.org/shbh/ProjectEuler.png?branch=master)](https://travis-ci.org/shbh/ProjectEuler)
-
+{<img src="https://coveralls.io/repos/shbh/ProjectEuler/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/shbh/ProjectEuler?branch=master] 
 
 FAQ
 ---
