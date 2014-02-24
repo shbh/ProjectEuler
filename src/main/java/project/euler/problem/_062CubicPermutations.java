@@ -14,7 +14,7 @@ public class _062CubicPermutations implements IProblem {
 
 	Map<BigInteger,List<BigInteger>> combination = new HashMap<>();
 	
-	static Logger logger = Logger.getLogger(_061CyclicalFigurateNumbers.class);
+	static Logger logger = Logger.getLogger(_062CubicPermutations.class);
 	
 	public BigInteger solve() {
 
@@ -23,7 +23,6 @@ public class _062CubicPermutations implements IProblem {
 		{
 			BigInteger cube = BigInteger.valueOf(i).multiply(BigInteger.valueOf(i)).multiply(BigInteger.valueOf(i));
 			BigInteger max = max(cube);
-			logger.info(cube + " " + max + " " + i);
 			
 			List<BigInteger> total = combination.get(max);
 			if(total==null)
