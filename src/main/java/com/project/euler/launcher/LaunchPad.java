@@ -19,7 +19,7 @@ public final class LaunchPad {
 		long lStartTime = System.nanoTime();
 
 
-		logger.info(new com.project.euler.problem._063PowerfulDigitCounts().solve());
+		logger.info(new com.project.euler.problem._068TotientMaximum().solve());
 
 		long lEndTime = System.nanoTime();
 		
