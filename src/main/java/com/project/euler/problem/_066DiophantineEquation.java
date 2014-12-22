@@ -65,13 +65,13 @@ public class _066DiophantineEquation implements IProblem {
 			v.k = newk;
 		}
 		if (v.k.compareTo(BigInteger.valueOf(-1))==0) {
-			System.out.println(v);
+			
 			return findBhaskar(v);
 		} else if (v.k.compareTo(BigInteger.valueOf(1))==0) {
-			System.out.println(v);
+			
 			return v;
 		} else {
-			System.out.println(v);
+			
 			return findPell(v);
 		}
 	}
