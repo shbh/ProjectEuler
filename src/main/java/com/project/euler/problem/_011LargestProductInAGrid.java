@@ -132,9 +132,9 @@ public class _011LargestProductInAGrid implements IProblem {
 
 					}
 				}
-				
+				// South-East
 				if (j + 3 < dim && i + 3 < dim) {
-					// South-East
+					
 					second = grid[i + 1][j + 1];
 					
 					third = grid[i + 2][j + 2];
