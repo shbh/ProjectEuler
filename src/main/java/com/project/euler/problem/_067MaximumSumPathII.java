@@ -63,9 +63,10 @@ public class _067MaximumSumPathII implements IProblem {
 			}
 		}
 		
+		for (int i = x - 2; i >= 0; i--) {
 		for (int j = y - 2; j >= 0; j--) {
 
-			for (int i = x - 2; i >= 0; i--) {
+			
 
 				int right = chunks[i][j] + chunks[i + 1][j + 1];
 
