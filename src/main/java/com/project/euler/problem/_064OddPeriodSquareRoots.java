@@ -9,7 +9,8 @@ public class _064OddPeriodSquareRoots implements IProblem {
 		
 	
 		 int upperbound = 10000;
-         int result = 0;
+         @SuppressWarnings("unused")
+		int result = 0;
 
          for (int n = 2; n <= upperbound; n++) {
              int limit = (int) Math.sqrt(n);                                

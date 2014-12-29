@@ -15,7 +15,7 @@ public class _063PowerfulDigitCounts implements IProblem {
 		
 		int count = 0;
 		
-		int y =100;
+
 		
 		BigInteger digits = BigInteger.ONE;
 	
