@@ -1,7 +1,6 @@
 package com.project.euler.problem;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -118,7 +117,7 @@ public class _059XORDecryption implements IProblem {
 				}
 			}
 		
-		} catch (IOException e) {
+		} catch (Exception e) {
 		
 			logger.trace("friendly exception");
 		

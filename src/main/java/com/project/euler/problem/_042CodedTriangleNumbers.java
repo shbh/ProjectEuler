@@ -1,7 +1,6 @@
 package com.project.euler.problem;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -74,7 +73,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 			
 		
 		} 
-		catch (IOException e) {
+		catch (Exception e) {
 			logger.trace("friendly message");
 		}
 		
