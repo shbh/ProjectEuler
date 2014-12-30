@@ -79,28 +79,28 @@ public class _058SpiralPrimes implements IProblem {
 			if(Functions.isPrime(newX))
 			{
 				
-				totalNoOfPrime++;
+				totalNoOfPrime = totalNoOfPrime + 1;
 			
 			}
 			
 			if(Functions.isPrime(newY))
 			{
 			
-				totalNoOfPrime++;
+				totalNoOfPrime = totalNoOfPrime + 1;
 			
 			}
 			
 			if(Functions.isPrime(newW))
 			{
 			
-				totalNoOfPrime++;
+				totalNoOfPrime = totalNoOfPrime + 1;
 			
 			}
 			
 			if(Functions.isPrime(newV))
 			{
 			
-				totalNoOfPrime++;
+				totalNoOfPrime = totalNoOfPrime + 1;
 			
 			}
 			

@@ -34,7 +34,7 @@ public class _067MaximumSumPathII implements IProblem {
 
 		} catch (IOException e) {
 
-			e.printStackTrace();
+			//e.printStackTrace();
 
 		}
 

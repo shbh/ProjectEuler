@@ -18,7 +18,15 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 
 	public Integer solve() {
 
+		int result = 0;
+		
+		boolean isSolved = false;
+		
 		for (int i = 11; i < 1000000; i = i + 2) {
+			if(isSolved)
+			{
+				break;
+			}
 	
 			if (Functions.isPrime(i)) {
 			
@@ -37,6 +45,10 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 				Set<Character> uniqueChars = new HashSet<Character>(Arrays.asList(characters));
 				
 				for (Character c : uniqueChars) {
+					if(isSolved)
+					{
+						break;
+					}
 				
 					if (strPrime.replace(c.toString(), "").length() != strPrime.length() - 3) {
 					
@@ -46,6 +58,10 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 					List<Integer> listPrimes = new ArrayList<>();
 					
 					for (Integer j = 0; j < 10; j++) {
+						if(isSolved)
+						{
+							break;
+						}
 					
 						Integer newNum = Integer.parseInt(strPrime.replace(c.toString(), j.toString()));
 						
@@ -73,7 +89,8 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 							
 							Collections.sort(unique);
 							
-							return unique.get(0);
+							result = unique.get(0);
+							isSolved = true;
 						
 						}
 
@@ -82,7 +99,7 @@ public class _051NextPrimeDigitReplacements implements IProblem {
 			}
 		}
 	
-		return 0;
+		return result;
 
 	}
 
