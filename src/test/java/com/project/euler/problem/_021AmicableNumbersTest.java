@@ -3,7 +3,7 @@ package com.project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 import com.project.euler.net.EulerTest;
 
 public class _021AmicableNumbersTest extends EulerTest {
@@ -15,7 +15,7 @@ public class _021AmicableNumbersTest extends EulerTest {
 		super(_021AmicableNumbers.class.getSimpleName());
 	}
 
-	@Test(timeout = KeyConstant.ALLOWEDTIME)
+	@Test(timeout = Functions.ALLOWEDTIME)
 	public void testSolve() {
 
 		_021AmicableNumbers problem = new _021AmicableNumbers();

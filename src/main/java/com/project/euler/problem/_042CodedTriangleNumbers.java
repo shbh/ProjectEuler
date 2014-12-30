@@ -11,7 +11,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
@@ -38,7 +38,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 
 			String sCurrentLine = br.readLine();
 
-			String[] names = sCurrentLine.split(KeyConstant.COMMA);
+			String[] names = sCurrentLine.split(Functions.COMMA);
 		
 			Arrays.sort(names);
 			
@@ -47,8 +47,8 @@ public class _042CodedTriangleNumbers implements IProblem {
 			
 				int sum = 0;
 			
-				char[] charcters = names[i].replace(KeyConstant.FORWARD_SLASH,
-						KeyConstant.BLANK).toCharArray();
+				char[] charcters = names[i].replace(Functions.FORWARD_SLASH,
+						Functions.BLANK).toCharArray();
 				
 				
 				for (int c = 0; c < charcters.length; c++) {

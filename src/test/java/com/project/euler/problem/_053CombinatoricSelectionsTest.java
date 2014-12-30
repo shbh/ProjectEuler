@@ -3,7 +3,7 @@ package com.project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 import com.project.euler.net.EulerTest;
 
 public class _053CombinatoricSelectionsTest extends EulerTest {
@@ -16,7 +16,7 @@ public class _053CombinatoricSelectionsTest extends EulerTest {
 		super(_053CombinatoricSelections.class.getSimpleName());
 	}
 
-	@Test(timeout = KeyConstant.ALLOWEDTIME)
+	@Test(timeout = Functions.ALLOWEDTIME)
 	public void testSolve() {
 
 		_053CombinatoricSelections problem = new _053CombinatoricSelections();

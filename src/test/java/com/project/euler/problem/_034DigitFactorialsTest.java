@@ -3,7 +3,7 @@ package com.project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 import com.project.euler.net.EulerTest;
 
 public class _034DigitFactorialsTest extends EulerTest {
@@ -15,7 +15,7 @@ public class _034DigitFactorialsTest extends EulerTest {
 		super(_034DigitFactorials.class.getSimpleName());
 	}
 
-	@Test(timeout = KeyConstant.ALLOWEDTIME)
+	@Test(timeout = Functions.ALLOWEDTIME)
 	public void testSolve() {
 
 		_034DigitFactorials problem = new _034DigitFactorials();

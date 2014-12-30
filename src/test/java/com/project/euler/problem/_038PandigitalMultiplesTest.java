@@ -3,7 +3,7 @@ package com.project.euler.problem;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 import com.project.euler.net.EulerTest;
 
 public class _038PandigitalMultiplesTest extends EulerTest {
@@ -15,7 +15,7 @@ public class _038PandigitalMultiplesTest extends EulerTest {
 		super(_038PandigitalMultiples.class.getSimpleName());
 	}
 
-	@Test(timeout = KeyConstant.ALLOWEDTIME)
+	@Test(timeout = Functions.ALLOWEDTIME)
 	public void testSolve() {
 
 		_038PandigitalMultiples problem = new _038PandigitalMultiples();

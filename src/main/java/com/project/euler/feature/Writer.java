@@ -1,8 +1,8 @@
 package com.project.euler.feature;
 
 import org.apache.log4j.Logger;
-
-public class Writer implements KeyConstant {
+import static com.project.euler.feature.Functions.*;
+public class Writer  {
 	
 	static Logger logger = Logger.getLogger(Writer.class);
 	

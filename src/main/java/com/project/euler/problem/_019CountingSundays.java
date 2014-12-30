@@ -2,7 +2,7 @@ package com.project.euler.problem;
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
@@ -34,11 +34,11 @@ public class _019CountingSundays implements IProblem {
 
 		for (int i = 1901; i < before; i++) {
 		
-			int[] temp = KeyConstant.NON_LEAP_YEAR;
+			int[] temp = Functions.NON_LEAP_YEAR;
 		
 			if (i % 4 == 0 && i % 400 > 0) {
 		
-				temp = KeyConstant.A_LEAP_YEAR;
+				temp = Functions.A_LEAP_YEAR;
 		
 			}
 

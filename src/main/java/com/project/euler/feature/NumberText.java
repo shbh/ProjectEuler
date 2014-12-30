@@ -1,9 +1,9 @@
 package com.project.euler.feature;
 
+import static com.project.euler.feature.Functions.*;
 
 
-
-public class NumberText implements KeyConstant {
+public class NumberText  {
 
 	public static String getNumberLetters(Integer number) {
 		

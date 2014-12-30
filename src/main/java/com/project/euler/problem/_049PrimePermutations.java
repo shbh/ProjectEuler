@@ -14,7 +14,6 @@ import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
 import com.project.euler.feature.Functions;
-import com.project.euler.feature.KeyConstant;
 
 public class _049PrimePermutations implements IProblem {
 
@@ -130,7 +129,7 @@ public class _049PrimePermutations implements IProblem {
 		}
 
 		keySet = result.keySet();
-		String output = KeyConstant.BLANK;
+		String output = Functions.BLANK;
 		for (Iterator<String> iterator = keySet.iterator(); iterator.hasNext();) {
 		
 			String key = iterator.next();
@@ -145,7 +144,7 @@ public class _049PrimePermutations implements IProblem {
 			
 			}
 			
-			output = Functions.join(resultValue, KeyConstant.BLANK);
+			output = Functions.join(resultValue, Functions.BLANK);
 			break;
 		}
 

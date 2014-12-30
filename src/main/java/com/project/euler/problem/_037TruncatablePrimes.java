@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
 import com.project.euler.feature.Functions;
-import com.project.euler.feature.KeyConstant;
 
 public class _037TruncatablePrimes implements IProblem {
 	
@@ -30,7 +29,7 @@ public class _037TruncatablePrimes implements IProblem {
 
 			if (Functions.isPrime(i)) {
 			
-				Set<String> combinations = Functions.generate(KeyConstant.BLANK + i);
+				Set<String> combinations = Functions.generate(Functions.BLANK + i);
 
 				boolean isPrimeCombination = false;
 

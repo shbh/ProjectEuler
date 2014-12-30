@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
  * Created by shashi on 1/29/14.
  */
 import com.project.euler.IProblem;
-import com.project.euler.feature.KeyConstant;
+import com.project.euler.feature.Functions;
 import com.project.euler.feature.NumberText;
 
 public class _017NumberLetterCounts implements IProblem {
@@ -24,7 +24,7 @@ public class _017NumberLetterCounts implements IProblem {
 			
 			String letters = NumberText.getNumberLetters(i);
 			
-			String replacedLetter = letters.replaceAll(KeyConstant.HYPHENSPACEREGEX, KeyConstant.BLANK);
+			String replacedLetter = letters.replaceAll(Functions.HYPHENSPACEREGEX, Functions.BLANK);
 		
 			length += replacedLetter.length();
 		
