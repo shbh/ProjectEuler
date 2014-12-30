@@ -311,6 +311,8 @@ public class Functions implements KeyConstant {
 
 		boolean isfactored = true;
 
+		long result = 0l;
+
 		while (true) {
 
 			if (largenumber % number != 0) {
@@ -323,7 +325,8 @@ public class Functions implements KeyConstant {
 
 					largeprimefactor = largenumber;
 
-					return largeprimefactor;
+					result = largeprimefactor;
+					break;
 				}
 			} else {
 
@@ -334,19 +337,23 @@ public class Functions implements KeyConstant {
 			}
 		}
 
-		if (isfactored) {
+		if (result == 0l) {
+			if (isfactored) {
 
-			largenumber = largenumber / number;
+				largenumber = largenumber / number;
 
-			largeprimefactor = (number > largeprimefactor && isPrime(number)) ? number : largeprimefactor;
+				largeprimefactor = (number > largeprimefactor && isPrime(number)) ? number : largeprimefactor;
 
-			return divideNumber(largenumber, 2, largeprimefactor);
+				result = divideNumber(largenumber, 2, largeprimefactor);
 
-		} else {
+			} else {
 
-			return largeprimefactor;
+				result = largeprimefactor;
 
+			}
 		}
+		
+		return result;
 	}
 
 	// Find the last digit needed to make the number 0-9 pandigital and concat
@@ -550,8 +557,6 @@ public class Functions implements KeyConstant {
 		return sets;
 	}
 
-	
-
 	public static boolean isConjecture(long n, long[] sqrt, int[] prime) {
 
 		for (int i = 0; i < prime.length; i++) {
@@ -630,20 +635,19 @@ public class Functions implements KeyConstant {
 		}
 
 	}
-	
+
 	public static boolean isLychrel(BigInteger number) {
-		
+
 		BigInteger testNumber = number;
-		
+
 		for (int i = 0; i < 50; i++) {
-		
+
 			testNumber = testNumber.add(new BigInteger(reverse(testNumber.toString())));
-			
-			if (isPalindrome(testNumber.toString()))
-			{
-			
+
+			if (isPalindrome(testNumber.toString())) {
+
 				return false;
-			
+
 			}
 		}
 
@@ -667,59 +671,55 @@ public class Functions implements KeyConstant {
 		return sum;
 
 	}
-	
+
 	public static int containPrimeFactor(int number) {
 
 		Set<Integer> divisor = new HashSet<>();
-		
+
 		while (true) {
-			
+
 			int factor = smallestFactor(number);
-			
+
 			divisor.add(factor);
-			
+
 			number = number / factor;
-			
-			if (number == 1)
-			{
-			
+
+			if (number == 1) {
+
 				break;
 			}
 		}
 
 		return divisor.size();
-		
+
 	}
-	
-	  /**  
-     * Checks whether a number is prime or not  
-     * @param num  
-     * @return  
-     */  
-    public static boolean isPrimeBrute(int num)  
-    {  
-         boolean is_prime = true;  
-    
-         double sqrt = Math.sqrt(num);  
-         
-         for(int i=2; i <= sqrt; ++i)  
-         
-         {  
-              int mod = num % i;  
-         
-              if(mod==0)  
-              {  
-              
-              	is_prime = false;  
-                  
-              	break;  
-              }  
-         }  
-         
-         return is_prime;  
-    
-    }  
-    
-    
-   
+
+	/**
+	 * Checks whether a number is prime or not
+	 * 
+	 * @param num
+	 * @return
+	 */
+	public static boolean isPrimeBrute(int num) {
+		boolean is_prime = true;
+
+		double sqrt = Math.sqrt(num);
+
+		for (int i = 2; i <= sqrt; ++i)
+
+		{
+			int mod = num % i;
+
+			if (mod == 0) {
+
+				is_prime = false;
+
+				break;
+			}
+		}
+
+		return is_prime;
+
+	}
+
 }
