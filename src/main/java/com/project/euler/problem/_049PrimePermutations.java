@@ -130,7 +130,7 @@ public class _049PrimePermutations implements IProblem {
 		}
 
 		keySet = result.keySet();
-		
+		String output = KeyConstant.BLANK;
 		for (Iterator<String> iterator = keySet.iterator(); iterator.hasNext();) {
 		
 			String key = iterator.next();
@@ -145,11 +145,12 @@ public class _049PrimePermutations implements IProblem {
 			
 			}
 			
-			return Functions.join(resultValue, KeyConstant.BLANK);
+			output = Functions.join(resultValue, KeyConstant.BLANK);
+			break;
 		}
 
 		
-		return KeyConstant.BLANK;
+		return output;
 
 	}
 
