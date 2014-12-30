@@ -74,7 +74,7 @@ public class _042CodedTriangleNumbers implements IProblem {
 		
 		} 
 		catch (Exception e) {
-			logger.trace("friendly message");
+		//	logger.trace("friendly message");
 		}
 		
 		return count;

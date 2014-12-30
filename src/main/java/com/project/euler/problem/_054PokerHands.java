@@ -1,11 +1,10 @@
 package com.project.euler.problem; 
-import org.apache.log4j.Logger;
-
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+
+import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
 
@@ -41,9 +40,9 @@ public class _054PokerHands implements IProblem {
 			}
 
 		} 
-		catch (IOException e) {
+		catch (Exception e) {
 		
-			e.printStackTrace();
+		//	e.printStackTrace();
 		
 		}
 

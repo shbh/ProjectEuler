@@ -33,7 +33,7 @@ public class _067MaximumSumPathII implements IProblem {
 
 		} catch (Exception e) {
 
-			logger.trace("friendly exception");
+		//	logger.trace("friendly exception");
 
 		}
 

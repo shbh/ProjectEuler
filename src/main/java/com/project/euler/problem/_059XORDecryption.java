@@ -75,7 +75,7 @@ public class _059XORDecryption implements IProblem {
 							catch(Exception ex)
 							{
 							
-								logger.trace("friendly exception");
+								//logger.trace("friendly exception");
 							
 							}
 							
@@ -119,7 +119,7 @@ public class _059XORDecryption implements IProblem {
 		
 		} catch (Exception e) {
 		
-			logger.trace("friendly exception");
+			//logger.trace("friendly exception");
 		
 		}
 

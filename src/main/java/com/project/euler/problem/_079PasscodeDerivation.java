@@ -31,7 +31,7 @@ public class _079PasscodeDerivation implements IProblem {
 
 		} catch (Exception e) {
 
-			logger.trace("friendly exception");
+		//	logger.trace("friendly exception");
 
 		}
 
