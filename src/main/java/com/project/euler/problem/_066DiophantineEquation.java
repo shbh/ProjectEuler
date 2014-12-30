@@ -3,6 +3,7 @@ package com.project.euler.problem;
 import java.math.BigInteger;
 
 import com.project.euler.IProblem;
+import com.project.euler.feature.Functions;
 
 public class _066DiophantineEquation implements IProblem {
 
@@ -30,7 +31,7 @@ public class _066DiophantineEquation implements IProblem {
 			Value v = new Value();
 			v.b = BigInteger.ONE;
 			v.k = BigInteger.ZERO;
-			v.a = BigInteger.valueOf(findNearestSquare(D));
+			v.a = BigInteger.valueOf(Functions.findNearestSquare(D));
 			v.m = BigInteger.ZERO;
 			v.D = D;
 			if (v.a.compareTo(BigInteger.valueOf(-1))==1) {
@@ -56,7 +57,7 @@ public class _066DiophantineEquation implements IProblem {
 
 			BigInteger fk = v.k.abs();
 
-			v.m = findNearestDifference(v.a, v.b, v.k, v.D);
+			v.m = Functions.findNearestDifference(v.a, v.b, v.k, v.D);
 			BigInteger newa = ((v.a.multiply(v.m)).add(BigInteger.valueOf(v.D).multiply(v.b))).divide(fk);
 			BigInteger newb = (v.a.add(v.b.multiply(v.m))).divide(fk);
 			BigInteger newk = ((v.m.multiply(v.m)).subtract(BigInteger.valueOf(v.D))).divide(v.k);
@@ -86,56 +87,7 @@ public class _066DiophantineEquation implements IProblem {
 		return v;
 	}
 
-	private BigInteger findNearestDifference(BigInteger a, BigInteger b, BigInteger k, int D) {
-		// TODO Auto-generated method stub
-
-		BigInteger diff = BigInteger.ZERO;
-		BigInteger m = BigInteger.ZERO;
-		BigInteger lastm = BigInteger.ZERO;
-
-		while (true) {
-
-			BigInteger n = (a.add(b.multiply(m))).divide(k);
-			BigInteger cn = (n.multiply(k)).subtract(b.multiply(m));
-			if (a.compareTo(cn)==0) {
-				BigInteger temp = (m.multiply(m).subtract(BigInteger.valueOf(D))).abs();
-				if (diff.compareTo(BigInteger.ZERO)==0) {
-					diff = temp;
-					lastm = m;
-
-				} else if (temp.compareTo(diff)<0) {
-					diff = temp;
-					lastm = m;
-
-				} else {
-					return lastm;
-				}
-
-			}
-
-			m = m.add(BigInteger.ONE);
-		}
-
-	}
-
-	private int findNearestSquare(int number) {
-		// TODO Auto-generated method stub
-		int sqrt = (int) Math.sqrt(number);
-		if (sqrt * sqrt == number) {
-			return -1;
-		} else {
-			int lowestsquare = sqrt * sqrt;
-			int greatestsquare = (sqrt + 1) * (sqrt + 1);
-			int diff = number - lowestsquare;
-			if ((greatestsquare - number) < diff) {
-				return sqrt + 1;
-			} else {
-				return sqrt;
-			}
-
-		}
-
-	}
+	
 
 	
 

@@ -1,7 +1,6 @@
 package com.project.euler.problem;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -31,7 +30,7 @@ public class _037TruncatablePrimes implements IProblem {
 
 			if (Functions.isPrime(i)) {
 			
-				Set<String> combinations = generate(KeyConstant.BLANK + i);
+				Set<String> combinations = Functions.generate(KeyConstant.BLANK + i);
 
 				boolean isPrimeCombination = false;
 
@@ -85,28 +84,6 @@ public class _037TruncatablePrimes implements IProblem {
 
 	}
 
-	private final Set<String> generate(String string) {
-
-		Set<String> sets = new HashSet<>();
-		
-		sets.add(string);
-		
-		String ltemp = string;
-		
-		String rtemp = string;
-		
-		for (int i = 0; i < string.length() - 1; i++) {
-		
-			ltemp = ltemp.substring(0, ltemp.length() - 1);
-			
-			rtemp = rtemp.substring(1);
-
-			sets.add(rtemp);
-			
-			sets.add(ltemp);
-		}
-
-		return sets;
-	}
+	
 
 }

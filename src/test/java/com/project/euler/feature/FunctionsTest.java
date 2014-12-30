@@ -3,7 +3,9 @@ package com.project.euler.feature;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+
 import org.junit.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -724,7 +726,7 @@ public class FunctionsTest {
 	@Test
 	public void testJoin_1()
 		throws Exception {
-		List<Object> list = new LinkedList();
+		List<Object> list = new LinkedList<Object>();
 		String delim = "";
 
 		String result = Functions.join(list, delim);
@@ -743,7 +745,7 @@ public class FunctionsTest {
 	@Test
 	public void testJoin_2()
 		throws Exception {
-		List<Object> list = new LinkedList();
+		List<Object> list = new LinkedList<Object>();
 		String delim = "";
 
 		String result = Functions.join(list, delim);
@@ -762,7 +764,7 @@ public class FunctionsTest {
 	@Test
 	public void testJoin_3()
 		throws Exception {
-		List<Object> list = new LinkedList();
+		List<Object> list = new LinkedList<Object>();
 		String delim = "";
 
 		String result = Functions.join(list, delim);

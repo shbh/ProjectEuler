@@ -49,7 +49,7 @@ public class _027QuadraticPrimes implements IProblem {
 			
 				for (int a = -limit + 2; a < limit; a = a + 2) {
 				
-					int count = validateQuadric(a, b);
+					int count = Functions.validateQuadric(a, b);
 
 					if (count > max) {
 					
@@ -65,7 +65,7 @@ public class _027QuadraticPrimes implements IProblem {
 			{
 				for (int a = -limit + 1; a < limit; a = a + 2) {
 			
-					int count = validateQuadric(a, b);
+					int count = Functions.validateQuadric(a, b);
 
 					
 					if (count > max) {
@@ -84,25 +84,6 @@ public class _027QuadraticPrimes implements IProblem {
 		
 	}
 
-	private final int validateQuadric(int a, int b) {
 
-		// formula n2+an+b
-		int count = 0;
-		boolean noprime = false;
-		int n = 0;
-		while (!noprime) {
-			int value = (int) Math.pow(n, 2) + a * n + b;
-
-			if (Functions.isPrime(value)) {
-				count++;
-				n++;
-			} else {
-				noprime = true;
-			}
-
-		}
-
-		return count;
-	}
 
 }

@@ -18,7 +18,7 @@ public final class _032PandigitalProducts implements IProblem {
 	
 		for (int i = 1; i < 10000; i++) {
 		
-			if (hasPandigitalProduct(i))
+			if (Functions.hasPandigitalProduct(i))
 			{	
 				sum += i;
 			}
@@ -29,20 +29,5 @@ public final class _032PandigitalProducts implements IProblem {
 	
 	}
 
-	private final boolean hasPandigitalProduct(int n) {
-		// Find and examine all factors of n
-
-		for (int i = 1; i <= n; i++) {
-			
-			if (n % i == 0 && Functions.isPandigital("" + n + i + n / i))
-			{
-			
-				return true;
-			
-			}
-		}
 	
-		return false;
-	}
-
 }

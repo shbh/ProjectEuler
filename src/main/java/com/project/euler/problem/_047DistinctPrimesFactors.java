@@ -1,7 +1,5 @@
 package com.project.euler.problem;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Stack;
 
 import org.apache.log4j.Logger;
@@ -27,7 +25,7 @@ public class _047DistinctPrimesFactors implements IProblem {
 		
 			number++;
 
-			if (containPrimeFactor(number) == count) {
+			if (Functions.containPrimeFactor(number) == count) {
 			
 				stack.add(number);
 			} 
@@ -49,27 +47,6 @@ public class _047DistinctPrimesFactors implements IProblem {
 		return firstnumber;
 	}
 
-	private static int containPrimeFactor(int number) {
-
-		Set<Integer> divisor = new HashSet<>();
-		
-		while (true) {
-			
-			int factor = Functions.smallestFactor(number);
-			
-			divisor.add(factor);
-			
-			number = number / factor;
-			
-			if (number == 1)
-			{
-			
-				break;
-			}
-		}
-
-		return divisor.size();
-		
-	}
+	
 
 }

@@ -38,50 +38,49 @@ public class _040ChampernowneConstant implements IProblem {
 				* findingposition(1000000, n);
 
 	}
-
+	
 	private final int findingposition(int number, int[] n) {
 
 		int bar = 0;
-		
+
 		for (int j = 0; j < n.length; j++) {
 
 			if (number < n[j]) {
-		
+
 				if (number == n[j - 1]) {
-				
+
 					bar = j - 1;
-					
+
 					break;
-				} 
-				else if (number > n[j - 1]) {
-		
+				} else if (number > n[j - 1]) {
+
 					bar = j - 1;
-					
+
 					break;
 				}
 			}
 
 		}
-		
+
 		// bar = 2
 		int x = n[bar] - 1;// 9
-		
+
 		int y = number - x;// 6
-		
+
 		int z = y % bar;// 0
-		
+
 		int w = y / bar;// 3
 
 		y = (int) Math.pow(10, bar - 1) - 1 + w;// 12
 
 		if (z != 0) {
-		
+
 			y = y + 1;// 13
 
 		} else {
-			
+
 			z = bar;
-		
+
 		}
 
 		int g = z - 1;
@@ -90,4 +89,5 @@ public class _040ChampernowneConstant implements IProblem {
 
 	}
 
+	
 }

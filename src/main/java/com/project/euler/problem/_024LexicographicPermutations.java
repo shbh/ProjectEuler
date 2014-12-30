@@ -1,11 +1,12 @@
 package com.project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.project.euler.IProblem;
+import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
@@ -33,7 +34,7 @@ public class _024LexicographicPermutations implements IProblem {
 
 		for (int i = 9; i >= 0; i--) {
 			
-			long fact = factorial(i);
+			long fact = Functions.factorial(i);
 		
 			long result = pos / fact;
 		
@@ -63,15 +64,6 @@ public class _024LexicographicPermutations implements IProblem {
 		return Long.valueOf(sb.toString());
 	}
 
-	private static long factorial(int n) {
-
-		if (n == 0)
-			return 1;
-		int result = 1;
-		for (int i = 1; i <= n; i++) {
-			result *= i;
-		}
-		return result;
-	}
+	
 
 }

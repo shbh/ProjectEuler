@@ -1,10 +1,11 @@
 package com.project.euler.problem;
 
-import org.apache.log4j.Logger;
-
 import java.math.BigInteger;
 
+import org.apache.log4j.Logger;
+
 import com.project.euler.IProblem;
+import com.project.euler.feature.Functions;
 
 public class _056PowerfulDigitSum implements IProblem {
 
@@ -24,7 +25,7 @@ public class _056PowerfulDigitSum implements IProblem {
 			
 				BigInteger power = BigInteger.valueOf(i).pow(j);
 				
-				Integer sum = addDigit(power);
+				Integer sum = Functions.addDigit(power);
 
 				if (sum > answer) {
 				
@@ -37,21 +38,5 @@ public class _056PowerfulDigitSum implements IProblem {
 		return answer;
 	}
 
-	private Integer addDigit(BigInteger number) {
-		
-		String str = number.toString();
-		
-		char[] characters = str.toCharArray();
-		
-		int sum = 0;
-
-		for (int i = 0; i < str.length(); i++) {
-		
-			sum += characters[i] - 48;
-
-		}
-		
-		return sum;
-
-	}
+	
 }

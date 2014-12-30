@@ -39,7 +39,7 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 			
 			if (Functions.isComposite(i)) {
 
-				if (isConjecture(i, sqrt, prime)) {
+				if (Functions.isConjecture(i, sqrt, prime)) {
 			
 					return i;
 				
@@ -54,35 +54,5 @@ public class _046GoldbachsOtherConjecture implements IProblem {
 		}
 	}
 
-	private final boolean isConjecture(long n, long[] sqrt, int[] prime) {
-
-		for (int i = 0; i < prime.length; i++) {
-			
-			int no = (int) n - prime[i];
-			
-			if (no > 0) {
-
-				
-				for (int j = 0; j < sqrt.length; j++) {
-				
-					int sno = (int) sqrt[j];
-					
-					if (2 * sno > no) {
-					
-						break;
-					} 
-					else if (2 * sno == no) 
-					{
-
-						return false;
-					}
-
-				}
-
-			}
-		}
-
-		return true;
-	}
-
+	
 }

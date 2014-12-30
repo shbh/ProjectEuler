@@ -2,10 +2,8 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.project.euler.IProblem;
+import com.project.euler.feature.Functions;
 
 public final class _026ReciprocalCycles implements IProblem {
 
@@ -21,7 +19,7 @@ public final class _026ReciprocalCycles implements IProblem {
 		
 		for (int i = limit; i > bestLength; i--) {
 		
-			int len = getCycleLength(i);
+			int len = Functions.getCycleLength(i);
 			
 			if (len > bestLength ) {
 			
@@ -34,16 +32,6 @@ public final class _026ReciprocalCycles implements IProblem {
 		return bestNumber;
 	}
 
-	private final int getCycleLength(int n) {
-		Map<Integer, Integer> stateToIter = new HashMap<Integer, Integer>();
-		int state = 1;
-		int iter = 0;
-		while (!stateToIter.containsKey(state)) {
-			stateToIter.put(state, iter);
-			state = state * 10 % n;
-			iter++;
-		}
-		return iter - stateToIter.get(state);
-	}
+	
 
 }
