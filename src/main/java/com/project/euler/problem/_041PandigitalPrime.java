@@ -29,6 +29,8 @@ public class _041PandigitalPrime implements IProblem {
 
 			Set<String> combinations = Permutations.generateCombination(Integer.toString(m));
 
+			m = n / (int) Math.pow(10, i);
+			
 			for (Iterator<String> iterator = combinations.iterator(); iterator
 					.hasNext();) {
 			
@@ -43,9 +45,6 @@ public class _041PandigitalPrime implements IProblem {
 						pandigitalNumber = Integer.parseInt(number);
 						
 						if (current > i) {
-						
-						
-						
 							break gotoresult;
 					
 						}
@@ -57,7 +56,7 @@ public class _041PandigitalPrime implements IProblem {
 			
 			
 			
-			m = n / (int) Math.pow(10, i);
+			
 
 		}
 		
