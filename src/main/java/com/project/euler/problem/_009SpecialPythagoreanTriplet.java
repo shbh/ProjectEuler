@@ -14,6 +14,8 @@ public class _009SpecialPythagoreanTriplet implements IProblem {
 
 	public Integer solve() {
 
+		int result = 0;
+		result:
 		for (int c = 1; c <= marker; c++) {
 
 			int a;
@@ -26,8 +28,8 @@ public class _009SpecialPythagoreanTriplet implements IProblem {
 		
 				if (a * a + b * b == c * c) {
 		
-					return a * b * c;
-		
+					result =  a * b * c;
+					break result;
 				} else {
 			
 					if (a == b || a == (b - 1)) {
@@ -39,8 +41,8 @@ public class _009SpecialPythagoreanTriplet implements IProblem {
 			}
 
 		}
-	
-		return 0;
+		
+		return result;
 
 	}
 

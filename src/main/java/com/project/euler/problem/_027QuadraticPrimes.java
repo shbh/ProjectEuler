@@ -58,6 +58,7 @@ public class _027QuadraticPrimes implements IProblem {
 						maxm = a * b;
 					
 					}
+					
 
 				}
 			} 

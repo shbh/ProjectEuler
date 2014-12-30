@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
  */
 import com.project.euler.IProblem;
 import com.project.euler.feature.Functions;
-import com.project.euler.feature.NumberText;
 
 public class _017NumberLetterCounts implements IProblem {
 	
@@ -22,7 +21,7 @@ public class _017NumberLetterCounts implements IProblem {
 		for (int i = 1; i <= 1000; i++) {
 
 			
-			String letters = NumberText.getNumberLetters(i);
+			String letters = Functions.getNumberLetters(i);
 			
 			String replacedLetter = letters.replaceAll(Functions.HYPHENSPACEREGEX, Functions.BLANK);
 		

@@ -32,7 +32,7 @@ public class _079PasscodeDerivation implements IProblem {
 
 		} catch (IOException e) {
 
-			e.printStackTrace();
+			logger.trace("friendly exception");
 
 		}
 
@@ -91,15 +91,16 @@ public class _079PasscodeDerivation implements IProblem {
 
 	private int getPosition(int no, int[] passcode, int[] bulb) {
 		// TODO Auto-generated method stub
-		
+		int position = 0;
 		for (int i = 0; i < passcode.length; i++) {
 			if(passcode[i]==no)
 			{
 				bulb[no]=1;
-				return i;
+				position = i;
+				break;
 			}
 		}
-		return 0;
+		return position;
 	}
 
 }

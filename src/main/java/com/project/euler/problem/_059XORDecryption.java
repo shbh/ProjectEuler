@@ -15,6 +15,7 @@ public class _059XORDecryption implements IProblem {
 	
 	public Integer solve() {
 		
+		int result = 0;
 
 		int[] ciphers = null;
 		
@@ -36,10 +37,10 @@ public class _059XORDecryption implements IProblem {
 		
 		} catch (IOException e) {
 		
-			e.printStackTrace();
+			logger.trace("friendly exception");
 		
 		}
-		
+		gotoresult:
 		for (int first = 97; first <= 122; first++) {
 		
 			for (int second = 97; second <= 122; second++) {
@@ -112,7 +113,8 @@ public class _059XORDecryption implements IProblem {
 					if(sentence.indexOf(" the ")>-1)
 					{
 						
-						return sum;
+						result= sum;
+						break gotoresult;
 					
 					}
 
@@ -120,7 +122,7 @@ public class _059XORDecryption implements IProblem {
 			}
 		}
 		
-		return 0;
+		return result;
 	}
 
 }

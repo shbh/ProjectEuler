@@ -37,7 +37,7 @@ public class _099LargestExponential implements IProblem {
 
 		} catch (IOException e) {
 
-			e.printStackTrace();
+			logger.trace("friendly exception");
 
 		}
 		
