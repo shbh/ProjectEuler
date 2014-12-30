@@ -307,54 +307,7 @@ public class Functions implements KeyConstant {
 
 	}
 
-	public static long divideNumber(long largenumber, long number, long largeprimefactor) {
-
-		boolean isfactored = true;
-
-		long result = 0l;
-
-		while (true) {
-
-			if (largenumber % number != 0) {
-
-				isfactored = false;
-
-				number++;
-
-				if (largenumber <= number) {
-
-					largeprimefactor = largenumber;
-
-					result = largeprimefactor;
-					break;
-				}
-			} else {
-
-				isfactored = true;
-
-				break;
-
-			}
-		}
-
-		if (result == 0l) {
-			if (isfactored) {
-
-				largenumber = largenumber / number;
-
-				largeprimefactor = (number > largeprimefactor && isPrime(number)) ? number : largeprimefactor;
-
-				result = divideNumber(largenumber, 2, largeprimefactor);
-
-			} else {
-
-				result = largeprimefactor;
-
-			}
-		}
-		
-		return result;
-	}
+	
 
 	// Find the last digit needed to make the number 0-9 pandigital and concat
 	// it in front.

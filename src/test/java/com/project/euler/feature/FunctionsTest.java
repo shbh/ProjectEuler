@@ -1,22 +1,16 @@
 package com.project.euler.feature;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
 import java.math.BigInteger;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 /**
  * The class <code>FunctionsTest</code> contains tests for the class <code>{@link Functions}</code>.
  *
- * @generatedBy CodePro at 30/12/14 3:52 PM
+ * @generatedBy CodePro at 30/12/14 4:43 PM
  * @author test
  * @version $Revision: 1.0 $
  */
@@ -26,7 +20,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGcdR_1()
@@ -45,7 +39,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGcdR_2()
@@ -64,7 +58,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testAddDigit_1()
@@ -89,7 +83,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testAddDigit_2()
@@ -114,7 +108,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testAreDistinctDigits_1()
@@ -132,7 +126,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testAreDistinctDigits_2()
@@ -150,7 +144,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testAreDistinctDigits_3()
@@ -168,7 +162,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testConcat_1()
@@ -187,7 +181,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testConcat_2()
@@ -206,7 +200,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testContainPrimeFactor_1()
@@ -224,7 +218,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testContainPrimeFactor_2()
@@ -242,7 +236,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testContainPrimeFactor_3()
@@ -260,7 +254,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountNoOfRelativePrime_1()
@@ -278,7 +272,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountNoOfRelativePrime_2()
@@ -296,7 +290,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountNoOfRelativePrime_3()
@@ -314,7 +308,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountdivisor_1()
@@ -332,7 +326,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountdivisor_2()
@@ -350,7 +344,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testCountdivisor_3()
@@ -364,111 +358,11 @@ public class FunctionsTest {
 	}
 
 	/**
-	 * Run the long divideNumber(long,long,long) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
-	 */
-	@Test
-	public void testDivideNumber_1()
-		throws Exception {
-		long largenumber = 1L;
-		long number = 1L;
-		long largeprimefactor = 1L;
-
-		long result = Functions.divideNumber(largenumber, number, largeprimefactor);
-
-		// add additional test code here
-		assertEquals(1L, result);
-	}
-
-	/**
-	 * Run the long divideNumber(long,long,long) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
-	 */
-	@Test
-	public void testDivideNumber_2()
-		throws Exception {
-		long largenumber = 1L;
-		long number = 1L;
-		long largeprimefactor = 1L;
-
-		long result = Functions.divideNumber(largenumber, number, largeprimefactor);
-
-		// add additional test code here
-		assertEquals(1L, result);
-	}
-
-	/**
-	 * Run the long divideNumber(long,long,long) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
-	 */
-	@Test
-	public void testDivideNumber_3()
-		throws Exception {
-		long largenumber = 1L;
-		long number = 1L;
-		long largeprimefactor = 1L;
-
-		long result = Functions.divideNumber(largenumber, number, largeprimefactor);
-
-		// add additional test code here
-		assertEquals(1L, result);
-	}
-
-	/**
-	 * Run the long divideNumber(long,long,long) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
-	 */
-	@Test
-	public void testDivideNumber_4()
-		throws Exception {
-		long largenumber = 1L;
-		long number = 2L;
-		long largeprimefactor = 1L;
-
-		long result = Functions.divideNumber(largenumber, number, largeprimefactor);
-
-		// add additional test code here
-		assertEquals(1L, result);
-	}
-
-	/**
-	 * Run the long divideNumber(long,long,long) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
-	 */
-	@Test
-	public void testDivideNumber_5()
-		throws Exception {
-		long largenumber = 1L;
-		long number = 1L;
-		long largeprimefactor = 1L;
-
-		long result = Functions.divideNumber(largenumber, number, largeprimefactor);
-
-		// add additional test code here
-		assertEquals(1L, result);
-	}
-
-	/**
 	 * Run the long factorial(int) method test.
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFactorial_1()
@@ -486,7 +380,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFactorial_2()
@@ -504,7 +398,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFactorial_3()
@@ -522,7 +416,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestDifference_1()
@@ -554,7 +448,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestDifference_2()
@@ -586,7 +480,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestDifference_3()
@@ -618,7 +512,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestDifference_4()
@@ -650,7 +544,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestDifference_5()
@@ -682,7 +576,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestSquare_1()
@@ -700,7 +594,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestSquare_2()
@@ -718,7 +612,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testFindNearestSquare_3()
@@ -736,7 +630,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGenerate_1()
@@ -756,7 +650,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGenerate_2()
@@ -776,7 +670,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGenerateCircular_1()
@@ -796,7 +690,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGenerateCircular_2()
@@ -816,7 +710,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGenerateCircular_3()
@@ -836,7 +730,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGetCycleLength_1()
@@ -854,7 +748,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGetCycleLength_2()
@@ -872,7 +766,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGreatestCommonFactor_1()
@@ -891,7 +785,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testGreatestCommonFactor_2()
@@ -910,7 +804,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testHasPandigitalProduct_1()
@@ -928,7 +822,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testHasPandigitalProduct_2()
@@ -946,7 +840,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testHasPandigitalProduct_3()
@@ -964,7 +858,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testHasPandigitalProduct_4()
@@ -982,7 +876,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsComposite_1()
@@ -1000,7 +894,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsComposite_2()
@@ -1018,7 +912,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsComposite_3()
@@ -1036,7 +930,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_1()
@@ -1056,7 +950,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_2()
@@ -1076,7 +970,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_3()
@@ -1096,7 +990,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_4()
@@ -1116,7 +1010,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_5()
@@ -1136,7 +1030,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsConjecture_6()
@@ -1156,7 +1050,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsDoubleBasePalindrome_1()
@@ -1174,7 +1068,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsDoubleBasePalindrome_2()
@@ -1192,7 +1086,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsDoubleBasePalindrome_3()
@@ -1210,7 +1104,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsLychrel_1()
@@ -1228,7 +1122,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsLychrel_2()
@@ -1246,7 +1140,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsLychrel_3()
@@ -1264,7 +1158,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsNumberContainEven_1()
@@ -1282,7 +1176,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsNumberContainEven_2()
@@ -1300,7 +1194,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsNumberContainEven_3()
@@ -1318,7 +1212,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPalindrome_1()
@@ -1336,7 +1230,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPalindrome_2()
@@ -1354,7 +1248,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPalindrome_3()
@@ -1374,7 +1268,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPalindrome_4()
@@ -1394,7 +1288,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPandigital_1()
@@ -1412,7 +1306,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPandigital_2()
@@ -1430,7 +1324,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPandigital_3()
@@ -1448,7 +1342,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPandigital_4()
@@ -1467,7 +1361,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPandigital_5()
@@ -1486,7 +1380,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPentagonal_1()
@@ -1504,7 +1398,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPentagonal_2()
@@ -1522,7 +1416,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrime_1()
@@ -1540,7 +1434,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrime_2()
@@ -1558,7 +1452,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrime_3()
@@ -1576,7 +1470,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrime_4()
@@ -1594,7 +1488,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrime_5()
@@ -1612,7 +1506,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrimeBrute_1()
@@ -1630,7 +1524,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrimeBrute_2()
@@ -1648,7 +1542,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testIsPrimeBrute_3()
@@ -1666,12 +1560,12 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testJoin_1()
 		throws Exception {
-		List<Object> list = new LinkedList<Object>();
+		List<Object> list = new LinkedList();
 		String delim = "";
 
 		String result = Functions.join(list, delim);
@@ -1685,12 +1579,12 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testJoin_2()
 		throws Exception {
-		List<Object> list = new LinkedList<Object>();
+		List<Object> list = new LinkedList();
 		String delim = "";
 
 		String result = Functions.join(list, delim);
@@ -1704,12 +1598,12 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testJoin_3()
 		throws Exception {
-		List<Object> list = new LinkedList<Object>();
+		List<Object> list = new LinkedList();
 		String delim = "";
 
 		String result = Functions.join(list, delim);
@@ -1723,7 +1617,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testMakePandigital_1()
@@ -1741,7 +1635,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testMakePandigital_2()
@@ -1759,7 +1653,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testMakePandigital_3()
@@ -1777,7 +1671,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testMakePandigital_4()
@@ -1795,7 +1689,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testReverse_1()
@@ -1813,7 +1707,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testReverse_2()
@@ -1831,7 +1725,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSmallestFactor_1()
@@ -1849,7 +1743,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSmallestFactor_2()
@@ -1867,7 +1761,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSmallestFactor_3()
@@ -1885,7 +1779,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSumofdivisor_1()
@@ -1903,7 +1797,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSumofdivisor_2()
@@ -1921,7 +1815,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSumofdivisor_3()
@@ -1939,7 +1833,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSumofdivisor_4()
@@ -1957,7 +1851,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testSumofdivisor_5()
@@ -1975,7 +1869,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testValidateQuadric_1()
@@ -1994,7 +1888,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testValidateQuadric_2()
@@ -2013,7 +1907,7 @@ public class FunctionsTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Test
 	public void testValidateQuadric_3()
@@ -2033,7 +1927,7 @@ public class FunctionsTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@Before
 	public void setUp()
@@ -2047,7 +1941,7 @@ public class FunctionsTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	@After
 	public void tearDown()
@@ -2060,7 +1954,7 @@ public class FunctionsTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 30/12/14 3:52 PM
+	 * @generatedBy CodePro at 30/12/14 4:43 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(FunctionsTest.class);

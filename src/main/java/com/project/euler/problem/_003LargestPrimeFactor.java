@@ -18,8 +18,57 @@ public class _003LargestPrimeFactor implements IProblem {
 	
 		long largenumber = inputnumber;
 
-		return Functions.divideNumber(largenumber, 2, 0);
+		return divideNumber(largenumber, 2, 0);
 
+	}
+	
+	private long divideNumber(long largenumber, long number, long largeprimefactor) {
+
+		boolean isfactored = true;
+
+		long result = 0l;
+
+		while (true) {
+
+			if (largenumber % number != 0) {
+
+				isfactored = false;
+
+				number++;
+
+				if (largenumber <= number) {
+
+					largeprimefactor = largenumber;
+
+					result = largeprimefactor;
+					break;
+				}
+				
+			} else {
+
+				isfactored = true;
+
+				break;
+
+			}
+		}
+
+		if (result == 0l) {
+			
+			result = largeprimefactor;
+			
+			if (isfactored) {
+
+				largenumber = largenumber / number;
+
+				largeprimefactor = (number > largeprimefactor && Functions.isPrime(number)) ? number : largeprimefactor;
+
+				result = divideNumber(largenumber, 2, largeprimefactor);
+
+			} 
+		}
+		
+		return result;
 	}
 
 	
