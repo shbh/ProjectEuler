@@ -2,4 +2,4 @@ language: java
 jdk:
   - oraclejdk7
 install:
-  - mvn clean install cobertura:cobertura coveralls:cobertura
+  - mvn clean cobertura:cobertura coveralls:cobertura
