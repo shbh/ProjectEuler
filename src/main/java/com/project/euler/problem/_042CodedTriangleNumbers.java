@@ -71,14 +71,14 @@ public class _042CodedTriangleNumbers implements IProblem {
 
 			}
 			
-			return count;
+			
 		
 		} 
 		catch (IOException e) {
-			e.printStackTrace();
+			logger.trace("friendly message");
 		}
 		
-		return 0;
+		return count;
 	}
 
 	private final int generateNext(int n, int limit) {

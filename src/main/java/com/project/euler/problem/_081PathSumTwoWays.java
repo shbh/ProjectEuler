@@ -37,7 +37,7 @@ public class _081PathSumTwoWays implements IProblem {
 
 		} catch (IOException e) {
 
-			e.printStackTrace();
+			logger.trace("friendly message");
 
 		}
 		
