@@ -690,4 +690,36 @@ public class Functions implements KeyConstant {
 		return divisor.size();
 		
 	}
+	
+	  /**  
+     * Checks whether a number is prime or not  
+     * @param num  
+     * @return  
+     */  
+    public static boolean isPrimeBrute(int num)  
+    {  
+         boolean is_prime = true;  
+    
+         double sqrt = Math.sqrt(num);  
+         
+         for(int i=2; i <= sqrt; ++i)  
+         
+         {  
+              int mod = num % i;  
+         
+              if(mod==0)  
+              {  
+              
+              	is_prime = false;  
+                  
+              	break;  
+              }  
+         }  
+         
+         return is_prime;  
+    
+    }  
+    
+    
+   
 }

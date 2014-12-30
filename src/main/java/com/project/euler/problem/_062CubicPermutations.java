@@ -45,46 +45,46 @@ public class _062CubicPermutations implements IProblem {
 	}
 	
 	
-	
-	public static BigInteger BubbleSort( char[] cs )
-	{
-		
-		 int j;
-	     boolean flag = true;   // set flag to true to begin first pass
-	     char temp;   //holding variable
-	     BigInteger number =BigInteger.ZERO;
-	     while ( flag )
-	     {
-	            flag= false;    //set flag to false awaiting a possible swap
-	            for( j=0;  j < cs.length -1;  j++ )
-	            {
-	                   if ( cs[ j ] > cs[j+1] )   // change to > for ascending sort
-	                   {
-	                           temp = cs[ j +1 ];                //swap elements
-	                           
-	                           cs[ j+1 ] = cs[ j ];
-	                           
-	                           cs[ j] = temp;
-	                           
-	                           flag = true;              //shows a swap occurred 
-	                  }
-	            }
-	      }
-	     
-	     
-	     for (int i = 0; i < cs.length; i++) {
-	    	number = number.add(BigInteger.valueOf(cs[i]-'0').multiply(BigInteger.TEN.pow(i)));
+	 private BigInteger BubbleSort( char[] cs )
+		{
+			
+			 int j;
+		     boolean flag = true;   
+		     char temp;   
+		     BigInteger number =BigInteger.ZERO;
+		     while ( flag )
+		     {
+		            flag= false;    
+		            for( j=0;  j < cs.length -1;  j++ )
+		            {
+		                   if ( cs[ j ] > cs[j+1] )   
+		                   {
+		                           temp = cs[ j +1 ];               
+		                           
+		                           cs[ j+1 ] = cs[ j ];
+		                           
+		                           cs[ j] = temp;
+		                           
+		                           flag = true;             
+		                  }
+		            }
+		      }
+		     
+		     
+		     for (int i = 0; i < cs.length; i++) {
+		    	number = number.add(BigInteger.valueOf(cs[i]-'0').multiply(BigInteger.TEN.pow(i)));
+			}
+		     
+		     return number;
+		} 
+
+	 private BigInteger max(BigInteger cube)
+		{
+
+			
+			return BubbleSort(cube.toString().toCharArray());
+			
 		}
-	     
-	     return number;
-	} 
-
-	public static BigInteger max(BigInteger cube)
-	{
-
-		
-		return BubbleSort(cube.toString().toCharArray());
-		
-	}
+	
 	
 }

@@ -6,6 +6,7 @@ import java.util.HashMap;
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
+import com.project.euler.feature.Functions;
  public class _060PrimePairSets  implements IProblem 
  {  
       public static HashMap<Integer, Boolean> primes = new HashMap<Integer, Boolean>();  
@@ -34,7 +35,7 @@ import com.project.euler.IProblem;
        * @return  
        * The sum of the first "n" remarkable primes   
        */  
-      public static long computeRemarkablePrimes(int n)  
+      private long computeRemarkablePrimes(int n)  
       {  
     	  long sum = 0;   
           //Compute the primes and their pairwise remarkable primes between 2 and 10,000  
@@ -100,7 +101,7 @@ import com.project.euler.IProblem;
       
       }  
       
-      public static ArrayList<Integer> getMinimumMatch(ArrayList<Integer> matches, int size)  
+      private  ArrayList<Integer> getMinimumMatch(ArrayList<Integer> matches, int size)  
       {  
            if(matches!=null && matches.size() >= size)  
            {  
@@ -157,47 +158,20 @@ import com.project.euler.IProblem;
            return new ArrayList<Integer>();  
       
       }  
-      /**  
-       * Checks whether a number is prime or not  
-       * @param num  
-       * @return  
-       */  
-      public static boolean isPrimeBrute(int num)  
-      {  
-           boolean is_prime = true;  
-      
-           double sqrt = Math.sqrt(num);  
-           
-           for(int i=2; i <= sqrt; ++i)  
-           
-           {  
-                int mod = num % i;  
-           
-                if(mod==0)  
-                {  
-                
-                	is_prime = false;  
-                    
-                	break;  
-                }  
-           }  
-           
-           return is_prime;  
-      
-      }  
+    
       /**  
        * Lazy load primes.  
        * @param num  
        * @return  
        */  
-      public static boolean isPrime(int num)  
+      private boolean isPrime(int num)  
       {  
            Boolean is_prime = primes.get(new Integer(num));  
       
            if(is_prime == null)  
            {  
            
-        	   is_prime = new Boolean(isPrimeBrute(num));  
+        	   is_prime = new Boolean(Functions.isPrimeBrute(num));  
                
         	   primes.put(new Integer(num), is_prime);  
            

@@ -13,7 +13,7 @@ public class _081PathSumTwoWays implements IProblem {
 
 	static Logger logger = Logger.getLogger(_081PathSumTwoWays.class);
 
-	public Object solve() {
+	public Integer solve() {
 
 		InputStream input = _081PathSumTwoWays.class.getClassLoader().getResourceAsStream("p081_matrix.txt");
 
