@@ -16,7 +16,7 @@ public class _079PasscodeDerivation implements IProblem {
 
 	static Logger logger = Logger.getLogger(_079PasscodeDerivation.class);
 
-	public Long solve() {
+	public String solve() {
 
 		InputStream input = _079PasscodeDerivation.class.getClassLoader().getResourceAsStream("p079_keylog.txt");
 
@@ -84,8 +84,8 @@ public class _079PasscodeDerivation implements IProblem {
 			if(bulb[passcode[i]]==1)
 			output = output + passcode[i];
 		}
-		System.out.println(output);
-		return null;
+		
+		return output;
 
 	}
 

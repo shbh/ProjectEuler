@@ -146,6 +146,31 @@ public class Functions implements KeyConstant {
 		
 		return C;
 	}
+	
+	
+	public static int GcdR(int value1, int value2) {
+	    return (value1 == 0) ? value2 : GcdR(value2 % value1, value1);
+	}
+	
+	public static int countNoOfRelativePrime(int number)
+	{
+		int count=0;
+		int n = number;
+		while(n!=0)
+		{
+			int i =GcdR(number,n);
+			if(i==1)
+			{
+				count = count+1;
+			}
+			
+			n--;
+			
+		}
+		
+		return count;
+		
+	}
 
 	public static Boolean isPalindrome(String letters) 
 	{

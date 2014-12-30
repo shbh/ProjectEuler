@@ -56,7 +56,7 @@ public class _081PathSumTwoWays implements IProblem {
 				int val1 = x < dimension ? numbers[x + 1][y] : Integer.MAX_VALUE;
 				int val2 = y < dimension ? numbers[x][y + 1] : Integer.MAX_VALUE;
 				numbers[x][y] += val1 < val2 ? val1 : val2;
-				System.out.println(numbers[x][y] +" x "+"="+x +" , "+ "y"+"="+y);
+			
 				
 				
 			}
