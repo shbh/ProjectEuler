@@ -59,7 +59,7 @@ public class Reader {
 			}
 
 		} catch (IOException ex) {
-			ex.printStackTrace();
+		//	ex.printStackTrace();
 		}
 		return results;
 
