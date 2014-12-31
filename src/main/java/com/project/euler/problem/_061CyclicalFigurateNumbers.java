@@ -28,6 +28,8 @@ public class _061CyclicalFigurateNumbers {
 		figurates(10000, 1000, FIGURATES.HEPTAGONAL, heptagonal);
 		figurates(10000, 1000, FIGURATES.OCTAGONAL, octagonal);
 
+		
+		int result = 0;
 		for (int i = 0; i < octagonal.size(); i++) {
 
 			int[] outputs = new int[6];
@@ -46,44 +48,41 @@ public class _061CyclicalFigurateNumbers {
 				if (snumbers.size() > 0) {
 					output = checkAll(number, snumbers, triangles, pentagonal, hexagonal, heptagonal, outputs);
 				}
-			} else {
 
-				return sum(outputs);
-			}
+				if (output == -1) {
+					List<Integer> pnumbers = findPairs(number, pentagonal);
+					if (pnumbers.size() > 0) {
 
-			if (output == -1) {
-				List<Integer> pnumbers = findPairs(number, pentagonal);
-				if (pnumbers.size() > 0) {
+						output = checkAll(number, pnumbers, triangles, square, hexagonal, heptagonal, outputs);
+					}
 
-					output = checkAll(number, pnumbers, triangles, square, hexagonal, heptagonal, outputs);
+					if (output == -1) {
+						List<Integer> hxnumbers = findPairs(number, hexagonal);
+						if (hxnumbers.size() > 0) {
+
+							output = checkAll(number, hxnumbers, triangles, pentagonal, square, heptagonal, outputs);
+						}
+						if (output == -1) {
+							List<Integer> hpnumbers = findPairs(number, heptagonal);
+							if (hpnumbers.size() > 0) {
+
+								output = checkAll(number, hpnumbers, triangles, pentagonal, hexagonal, square, outputs);
+							}
+
+						} else {
+							result =  sum(outputs);
+							break;
+						}
+
+					}
+
 				}
-			} else {
-				return sum(outputs);
-			}
 
-			if (output == -1) {
-				List<Integer> hxnumbers = findPairs(number, hexagonal);
-				if (hxnumbers.size() > 0) {
-
-					output = checkAll(number, hxnumbers, triangles, pentagonal, square, heptagonal, outputs);
-				}
-			} else {
-				return sum(outputs);
-			}
-
-			if (output == -1) {
-				List<Integer> hpnumbers = findPairs(number, heptagonal);
-				if (hpnumbers.size() > 0) {
-
-					output = checkAll(number, hpnumbers, triangles, pentagonal, hexagonal, square, outputs);
-				}
-			} else {
-				return sum(outputs);
 			}
 
 		}
+		return result;
 
-		return 0;
 	}
 
 	private Integer sum(int[] outputs) {
@@ -208,7 +207,7 @@ public class _061CyclicalFigurateNumbers {
 
 		int output = -1;
 		if (filter.size() > 0) {
-					
+
 			outputs[2] = filter.get(0);
 			output = checkThree(number, filter.get(0), first, second, third, outputs);
 
@@ -217,11 +216,11 @@ public class _061CyclicalFigurateNumbers {
 				if (output == -1) {
 					output = checkThree(number, filter.get(0), third, first, second, outputs);
 
-				} 
+				}
 
-			} 
-		}	
-	
+			}
+		}
+
 		return output;
 	}
 
@@ -230,7 +229,7 @@ public class _061CyclicalFigurateNumbers {
 
 		int output = -1;
 		if (fiver.size() > 0) {
-			
+
 			for (int j = 0; j < fiver.size(); j++) {
 
 				List<Integer> filter = findPairs(fiver.get(j), second);
