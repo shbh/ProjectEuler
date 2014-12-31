@@ -24,7 +24,6 @@ public class _059XORDecryption implements IProblem {
 		String[] ciphertexts = cipher.split(",");
 
 		ciphers = new int[ciphertexts.length];
-		System.out.println(ciphertexts.length);
 
 		for (int i = 0; i < ciphertexts.length; i++) {
 
@@ -42,7 +41,7 @@ public class _059XORDecryption implements IProblem {
 
 					int sum = 0;
 
-					for (int i = 0; i < ciphers.length-1;) {
+					for (int i = 0; i < ciphers.length;) {
 
 						int junk = 0;
 
@@ -58,6 +57,8 @@ public class _059XORDecryption implements IProblem {
 
 							junk++;
 
+						if(i<ciphers.length-1)
+						{
 							text2 = ciphers[i + 1] ^ second;
 
 							junk++;
@@ -66,24 +67,17 @@ public class _059XORDecryption implements IProblem {
 
 							junk++;
 
-						
+						} 
 
 						sum += text1 + text2 + text3;
 
-						if (junk == 3) {
+						sentence.append((char) text1);
+						
+						if (junk == 3 || junk ==2) {
 
-							sentence.append((char) text1).append((char) text2).append((char) text3);
+							sentence.append((char) text2).append((char) text3);
 
-						} else if (junk == 2) {
-
-							sentence.append((char) text1).append((char) text2).append((char) text3);
-
-						} else {
-
-							sentence.append((char) text1);
-
-						}
-
+						} 
 						i += 3;
 
 					}
