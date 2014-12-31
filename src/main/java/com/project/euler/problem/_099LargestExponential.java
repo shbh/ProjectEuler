@@ -15,7 +15,7 @@ public class _099LargestExponential implements IProblem {
 	public Integer solve() {
 
 
-		List<String> datas = Reader.getInstance().readFile("p099_base_exp.tx");
+		List<String> datas = Reader.getInstance().readFile("p099_base_exp.txt");
 		
 		int[][] matrix = new int[1000][2];
 
