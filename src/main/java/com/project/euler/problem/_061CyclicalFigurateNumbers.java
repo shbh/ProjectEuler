@@ -28,7 +28,6 @@ public class _061CyclicalFigurateNumbers {
 		figurates(10000, 1000, FIGURATES.HEPTAGONAL, heptagonal);
 		figurates(10000, 1000, FIGURATES.OCTAGONAL, octagonal);
 
-		
 		int result = 0;
 		for (int i = 0; i < octagonal.size(); i++) {
 
@@ -70,7 +69,7 @@ public class _061CyclicalFigurateNumbers {
 							}
 
 						} else {
-							result =  sum(outputs);
+							result = sum(outputs);
 							break;
 						}
 
@@ -133,72 +132,71 @@ public class _061CyclicalFigurateNumbers {
 	private Integer checkThree(int number, int value, List<Integer> firstlist, List<Integer> secondlist,
 			List<Integer> thirdlist, int[] outputs) {
 
-		if (firstlist.size() == 0) {
-			return -1;
-		}
-		List<Integer> first = findPairs(value, firstlist);
+		if (firstlist.size() > 0) {
 
-		for (int l = 0; l < first.size(); l++) {
+			List<Integer> first = findPairs(value, firstlist);
 
-			outputs[3] = first.get(l);
-			List<Integer> second = findPairs(first.get(l), secondlist);
+			for (int l = 0; l < first.size(); l++) {
 
-			if (second.size() == 0) {
-				continue;
-			}
+				outputs[3] = first.get(l);
+				List<Integer> second = findPairs(first.get(l), secondlist);
 
-			for (int m = 0; m < second.size(); m++) {
-
-				outputs[4] = second.get(m);
-				List<Integer> third = findPairs(second.get(m), thirdlist);
-				if (third.size() == 0) {
+				if (second.size() == 0) {
 					continue;
 				}
-				for (int n = 0; n < third.size(); n++) {
-					outputs[5] = third.get(n);
-					int output = third.get(0);
 
-					int firsttwo = number / 100;
+				for (int m = 0; m < second.size(); m++) {
 
-					int lasttwo = output % 100;
-
-					if (firsttwo == lasttwo) {
-						return output;
+					outputs[4] = second.get(m);
+					List<Integer> third = findPairs(second.get(m), thirdlist);
+					if (third.size() == 0) {
+						continue;
 					}
+					for (int n = 0; n < third.size(); n++) {
+						outputs[5] = third.get(n);
+						int output = third.get(0);
+
+						int firsttwo = number / 100;
+
+						int lasttwo = output % 100;
+
+						if (firsttwo == lasttwo) {
+							return output;
+						}
+					}
+
 				}
 
-			}
-
-			List<Integer> fourth = findPairs(first.get(l), thirdlist);
-			if (fourth.size() == 0) {
-				continue;
-			}
-			for (int m = 0; m < fourth.size(); m++) {
-
-				outputs[4] = fourth.get(m);
-				List<Integer> fifth = findPairs(fourth.get(m), secondlist);
-
-				if (fifth.size() == 0) {
+				List<Integer> fourth = findPairs(first.get(l), thirdlist);
+				if (fourth.size() == 0) {
 					continue;
 				}
-				for (int n = 0; n < fifth.size(); n++) {
-					outputs[5] = fifth.get(n);
+				for (int m = 0; m < fourth.size(); m++) {
 
-					int output = fifth.get(0);
+					outputs[4] = fourth.get(m);
+					List<Integer> fifth = findPairs(fourth.get(m), secondlist);
 
-					int firsttwo = number / 100;
-
-					int lasttwo = output % 100;
-
-					if (firsttwo == lasttwo) {
-						return output;
+					if (fifth.size() == 0) {
+						continue;
 					}
+					for (int n = 0; n < fifth.size(); n++) {
+						outputs[5] = fifth.get(n);
+
+						int output = fifth.get(0);
+
+						int firsttwo = number / 100;
+
+						int lasttwo = output % 100;
+
+						if (firsttwo == lasttwo) {
+							return output;
+						}
+					}
+
 				}
 
 			}
-
 		}
-
 		return -1;
 	}
 
