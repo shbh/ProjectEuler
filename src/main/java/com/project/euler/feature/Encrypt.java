@@ -28,7 +28,9 @@ public final class Encrypt {
         }
         return hashValue;
     }
- 
+// public static void main(String[] args) throws Exception {
+//	System.out.println(encrypt("test", "SHA", "UTF-8"));
+//}
 //    public static void main(String args[]) throws Exception {
 //      /*  String plainPassword = "SecretPassword";
 // 
