@@ -20,7 +20,7 @@ public class _054PokerHandsTest extends EulerTest {
 
 		_054PokerHands problem = new _054PokerHands();
 
-		testEquality(problem);
+		testEquality(54,problem.solve());
 	}
 
 }

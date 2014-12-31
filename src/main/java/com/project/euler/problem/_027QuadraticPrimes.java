@@ -7,13 +7,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/31/14.
  */
-public class _027QuadraticPrimes implements IProblem {
+public class _027QuadraticPrimes  {
 
 	static Logger logger = Logger.getLogger(_027QuadraticPrimes.class);
 

@@ -2,12 +2,12 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _092SquareDigitChains implements IProblem {
+public class _092SquareDigitChains  {
 
 	static Logger logger = Logger.getLogger(_092SquareDigitChains.class);
 

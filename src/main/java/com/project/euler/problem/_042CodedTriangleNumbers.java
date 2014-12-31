@@ -6,14 +6,14 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 import com.project.euler.feature.Reader;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _042CodedTriangleNumbers implements IProblem {
+public class _042CodedTriangleNumbers  {
 
 	static Logger logger = Logger.getLogger(_042CodedTriangleNumbers.class);
 

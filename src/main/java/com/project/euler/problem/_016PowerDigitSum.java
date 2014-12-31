@@ -4,12 +4,12 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/29/14.
  */
-public class _016PowerDigitSum implements IProblem {
+public class _016PowerDigitSum  {
 
 	static Logger logger = Logger.getLogger(_016PowerDigitSum.class);
 	

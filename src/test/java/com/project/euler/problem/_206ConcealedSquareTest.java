@@ -20,7 +20,7 @@ public class _206ConcealedSquareTest extends EulerTest {
 
 		_206ConcealedSquare problem = new _206ConcealedSquare();
 
-		testEquality(problem);
+		testEquality(206,problem.solve());
 	}
 
 }

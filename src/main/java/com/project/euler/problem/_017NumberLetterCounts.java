@@ -5,10 +5,10 @@ import org.apache.log4j.Logger;
 /**
  * Created by shashi on 1/29/14.
  */
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _017NumberLetterCounts implements IProblem {
+public class _017NumberLetterCounts  {
 	
 	static Logger logger = Logger.getLogger(_017NumberLetterCounts.class);
 	

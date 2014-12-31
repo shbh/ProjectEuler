@@ -20,7 +20,7 @@ public class _031CoinSumsTest extends EulerTest {
 
 		_031CoinSums problem = new _031CoinSums();
 
-		testEquality(problem);
+		testEquality(31,problem.solve());
 	}
 
 }

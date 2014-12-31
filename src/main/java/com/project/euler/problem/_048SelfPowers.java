@@ -4,9 +4,9 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
 
-public class _048SelfPowers implements IProblem {
+
+public class _048SelfPowers  {
 
 	static Logger logger = Logger.getLogger(_048SelfPowers.class);
 

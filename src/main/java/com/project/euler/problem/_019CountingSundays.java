@@ -1,13 +1,13 @@
 package com.project.euler.problem; 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _019CountingSundays implements IProblem {
+public class _019CountingSundays  {
 	
 	static Logger logger = Logger.getLogger(_019CountingSundays.class);
 

@@ -21,7 +21,7 @@ public class _024LexicographicPermutationsTest extends EulerTest {
 
 		_024LexicographicPermutations problem = new _024LexicographicPermutations();
 
-		testEquality(problem);
+		testEquality(24,problem.solve());
 	}
 
 }

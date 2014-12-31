@@ -20,7 +20,7 @@ public class _020FactorialDigitSumTest extends EulerTest {
 
 		_020FactorialDigitSum problem = new _020FactorialDigitSum();
 
-		testEquality(problem);
+		testEquality(20,problem.solve());
 	}
 
 }

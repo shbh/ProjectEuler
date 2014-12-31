@@ -20,7 +20,7 @@ public class _023NonAbundantSumsTest extends EulerTest {
 
 		_023NonAbundantSums problem = new _023NonAbundantSums();
 
-		testEquality(problem);
+		testEquality(23,problem.solve());
 	}
 
 }

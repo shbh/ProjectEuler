@@ -20,7 +20,7 @@ public class _001MultiplesOf3And5Test extends EulerTest {
 
 		_001MultiplesOf3And5 problem = new _001MultiplesOf3And5();
 
-		testEquality(problem);
+		testEquality(1,problem.solve());
 	}
 
 }

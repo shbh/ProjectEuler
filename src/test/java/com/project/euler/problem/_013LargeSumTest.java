@@ -20,7 +20,7 @@ public class _013LargeSumTest extends EulerTest {
 
 		_013LargeSum problem = new _013LargeSum();
 
-		testEquality(problem);
+		testEquality(13,problem.solve());
 	}
 
 }

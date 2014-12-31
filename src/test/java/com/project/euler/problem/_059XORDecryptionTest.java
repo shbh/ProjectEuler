@@ -20,7 +20,7 @@ public class _059XORDecryptionTest extends EulerTest {
 
 		_059XORDecryption problem = new _059XORDecryption();
 
-		testEquality(problem);
+		testEquality(59,problem.solve());
 	}
 
 }

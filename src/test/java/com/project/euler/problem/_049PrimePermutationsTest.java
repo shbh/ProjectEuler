@@ -21,7 +21,7 @@ public class _049PrimePermutationsTest extends EulerTest {
 
 		_049PrimePermutations problem = new _049PrimePermutations();
 
-		testEquality(problem);
+		testEquality(49,problem.solve());
 	}
 
 }

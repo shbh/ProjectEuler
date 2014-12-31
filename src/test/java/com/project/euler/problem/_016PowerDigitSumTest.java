@@ -20,7 +20,7 @@ public class _016PowerDigitSumTest extends EulerTest {
 
 		_016PowerDigitSum problem = new _016PowerDigitSum();
 
-		testEquality(problem);
+		testEquality(16,problem.solve());
 	}
 
 }

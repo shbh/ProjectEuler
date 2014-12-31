@@ -20,7 +20,7 @@ public class _044PentagonNumbersTest extends EulerTest {
 
 		_044PentagonNumbers problem = new _044PentagonNumbers();
 
-		testEquality(problem);
+		testEquality(44,problem.solve());
 	}
 
 }

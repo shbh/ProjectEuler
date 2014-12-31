@@ -4,12 +4,12 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _020FactorialDigitSum implements IProblem {
+public class _020FactorialDigitSum  {
 	
 	static Logger logger = Logger.getLogger(_020FactorialDigitSum.class);
 

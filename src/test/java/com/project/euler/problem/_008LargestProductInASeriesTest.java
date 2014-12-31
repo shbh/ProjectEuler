@@ -21,7 +21,7 @@ public class _008LargestProductInASeriesTest extends EulerTest {
 
 		_008LargestProductInASeries problem = new _008LargestProductInASeries();
 
-		testEquality(problem);
+		testEquality(8,problem.solve());
 	}
 
 }

@@ -1,9 +1,9 @@
 package com.project.euler.problem; 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _028NumberSpiralDiagonals implements IProblem { 
+
+public class _028NumberSpiralDiagonals  { 
 	
 	static Logger logger = Logger.getLogger(_028NumberSpiralDiagonals.class);
 

@@ -21,7 +21,7 @@ public class _028NumberSpiralDiagonalsTest extends EulerTest {
 
 		_028NumberSpiralDiagonals problem = new _028NumberSpiralDiagonals();
 
-		testEquality(problem);
+		testEquality(28,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _017NumberLetterCountsTest extends EulerTest {
 
 		_017NumberLetterCounts problem = new _017NumberLetterCounts();
 
-		testEquality(problem);
+		testEquality(17,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _019CountingSundaysTest extends EulerTest {
 
 		_019CountingSundays problem = new _019CountingSundays();
 
-		testEquality(problem);
+		testEquality(19,problem.solve());
 	}
 
 }

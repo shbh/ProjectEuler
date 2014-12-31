@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _061CyclicalFigurateNumbers implements IProblem {
+
+public class _061CyclicalFigurateNumbers  {
 	public static HashMap<Integer, Boolean> primes = new HashMap<Integer, Boolean>();
 	public static HashMap<Integer, ArrayList<Integer>> ht_commons = new HashMap<Integer, ArrayList<Integer>>();
 

@@ -12,10 +12,10 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _049PrimePermutations implements IProblem {
+public class _049PrimePermutations  {
 
 	static Logger logger = Logger.getLogger(_049PrimePermutations.class);
 

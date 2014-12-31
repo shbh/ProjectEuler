@@ -21,7 +21,7 @@ public class _012HighlyDivisibleTriangularNumberTest extends EulerTest {
 
 		_012HighlyDivisibleTriangularNumber problem = new _012HighlyDivisibleTriangularNumber();
 
-		testEquality(problem);
+		testEquality(12,problem.solve());
 	}
 
 }

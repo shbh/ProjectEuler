@@ -20,7 +20,7 @@ public class _015LatticePathsTest extends EulerTest {
 
 		_015LatticePaths problem = new _015LatticePaths();
 
-		testEquality(problem);
+		testEquality(15,problem.solve());
 	}
 
 }

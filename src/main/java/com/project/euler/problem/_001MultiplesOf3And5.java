@@ -2,12 +2,12 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/28/14.
  */
-public class _001MultiplesOf3And5 implements IProblem {
+public class _001MultiplesOf3And5  {
 
 	static Logger logger = Logger.getLogger(_001MultiplesOf3And5.class);
 

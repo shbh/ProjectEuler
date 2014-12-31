@@ -8,10 +8,10 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _041PandigitalPrime implements IProblem {
+public class _041PandigitalPrime  {
 
 	static Logger logger = Logger.getLogger(_041PandigitalPrime.class);
 

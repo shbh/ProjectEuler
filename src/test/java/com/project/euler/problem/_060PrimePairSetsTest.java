@@ -20,7 +20,7 @@ public class _060PrimePairSetsTest extends EulerTest {
 
 		_060PrimePairSets problem = new _060PrimePairSets();
 
-		testEquality(problem);
+		testEquality(60,problem.solve());
 	}
 
 }

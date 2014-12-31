@@ -4,10 +4,10 @@ import java.math.BigInteger;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _055LychrelNumbers implements IProblem {
+public class _055LychrelNumbers  {
 
 	static Logger logger = Logger.getLogger(_055LychrelNumbers.class);
 

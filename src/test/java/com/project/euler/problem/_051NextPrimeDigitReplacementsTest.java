@@ -21,7 +21,7 @@ public class _051NextPrimeDigitReplacementsTest extends EulerTest {
 
 		_051NextPrimeDigitReplacements problem = new _051NextPrimeDigitReplacements();
 
-		testEquality(problem);
+		testEquality(51,problem.solve());
 
 	}
 }

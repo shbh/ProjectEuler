@@ -20,7 +20,7 @@ public class _079PasscodeDerivationTest extends EulerTest {
 
 		_079PasscodeDerivation problem = new _079PasscodeDerivation();
 
-		testEquality(problem);
+		testEquality(79,problem.solve());
 	}
 
 }

@@ -21,7 +21,7 @@ public class _007TenThousandFirstPrimeTest extends EulerTest {
 
 		_007TenThousandFirstPrime problem = new _007TenThousandFirstPrime();
 
-		testEquality(problem);
+		testEquality(7,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _069TotientMaximumTest extends EulerTest {
 
 		_069TotientMaximum problem = new _069TotientMaximum();
 
-		testEquality(problem);
+		testEquality(69,problem.solve());
 	}
 
 }

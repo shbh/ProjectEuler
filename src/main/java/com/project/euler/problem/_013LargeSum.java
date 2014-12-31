@@ -3,12 +3,12 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/29/14.
  */
-public class _013LargeSum implements IProblem { 
+public class _013LargeSum  { 
 	static Logger logger = Logger.getLogger(_013LargeSum.class);
 
 	public BigInteger solve() {

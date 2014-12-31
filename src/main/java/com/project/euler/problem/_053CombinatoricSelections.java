@@ -4,9 +4,9 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
 
-public class _053CombinatoricSelections implements IProblem {
+
+public class _053CombinatoricSelections  {
 	
 	static Logger logger = Logger.getLogger(_053CombinatoricSelections.class);
 

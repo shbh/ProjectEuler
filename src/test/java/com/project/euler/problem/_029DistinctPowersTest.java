@@ -20,7 +20,7 @@ public class _029DistinctPowersTest extends EulerTest {
 
 		_029DistinctPowers problem = new _029DistinctPowers();
 
-		testEquality(problem);
+		testEquality(29,problem.solve());
 	}
 
 }

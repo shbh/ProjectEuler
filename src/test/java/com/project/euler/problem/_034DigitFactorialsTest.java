@@ -20,7 +20,7 @@ public class _034DigitFactorialsTest extends EulerTest {
 
 		_034DigitFactorials problem = new _034DigitFactorials();
 
-		testEquality(problem);
+		testEquality(34,problem.solve());
 	}
 
 }

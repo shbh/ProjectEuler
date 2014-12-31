@@ -4,9 +4,9 @@ import java.math.BigInteger;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _097LargeNonMersennePrime implements IProblem {
+
+public class _097LargeNonMersennePrime  {
 
 	static Logger logger = Logger.getLogger(_097LargeNonMersennePrime.class);
 

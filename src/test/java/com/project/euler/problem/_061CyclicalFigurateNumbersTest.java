@@ -20,7 +20,7 @@ public class _061CyclicalFigurateNumbersTest extends EulerTest {
 
 		_061CyclicalFigurateNumbers problem = new _061CyclicalFigurateNumbers();
 
-		testEquality(problem);
+		testEquality(61,problem.solve());
 	}
 
 }

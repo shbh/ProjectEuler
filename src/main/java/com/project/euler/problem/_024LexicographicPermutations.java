@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _024LexicographicPermutations implements IProblem {
+public class _024LexicographicPermutations  {
 	
 	static Logger logger = Logger.getLogger(_024LexicographicPermutations.class);
 

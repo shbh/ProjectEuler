@@ -20,7 +20,7 @@ public class _021AmicableNumbersTest extends EulerTest {
 
 		_021AmicableNumbers problem = new _021AmicableNumbers();
 
-		testEquality(problem);
+		testEquality(21,problem.solve());
 	}
 
 }

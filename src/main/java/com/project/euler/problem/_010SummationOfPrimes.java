@@ -2,13 +2,13 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/28/14.
  */
-public class _010SummationOfPrimes implements IProblem {
+public class _010SummationOfPrimes  {
 	
 	static Logger logger = Logger.getLogger(_010SummationOfPrimes.class);
 

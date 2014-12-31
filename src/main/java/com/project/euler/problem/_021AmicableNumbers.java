@@ -5,13 +5,13 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _021AmicableNumbers implements IProblem {
+public class _021AmicableNumbers  {
 
 	static Logger logger = Logger.getLogger(_021AmicableNumbers.class);
 

@@ -6,9 +6,9 @@ import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.project.euler.IProblem;
 
-public class _029DistinctPowers implements IProblem {
+
+public class _029DistinctPowers  {
 	static Logger logger = Logger.getLogger(_029DistinctPowers.class);
 
 	private int lowerA = 2;

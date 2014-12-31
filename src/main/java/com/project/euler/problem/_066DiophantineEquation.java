@@ -2,10 +2,10 @@ package com.project.euler.problem;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _066DiophantineEquation implements IProblem {
+public class _066DiophantineEquation  {
 
 	
 

@@ -20,7 +20,7 @@ public class _027QuadraticPrimesTest extends EulerTest {
 
 		_027QuadraticPrimes problem = new _027QuadraticPrimes();
 
-		testEquality(problem);
+		testEquality(27,problem.solve());
 	}
 
 }

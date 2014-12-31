@@ -2,9 +2,9 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _039IntegerRightTriangles implements IProblem {
+
+public class _039IntegerRightTriangles  {
 	
 	static Logger logger = Logger.getLogger(_039IntegerRightTriangles.class);
 

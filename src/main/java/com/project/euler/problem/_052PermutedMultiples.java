@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _052PermutedMultiples implements IProblem {
+public class _052PermutedMultiples  {
 
 	static Logger logger = Logger.getLogger(_052PermutedMultiples.class);
 

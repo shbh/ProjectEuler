@@ -1,10 +1,10 @@
 package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _033DigitCancelingFractions implements IProblem {
+public class _033DigitCancelingFractions  {
 
 	static Logger logger = Logger.getLogger(_033DigitCancelingFractions.class);
 

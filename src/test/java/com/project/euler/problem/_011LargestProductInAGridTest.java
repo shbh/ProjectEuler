@@ -21,7 +21,7 @@ public class _011LargestProductInAGridTest extends EulerTest {
 
 		_011LargestProductInAGrid problem = new _011LargestProductInAGrid();
 
-		testEquality(problem);
+		testEquality(11,problem.solve());
 	}
 
 }

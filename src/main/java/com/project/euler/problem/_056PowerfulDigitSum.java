@@ -4,10 +4,10 @@ import java.math.BigInteger;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _056PowerfulDigitSum implements IProblem {
+public class _056PowerfulDigitSum  {
 
 	static Logger logger = Logger.getLogger(_056PowerfulDigitSum.class);
 

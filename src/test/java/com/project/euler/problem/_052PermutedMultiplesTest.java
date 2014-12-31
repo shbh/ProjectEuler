@@ -20,7 +20,7 @@ public class _052PermutedMultiplesTest extends EulerTest {
 
 		_052PermutedMultiples problem = new _052PermutedMultiples();
 
-		testEquality(problem);
+		testEquality(52,problem.solve());
 	}
 
 }

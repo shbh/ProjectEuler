@@ -2,9 +2,9 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _040ChampernowneConstant implements IProblem {
+
+public class _040ChampernowneConstant  {
 	
 	static Logger logger = Logger.getLogger(_040ChampernowneConstant.class);
 

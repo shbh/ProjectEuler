@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Reader;
 
-public class _099LargestExponential implements IProblem { 
+public class _099LargestExponential  { 
 
 	static Logger logger = Logger.getLogger(_097LargeNonMersennePrime.class);
 

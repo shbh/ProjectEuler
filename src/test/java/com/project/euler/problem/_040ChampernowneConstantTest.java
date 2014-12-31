@@ -20,7 +20,7 @@ public class _040ChampernowneConstantTest extends EulerTest {
 
 		_040ChampernowneConstant problem = new _040ChampernowneConstant();
 
-		testEquality(problem);
+		testEquality(40,problem.solve());
 	}
 
 }

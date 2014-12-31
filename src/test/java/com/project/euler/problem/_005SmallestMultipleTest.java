@@ -20,7 +20,7 @@ public class _005SmallestMultipleTest extends EulerTest {
 
 		_005SmallestMultiple problem = new _005SmallestMultiple();
 
-		testEquality(problem);
+		testEquality(5,problem.solve());
 	}
 
 }

@@ -21,7 +21,7 @@ public class _025ThousandDigitFibonacciNumberTest extends EulerTest {
 
 		_025ThousandDigitFibonacciNumber problem = new _025ThousandDigitFibonacciNumber();
 
-		testEquality(problem);
+		testEquality(25,problem.solve());
 	}
 
 }

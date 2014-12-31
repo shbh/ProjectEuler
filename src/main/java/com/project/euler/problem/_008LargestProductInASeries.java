@@ -3,12 +3,12 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/28/14.
  */
-public class _008LargestProductInASeries implements IProblem { 
+public class _008LargestProductInASeries  { 
 	
 	static Logger logger = Logger.getLogger(_008LargestProductInASeries.class);
 

@@ -2,10 +2,10 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _044PentagonNumbers implements IProblem {
+public class _044PentagonNumbers  {
 	
 	static Logger logger = Logger.getLogger(_044PentagonNumbers.class);
 

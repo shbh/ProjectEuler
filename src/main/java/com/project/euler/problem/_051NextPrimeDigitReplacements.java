@@ -9,10 +9,10 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _051NextPrimeDigitReplacements implements IProblem {
+public class _051NextPrimeDigitReplacements  {
 
 	static Logger logger = Logger.getLogger(_051NextPrimeDigitReplacements.class);
 

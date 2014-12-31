@@ -7,10 +7,10 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _037TruncatablePrimes implements IProblem {
+public class _037TruncatablePrimes  {
 	
 	static Logger logger = Logger.getLogger(_037TruncatablePrimes.class);
 

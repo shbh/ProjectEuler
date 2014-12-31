@@ -2,12 +2,12 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/28/14.
  */
-public class _005SmallestMultiple implements IProblem {
+public class _005SmallestMultiple  {
 	
 	static Logger logger = Logger.getLogger(_005SmallestMultiple.class);
 

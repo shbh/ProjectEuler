@@ -21,7 +21,7 @@ public class _055LychrelNumbersTest extends EulerTest {
 
 		_055LychrelNumbers problem = new _055LychrelNumbers();
 
-		testEquality(problem);
+		testEquality(55,problem.solve());
 	}
 
 }

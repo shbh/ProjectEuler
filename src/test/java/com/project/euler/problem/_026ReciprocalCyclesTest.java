@@ -20,7 +20,7 @@ public class _026ReciprocalCyclesTest extends EulerTest {
 
 		_026ReciprocalCycles problem = new _026ReciprocalCycles();
 
-		testEquality(problem);
+		testEquality(26,problem.solve());
 	}
 
 }

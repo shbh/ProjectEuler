@@ -20,7 +20,7 @@ public class _062CubicPermutationsTest extends EulerTest {
 
 		_062CubicPermutations problem = new _062CubicPermutations();
 
-		testEquality(problem);
+		testEquality(62,problem.solve());
 	}
 
 }

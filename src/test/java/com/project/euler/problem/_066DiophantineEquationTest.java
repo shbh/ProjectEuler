@@ -20,7 +20,7 @@ public class _066DiophantineEquationTest extends EulerTest {
 
 		_066DiophantineEquation problem = new _066DiophantineEquation();
 
-		testEquality(problem);
+		testEquality(66,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _050ConsecutivePrimeSumTest extends EulerTest {
 
 		_050ConsecutivePrimeSum problem = new _050ConsecutivePrimeSum();
 
-		testEquality(problem);
+		testEquality(50,problem.solve());
 	}
 
 }

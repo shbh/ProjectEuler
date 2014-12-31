@@ -20,7 +20,7 @@ public class _018MaximumPathSumITest extends EulerTest {
 
 		_018MaximumPathSumI problem = new _018MaximumPathSumI();
 
-		testEquality(problem);
+		testEquality(18,problem.solve());
 	}
 
 }

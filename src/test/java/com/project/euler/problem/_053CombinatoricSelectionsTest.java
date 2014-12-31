@@ -21,7 +21,7 @@ public class _053CombinatoricSelectionsTest extends EulerTest {
 
 		_053CombinatoricSelections problem = new _053CombinatoricSelections();
 
-		testEquality(problem);
+		testEquality(53,problem.solve());
 
 	}
 

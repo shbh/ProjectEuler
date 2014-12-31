@@ -2,10 +2,10 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _045TriangularPentagonalAndHexagonal implements IProblem {
+public class _045TriangularPentagonalAndHexagonal  {
 	
 	static Logger logger = Logger.getLogger(_045TriangularPentagonalAndHexagonal.class);
 

@@ -8,9 +8,9 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _062CubicPermutations implements IProblem {
+
+public class _062CubicPermutations  {
 
 	Map<BigInteger,List<BigInteger>> combination = new HashMap<>();
 	

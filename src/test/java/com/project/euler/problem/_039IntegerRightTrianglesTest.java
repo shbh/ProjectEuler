@@ -21,7 +21,7 @@ public class _039IntegerRightTrianglesTest extends EulerTest {
 
 		_039IntegerRightTriangles problem = new _039IntegerRightTriangles();
 
-		testEquality(problem);
+		testEquality(39,problem.solve());
 	}
 
 }

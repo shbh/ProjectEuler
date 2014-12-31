@@ -21,7 +21,7 @@ public class _004LargestPalindromeProductTest extends EulerTest {
 
 		_004LargestPalindromeProduct problem = new _004LargestPalindromeProduct();
 
-		testEquality(problem);
+		testEquality(4,problem.solve());
 	}
 
 }

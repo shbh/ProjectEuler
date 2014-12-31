@@ -20,7 +20,7 @@ public class _041PandigitalPrimeTest extends EulerTest {
 
 		_041PandigitalPrime problem = new _041PandigitalPrime();
 
-		testEquality(problem);
+		testEquality(41,problem.solve());
 	}
 
 }

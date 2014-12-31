@@ -20,7 +20,7 @@ public class _099LargestExponentialTest extends EulerTest {
 
 		_099LargestExponential problem = new _099LargestExponential();
 
-		testEquality(problem);
+		testEquality(99,problem.solve());
 	}
 
 }

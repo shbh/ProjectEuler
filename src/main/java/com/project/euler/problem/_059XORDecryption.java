@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Reader;
 
-public class _059XORDecryption implements IProblem {
+public class _059XORDecryption  {
 
 	static Logger logger = Logger.getLogger(_059XORDecryption.class);
 

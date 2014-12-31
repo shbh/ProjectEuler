@@ -21,7 +21,7 @@ public class _057SquareRootConvergentsTest extends EulerTest {
 
 		_057SquareRootConvergents problem = new _057SquareRootConvergents();
 
-		testEquality(problem);
+		testEquality(57,problem.solve());
 	}
 
 }

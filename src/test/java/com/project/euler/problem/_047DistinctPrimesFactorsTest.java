@@ -21,7 +21,7 @@ public class _047DistinctPrimesFactorsTest extends EulerTest {
 
 		_047DistinctPrimesFactors problem = new _047DistinctPrimesFactors();
 
-		testEquality(problem);
+		testEquality(47,problem.solve());
 	}
 
 }

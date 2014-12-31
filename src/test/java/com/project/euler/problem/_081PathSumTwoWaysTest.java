@@ -20,7 +20,7 @@ public class _081PathSumTwoWaysTest extends EulerTest {
 
 		_081PathSumTwoWays problem = new _081PathSumTwoWays();
 
-		testEquality(problem);
+		testEquality(81,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _048SelfPowersTest extends EulerTest {
 
 		_048SelfPowers problem = new _048SelfPowers();
 
-		testEquality(problem);
+		testEquality(48,problem.solve());
 	}
 
 }

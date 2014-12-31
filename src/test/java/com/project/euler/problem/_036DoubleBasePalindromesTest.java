@@ -21,7 +21,7 @@ public class _036DoubleBasePalindromesTest extends EulerTest {
 
 		_036DoubleBasePalindromes problem = new _036DoubleBasePalindromes();
 
-		testEquality(problem);
+		testEquality(36,problem.solve());
 	}
 
 }

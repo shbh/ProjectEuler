@@ -20,7 +20,7 @@ public class _042CodedTriangleNumbersTest extends EulerTest {
 
 		_042CodedTriangleNumbers problem = new _042CodedTriangleNumbers();
 
-		testEquality(problem);
+		testEquality(42,problem.solve());
 	}
 
 }

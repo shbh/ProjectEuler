@@ -21,7 +21,7 @@ public class _033DigitCancelingFractionsTest extends EulerTest {
 
 		_033DigitCancelingFractions problem = new _033DigitCancelingFractions();
 
-		testEquality(problem);
+		testEquality(33,problem.solve());
 	}
 
 }

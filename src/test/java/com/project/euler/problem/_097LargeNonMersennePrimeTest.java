@@ -20,7 +20,7 @@ public class _097LargeNonMersennePrimeTest extends EulerTest {
 
 		_097LargeNonMersennePrime problem = new _097LargeNonMersennePrime();
 
-		testEquality(problem);
+		testEquality(97,problem.solve());
 	}
 
 }

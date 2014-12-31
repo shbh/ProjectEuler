@@ -21,7 +21,7 @@ public class _003LargestPrimeFactorTest extends EulerTest {
 
 		_003LargestPrimeFactor problem = new _003LargestPrimeFactor();
 
-		testEquality(problem);
+		testEquality(3,problem.solve());
 	}
 
 }

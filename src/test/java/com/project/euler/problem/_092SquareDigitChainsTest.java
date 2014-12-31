@@ -20,7 +20,7 @@ public class _092SquareDigitChainsTest extends EulerTest {
 
 		_092SquareDigitChains problem = new _092SquareDigitChains();
 
-		testEquality(problem);
+		testEquality(92,problem.solve());
 	}
 
 }

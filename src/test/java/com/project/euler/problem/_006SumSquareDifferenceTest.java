@@ -20,7 +20,7 @@ public class _006SumSquareDifferenceTest extends EulerTest {
 
 		_006SumSquareDifference problem = new _006SumSquareDifference();
 
-		testEquality(problem);
+		testEquality(6,problem.solve());
 	}
 
 }

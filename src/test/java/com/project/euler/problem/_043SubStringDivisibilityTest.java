@@ -21,7 +21,7 @@ public class _043SubStringDivisibilityTest extends EulerTest {
 
 		_043SubStringDivisibility problem = new _043SubStringDivisibility();
 
-		testEquality(problem);
+		testEquality(43,problem.solve());
 	}
 
 }

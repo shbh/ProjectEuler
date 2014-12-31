@@ -4,12 +4,12 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/31/14.
  */
-public class _025ThousandDigitFibonacciNumber implements IProblem {
+public class _025ThousandDigitFibonacciNumber  {
 	
 	static Logger logger = Logger.getLogger(_025ThousandDigitFibonacciNumber.class);
 

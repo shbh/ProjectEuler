@@ -20,7 +20,7 @@ public class _002EvenFibonacciNumbersTest extends EulerTest {
 
 		_002EvenFibonacciNumbers problem = new _002EvenFibonacciNumbers();
 
-		testEquality(problem);
+		testEquality(2,problem.solve());
 
 	}
 

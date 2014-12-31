@@ -20,7 +20,7 @@ public class _022NamesScoresTest extends EulerTest {
 
 		_022NamesScores problem = new _022NamesScores();
 
-		testEquality(problem);
+		testEquality(22,problem.solve());
 	}
 
 }

@@ -20,7 +20,7 @@ public class _058SpiralPrimesTest extends EulerTest {
 
 		_058SpiralPrimes problem = new _058SpiralPrimes();
 
-		testEquality(problem);
+		testEquality(58,problem.solve());
 	}
 
 }

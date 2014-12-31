@@ -2,12 +2,12 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 
 /**
  * Created by shashi on 1/29/14.
  */
-public class _011LargestProductInAGrid implements IProblem {
+public class _011LargestProductInAGrid  {
 
 	static Logger logger = Logger.getLogger(_011LargestProductInAGrid.class);
 

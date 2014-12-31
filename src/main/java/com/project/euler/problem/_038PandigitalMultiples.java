@@ -2,10 +2,10 @@ package com.project.euler.problem;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
-public class _038PandigitalMultiples implements IProblem {
+public class _038PandigitalMultiples  {
 	
 	static Logger logger = Logger.getLogger(_038PandigitalMultiples.class);
 

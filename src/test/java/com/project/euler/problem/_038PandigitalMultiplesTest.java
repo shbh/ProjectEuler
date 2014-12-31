@@ -20,7 +20,7 @@ public class _038PandigitalMultiplesTest extends EulerTest {
 
 		_038PandigitalMultiples problem = new _038PandigitalMultiples();
 
-		testEquality(problem);
+		testEquality(38,problem.solve());
 	}
 
 }

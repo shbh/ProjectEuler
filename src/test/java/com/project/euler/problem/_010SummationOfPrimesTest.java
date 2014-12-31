@@ -20,7 +20,7 @@ public class _010SummationOfPrimesTest extends EulerTest {
 
 		_010SummationOfPrimes problem = new _010SummationOfPrimes();
 
-		testEquality(problem);
+		testEquality(10,problem.solve());
 	}
 
 }

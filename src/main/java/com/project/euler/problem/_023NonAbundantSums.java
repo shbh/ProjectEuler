@@ -7,13 +7,13 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
 
 /**
  * Created by shashi on 1/30/14.
  */
-public class _023NonAbundantSums implements IProblem {
+public class _023NonAbundantSums  {
 
 	static Logger logger = Logger.getLogger(_023NonAbundantSums.class);
 

@@ -20,7 +20,7 @@ public class _035CircularPrimesTest extends EulerTest {
 
 		_035CircularPrimes problem = new _035CircularPrimes();
 
-		testEquality(problem);
+		testEquality(35,problem.solve());
 	}
 
 }

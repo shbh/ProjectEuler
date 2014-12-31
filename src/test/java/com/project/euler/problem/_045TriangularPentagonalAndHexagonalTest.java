@@ -21,7 +21,7 @@ public class _045TriangularPentagonalAndHexagonalTest extends EulerTest {
 
 		_045TriangularPentagonalAndHexagonal problem = new _045TriangularPentagonalAndHexagonal();
 
-		testEquality(problem);
+		testEquality(45,problem.solve());
 	}
 
 }

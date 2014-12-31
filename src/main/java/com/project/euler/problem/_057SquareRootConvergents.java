@@ -4,9 +4,9 @@ import org.apache.log4j.Logger;
 
 import java.math.BigInteger;
 
-import com.project.euler.IProblem;
 
-public class _057SquareRootConvergents implements IProblem {
+
+public class _057SquareRootConvergents  {
 	
 	static Logger logger = Logger.getLogger(_057SquareRootConvergents.class);
 

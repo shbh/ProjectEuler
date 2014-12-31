@@ -20,7 +20,7 @@ public class _030DigitFifthPowersTest extends EulerTest {
 
 		_030DigitFifthPowers problem = new _030DigitFifthPowers();
 
-		testEquality(problem);
+		testEquality(30,problem.solve());
 	}
 
 }

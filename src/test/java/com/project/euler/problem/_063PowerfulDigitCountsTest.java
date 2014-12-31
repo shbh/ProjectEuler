@@ -20,7 +20,7 @@ public class _063PowerfulDigitCountsTest extends EulerTest {
 
 		_063PowerfulDigitCounts problem = new _063PowerfulDigitCounts();
 
-		testEquality(problem);
+		testEquality(63,problem.solve());
 	}
 
 }

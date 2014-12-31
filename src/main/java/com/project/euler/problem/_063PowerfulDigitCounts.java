@@ -4,9 +4,9 @@ import java.math.BigInteger;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
 
-public class _063PowerfulDigitCounts implements IProblem {
+
+public class _063PowerfulDigitCounts  {
 
 	static Logger logger = Logger.getLogger(_063PowerfulDigitCounts.class);
 	public Integer solve() {

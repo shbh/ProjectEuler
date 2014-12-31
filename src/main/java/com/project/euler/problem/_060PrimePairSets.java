@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Functions;
- public class _060PrimePairSets  implements IProblem 
+ public class _060PrimePairSets   
  {  
       public static HashMap<Integer, Boolean> primes = new HashMap<Integer, Boolean>();  
       public static HashMap<Integer, ArrayList<Integer>> ht_commons = new HashMap<Integer, ArrayList<Integer>>();  

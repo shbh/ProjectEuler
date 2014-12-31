@@ -21,7 +21,7 @@ public class _014LongestCollatzSequenceTest extends EulerTest {
 
 		_014LongestCollatzSequence problem = new _014LongestCollatzSequence();
 
-		testEquality(problem);
+		testEquality(14,problem.solve());
 	}
 
 }

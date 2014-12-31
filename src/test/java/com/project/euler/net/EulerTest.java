@@ -2,7 +2,7 @@ package com.project.euler.net;
 
 import java.util.Map;
 
-import com.project.euler.IProblem;
+
 import com.project.euler.feature.Encrypt;
 import com.project.euler.feature.Reader;
 
@@ -20,11 +20,11 @@ public abstract class EulerTest {
 	}
 	
 	
-	protected void testEquality(IProblem problem)
+	protected void testEquality(int classNo, Object solution)
 	{
 
 		try {
-			if (!Encrypt.encrypt(problem.solve().toString(), "SHA", "UTF-8").equals(results.get(classNo))) {
+			if (!Encrypt.encrypt(solution.toString(), "SHA", "UTF-8").equals(results.get(classNo))) {
 
 				org.junit.Assert
 						.fail("The result is not matched with desired result");

@@ -21,7 +21,7 @@ public class _009SpecialPythagoreanTripletTest extends EulerTest {
 
 		_009SpecialPythagoreanTriplet problem = new _009SpecialPythagoreanTriplet();
 
-		testEquality(problem);
+		testEquality(9,problem.solve());
 	}
 
 }

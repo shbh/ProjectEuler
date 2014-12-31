@@ -20,7 +20,7 @@ public class _067MaximumSumPathIITest extends EulerTest {
 
 		_067MaximumSumPathII problem = new _067MaximumSumPathII();
 
-		testEquality(problem);
+		testEquality(67,problem.solve());
 	}
 
 }

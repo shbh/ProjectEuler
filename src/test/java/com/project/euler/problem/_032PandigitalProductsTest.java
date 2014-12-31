@@ -20,7 +20,7 @@ public class _032PandigitalProductsTest extends EulerTest {
 
 		_032PandigitalProducts problem = new _032PandigitalProducts();
 
-		testEquality(problem);
+		testEquality(32,problem.solve());
 	}
 
 }

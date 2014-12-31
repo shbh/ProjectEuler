@@ -21,7 +21,7 @@ public class _046GoldbachsOtherConjectureTest extends EulerTest {
 
 		_046GoldbachsOtherConjecture problem = new _046GoldbachsOtherConjecture();
 
-		testEquality(problem);
+		testEquality(46,problem.solve());
 	}
 
 }

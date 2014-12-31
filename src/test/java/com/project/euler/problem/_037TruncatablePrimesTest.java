@@ -20,7 +20,7 @@ public class _037TruncatablePrimesTest extends EulerTest {
 
 		_037TruncatablePrimes problem = new _037TruncatablePrimes();
 
-		testEquality(problem);
+		testEquality(37,problem.solve());
 	}
 
 }
