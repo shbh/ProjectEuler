@@ -158,11 +158,8 @@ public class _061CyclicalFigurateNumbers {
 						outputs[5] = third.get(n);
 						int output = third.get(0);
 
-						int firsttwo = number / 100;
-
-						int lasttwo = output % 100;
-
-						if (firsttwo == lasttwo) {
+						if(compare(number, output))
+						{
 							result = output;
 							break forloop;
 						}
@@ -187,20 +184,32 @@ public class _061CyclicalFigurateNumbers {
 
 						int output = fifth.get(0);
 
-						int firsttwo = number / 100;
-
-						int lasttwo = output % 100;
-
-						if (firsttwo == lasttwo) {
+						if(compare(number, output))
+						{
 							result = output;
 							break forloop;
 						}
+						
 					}
 
 				}
 
 			}
 		}
+		return result;
+	}
+	
+	private boolean compare(int number, int output)
+	{
+		boolean result = false;
+		int firsttwo = number / 100;
+
+		int lasttwo = output % 100;
+
+		if (firsttwo == lasttwo) {
+			result = true;
+		}
+		
 		return result;
 	}
 
