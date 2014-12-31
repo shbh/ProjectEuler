@@ -206,30 +206,23 @@ public class _061CyclicalFigurateNumbers {
 	private Integer checkFour(int number, List<Integer> filter, List<Integer> first, List<Integer> second,
 			List<Integer> third, int[] outputs) {
 
-		if (filter.size() == 0) {
-			return -1;
-
-		}
-		for (int k = 0; k < filter.size(); k++) {
-
-			outputs[2] = filter.get(k);
-			int output = checkThree(number, filter.get(k), first, second, third, outputs);
+		int output = -1;
+		if (filter.size() > 0) {
+					
+			outputs[2] = filter.get(0);
+			output = checkThree(number, filter.get(0), first, second, third, outputs);
 
 			if (output == -1) {
-				output = checkThree(number, filter.get(k), second, third, first, outputs);
+				output = checkThree(number, filter.get(0), second, third, first, outputs);
+				if (output == -1) {
+					output = checkThree(number, filter.get(0), third, first, second, outputs);
 
-			} else {
-				return output;
-			}
-			if (output == -1) {
-				output = checkThree(number, filter.get(k), third, first, second, outputs);
+				} 
 
-			} else {
-				return output;
-			}
-
-		}
-		return -1;
+			} 
+		}	
+	
+		return output;
 	}
 
 	private Integer checkFive(int number, List<Integer> fiver, List<Integer> second, List<Integer> third,
