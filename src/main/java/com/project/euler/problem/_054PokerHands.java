@@ -81,14 +81,8 @@ public class _054PokerHands  {
 			case FOUROFAKIND:
 			
 				
-				cnos[0] = getCNO(numbers1[0]);
-				
-				cnos[1] = getCNO(numbers2[0]);
 
-				cnos[0] = resetA(cnos[0]);
-				cnos[1] = resetA(cnos[1]);
-				
-				if (cnos[0]> cnos[1]) {
+				if (compareN1AndN2(numbers1[0], numbers2[0], cnos)) {
 				
 					result = true;
 				
@@ -936,6 +930,28 @@ public class _054PokerHands  {
 		
 	}
 
+	
+	private boolean compareN1AndN2(int n1, int n2, int[] cnos)
+	{
+
+		boolean result = false;
+		
+		cnos[0] = getCNO(n1);
+		
+		cnos[1] = getCNO(n2);
+
+		cnos[0] = resetA(cnos[0]);
+		cnos[1] = resetA(cnos[1]);
+		
+		if (cnos[0]> cnos[1]) {
+		
+			result = true;
+		
+		} 
+		
+		return result;
+
+	}
 	
 	public enum POKER {
 		
