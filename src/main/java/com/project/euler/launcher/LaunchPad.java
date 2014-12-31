@@ -15,7 +15,7 @@ public class LaunchPad {
 		long lStartTime = System.nanoTime();
 
 
-		logger.info(new com.project.euler.problem._061CyclicalFigurateNumbers().solve());
+		logger.info(new com.project.euler.problem._054PokerHands().solve());
 
 		long lEndTime = System.nanoTime();
 		

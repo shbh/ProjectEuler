@@ -24,7 +24,7 @@ public abstract class EulerTest {
 	{
 
 		try {
-			if (!Encrypt.encrypt(solution.toString(), "SHA", "UTF-8").equals(results.get(classNo))) {
+			if (!new Encrypt().encrypt(solution.toString(), "SHA", "UTF-8").equals(results.get(classNo))) {
 
 				org.junit.Assert
 						.fail("The result is not matched with desired result");

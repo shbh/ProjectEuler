@@ -2,17 +2,19 @@ package com.project.euler.feature;
 
 import java.security.MessageDigest;
 
-@SuppressWarnings("restriction")
+import javax.xml.bind.DatatypeConverter;
+
+
 public class Encrypt {
 
-	public static synchronized String encrypt(String plaintext, String algorithm, String encoding) throws Exception {
+	public String encrypt(String plaintext, String algorithm, String encoding) throws Exception {
 		MessageDigest msgDigest = null;
 		String hashValue = null;
 
 		msgDigest = MessageDigest.getInstance(algorithm);
 		msgDigest.update(plaintext.getBytes(encoding));
 		byte rawByte[] = msgDigest.digest();
-		hashValue = (new sun.misc.BASE64Encoder()).encode(rawByte);
+		hashValue = DatatypeConverter.printBase64Binary(rawByte);
 
 		return hashValue;
 	}
