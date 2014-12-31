@@ -22,10 +22,8 @@ public class _027QuadraticPrimes {
 
 		List<Integer> bs = new ArrayList<>();
 
-		int max = 0;
-
-		int maxm = 0;
-
+		int[] result = new int[2];
+		
 		for (int i = 1; i < limit; i++) {
 
 			if (Functions.isPrime(i)) {
@@ -46,26 +44,31 @@ public class _027QuadraticPrimes {
 			if (b % 2 == 0) {
 
 				for (int a = -limit + 2; a < limit; a = a + 2) {
-					int count = Functions.validateQuadric(a, b);
-					if (count > max) {
-						max = count;
-						maxm = a * b;
-					}
+					findMaximumQuadric(a,b,result);
 				}
 			} else {
 				for (int a = -limit + 1; a < limit; a = a + 2) {
-					int count = Functions.validateQuadric(a, b);
-					if (count > max) {
-						max = count;
-						maxm = a * b;
-					}
+					findMaximumQuadric(a,b,result);
 				}
 			}
 
 		}
 
-		return maxm;
+		return result[1];
 
 	}
+
+	private int[] findMaximumQuadric(int a,int b, int[] result) {
+		// TODO Auto-generated method stub
+		int count = Functions.validateQuadric(a, b);
+		if (count > result[0]) {
+			result[0]= count;
+			result[1] = a * b;
+		}
+		
+		return result;
+	}
+	
+	
 
 }
