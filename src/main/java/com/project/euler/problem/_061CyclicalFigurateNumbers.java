@@ -132,11 +132,13 @@ public class _061CyclicalFigurateNumbers {
 	private Integer checkThree(int number, int value, List<Integer> firstlist, List<Integer> secondlist,
 			List<Integer> thirdlist, int[] outputs) {
 
+		int output = -1;
+		
 		if (firstlist.size() > 0) {
 
 			List<Integer> first = findPairs(value, firstlist);
 
-			for (int l = 0; l < first.size(); l++) {
+			topforloop:for (int l = 0; l < first.size(); l++) {
 
 				outputs[3] = first.get(l);
 				List<Integer> second = findPairs(first.get(l), secondlist);
@@ -154,14 +156,14 @@ public class _061CyclicalFigurateNumbers {
 					}
 					for (int n = 0; n < third.size(); n++) {
 						outputs[5] = third.get(n);
-						int output = third.get(0);
+						output = third.get(0);
 
 						int firsttwo = number / 100;
 
 						int lasttwo = output % 100;
 
 						if (firsttwo == lasttwo) {
-							return output;
+							break topforloop;
 						}
 					}
 
@@ -182,14 +184,14 @@ public class _061CyclicalFigurateNumbers {
 					for (int n = 0; n < fifth.size(); n++) {
 						outputs[5] = fifth.get(n);
 
-						int output = fifth.get(0);
+						output = fifth.get(0);
 
 						int firsttwo = number / 100;
 
 						int lasttwo = output % 100;
 
 						if (firsttwo == lasttwo) {
-							return output;
+							break topforloop;
 						}
 					}
 
@@ -197,7 +199,7 @@ public class _061CyclicalFigurateNumbers {
 
 			}
 		}
-		return -1;
+		return output;
 	}
 
 	private Integer checkFour(int number, List<Integer> filter, List<Integer> first, List<Integer> second,
