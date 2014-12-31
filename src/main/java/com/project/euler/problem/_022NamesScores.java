@@ -18,7 +18,7 @@ public class _022NamesScores  {
 
 	public Long solve() {
 
-		List<String> datas = Reader.getInstance().readFile("names.txt");
+		List<String> datas = new Reader().readFile("names.txt");
 
 		String sCurrentLine = datas.get(0);
 

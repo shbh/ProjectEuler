@@ -34,7 +34,7 @@ public  class Encrypt {
 	// */
 	//
 	//
-	// Reader reader = Reader.getInstance();
+	// Reader reader = new Reader();
 	// java.util.Map<Integer,String> results = reader.getResults();
 	//
 	// for(java.util.Map.Entry<Integer, String> entry : results.entrySet())

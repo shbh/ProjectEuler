@@ -24,7 +24,7 @@
 //	public void testGetInstance_1()
 //		throws Exception {
 //
-//		Reader result = Reader.getInstance();
+//		Reader result = new Reader();
 //
 //		// add additional test code here
 //		assertNotNull(result);
@@ -41,7 +41,7 @@
 //	public void testGetInstance_2()
 //		throws Exception {
 //
-//		Reader result = Reader.getInstance();
+//		Reader result = new Reader();
 //
 //		// add additional test code here
 //		assertNotNull(result);
@@ -57,7 +57,7 @@
 //	@Test
 //	public void testGetResults_1()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.getResults();
@@ -77,7 +77,7 @@
 //	@Test
 //	public void testReadProperties_1()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -553,7 +553,7 @@
 //	@Test
 //	public void testReadProperties_2()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -1029,7 +1029,7 @@
 //	@Test
 //	public void testReadProperties_3()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -1505,7 +1505,7 @@
 //	@Test
 //	public void testReadProperties_4()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -1981,7 +1981,7 @@
 //	@Test
 //	public void testReadProperties_5()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -2457,7 +2457,7 @@
 //	@Test
 //	public void testReadProperties_6()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //
 //		Map<Integer, String> result = fixture.readProperties();
@@ -2933,7 +2933,7 @@
 //	@Test
 //	public void testSetResults_1()
 //		throws Exception {
-//		Reader fixture = Reader.getInstance();
+//		Reader fixture = new Reader();
 //		fixture.setResults(new HashMap());
 //		Map<Integer, String> results = new HashMap();
 //

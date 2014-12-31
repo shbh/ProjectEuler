@@ -20,7 +20,7 @@ public class _054PokerHands  {
 		int count = 0;
 
 		
-		List<String> datas = Reader.getInstance().readFile("poker.txt");
+		List<String> datas = new Reader().readFile("poker.txt");
 		
 		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
 			String data = (String) iterator.next();

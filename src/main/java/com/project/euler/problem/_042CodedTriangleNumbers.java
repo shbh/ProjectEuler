@@ -27,7 +27,7 @@ public class _042CodedTriangleNumbers  {
 
 		int count = 0;
 
-		List<String> datas = Reader.getInstance().readFile("words.txt");
+		List<String> datas = new Reader().readFile("words.txt");
 
 		String sCurrentLine = datas.get(0);
 

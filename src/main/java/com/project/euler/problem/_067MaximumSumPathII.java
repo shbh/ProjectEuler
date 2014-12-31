@@ -18,7 +18,7 @@ public class _067MaximumSumPathII  {
 	public Integer solve() {
 
 		String[] texts = new String[100];
-		List<String> datas = Reader.getInstance().readFile("triangle.txt");
+		List<String> datas = new Reader().readFile("triangle.txt");
 		int n = 0;
 		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
 			String data = (String) iterator.next();

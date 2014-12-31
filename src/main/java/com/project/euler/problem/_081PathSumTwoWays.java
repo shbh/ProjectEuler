@@ -17,7 +17,7 @@ public class _081PathSumTwoWays  {
 	
 		int[][] matrix = new int[80][80];
 		
-		List<String> datas = Reader.getInstance().readFile("p081_matrix.txt");
+		List<String> datas = new Reader().readFile("p081_matrix.txt");
 
 		int line = 0;
 		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {

@@ -15,25 +15,10 @@ import com.project.euler.problem._054PokerHands;
 
 public class Reader {
 	
-	public static Reader reader = null;
 	
-	public static Reader getInstance()
-	{
-	
-		if(reader!=null)
-		{
-		
-			return reader;
-		
-		}
-		
-		return new Reader();
-	
-	}
-
 	private Map<Integer, String> results = new HashMap<Integer, String>();
 
-	private Reader() {
+	public Reader() {
 	
 		this.readProperties();
 	

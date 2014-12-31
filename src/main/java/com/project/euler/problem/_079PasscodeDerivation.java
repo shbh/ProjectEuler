@@ -20,7 +20,7 @@ public class _079PasscodeDerivation  {
 		
 		int[] texts = new int[50];
 		
-		List<String> datas = Reader.getInstance().readFile("p079_keylog.txt");
+		List<String> datas = new Reader().readFile("p079_keylog.txt");
 		int n = 0;
 		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
 			String data = (String) iterator.next();

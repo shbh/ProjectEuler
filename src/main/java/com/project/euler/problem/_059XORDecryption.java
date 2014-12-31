@@ -17,7 +17,7 @@ public class _059XORDecryption  {
 
 		int[] ciphers = null;
 
-		List<String> datas = Reader.getInstance().readFile("cipher1.txt");
+		List<String> datas = new Reader().readFile("cipher1.txt");
 
 		String cipher = datas.get(0);
 

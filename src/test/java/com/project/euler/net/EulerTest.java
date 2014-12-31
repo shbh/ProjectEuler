@@ -10,7 +10,7 @@ public abstract class EulerTest {
 
 
 	
-	protected Map<Integer, String> results = Reader.getInstance().getResults();
+	protected Map<Integer, String> results = new Reader().getResults();
 	
 	protected Integer classNo = 0;
 
