@@ -24,6 +24,7 @@ public class _059XORDecryption implements IProblem {
 		String[] ciphertexts = cipher.split(",");
 
 		ciphers = new int[ciphertexts.length];
+		System.out.println(ciphertexts.length);
 
 		for (int i = 0; i < ciphertexts.length; i++) {
 
@@ -41,7 +42,7 @@ public class _059XORDecryption implements IProblem {
 
 					int sum = 0;
 
-					for (int i = 0; i < ciphers.length;) {
+					for (int i = 0; i < ciphers.length-1;) {
 
 						int junk = 0;
 
@@ -51,7 +52,7 @@ public class _059XORDecryption implements IProblem {
 
 						int text3 = 0;
 
-						try {
+						
 
 							text1 = ciphers[i] ^ first;
 
@@ -65,11 +66,7 @@ public class _059XORDecryption implements IProblem {
 
 							junk++;
 
-						} catch (Exception ex) {
-
-							// logger.trace("friendly exception");
-
-						}
+						
 
 						sum += text1 + text2 + text3;
 
