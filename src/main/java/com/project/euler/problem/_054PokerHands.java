@@ -109,18 +109,10 @@ public class _054PokerHands  {
 			case FULLHOUSE:
 				
 				
-				cnos[0] = getCNO(numbers1[0]);
-				
-				cnos[1] = getCNO(numbers2[0]);
-
-				cnos[0] = resetA(cnos[0]);
-				cnos[1] = resetA(cnos[1]);
-			
-				if (cnos[0] > cnos[1]) 
-				{
-				
+				if (compareN1AndN2(numbers1[0], numbers2[0], cnos)) {
+					
 					result = true;
-
+				
 				} 
 				else if (cnos[0] == cnos[1]) 
 				{
@@ -139,17 +131,8 @@ public class _054PokerHands  {
 				
 				for (int i = numbers1.length - 1; i >= 0; i--) {
 
-					
-					cnos[0] = getCNO(numbers1[i]);
-				
-					cnos[1] = getCNO(numbers2[i]);
-
-					cnos[0] = resetA(cnos[0]);
-					cnos[1] = resetA(cnos[1]);
-				
-					if (cnos[0] > cnos[1]) 
-					{
-					
+					if (compareN1AndN2(numbers1[i], numbers2[i], cnos)) {
+						
 						result = true;
 					
 					} 
@@ -202,16 +185,8 @@ public class _054PokerHands  {
 			case THREEOFAKIND:
 
 				
-				cnos[0] = getCNO(numbers1[0]);
-				
-				cnos[1] = getCNO(numbers2[0]);
-
-				cnos[0] = resetA(cnos[0]);
-				cnos[1] = resetA(cnos[1]);
-			
-				if (cnos[0] > cnos[1]) 
-				{
-				
+				if (compareN1AndN2(numbers1[0], numbers2[0], cnos)) {
+					
 					result = true;
 				
 				} 
@@ -253,34 +228,18 @@ public class _054PokerHands  {
 				
 			case TWOPAIRS:
 				
-				cnos[0] = getCNO(numbers1[0]);
-				
-				cnos[1] = getCNO(numbers2[0]);
-
-				cnos[0] = resetA(cnos[0]);
-				cnos[1] = resetA(cnos[1]);
-			
-				if (cnos[0] > cnos[1]) 
-				{
-				
+				if (compareN1AndN2(numbers1[0], numbers2[0], cnos)) {
+					
 					result = true;
 				
 				} 
 				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnos[0] = getCNO(numbers1[2]);
-				
-					cnos[1] = getCNO(numbers2[2]);
-
-					cnos[0] = resetA(cnos[0]);
-					cnos[1] = resetA(cnos[1]);
-				
-					if (cnos[0] > cnos[1]) 
-					{
-					
-						result = true;
+					if (compareN1AndN2(numbers1[2], numbers2[2], cnos)) {
 						
+						result = true;
+					
 					} 
 					else if (cnos[0] == cnos[1]) 
 					{
@@ -305,48 +264,26 @@ public class _054PokerHands  {
 				
 			case ONEPAIR:
 
-				cnos[0] = getCNO(numbers1[0]);
-				
-				cnos[1] = getCNO(numbers2[0]);
-
-				cnos[0] = resetA(cnos[0]);
-				cnos[1] = resetA(cnos[1]);
-			
-
-				if (cnos[0] > cnos[1]) {
-				
+				if (compareN1AndN2(numbers1[0], numbers2[0], cnos)) {
+					
 					result = true;
 				
 				} 
 				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnos[0] = getCNO(numbers1[2]);
-					
-					cnos[1] = getCNO(numbers2[2]);
-
-					cnos[0] = resetA(cnos[0]);
-					cnos[1] = resetA(cnos[1]);
-				
-					if (cnos[0] > cnos[1]) {
-					
+					if (compareN1AndN2(numbers1[2], numbers2[2], cnos)) {
+						
 						result = true;
-
+					
 					} 
 					else if (cnos[0] == cnos[1]) 
 					{
 						
-						cnos[0] = getCNO(numbers1[3]);
-						
-						cnos[1] = getCNO(numbers2[3]);
-
-						cnos[0] = resetA(cnos[0]);
-						cnos[1] = resetA(cnos[1]);
-					
-						if (cnos[0] > cnos[1]) {
+						if (compareN1AndN2(numbers1[3], numbers2[3], cnos)) {
 							
 							result = true;
-
+						
 						} 
 						else if (cnos[0] == cnos[1]) 
 						{
