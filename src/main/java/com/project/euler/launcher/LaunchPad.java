@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 
 
 
-public final class LaunchPad {
+public  class LaunchPad {
 
 	static Logger logger = Logger.getLogger(LaunchPad.class);
 	
