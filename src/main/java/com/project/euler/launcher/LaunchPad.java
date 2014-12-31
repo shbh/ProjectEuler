@@ -10,7 +10,6 @@ public final class LaunchPad {
 	
 	private LaunchPad() {
 	
-		super();
 	
 	}
 
@@ -19,7 +18,7 @@ public final class LaunchPad {
 		long lStartTime = System.nanoTime();
 
 
-		logger.info(new com.project.euler.problem._041PandigitalPrime().solve());
+		logger.info(new com.project.euler.problem._061CyclicalFigurateNumbers().solve());
 
 		long lEndTime = System.nanoTime();
 		
