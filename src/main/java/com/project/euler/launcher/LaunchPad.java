@@ -19,7 +19,7 @@ public final class LaunchPad {
 		long lStartTime = System.nanoTime();
 
 
-		logger.info(new com.project.euler.problem._059XORDecryption().solve());
+		logger.info(new com.project.euler.problem._041PandigitalPrime().solve());
 
 		long lEndTime = System.nanoTime();
 		
