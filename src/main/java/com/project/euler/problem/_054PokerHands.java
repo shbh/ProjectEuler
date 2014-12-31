@@ -82,19 +82,8 @@ public class _054PokerHands  {
 				
 				int cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1)
-				{
-				
-					cnof1 = 14;
-				
-				}
-				
-				if (cnof2 == 1)
-				{
-				
-					cnof2 = 14;
-				
-				}	
+				cnof1 = resetA(cnof1);
+				cnof2 = resetA(cnof2);
 				
 				if (cnof1 > cnof2) {
 				
@@ -108,17 +97,9 @@ public class _054PokerHands  {
 				
 					cnof2 = getCNO(numbers2[0]);
 
-					if (cnof1 == 1){
-					
-						cnof1 = 14;
-					
-					}
-					if (cnof2 == 1){
-					
-						cnof2 = 14;
-					
-					}
-
+					cnof1 = resetA(cnof1);
+					cnof2 = resetA(cnof2);
+				
 					if (cnof1 >= cnof2) {
 					
 						result = true;
@@ -134,19 +115,9 @@ public class _054PokerHands  {
 				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1)
-				{
-				
-					cnof1 = 14;
-				
-				}
-				if (cnof2 == 1)
-				{
-				
-					cnof2 = 14;
-				
-				}
-
+				cnof1 = resetA(cnof1);
+				cnof2 = resetA(cnof2);
+			
 				if (cnof1 > cnof2) 
 				{
 				
@@ -174,20 +145,9 @@ public class _054PokerHands  {
 				
 					cnof2 = getCNO(numbers2[i]);
 
-					if (cnof1 == 1)
-					{
-					
-						cnof1 = 14;
-					
-					}
-					
-					if (cnof2 == 1)
-					{
-					
-						cnof2 = 14;
-					
-					}
-
+					cnof1 = resetA(cnof1);
+					cnof2 = resetA(cnof2);
+				
 					if (cnof1 > cnof2) 
 					{
 					
@@ -219,16 +179,16 @@ public class _054PokerHands  {
 				
 				int cnof20 = getCNO(numbers2[1]);
 
-				if (cnof1 == 1 && cnof10 == 10)
+				if (cnof10 == 10)
 				{
-					
-					cnof1 = 14;
+					cnof1 = resetA(cnof1);
 				}
 				
-				if (cnof2 == 1 && cnof20 == 10)
+				if (cnof20 == 10)
 				{
 				
-					cnof2 = 14;
+					cnof2 = resetA(cnof2);
+					
 				}
 
 				if (cnof1 >= cnof2) 
@@ -247,17 +207,9 @@ public class _054PokerHands  {
 				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1){
-				
-					cnof1 = 14;
-				
-				}
-				if (cnof2 == 1){
-				
-					cnof2 = 14;
-				
-				}
-
+				cnof1 = resetA(cnof1);
+				cnof2 = resetA(cnof2);
+			
 				if (cnof1 > cnof2) 
 				{
 				
@@ -271,19 +223,9 @@ public class _054PokerHands  {
 					
 					cnof2 = getCNO(numbers2[3]);
 
-					if (cnof1 == 1)
-					{
-					
-						cnof1 = 14;
-					
-					}
-					
-					if (cnof2 == 1){
-						
-						cnof2 = 14;
-					
-					}
-
+					cnof1 = resetA(cnof1);
+					cnof2 = resetA(cnof2);
+				
 					if (cnof1 > cnof2) 
 					{
 					
@@ -295,19 +237,9 @@ public class _054PokerHands  {
 						
 						cnof2 = getCNO(numbers2[4]);
 
-						if (cnof1 == 1){
-						
-							cnof1 = 14;
-						
-						}
-						
-						if (cnof2 == 1)
-						{
-						
-							cnof2 = 14;
-						
-						}
-
+						cnof1 = resetA(cnof1);
+						cnof2 = resetA(cnof2);
+					
 						if (cnof1 >= cnof2) {
 				
 							result = true;
@@ -326,20 +258,9 @@ public class _054PokerHands  {
 				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1)
-				{
-				
-					cnof1 = 14;
-				
-				}
-				
-				if (cnof2 == 1)
-				{
-				
-					cnof2 = 14;
-				
-				}
-
+				cnof1 = resetA(cnof1);
+				cnof2 = resetA(cnof2);
+			
 				if (cnof1 > cnof2) 
 				{
 				
@@ -353,20 +274,9 @@ public class _054PokerHands  {
 				
 					cnof2 = getCNO(numbers2[2]);
 
-					if (cnof1 == 1)
-					{
-
-						cnof1 = 14;
-					
-					}
-					
-					if (cnof2 == 1)
-					{
-					
-						cnof2 = 14;
-					
-					}
-
+					cnof1 = resetA(cnof1);
+					cnof2 = resetA(cnof2);
+				
 					if (cnof1 > cnof2) 
 					{
 					
@@ -380,20 +290,9 @@ public class _054PokerHands  {
 						
 						cnof2 = getCNO(numbers2[4]);
 
-						if (cnof1 == 1)
-						{
-						
-							cnof1 = 14;
-						
-						}
-						
-						if (cnof2 == 1)
-						{
-						
-							cnof2 = 14;
-						
-						}
-
+						cnof1 = resetA(cnof1);
+						cnof2 = resetA(cnof2);
+					
 						if (cnof1 >= cnof2) {
 				
 							result = true;
@@ -411,17 +310,9 @@ public class _054PokerHands  {
 				
 				cnof2 = getCNO(numbers2[0]);
 
-				if (cnof1 == 1){
-				
-					cnof1 = 14;
-				
-				}
-				
-				if (cnof2 == 1){
-				
-					cnof2 = 14;
-				
-				}
+				cnof1 = resetA(cnof1);
+				cnof2 = resetA(cnof2);
+			
 
 				if (cnof1 > cnof2) {
 				
@@ -435,17 +326,9 @@ public class _054PokerHands  {
 					
 					cnof2 = getCNO(numbers2[2]);
 
-					if (cnof1 == 1){
-					
-						cnof1 = 14;
-					
-					}
-					if (cnof2 == 1){
-					
-						cnof2 = 14;
-					
-					}
-
+					cnof1 = resetA(cnof1);
+					cnof2 = resetA(cnof2);
+				
 					if (cnof1 > cnof2) {
 					
 						result = true;
@@ -458,17 +341,9 @@ public class _054PokerHands  {
 						
 						cnof2 = getCNO(numbers2[3]);
 
-						if (cnof1 == 1){
-						
-							cnof1 = 14;
-						
-						}
-						if (cnof2 == 1){
-						
-							cnof2 = 14;
-						
-						}
-
+						cnof1 = resetA(cnof1);
+						cnof2 = resetA(cnof2);
+					
 						if (cnof1 > cnof2) {
 							
 							result = true;
@@ -481,17 +356,9 @@ public class _054PokerHands  {
 							
 							cnof2 = getCNO(numbers2[4]);
 
-							if (cnof1 == 1){
-							
-								cnof1 = 14;
-							
-							}
-							
-							if (cnof2 == 1){
-							
-								cnof2 = 14;
-							}
-
+							cnof1 = resetA(cnof1);
+							cnof2 = resetA(cnof2);
+						
 							if (cnof1 >= cnof2) {
 								
 								result = true;
@@ -1051,6 +918,18 @@ public class _054PokerHands  {
 	 */
 
 	
+	private int resetA(int n)
+	{
+		if (n == 1)
+		{
+		
+			n = 14;
+		
+		}	
+		
+		return n;
+		
+	}
 
 	
 	public enum POKER {
