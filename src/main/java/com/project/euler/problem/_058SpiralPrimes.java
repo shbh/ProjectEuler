@@ -76,33 +76,12 @@ public class _058SpiralPrimes implements IProblem {
 
 			}
 			
-			if(Functions.isPrime(newX))
-			{
-				
-				totalNoOfPrime = totalNoOfPrime + 1;
+			totalNoOfPrime = getValue(newX, totalNoOfPrime);
+			totalNoOfPrime = getValue(newY, totalNoOfPrime);
+			totalNoOfPrime = getValue(newW, totalNoOfPrime);
+			totalNoOfPrime = getValue(newV, totalNoOfPrime);
 			
-			}
 			
-			if(Functions.isPrime(newY))
-			{
-			
-				totalNoOfPrime = totalNoOfPrime + 1;
-			
-			}
-			
-			if(Functions.isPrime(newW))
-			{
-			
-				totalNoOfPrime = totalNoOfPrime + 1;
-			
-			}
-			
-			if(Functions.isPrime(newV))
-			{
-			
-				totalNoOfPrime = totalNoOfPrime + 1;
-			
-			}
 			
 			side = newV -newX + 1;
 			
@@ -123,6 +102,18 @@ public class _058SpiralPrimes implements IProblem {
 		}
 		
 		return side;
+	}
+
+	private int getValue(int no, int totalNoOfPrime) {
+		// TODO Auto-generated method stub
+		
+		if(Functions.isPrime(no))
+		{
+			
+			totalNoOfPrime = totalNoOfPrime + 1;
+		
+		}
+		return totalNoOfPrime ;
 	}
 
 	

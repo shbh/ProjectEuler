@@ -582,37 +582,7 @@ public static final int ALLOWEDTIME = 60000;
 		return true;
 	}
 
-	public static BigInteger findNearestDifference(BigInteger a, BigInteger b, BigInteger k, int D) {
-		// TODO Auto-generated method stub
-
-		BigInteger diff = BigInteger.ZERO;
-		BigInteger m = BigInteger.ZERO;
-		BigInteger lastm = BigInteger.ZERO;
-
-		while (true) {
-
-			BigInteger n = (a.add(b.multiply(m))).divide(k);
-			BigInteger cn = (n.multiply(k)).subtract(b.multiply(m));
-			if (a.compareTo(cn) == 0) {
-				BigInteger temp = (m.multiply(m).subtract(BigInteger.valueOf(D))).abs();
-				if (diff.compareTo(BigInteger.ZERO) == 0) {
-					diff = temp;
-					lastm = m;
-
-				} else if (temp.compareTo(diff) < 0) {
-					diff = temp;
-					lastm = m;
-
-				} else {
-					return lastm;
-				}
-
-			}
-
-			m = m.add(BigInteger.ONE);
-		}
-
-	}
+	
 
 	public static int findNearestSquare(int number) {
 		// TODO Auto-generated method stub
