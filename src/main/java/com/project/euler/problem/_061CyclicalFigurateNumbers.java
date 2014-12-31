@@ -99,22 +99,20 @@ public class _061CyclicalFigurateNumbers {
 			List<Integer> third, List<Integer> fourth, int[] outputs) {
 
 		int output = checkFive(number, fiver, first, second, third, fourth, outputs);
-		
+
 		if (output == -1) {
 			output = checkFive(number, fiver, second, first, third, fourth, outputs);
 			if (output == -1) {
 				output = checkFive(number, fiver, third, first, second, fourth, outputs);
-				
+
 				if (output == -1) {
 					output = checkFive(number, fiver, fourth, first, third, second, outputs);
-				} 
+				}
 			}
-			
-			
-			
+
 		}
-			return output;
-		
+		return output;
+
 	}
 
 	private List<Integer> findPairs(Integer number, List<Integer> values) {
@@ -238,27 +236,25 @@ public class _061CyclicalFigurateNumbers {
 			List<Integer> fourth, List<Integer> fifth, int[] outputs) {
 
 		int output = -1;
-		if (fiver.size() == 0) {
-			return -1;
-		}
+		if (fiver.size() > 0) {
+			
+			for (int j = 0; j < fiver.size(); j++) {
 
-		for (int j = 0; j < fiver.size(); j++) {
+				List<Integer> filter = findPairs(fiver.get(j), second);
 
-			List<Integer> filter = findPairs(fiver.get(j), second);
+				if (filter.size() == 0) {
+					output = -1;
+					break;
+				}
+				outputs[1] = fiver.get(j);
 
-			if (filter.size() == 0) {
-				output =  -1;
-				break;
+				output = checkFour(number, filter, third, fourth, fifth, outputs);
+				if (output > -1) {
+					break;
+				}
+
 			}
-			outputs[1] = fiver.get(j);
-
-			output = checkFour(number, filter, third, fourth, fifth, outputs);
-			if (output > -1) {
-				break;
-			}
-
 		}
-
 		return output;
 
 	}
