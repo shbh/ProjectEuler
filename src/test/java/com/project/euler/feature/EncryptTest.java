@@ -1,12 +1,15 @@
 package com.project.euler.feature;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * The class <code>EncryptTest</code> contains tests for the class <code>{@link Encrypt}</code>.
  *
- * @generatedBy CodePro at 30/12/14 1:32 PM
+ * @generatedBy CodePro at 31/12/14 5:09 PM
  * @author test
  * @version $Revision: 1.0 $
  */
@@ -16,19 +19,19 @@ public class EncryptTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 1:32 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
-	@Test
+	@Test(expected = java.security.NoSuchAlgorithmException.class)
 	public void testEncrypt_1()
 		throws Exception {
-		String plaintext = "test";
-		String algorithm = "SHA";
-		String encoding = "UTF-8";
+		String plaintext = "";
+		String algorithm = "";
+		String encoding = "";
 
 		String result = Encrypt.encrypt(plaintext, algorithm, encoding);
 
 		// add additional test code here
-		assertEquals("qUqP5cyxm6YcTAhz05Hph5gvu9M=", result);
+		assertNotNull(result);
 	}
 
 	/**
@@ -36,19 +39,39 @@ public class EncryptTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 30/12/14 1:32 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
-	@Test
+	@Test(expected = java.security.NoSuchAlgorithmException.class)
 	public void testEncrypt_2()
 		throws Exception {
-		String plaintext = "test";
-		String algorithm = "SHA";
-		String encoding = "UTF-8";
+		String plaintext = "";
+		String algorithm = "";
+		String encoding = "";
 
 		String result = Encrypt.encrypt(plaintext, algorithm, encoding);
 
 		// add additional test code here
-		assertEquals("qUqP5cyxm6YcTAhz05Hph5gvu9M=", result);
+		assertNotNull(result);
+	}
+
+	/**
+	 * Run the String encrypt(String,String,String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
+	 */
+	@Test(expected = java.security.NoSuchAlgorithmException.class)
+	public void testEncrypt_3()
+		throws Exception {
+		String plaintext = "";
+		String algorithm = "";
+		String encoding = "";
+
+		String result = Encrypt.encrypt(plaintext, algorithm, encoding);
+
+		// add additional test code here
+		assertNotNull(result);
 	}
 
 	/**
@@ -57,7 +80,7 @@ public class EncryptTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 30/12/14 1:32 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	@Before
 	public void setUp()
@@ -71,7 +94,7 @@ public class EncryptTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 30/12/14 1:32 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	@After
 	public void tearDown()
@@ -84,7 +107,7 @@ public class EncryptTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 30/12/14 1:32 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(EncryptTest.class);

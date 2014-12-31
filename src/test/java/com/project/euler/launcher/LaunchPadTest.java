@@ -6,17 +6,30 @@ import static org.junit.Assert.*;
 /**
  * The class <code>LaunchPadTest</code> contains tests for the class <code>{@link LaunchPad}</code>.
  *
- * @generatedBy CodePro at 31/12/14 3:52 PM
+ * @generatedBy CodePro at 31/12/14 5:09 PM
  * @author test
  * @version $Revision: 1.0 $
  */
 public class LaunchPadTest {
 	/**
+	 * Run the LaunchPad() constructor test.
+	 *
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
+	 */
+	@Test
+	public void testLaunchPad_1()
+		throws Exception {
+		LaunchPad result = new LaunchPad();
+		assertNotNull(result);
+		// add additional test code here
+	}
+
+	/**
 	 * Run the void main(String[]) method test.
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 31/12/14 3:52 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	@Test
 	public void testMain_1()
@@ -25,7 +38,6 @@ public class LaunchPadTest {
 
 		LaunchPad.main(args);
 
-		assertTrue(true);
 		// add additional test code here
 	}
 
@@ -35,7 +47,7 @@ public class LaunchPadTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 31/12/14 3:52 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	@Before
 	public void setUp()
@@ -49,7 +61,7 @@ public class LaunchPadTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 31/12/14 3:52 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	@After
 	public void tearDown()
@@ -62,7 +74,7 @@ public class LaunchPadTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 31/12/14 3:52 PM
+	 * @generatedBy CodePro at 31/12/14 5:09 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(LaunchPadTest.class);
