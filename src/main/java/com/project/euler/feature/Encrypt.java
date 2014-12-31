@@ -3,7 +3,7 @@ package com.project.euler.feature;
 import java.security.MessageDigest;
 
 @SuppressWarnings("restriction")
-public  class Encrypt {
+public class Encrypt {
 
 	public static synchronized String encrypt(String plaintext, String algorithm, String encoding) throws Exception {
 		MessageDigest msgDigest = null;
