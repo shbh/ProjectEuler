@@ -51,25 +51,26 @@ public class _054PokerHands  {
 		
 		POKER poker2 = whichPoker(numbers2, set2);
 		
-		if (poker1.ordinal() > poker2.ordinal()) 
+		boolean result = false;
+		
+		if (poker1.ordinal() > poker2.ordinal())
 		{
-		
-			return true;
-		
-		} 
+			result = true;
+		}
 		else if (poker1.ordinal() == poker2.ordinal()) 
 		{
 
 			switch (poker1) {
 		
 			case ROYALFLUSH:
-				return true;
+				result = true;
+				break;
 
 			case STRAIGHTFLUSH:
 			
 				if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
 				
-					return true;
+					result = true;
 				
 				}
 				
@@ -97,7 +98,7 @@ public class _054PokerHands  {
 				
 				if (cnof1 > cnof2) {
 				
-					return true;
+					result = true;
 				
 				} 
 				else if (cnof1 == cnof2) 
@@ -120,7 +121,7 @@ public class _054PokerHands  {
 
 					if (cnof1 >= cnof2) {
 					
-						return true;
+						result = true;
 					
 					}
 				}
@@ -149,14 +150,14 @@ public class _054PokerHands  {
 				if (cnof1 > cnof2) 
 				{
 				
-					return true;
+					result = true;
 
 				} 
 				else if (cnof1 == cnof2) 
 				{
 					if (getCNO(numbers1[3]) >= getCNO(numbers2[3])) {
 				
-						return true;
+						result = true;
 					
 					}
 				}
@@ -190,7 +191,7 @@ public class _054PokerHands  {
 					if (cnof1 > cnof2) 
 					{
 					
-						return true;
+						result = true;
 					
 					} 
 					else if (cnof1 == cnof2) 
@@ -233,7 +234,7 @@ public class _054PokerHands  {
 				if (cnof1 >= cnof2) 
 				{
 				
-					return true;
+					result = true;
 				
 				}
 
@@ -260,7 +261,7 @@ public class _054PokerHands  {
 				if (cnof1 > cnof2) 
 				{
 				
-					return true;
+					result = true;
 				
 				} 
 				else if (cnof1 == cnof2) 
@@ -286,7 +287,7 @@ public class _054PokerHands  {
 					if (cnof1 > cnof2) 
 					{
 					
-						return true;
+						result = true;
 
 					} else if (cnof1 == cnof2) {
 						
@@ -309,7 +310,7 @@ public class _054PokerHands  {
 
 						if (cnof1 >= cnof2) {
 				
-							return true;
+							result = true;
 
 						}
 
@@ -342,7 +343,7 @@ public class _054PokerHands  {
 				if (cnof1 > cnof2) 
 				{
 				
-					return true;
+					result = true;
 				
 				} 
 				else if (cnof1 == cnof2) 
@@ -369,7 +370,7 @@ public class _054PokerHands  {
 					if (cnof1 > cnof2) 
 					{
 					
-						return true;
+						result = true;
 						
 					} 
 					else if (cnof1 == cnof2) 
@@ -395,7 +396,7 @@ public class _054PokerHands  {
 
 						if (cnof1 >= cnof2) {
 				
-							return true;
+							result = true;
 
 						}
 
@@ -424,7 +425,7 @@ public class _054PokerHands  {
 
 				if (cnof1 > cnof2) {
 				
-					return true;
+					result = true;
 				
 				} 
 				else if (cnof1 == cnof2) 
@@ -447,7 +448,7 @@ public class _054PokerHands  {
 
 					if (cnof1 > cnof2) {
 					
-						return true;
+						result = true;
 
 					} 
 					else if (cnof1 == cnof2) 
@@ -470,7 +471,7 @@ public class _054PokerHands  {
 
 						if (cnof1 > cnof2) {
 							
-							return true;
+							result = true;
 
 						} 
 						else if (cnof1 == cnof2) 
@@ -493,7 +494,7 @@ public class _054PokerHands  {
 
 							if (cnof1 >= cnof2) {
 								
-								return true;
+								result = true;
 
 							}
 
@@ -510,7 +511,7 @@ public class _054PokerHands  {
 			}
 		}
 
-		return false;
+		return result;
 	}
 
 	
