@@ -1,12 +1,12 @@
 package com.project.euler.problem;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
+import com.project.euler.feature.Reader;
 
 /**
  * Created by shashi on 1/30/14.
@@ -17,23 +17,17 @@ public class _079PasscodeDerivation implements IProblem {
 
 	public String solve() {
 
-		InputStream input = _079PasscodeDerivation.class.getClassLoader().getResourceAsStream("p079_keylog.txt");
-
+		
 		int[] texts = new int[50];
-		try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
-
-			String sCurrentLine;
-
-			int x = 0;
-			while ((sCurrentLine = br.readLine()) != null) {
-				texts[x++] = Integer.valueOf(sCurrentLine);
-			}
-
-		} catch (Exception e) {
-
-		//	logger.trace("friendly exception");
-
+		
+		List<String> datas = Reader.getInstance().readFile("p079_keylog.txt");
+		int n = 0;
+		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
+			String data = (String) iterator.next();
+			texts[n++] =Integer.valueOf( data);
 		}
+		
+		
 
 	//	Arrays.sort(texts);
 

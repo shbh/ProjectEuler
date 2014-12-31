@@ -1,12 +1,12 @@
 package com.project.euler.problem; 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
+import com.project.euler.feature.Reader;
 
 public class _054PokerHands implements IProblem { 
 	
@@ -19,32 +19,24 @@ public class _054PokerHands implements IProblem {
 	
 		int count = 0;
 
-		InputStream input = _054PokerHands.class.getClassLoader().getResourceAsStream("poker.txt");
 		
-		try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
-
-			String sCurrentLine;
-
-			while ((sCurrentLine = br.readLine()) != null) {
-
-				String set1 = sCurrentLine.substring(0, 15);
+		List<String> datas = Reader.getInstance().readFile("poker.txt");
 		
-				String set2 = sCurrentLine.substring(15);
-				
-				boolean isPlayer1Won = isPlayer1Won(set1, set2);
-				
-				if (isPlayer1Won) {
+		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
+			String data = (String) iterator.next();
+			String set1 = data.substring(0, 15);
+			
+			String set2 = data.substring(15);
+			
+			boolean isPlayer1Won = isPlayer1Won(set1, set2);
+			
+			if (isPlayer1Won) {
 
-					count++;
-				}
+				count++;
 			}
-
-		} 
-		catch (Exception e) {
-		
-		//	e.printStackTrace();
-		
 		}
+		
+		
 
 		return Integer.valueOf(count);
 	}

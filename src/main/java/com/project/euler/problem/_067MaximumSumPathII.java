@@ -1,12 +1,12 @@
 package com.project.euler.problem;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import com.project.euler.IProblem;
+import com.project.euler.feature.Reader;
 
 /**
  * Created by shashi on 1/30/14.
@@ -17,26 +17,15 @@ public class _067MaximumSumPathII implements IProblem {
 
 	public Integer solve() {
 
-		InputStream input = _067MaximumSumPathII.class.getClassLoader()
-				.getResourceAsStream("triangle.txt");
-		
 		String[] texts = new String[100];
-		try (BufferedReader br = new BufferedReader(
-				new InputStreamReader(input))) {
-
-			String sCurrentLine;
-
-			int x = 0;
-			while ((sCurrentLine = br.readLine()) != null) {
-				texts[x++] = sCurrentLine;
-			}
-
-		} catch (Exception e) {
-
-		//	logger.trace("friendly exception");
-
+		List<String> datas = Reader.getInstance().readFile("triangle.txt");
+		int n = 0;
+		for (Iterator<String> iterator = datas.iterator(); iterator.hasNext();) {
+			String data = (String) iterator.next();
+			texts[n++] = data;
 		}
-
+		
+		
 		int x = texts.length;
 		
 		int y = texts[x - 1].split(" ").length;

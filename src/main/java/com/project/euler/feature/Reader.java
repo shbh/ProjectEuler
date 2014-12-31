@@ -1,11 +1,17 @@
 package com.project.euler.feature;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
+import com.project.euler.problem._054PokerHands;
 
 public class Reader {
 	
@@ -94,5 +100,31 @@ public class Reader {
 
 	public void setResults(Map<Integer, String> results) {
 		this.results = results;
+	}
+	
+	public List<String> readFile(String fileName)
+	{
+
+		List<String> datas = new ArrayList<>(100);
+		
+		InputStream input = _054PokerHands.class.getClassLoader().getResourceAsStream(fileName);
+		
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
+
+			String sCurrentLine;
+
+			while ((sCurrentLine = br.readLine()) != null) {
+
+				datas.add(sCurrentLine);
+			}
+
+		} 
+		catch (Exception e) {
+		
+		//	e.printStackTrace();
+		
+		}
+		
+		return datas;
 	}
 }
