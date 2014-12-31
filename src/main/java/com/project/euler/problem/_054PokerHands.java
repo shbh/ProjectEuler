@@ -59,6 +59,8 @@ public class _054PokerHands  {
 		}
 		else if (poker1.ordinal() == poker2.ordinal()) 
 		{
+			int[] cnos = new int[2];
+			
 
 			switch (poker1) {
 		
@@ -78,29 +80,30 @@ public class _054PokerHands  {
 			
 			case FOUROFAKIND:
 			
-				int cnof1 = getCNO(numbers1[0]);
 				
-				int cnof2 = getCNO(numbers2[0]);
+				cnos[0] = getCNO(numbers1[0]);
+				
+				cnos[1] = getCNO(numbers2[0]);
 
-				cnof1 = resetA(cnof1);
-				cnof2 = resetA(cnof2);
+				cnos[0] = resetA(cnos[0]);
+				cnos[1] = resetA(cnos[1]);
 				
-				if (cnof1 > cnof2) {
+				if (cnos[0]> cnos[1]) {
 				
 					result = true;
 				
 				} 
-				else if (cnof1 == cnof2) 
+				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnof1 = getCNO(numbers1[0]);
+					cnos[0] = getCNO(numbers1[0]);
 				
-					cnof2 = getCNO(numbers2[0]);
+					cnos[1] = getCNO(numbers2[0]);
 
-					cnof1 = resetA(cnof1);
-					cnof2 = resetA(cnof2);
+					cnos[0] = resetA(cnos[0]);
+					cnos[1] = resetA(cnos[1]);
 				
-					if (cnof1 >= cnof2) {
+					if (cnos[0] >= cnos[1]) {
 					
 						result = true;
 					
@@ -111,20 +114,21 @@ public class _054PokerHands  {
 
 			case FULLHOUSE:
 				
-				cnof1 = getCNO(numbers1[0]);
 				
-				cnof2 = getCNO(numbers2[0]);
+				cnos[0] = getCNO(numbers1[0]);
+				
+				cnos[1] = getCNO(numbers2[0]);
 
-				cnof1 = resetA(cnof1);
-				cnof2 = resetA(cnof2);
+				cnos[0] = resetA(cnos[0]);
+				cnos[1] = resetA(cnos[1]);
 			
-				if (cnof1 > cnof2) 
+				if (cnos[0] > cnos[1]) 
 				{
 				
 					result = true;
 
 				} 
-				else if (cnof1 == cnof2) 
+				else if (cnos[0] == cnos[1]) 
 				{
 					if (getCNO(numbers1[3]) >= getCNO(numbers2[3])) {
 				
@@ -141,25 +145,26 @@ public class _054PokerHands  {
 				
 				for (int i = numbers1.length - 1; i >= 0; i--) {
 
-					cnof1 = getCNO(numbers1[i]);
+					
+					cnos[0] = getCNO(numbers1[i]);
 				
-					cnof2 = getCNO(numbers2[i]);
+					cnos[1] = getCNO(numbers2[i]);
 
-					cnof1 = resetA(cnof1);
-					cnof2 = resetA(cnof2);
+					cnos[0] = resetA(cnos[0]);
+					cnos[1] = resetA(cnos[1]);
 				
-					if (cnof1 > cnof2) 
+					if (cnos[0] > cnos[1]) 
 					{
 					
 						result = true;
 					
 					} 
-					else if (cnof1 == cnof2) 
+					else if (cnos[0] == cnos[1]) 
 					{
 						continue;
 						
 					} 
-					else if (cnof1 < cnof2) 
+					else if (cnos[0] < cnos[1]) 
 					{
 					
 						break;
@@ -171,9 +176,9 @@ public class _054PokerHands  {
 
 			case STRAIGHT:
 
-				cnof1 = getCNO(numbers1[0]);
+				cnos[0] = getCNO(numbers1[0]);
 				
-				cnof2 = getCNO(numbers2[0]);
+				cnos[1] = getCNO(numbers2[0]);
 				
 				int cnof10 = getCNO(numbers1[1]);
 				
@@ -181,17 +186,17 @@ public class _054PokerHands  {
 
 				if (cnof10 == 10)
 				{
-					cnof1 = resetA(cnof1);
+					cnos[0] = resetA(cnos[0]);
 				}
 				
 				if (cnof20 == 10)
 				{
 				
-					cnof2 = resetA(cnof2);
+					cnos[1] = resetA(cnos[1]);
 					
 				}
 
-				if (cnof1 >= cnof2) 
+				if (cnos[0] >= cnos[1]) 
 				{
 				
 					result = true;
@@ -203,44 +208,44 @@ public class _054PokerHands  {
 			case THREEOFAKIND:
 
 				
-				cnof1 = getCNO(numbers1[0]);
+				cnos[0] = getCNO(numbers1[0]);
 				
-				cnof2 = getCNO(numbers2[0]);
+				cnos[1] = getCNO(numbers2[0]);
 
-				cnof1 = resetA(cnof1);
-				cnof2 = resetA(cnof2);
+				cnos[0] = resetA(cnos[0]);
+				cnos[1] = resetA(cnos[1]);
 			
-				if (cnof1 > cnof2) 
+				if (cnos[0] > cnos[1]) 
 				{
 				
 					result = true;
 				
 				} 
-				else if (cnof1 == cnof2) 
+				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnof1 = getCNO(numbers1[3]);
+					cnos[0] = getCNO(numbers1[3]);
 					
-					cnof2 = getCNO(numbers2[3]);
+					cnos[1] = getCNO(numbers2[3]);
 
-					cnof1 = resetA(cnof1);
-					cnof2 = resetA(cnof2);
+					cnos[0] = resetA(cnos[0]);
+					cnos[1] = resetA(cnos[1]);
 				
-					if (cnof1 > cnof2) 
+					if (cnos[0] > cnos[1]) 
 					{
 					
 						result = true;
 
-					} else if (cnof1 == cnof2) {
+					} else if (cnos[0] == cnos[1]) {
 						
-						cnof1 = getCNO(numbers1[4]);
+						cnos[0] = getCNO(numbers1[4]);
 						
-						cnof2 = getCNO(numbers2[4]);
+						cnos[1] = getCNO(numbers2[4]);
 
-						cnof1 = resetA(cnof1);
-						cnof2 = resetA(cnof2);
+						cnos[0] = resetA(cnos[0]);
+						cnos[1] = resetA(cnos[1]);
 					
-						if (cnof1 >= cnof2) {
+						if (cnos[0] >= cnos[1]) {
 				
 							result = true;
 
@@ -254,46 +259,46 @@ public class _054PokerHands  {
 				
 			case TWOPAIRS:
 				
-				cnof1 = getCNO(numbers1[0]);
+				cnos[0] = getCNO(numbers1[0]);
 				
-				cnof2 = getCNO(numbers2[0]);
+				cnos[1] = getCNO(numbers2[0]);
 
-				cnof1 = resetA(cnof1);
-				cnof2 = resetA(cnof2);
+				cnos[0] = resetA(cnos[0]);
+				cnos[1] = resetA(cnos[1]);
 			
-				if (cnof1 > cnof2) 
+				if (cnos[0] > cnos[1]) 
 				{
 				
 					result = true;
 				
 				} 
-				else if (cnof1 == cnof2) 
+				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnof1 = getCNO(numbers1[2]);
+					cnos[0] = getCNO(numbers1[2]);
 				
-					cnof2 = getCNO(numbers2[2]);
+					cnos[1] = getCNO(numbers2[2]);
 
-					cnof1 = resetA(cnof1);
-					cnof2 = resetA(cnof2);
+					cnos[0] = resetA(cnos[0]);
+					cnos[1] = resetA(cnos[1]);
 				
-					if (cnof1 > cnof2) 
+					if (cnos[0] > cnos[1]) 
 					{
 					
 						result = true;
 						
 					} 
-					else if (cnof1 == cnof2) 
+					else if (cnos[0] == cnos[1]) 
 					{
 					
-						cnof1 = getCNO(numbers1[4]);
+						cnos[0] = getCNO(numbers1[4]);
 						
-						cnof2 = getCNO(numbers2[4]);
+						cnos[1] = getCNO(numbers2[4]);
 
-						cnof1 = resetA(cnof1);
-						cnof2 = resetA(cnof2);
+						cnos[0] = resetA(cnos[0]);
+						cnos[1] = resetA(cnos[1]);
 					
-						if (cnof1 >= cnof2) {
+						if (cnos[0] >= cnos[1]) {
 				
 							result = true;
 
@@ -306,60 +311,60 @@ public class _054PokerHands  {
 				
 			case ONEPAIR:
 
-				cnof1 = getCNO(numbers1[0]);
+				cnos[0] = getCNO(numbers1[0]);
 				
-				cnof2 = getCNO(numbers2[0]);
+				cnos[1] = getCNO(numbers2[0]);
 
-				cnof1 = resetA(cnof1);
-				cnof2 = resetA(cnof2);
+				cnos[0] = resetA(cnos[0]);
+				cnos[1] = resetA(cnos[1]);
 			
 
-				if (cnof1 > cnof2) {
+				if (cnos[0] > cnos[1]) {
 				
 					result = true;
 				
 				} 
-				else if (cnof1 == cnof2) 
+				else if (cnos[0] == cnos[1]) 
 				{
 
-					cnof1 = getCNO(numbers1[2]);
+					cnos[0] = getCNO(numbers1[2]);
 					
-					cnof2 = getCNO(numbers2[2]);
+					cnos[1] = getCNO(numbers2[2]);
 
-					cnof1 = resetA(cnof1);
-					cnof2 = resetA(cnof2);
+					cnos[0] = resetA(cnos[0]);
+					cnos[1] = resetA(cnos[1]);
 				
-					if (cnof1 > cnof2) {
+					if (cnos[0] > cnos[1]) {
 					
 						result = true;
 
 					} 
-					else if (cnof1 == cnof2) 
+					else if (cnos[0] == cnos[1]) 
 					{
 						
-						cnof1 = getCNO(numbers1[3]);
+						cnos[0] = getCNO(numbers1[3]);
 						
-						cnof2 = getCNO(numbers2[3]);
+						cnos[1] = getCNO(numbers2[3]);
 
-						cnof1 = resetA(cnof1);
-						cnof2 = resetA(cnof2);
+						cnos[0] = resetA(cnos[0]);
+						cnos[1] = resetA(cnos[1]);
 					
-						if (cnof1 > cnof2) {
+						if (cnos[0] > cnos[1]) {
 							
 							result = true;
 
 						} 
-						else if (cnof1 == cnof2) 
+						else if (cnos[0] == cnos[1]) 
 						{
 
-							cnof1 = getCNO(numbers1[4]);
+							cnos[0] = getCNO(numbers1[4]);
 							
-							cnof2 = getCNO(numbers2[4]);
+							cnos[1] = getCNO(numbers2[4]);
 
-							cnof1 = resetA(cnof1);
-							cnof2 = resetA(cnof2);
+							cnos[0] = resetA(cnos[0]);
+							cnos[1] = resetA(cnos[1]);
 						
-							if (cnof1 >= cnof2) {
+							if (cnos[0] >= cnos[1]) {
 								
 								result = true;
 
