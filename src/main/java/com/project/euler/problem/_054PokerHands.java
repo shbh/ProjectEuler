@@ -75,11 +75,7 @@ public class _054PokerHands {
 
 			case FOUROFAKIND:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos)) {
-
-					result = true;
-
-				} else if (compareN1AndN2GTEQ(numbers1[0], numbers2[0], cnos)) {
+				if (compareN1AndN2GTEQ(numbers1[0], numbers2[0], cnos)) {
 
 					result = true;
 
