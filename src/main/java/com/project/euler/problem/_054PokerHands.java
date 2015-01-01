@@ -49,7 +49,7 @@ public class _054PokerHands {
 
 		numbers1 = getCNO(numbers1);
 		numbers2 = getCNO(numbers2);
-		
+
 		boolean result = false;
 
 		if (poker1.ordinal() > poker2.ordinal()) {
@@ -76,8 +76,8 @@ public class _054PokerHands {
 			case FOUROFAKIND:
 
 				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
-				
-				if (cnos[0]>cnos[1]) {
+
+				if (cnos[0] > cnos[1]) {
 
 					result = true;
 
@@ -88,11 +88,11 @@ public class _054PokerHands {
 			case FULLHOUSE:
 
 				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
-				if (cnos[0]>cnos[1] || (cnos[0] == cnos[1] && numbers1[3] >= numbers2[3])) {
+				if (cnos[0] > cnos[1] || (cnos[0] == cnos[1] && numbers1[3] >= numbers2[3])) {
 
 					result = true;
 
-				} 
+				}
 				break;
 
 			case FLUSH:
@@ -103,7 +103,7 @@ public class _054PokerHands {
 
 					cnos = assignN1AndN2(numbers1[i], numbers2[i]);
 
-					if (cnos[0]>cnos[1]) {
+					if (cnos[0] > cnos[1]) {
 
 						result = true;
 
@@ -151,14 +151,20 @@ public class _054PokerHands {
 
 				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
 
-				if (cnos[0]>cnos[1]) {
+				if (cnos[0] > cnos[1]) {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1]){
-					if (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos)) {
-				
-						result = true;
+				} else if (cnos[0] == cnos[1]) {
+					cnos = assignN1AndN2(numbers1[3], numbers2[3]);
+					if (cnos[0] > cnos[1]) {
+						cnos = assignN1AndN2(numbers1[4], numbers2[4]);
+
+						if (cnos[0] >= cnos[1]) {
+
+							result = true;
+
+						}
 					}
 				}
 
@@ -166,36 +172,62 @@ public class _054PokerHands {
 
 			case TWOPAIRS:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos)) {
+				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
+				if (cnos[0] > cnos[1]) {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[2], numbers2[2], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
-
-					
+				} else if (cnos[0] == cnos[1]) {
+					cnos = assignN1AndN2(numbers1[2], numbers2[2]);
+					if (cnos[0] > cnos[1]) {
 						result = true;
+					} else {
+						cnos = assignN1AndN2(numbers1[4], numbers2[4]);
+						if (cnos[0] >= cnos[1]) {
+							result = true;
+						}
+					}
 
 				}
-				
+
 				break;
 
 			case ONEPAIR:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos)) {
+				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
+				
+				if (cnos[0]>cnos[1]) {
 
 					result = true;
 
 				} else if (cnos[0] == cnos[1]) {
 
-					if (compareN1AndN2EQ(numbers1[2], numbers2[2], cnos)) {
+					cnos = assignN1AndN2(numbers1[2], numbers2[2]);
+						
+					if (cnos[0]>cnos[1]) {
 
 						result = true;
 
-					} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
-
+					} else if (cnos[0] == cnos[1])
+					{
 						
+						cnos = assignN1AndN2(numbers1[3], numbers2[3]);
+						if (cnos[0]>cnos[1]) {
+
 							result = true;
 
+						}
+						else 
+						{
+							cnos = assignN1AndN2(numbers1[4], numbers2[4]);
+							if (cnos[0]>cnos[1]) {
+
+								result = true;
+
+							}
+
+						}
+						
 						
 					}
 
@@ -678,8 +710,6 @@ public class _054PokerHands {
 			}
 
 		}
-		
-		
 
 		return poker;
 	}
@@ -716,44 +746,10 @@ public class _054PokerHands {
 
 	}
 
-	private boolean compareN1AndN2EQ(int n1, int n2, int[] cnos) {
-
-		boolean result = false;
-
-		cnos[0] = resetA(n1);
-		cnos[1] = resetA(n2);
-
-		if (cnos[0] > cnos[1]) {
-
-			result = true;
-
-		}
-
-		return result;
-
-	}
-
-	private boolean compareN1AndN2GTEQ(int n1, int n2, int[] cnos) {
-
-		boolean result = false;
-
-		cnos[0] = resetA(n1);
-		cnos[1] = resetA(n2);
-
-		if (cnos[0] >= cnos[1]) {
-
-			result = true;
-
-		}
-		return result;
-
-	}
-
 	private int[] assignN1AndN2(int n1, int n2) {
 
-
 		int[] cnos = new int[2];
-		
+
 		cnos[0] = resetA(n1);
 		cnos[1] = resetA(n2);
 
@@ -761,24 +757,21 @@ public class _054PokerHands {
 
 	}
 
-	
 	private int getCNO(int n) {
 
 		return (n - (n % 10)) / 10;
-		
-		
+
 	}
 
 	private int[] getCNO(int[] n) {
 
 		for (int i = 0; i < n.length; i++) {
-			n[i] = getCNO(n[i] );
+			n[i] = getCNO(n[i]);
 		}
-		
-		return n;
-		
-	}
 
+		return n;
+
+	}
 
 	public enum POKER {
 
