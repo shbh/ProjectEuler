@@ -85,18 +85,11 @@ public class _054PokerHands {
 
 			case FULLHOUSE:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos)) {
+				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos) && (cnos[0] == cnos[1] && numbers1[3] >= numbers2[3])) {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1]) {
-					if (numbers1[3] >= numbers2[3]) {
-
-						result = true;
-
-					}
-				}
-
+				} 
 				break;
 
 			case FLUSH:
@@ -155,19 +148,8 @@ public class _054PokerHands {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1]) {
-					if (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos)) {
-
+				} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
 						result = true;
-
-					}
-
-					else if (compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos)) {
-
-						result = true;
-
-					}
-
 				}
 
 				break;
@@ -178,19 +160,13 @@ public class _054PokerHands {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1]) {
+				} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[2], numbers2[2], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
 
-					if (compareN1AndN2EQ(numbers1[2], numbers2[2], cnos)) {
-
+					
 						result = true;
 
-					} else if (compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos)) {
-
-						result = true;
-
-					}
 				}
-
+				
 				break;
 
 			case ONEPAIR:
@@ -205,17 +181,12 @@ public class _054PokerHands {
 
 						result = true;
 
-					} else if (cnos[0] == cnos[1]) {
+					} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
 
-						if (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos)) {
-
+						
 							result = true;
 
-						} else if (compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos)) {
-
-							result = true;
-
-						}
+						
 					}
 
 				}
