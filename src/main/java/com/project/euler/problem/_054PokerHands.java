@@ -47,6 +47,9 @@ public class _054PokerHands {
 
 		POKER poker2 = whichPoker(numbers2, set2);
 
+		numbers1 = getCNO(numbers1);
+		numbers2 = getCNO(numbers2);
+		
 		boolean result = false;
 
 		if (poker1.ordinal() > poker2.ordinal()) {
@@ -62,7 +65,7 @@ public class _054PokerHands {
 
 			case STRAIGHTFLUSH:
 
-				if (getCNO(numbers1[4]) >= getCNO(numbers2[4])) {
+				if (numbers1[4] >= numbers2[4]) {
 
 					result = true;
 
@@ -91,7 +94,7 @@ public class _054PokerHands {
 					result = true;
 
 				} else if (cnos[0] == cnos[1]) {
-					if (getCNO(numbers1[3]) >= getCNO(numbers2[3])) {
+					if (numbers1[3] >= numbers2[3]) {
 
 						result = true;
 
@@ -124,13 +127,13 @@ public class _054PokerHands {
 
 			case STRAIGHT:
 
-				cnos[0] = getCNO(numbers1[0]);
+				cnos[0] = numbers1[0];
 
-				cnos[1] = getCNO(numbers2[0]);
+				cnos[1] = numbers2[0];
 
-				int cnof10 = getCNO(numbers1[1]);
+				int cnof10 = numbers1[1];
 
-				int cnof20 = getCNO(numbers2[1]);
+				int cnof20 = numbers2[1];
 
 				if (cnof10 == 10) {
 					cnos[0] = resetA(cnos[0]);
@@ -698,14 +701,10 @@ public class _054PokerHands {
 			}
 
 		}
+		
+		
 
 		return poker;
-	}
-
-	private int getCNO(int n) {
-
-		return (n - (n % 10)) / 10;
-
 	}
 
 	/*
@@ -744,12 +743,8 @@ public class _054PokerHands {
 
 		boolean result = false;
 
-		cnos[0] = getCNO(n1);
-
-		cnos[1] = getCNO(n2);
-
-		cnos[0] = resetA(cnos[0]);
-		cnos[1] = resetA(cnos[1]);
+		cnos[0] = resetA(n1);
+		cnos[1] = resetA(n2);
 
 		if (cnos[0] > cnos[1]) {
 
@@ -765,12 +760,8 @@ public class _054PokerHands {
 
 		boolean result = false;
 
-		cnos[0] = getCNO(n1);
-
-		cnos[1] = getCNO(n2);
-
-		cnos[0] = resetA(cnos[0]);
-		cnos[1] = resetA(cnos[1]);
+		cnos[0] = resetA(n1);
+		cnos[1] = resetA(n2);
 
 		if (cnos[0] >= cnos[1]) {
 
@@ -780,6 +771,25 @@ public class _054PokerHands {
 		return result;
 
 	}
+
+
+	private int getCNO(int n) {
+
+		return (n - (n % 10)) / 10;
+		
+		
+	}
+
+	private int[] getCNO(int[] n) {
+
+		for (int i = 0; i < n.length; i++) {
+			n[i] = getCNO(n[i] );
+		}
+		
+		return n;
+		
+	}
+
 
 	public enum POKER {
 
