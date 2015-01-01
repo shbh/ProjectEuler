@@ -75,7 +75,9 @@ public class _054PokerHands {
 
 			case FOUROFAKIND:
 
-				if (compareN1AndN2GTEQ(numbers1[0], numbers2[0], cnos)) {
+				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
+				
+				if (cnos[0]>cnos[1]) {
 
 					result = true;
 
@@ -85,7 +87,8 @@ public class _054PokerHands {
 
 			case FULLHOUSE:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos) && (cnos[0] == cnos[1] && numbers1[3] >= numbers2[3])) {
+				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
+				if (cnos[0]>cnos[1] || (cnos[0] == cnos[1] && numbers1[3] >= numbers2[3])) {
 
 					result = true;
 
@@ -98,7 +101,9 @@ public class _054PokerHands {
 
 				for (int i = numbers1.length - 1; i >= 0; i--) {
 
-					if (compareN1AndN2EQ(numbers1[i], numbers2[i], cnos)) {
+					cnos = assignN1AndN2(numbers1[i], numbers2[i]);
+
+					if (cnos[0]>cnos[1]) {
 
 						result = true;
 
@@ -144,12 +149,17 @@ public class _054PokerHands {
 
 			case THREEOFAKIND:
 
-				if (compareN1AndN2EQ(numbers1[0], numbers2[0], cnos)) {
+				cnos = assignN1AndN2(numbers1[0], numbers2[0]);
+
+				if (cnos[0]>cnos[1]) {
 
 					result = true;
 
-				} else if (cnos[0] == cnos[1] && (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos))) {
+				} else if (cnos[0] == cnos[1]){
+					if (compareN1AndN2EQ(numbers1[3], numbers2[3], cnos) || compareN1AndN2GTEQ(numbers1[4], numbers2[4], cnos)) {
+				
 						result = true;
+					}
 				}
 
 				break;
@@ -739,7 +749,19 @@ public class _054PokerHands {
 
 	}
 
+	private int[] assignN1AndN2(int n1, int n2) {
 
+
+		int[] cnos = new int[2];
+		
+		cnos[0] = resetA(n1);
+		cnos[1] = resetA(n2);
+
+		return cnos;
+
+	}
+
+	
 	private int getCNO(int n) {
 
 		return (n - (n % 10)) / 10;
